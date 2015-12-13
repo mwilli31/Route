@@ -5,6 +5,7 @@ use_frameworks!
 
 target 'Route' do
     pod 'Firebase', '>= 2.4.3'
+    pod 'SinchVerification-Swift'
 end
 
 target 'RouteTests' do
