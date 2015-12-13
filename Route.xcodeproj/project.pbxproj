@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */; };
+		27B21C781C1DF7120091505B /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B21C771C1DF7120091505B /* signUp.swift */; };
 		27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */; };
 		27C74ADC1C04FE4A00E5A206 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74ADB1C04FE4A00E5A206 /* ViewController.swift */; };
 		27C74ADF1C04FE4A00E5A206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C74ADD1C04FE4A00E5A206 /* Main.storyboard */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		27B21C771C1DF7120091505B /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = signUp.swift; path = API/signUp.swift; sourceTree = "<group>"; };
 		27C74AD61C04FE4A00E5A206 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C74ADB1C04FE4A00E5A206 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -109,10 +113,12 @@
 				27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */,
 				27C74ADB1C04FE4A00E5A206 /* ViewController.swift */,
 				27C74ADD1C04FE4A00E5A206 /* Main.storyboard */,
+				27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */,
 				27C74AE31C04FE4A00E5A206 /* Assets.xcassets */,
 				27C74AE51C04FE4A00E5A206 /* LaunchScreen.storyboard */,
 				27C74AE81C04FE4A00E5A206 /* Info.plist */,
 				27C74AE01C04FE4A00E5A206 /* Route.xcdatamodeld */,
+				27B21C771C1DF7120091505B /* signUp.swift */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 				TargetAttributes = {
 					27C74AD51C04FE4A00E5A206 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 878J2FB9S8;
 					};
 					27C74AEC1C04FE4A00E5A206 = {
 						CreatedOnToolsVersion = 7.1.1;
@@ -334,9 +341,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27B21C781C1DF7120091505B /* signUp.swift in Sources */,
 				27C74AE21C04FE4A00E5A206 /* Route.xcdatamodeld in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* ViewController.swift in Sources */,
 				27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */,
+				27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,10 +488,13 @@
 			baseConfigurationReference = C230823E65931EF5B2CCAEF2 /* Pods-Route.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Route/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mike.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -491,10 +503,13 @@
 			baseConfigurationReference = A28B9446C12A405EFCF8C94C /* Pods-Route.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Route/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = mike.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
