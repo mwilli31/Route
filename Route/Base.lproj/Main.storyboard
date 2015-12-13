@@ -7,10 +7,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Enter your phone number-->
+        <!--Sign Up Phone Number View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Route" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SignUpPhoneNumberViewController" customModule="Route" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,7 +47,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="getVerificationCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Me7-NH-4af"/>
+                                    <action selector="getVerificationCodeAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blV-iP-5A0"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5n-Qd-AP0">
@@ -131,9 +131,7 @@
                                 <exclude reference="5ce-61-hml"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="0ny-J6-WMu"/>
-                                <exclude reference="CaY-ss-sAa"/>
-                                <exclude reference="MtM-lE-G1F"/>
+                                <exclude reference="jBL-u8-dPs"/>
                                 <exclude reference="8fu-CN-Sm7"/>
                                 <exclude reference="A3A-79-rKq"/>
                                 <exclude reference="Jc8-LU-l5P"/>
@@ -143,7 +141,9 @@
                                 <exclude reference="ggx-Rt-Kt3"/>
                                 <exclude reference="opE-lK-gyX"/>
                                 <exclude reference="rgD-LV-C4z"/>
-                                <exclude reference="jBL-u8-dPs"/>
+                                <exclude reference="0ny-J6-WMu"/>
+                                <exclude reference="CaY-ss-sAa"/>
+                                <exclude reference="MtM-lE-G1F"/>
                                 <exclude reference="WcU-rr-vno"/>
                             </mask>
                         </variation>
@@ -154,9 +154,7 @@
                                 <include reference="5ce-61-hml"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0ny-J6-WMu"/>
-                                <include reference="CaY-ss-sAa"/>
-                                <include reference="MtM-lE-G1F"/>
+                                <include reference="jBL-u8-dPs"/>
                                 <include reference="8fu-CN-Sm7"/>
                                 <include reference="A3A-79-rKq"/>
                                 <include reference="Jc8-LU-l5P"/>
@@ -166,17 +164,19 @@
                                 <include reference="ggx-Rt-Kt3"/>
                                 <include reference="opE-lK-gyX"/>
                                 <include reference="rgD-LV-C4z"/>
-                                <include reference="jBL-u8-dPs"/>
+                                <include reference="0ny-J6-WMu"/>
+                                <include reference="CaY-ss-sAa"/>
+                                <include reference="MtM-lE-G1F"/>
                                 <include reference="WcU-rr-vno"/>
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Enter your phone number" id="RpS-st-sNc"/>
+                    <navigationItem key="navigationItem" id="RpS-st-sNc"/>
                     <connections>
-                        <outlet property="phoneNumber" destination="7Jh-DV-3Yc" id="YW4-yA-3zO"/>
-                        <outlet property="phoneNumberButton" destination="4A8-md-Laf" id="8LQ-1W-D5s"/>
-                        <outlet property="spinner" destination="5ce-61-hml" id="5ef-qu-I4d"/>
-                        <outlet property="status" destination="o5n-Qd-AP0" id="BqK-9W-Xlu"/>
+                        <outlet property="phoneNumber" destination="7Jh-DV-3Yc" id="CNc-aD-jGl"/>
+                        <outlet property="phoneNumberButton" destination="4A8-md-Laf" id="eZ7-ry-hKd"/>
+                        <outlet property="spinner" destination="5ce-61-hml" id="0wI-Zn-rrj"/>
+                        <outlet property="status" destination="o5n-Qd-AP0" id="0iz-Uk-ZBn"/>
                         <segue destination="IJk-Fu-pl0" kind="show" identifier="validatePhoneNumber" id="YT7-FM-GxB"/>
                     </connections>
                 </viewController>
@@ -364,7 +364,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="y7e-vQ-dte" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ymj-r0-izt">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="Ymj-r0-izt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

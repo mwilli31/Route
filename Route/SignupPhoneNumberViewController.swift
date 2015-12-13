@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SignUpViewController.swift
 //  Route
 //
 //  Created by Michael Williams on 11/24/15.
@@ -9,7 +9,7 @@
 import UIKit
 import SinchVerification
 
-class ViewController: UIViewController {
+class SignUpPhoneNumberViewController: UIViewController {
     
     var verification:Verification!
     var applicationKey = "60b73d3d-61e9-4ed8-857a-1addcf1a131a"
