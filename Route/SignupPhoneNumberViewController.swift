@@ -23,6 +23,10 @@ class SignUpPhoneNumberViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
+    
+    override func viewWillAppear(animated: Bool) {
+        self.phoneNumber.becomeFirstResponder()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -51,6 +55,7 @@ class SignUpPhoneNumberViewController: UIViewController {
         self.phoneNumberButton.alpha = alpha
         
     }
+    
     
     @IBAction func getVerificationCodeAction(sender: AnyObject) {
         self.disableUI(true);
