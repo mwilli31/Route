@@ -8,6 +8,7 @@
 
 import UIKit
 import SinchVerification
+import libPhoneNumber-iOS
 
 class SignUpPhoneNumberViewController: UIViewController {
     
@@ -16,7 +17,7 @@ class SignUpPhoneNumberViewController: UIViewController {
 
     @IBOutlet var phoneNumber: UITextField!
     @IBOutlet var phoneNumberButton: UIButton!
-    @IBOutlet var status: UILabel! 
+    @IBOutlet var status: UILabel!
     @IBOutlet var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {

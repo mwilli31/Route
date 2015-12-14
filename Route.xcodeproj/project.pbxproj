@@ -19,7 +19,7 @@
 		27C74AE41C04FE4A00E5A206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C74AE31C04FE4A00E5A206 /* Assets.xcassets */; };
 		27C74AF21C04FE4A00E5A206 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AF11C04FE4A00E5A206 /* RouteTests.swift */; };
 		27C74AFD1C04FE4A00E5A206 /* RouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AFC1C04FE4A00E5A206 /* RouteUITests.swift */; };
-		AC635AAE9B0D0C99ECD35D4F /* Pods_Route.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9833D9B6E532B34263B9872A /* Pods_Route.framework */; };
+		F01AF22C7C155C3B2FC70F75 /* Pods_Route.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9833D9B6E532B34263B9872A /* Pods_Route.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +45,7 @@
 		27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch-667h@2x.png"; path = "Images/Launch-667h@2x.png"; sourceTree = "<group>"; };
 		27B21C771C1DF7120091505B /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = signUp.swift; path = API/signUp.swift; sourceTree = "<group>"; };
+		27C42B091C1F66E40088F9A0 /* libPhoneNumber_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber_iOS.framework; path = "Pods/../build/Debug-iphoneos/libPhoneNumber_iOS.framework"; sourceTree = "<group>"; };
 		27C74AD61C04FE4A00E5A206 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27C74ADB1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupPhoneNumberViewController.swift; sourceTree = "<group>"; };
@@ -68,7 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC635AAE9B0D0C99ECD35D4F /* Pods_Route.framework in Frameworks */,
+				F01AF22C7C155C3B2FC70F75 /* Pods_Route.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +176,7 @@
 		54ABC86762A9AC9995288B71 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				27C42B091C1F66E40088F9A0 /* libPhoneNumber_iOS.framework */,
 				9833D9B6E532B34263B9872A /* Pods_Route.framework */,
 			);
 			name = Frameworks;
@@ -507,6 +509,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Route/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -525,6 +531,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = Route/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
