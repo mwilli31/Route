@@ -4,9 +4,9 @@
 use_frameworks!
 
 target 'Route' do
-pod 'Firebase', '>= 2.4.3'
-pod 'SinchVerification-Swift'
-pod 'libPhoneNumber-iOS', '~> 0.8'
+    pod 'Firebase', '>= 2.4.3'
+    pod 'SinchVerification-Swift'
+    pod 'libPhoneNumber-iOS', '~> 0.8'
 end
 
 target 'RouteTests' do

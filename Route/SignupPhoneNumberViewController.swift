@@ -7,22 +7,23 @@
 //
 
 import UIKit
+import libPhoneNumber_iOS
 import SinchVerification
-import libPhoneNumber-iOS
 
-class SignUpPhoneNumberViewController: UIViewController {
+class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
     var verification:Verification!
     var applicationKey = "60b73d3d-61e9-4ed8-857a-1addcf1a131a"
+    private var phoneFormatter: NBAsYouTypeFormatter!
 
     @IBOutlet var phoneNumber: UITextField!
-    @IBOutlet var phoneNumberButton: UIButton!
-    @IBOutlet var status: UILabel!
-    @IBOutlet var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        phoneNumber.delegate = self
+        phoneFormatter = NBAsYouTypeFormatter(regionCode: "US")
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -35,12 +36,8 @@ class SignUpPhoneNumberViewController: UIViewController {
     }
     
     func disableUI(disable:Bool) {
-        var alpha:CGFloat = 1.0
         if(disable) {
-            alpha = 0.5;
             phoneNumber.resignFirstResponder();
-            spinner.startAnimating();
-            self.status.text = "";
             let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(30*Double(NSEC_PER_MSEC)))
             
             dispatch_after(delayTime, dispatch_get_main_queue(), { () -> Void in
@@ -49,17 +46,12 @@ class SignUpPhoneNumberViewController: UIViewController {
 
         } else {
             self.phoneNumber.becomeFirstResponder()
-            self.spinner.stopAnimating()
         }
         self.phoneNumber.enabled = !disable
-        self.phoneNumberButton.enabled = !disable
-        self.phoneNumberButton.alpha = alpha
-        
     }
     
-    
-    @IBAction func getVerificationCodeAction(sender: AnyObject) {
-        self.disableUI(true);
+    func getVerificationCode(sender: AnyObject) {
+        //self.disableUI(true);
         verification =
             SMSVerification(applicationKey:applicationKey,
                 phoneNumber: phoneNumber.text!)
@@ -68,10 +60,34 @@ class SignUpPhoneNumberViewController: UIViewController {
             if (success){
                 self.performSegueWithIdentifier("validatePhoneNumber", sender: sender)
             } else {
-                self.status.text = error?.description
+                //error
             }
         }
         
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string: String) -> Bool {
+        
+        // Allow up to 18 chars
+        if !(string.characters.count + range.location > 14) {
+            if range.length == 0 {
+                textField.text = phoneFormatter?.inputDigit(string)
+            } else if range.length == 1 {
+                // user pressed backspace
+                textField.text = phoneFormatter?.removeLastDigit()
+            } else if range.length == textField.text?.characters.count {
+                // text was cleared
+                phoneFormatter?.clear()
+                textField.text = ""
+            }
+        }
+        
+        if (string.characters.count + range.location) == 14 {
+            print("full number")
+            self.getVerificationCode(phoneNumber)
+        }
+        
+        return false
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
