@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -56,9 +57,8 @@
                             <constraint firstItem="Zjp-UP-eiV" firstAttribute="bottom" secondItem="lMp-vV-y1G" secondAttribute="top" id="Mzi-5X-acY"/>
                             <constraint firstItem="Zjp-UP-eiV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="VBV-e8-Qyg"/>
                             <constraint firstItem="fCx-d2-8YR" firstAttribute="top" secondItem="XbP-PK-xlh" secondAttribute="bottom" constant="75" id="WvH-P6-Dbm"/>
-                            <constraint firstItem="fCx-d2-8YR" firstAttribute="centerX" secondItem="Zjp-UP-eiV" secondAttribute="centerX" id="etX-Hb-oTd"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mMc-Zf-D92"/>
-                            <constraint firstItem="fCx-d2-8YR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="v6i-Z8-1IV"/>
+                            <constraint firstItem="fCx-d2-8YR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s03-ye-Fbp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -70,8 +70,7 @@
                                 <exclude reference="8Tx-Fv-p6I"/>
                                 <exclude reference="VBV-e8-Qyg"/>
                                 <exclude reference="WvH-P6-Dbm"/>
-                                <exclude reference="etX-Hb-oTd"/>
-                                <exclude reference="v6i-Z8-1IV"/>
+                                <exclude reference="s03-ye-Fbp"/>
                                 <exclude reference="mMc-Zf-D92"/>
                                 <exclude reference="0Bk-No-bzN"/>
                                 <exclude reference="A5K-By-h8J"/>
@@ -87,8 +86,7 @@
                                 <include reference="8Tx-Fv-p6I"/>
                                 <include reference="VBV-e8-Qyg"/>
                                 <include reference="WvH-P6-Dbm"/>
-                                <include reference="etX-Hb-oTd"/>
-                                <include reference="v6i-Z8-1IV"/>
+                                <include reference="s03-ye-Fbp"/>
                                 <include reference="mMc-Zf-D92"/>
                                 <include reference="0Bk-No-bzN"/>
                                 <include reference="A5K-By-h8J"/>
@@ -103,6 +101,6 @@
     </scenes>
     <resources>
         <image name="backgroundImage" width="375" height="667"/>
-        <image name="route" width="83" height="77"/>
+        <image name="route" width="101" height="91"/>
     </resources>
 </document>

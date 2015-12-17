@@ -9,44 +9,55 @@
 import UIKit
 import SinchVerification
 
-class VerifyPhoneNumberViewController: UIViewController {
+class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
     var verification:Verification!
-    var applicationKey = "60b73d3d-61e9-4ed8-857a-1addcf1a131a";
+    var applicationKey = "60b73d3d-61e9-4ed8-857a-1addcf1a131a"
+    var timer = NSTimer()
     
-    @IBOutlet var pinNumber: UITextField!
-    @IBOutlet var verifyButton: UIButton!
-    @IBOutlet var status: UILabel!
     @IBOutlet var spinner: UIActivityIndicatorView!
+    @IBOutlet var validateTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        validateTextField.delegate = self
 
         // Do any additional setup after loading the view.
     }
-
+    
+    override func viewWillAppear(animated: Bool) {
+        self.validateTextField.becomeFirstResponder()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
-    @IBAction func verifyPhoneNumber(sender: AnyObject) {
-        spinner.startAnimating();
-        verifyButton.enabled = false;
-        status.text  = "";
-        pinNumber.enabled = false;
-        verification.verify(pinNumber.text!,
+    func verifyPhoneNumber() {
+        spinner.startAnimating()
+        timer.invalidate()
+        verification.verify(validateTextField.text!,
             completion: { (success:Bool, error:NSError?) -> Void in
-                self.spinner.stopAnimating();
-                self.verifyButton.enabled = true;
-                self.pinNumber.enabled = true;
+                self.spinner.stopAnimating()
                 if (success) {
-                    self.status.text = "Verified";
+                    print("Verified")
+                    self.performSegueWithIdentifier("SignUpComplete", sender: nil)
                 } else {
-                    self.status.text = error?.description;
+                    print(error?.description)
                 }
+                
         });
+    }
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string: String) -> Bool {
+        
+        if (string.characters.count + range.location) == 4 {
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target:self, selector: Selector("verifyPhoneNumber"), userInfo: nil, repeats: false)
+
+        }
+        
+        return true
     }
     
     /*

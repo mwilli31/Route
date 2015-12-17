@@ -17,6 +17,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     private var phoneFormatter: NBAsYouTypeFormatter!
 
     @IBOutlet var phoneNumber: UITextField!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,28 +36,15 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func disableUI(disable:Bool) {
-        if(disable) {
-            phoneNumber.resignFirstResponder();
-            let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(30*Double(NSEC_PER_MSEC)))
-            
-            dispatch_after(delayTime, dispatch_get_main_queue(), { () -> Void in
-                self.disableUI(false);
-            })
-
-        } else {
-            self.phoneNumber.becomeFirstResponder()
-        }
-        self.phoneNumber.enabled = !disable
-    }
-    
     func getVerificationCode(sender: AnyObject) {
-        //self.disableUI(true);
+        spinner.startAnimating()
         verification =
             SMSVerification(applicationKey:applicationKey,
                 phoneNumber: phoneNumber.text!)
         verification.initiate { (success:Bool, error:NSError?) -> Void in
-            self.disableUI(false)
+            self.phoneNumber.enabled = false
+            self.spinner.stopAnimating()
+
             if (success){
                 self.performSegueWithIdentifier("validatePhoneNumber", sender: sender)
             } else {
