@@ -50,13 +50,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lMp-vV-y1G" firstAttribute="top" secondItem="Zjp-UP-eiV" secondAttribute="bottom" id="0Bk-No-bzN"/>
                             <constraint firstItem="Zjp-UP-eiV" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="8Lo-GD-0NY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Zjp-UP-eiV" secondAttribute="trailing" constant="-20" id="8Tx-Fv-p6I"/>
-                            <constraint firstItem="lMp-vV-y1G" firstAttribute="top" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="A5K-By-h8J"/>
-                            <constraint firstItem="Zjp-UP-eiV" firstAttribute="bottom" secondItem="lMp-vV-y1G" secondAttribute="top" id="Mzi-5X-acY"/>
+                            <constraint firstItem="lMp-vV-y1G" firstAttribute="top" secondItem="Zjp-UP-eiV" secondAttribute="bottom" id="AQr-nT-dWB"/>
+                            <constraint firstItem="lMp-vV-y1G" firstAttribute="top" secondItem="obG-Y5-kRd" secondAttribute="bottom" constant="20" id="DDy-si-r0g"/>
+                            <constraint firstItem="Zjp-UP-eiV" firstAttribute="bottom" secondItem="lMp-vV-y1G" secondAttribute="top" id="I1a-CV-OoL"/>
+                            <constraint firstItem="fCx-d2-8YR" firstAttribute="top" secondItem="XbP-PK-xlh" secondAttribute="bottom" constant="75" id="Of0-gM-F2m"/>
                             <constraint firstItem="Zjp-UP-eiV" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" id="VBV-e8-Qyg"/>
-                            <constraint firstItem="fCx-d2-8YR" firstAttribute="top" secondItem="XbP-PK-xlh" secondAttribute="bottom" constant="75" id="WvH-P6-Dbm"/>
                             <constraint firstItem="obG-Y5-kRd" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="mMc-Zf-D92"/>
                             <constraint firstItem="fCx-d2-8YR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="s03-ye-Fbp"/>
                         </constraints>
@@ -69,11 +69,8 @@
                                 <exclude reference="8Lo-GD-0NY"/>
                                 <exclude reference="8Tx-Fv-p6I"/>
                                 <exclude reference="VBV-e8-Qyg"/>
-                                <exclude reference="WvH-P6-Dbm"/>
                                 <exclude reference="s03-ye-Fbp"/>
                                 <exclude reference="mMc-Zf-D92"/>
-                                <exclude reference="0Bk-No-bzN"/>
-                                <exclude reference="A5K-By-h8J"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -85,11 +82,8 @@
                                 <include reference="8Lo-GD-0NY"/>
                                 <include reference="8Tx-Fv-p6I"/>
                                 <include reference="VBV-e8-Qyg"/>
-                                <include reference="WvH-P6-Dbm"/>
                                 <include reference="s03-ye-Fbp"/>
                                 <include reference="mMc-Zf-D92"/>
-                                <include reference="0Bk-No-bzN"/>
-                                <include reference="A5K-By-h8J"/>
                             </mask>
                         </variation>
                     </view>

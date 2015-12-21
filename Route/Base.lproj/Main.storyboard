@@ -3,55 +3,132 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--SignUpStoryboard-->
+        <!--SignUpLogin-->
         <scene sceneID="JEr-6A-hNp">
             <objects>
-                <viewControllerPlaceholder storyboardName="SignUpStoryboard" bundleIdentifier="mike.Route" id="Ikz-gQ-W8h" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="SignUpStoryboard" bundleIdentifier="mike.Route" referencedIdentifier="SignUpLogin" id="Ikz-gQ-W8h" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aQE-dn-J6z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="958.5" y="310.5"/>
+            <point key="canvasLocation" x="1868.25" y="75.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Guy-oA-9q8">
             <objects>
-                <viewController id="zZz-gc-qwK" sceneMemberID="viewController">
+                <viewController id="zZz-gc-qwK" customClass="MainViewController" customModule="Route" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tps-dx-C2y"/>
                         <viewControllerLayoutGuide type="bottom" id="cFs-aV-dBM"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="etZ-F2-Age">
+                    <view key="view" contentMode="scaleToFill" id="A0j-Yj-El5">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ib-N6-JPR">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Sign Up"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="173" y="62" width="55" height="30"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="liN-ld-z91">
+                                <rect key="frame" x="0.0" y="-667" width="375" height="667"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="route" translatesAutoresizingMaskIntoConstraints="NO" id="Nem-dv-EfK">
+                                <rect key="frame" x="0.0" y="-47" width="50" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="ihP-lg-5TU"/>
+                                    <constraint firstAttribute="width" constant="103" id="mvM-hF-Qk4"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ihP-lg-5TU"/>
+                                        <exclude reference="mvM-hF-Qk4"/>
+                                    </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ihP-lg-5TU"/>
+                                        <include reference="mvM-hF-Qk4"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="  Copyright © 2015 Route. All rights reserved." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="10Z-iy-RbW">
+                                <rect key="frame" x="20" y="527" width="280" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m8o-7p-tfJ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Sign Up">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <segue destination="Ikz-gQ-W8h" kind="show" id="fkv-au-Hq3"/>
+                                    <action selector="testAction:" destination="zZz-gc-qwK" eventType="touchUpInside" id="Nfw-6C-R5q"/>
+                                    <segue destination="Ikz-gQ-W8h" kind="show" id="6UC-fN-IsQ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="10Z-iy-RbW" secondAttribute="bottom" constant="20" symbolic="YES" id="3wJ-fX-5Tf"/>
+                            <constraint firstItem="10Z-iy-RbW" firstAttribute="centerX" secondItem="A0j-Yj-El5" secondAttribute="centerX" id="5ni-l6-mTN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="liN-ld-z91" secondAttribute="trailing" constant="-20" id="6FL-ZS-93X"/>
+                            <constraint firstItem="liN-ld-z91" firstAttribute="top" secondItem="A0j-Yj-El5" secondAttribute="topMargin" id="6ec-oh-Csd"/>
+                            <constraint firstItem="liN-ld-z91" firstAttribute="leading" secondItem="A0j-Yj-El5" secondAttribute="leadingMargin" constant="-20" id="HOh-6V-4C1"/>
+                            <constraint firstItem="m8o-7p-tfJ" firstAttribute="leading" secondItem="A0j-Yj-El5" secondAttribute="leading" constant="160" id="VXg-vZ-r7D">
+                                <variation key="heightClass=regular-widthClass=compact" constant="156"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="m8o-7p-tfJ" secondAttribute="bottom" constant="362" id="bzQ-jB-dO8"/>
+                            <constraint firstItem="liN-ld-z91" firstAttribute="bottom" secondItem="cFs-aV-dBM" secondAttribute="top" id="gjo-EZ-G68"/>
+                            <constraint firstItem="Nem-dv-EfK" firstAttribute="top" secondItem="tps-dx-C2y" secondAttribute="bottom" constant="75" id="qnf-n9-oyY"/>
+                            <constraint firstItem="Nem-dv-EfK" firstAttribute="centerX" secondItem="A0j-Yj-El5" secondAttribute="centerX" id="xKL-Ce-U1s"/>
+                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="8ib-N6-JPR"/>
+                                <exclude reference="liN-ld-z91"/>
+                                <exclude reference="Nem-dv-EfK"/>
+                                <exclude reference="m8o-7p-tfJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6FL-ZS-93X"/>
+                                <exclude reference="6ec-oh-Csd"/>
+                                <exclude reference="HOh-6V-4C1"/>
+                                <exclude reference="gjo-EZ-G68"/>
+                                <exclude reference="qnf-n9-oyY"/>
+                                <exclude reference="xKL-Ce-U1s"/>
+                                <exclude reference="VXg-vZ-r7D"/>
+                                <exclude reference="bzQ-jB-dO8"/>
+                                <exclude reference="3wJ-fX-5Tf"/>
+                                <exclude reference="5ni-l6-mTN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="8ib-N6-JPR"/>
+                                <include reference="liN-ld-z91"/>
+                                <include reference="Nem-dv-EfK"/>
+                                <include reference="m8o-7p-tfJ"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6FL-ZS-93X"/>
+                                <include reference="6ec-oh-Csd"/>
+                                <include reference="HOh-6V-4C1"/>
+                                <include reference="gjo-EZ-G68"/>
+                                <include reference="qnf-n9-oyY"/>
+                                <include reference="xKL-Ce-U1s"/>
+                                <include reference="VXg-vZ-r7D"/>
+                                <include reference="bzQ-jB-dO8"/>
+                                <include reference="3wJ-fX-5Tf"/>
+                                <include reference="5ni-l6-mTN"/>
                             </mask>
                         </variation>
                     </view>
+                    <navigationItem key="navigationItem" id="AfD-h0-cLA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CyN-40-OEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="372" y="310.5"/>
+            <point key="canvasLocation" x="1290" y="310.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="backgroundImage" width="375" height="667"/>
+        <image name="route" width="101" height="91"/>
+    </resources>
 </document>

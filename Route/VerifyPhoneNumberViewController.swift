@@ -42,7 +42,7 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
                 self.spinner.stopAnimating()
                 if (success) {
                     print("Verified")
-                    self.performSegueWithIdentifier("SignUpComplete", sender: nil)
+                    self.performSegueWithIdentifier("CreateUsernameView", sender: nil)
                 } else {
                     print(error?.description)
                 }

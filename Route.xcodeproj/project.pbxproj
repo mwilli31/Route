@@ -20,6 +20,7 @@
 		27C74AE41C04FE4A00E5A206 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27C74AE31C04FE4A00E5A206 /* Assets.xcassets */; };
 		27C74AF21C04FE4A00E5A206 /* RouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AF11C04FE4A00E5A206 /* RouteTests.swift */; };
 		27C74AFD1C04FE4A00E5A206 /* RouteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AFC1C04FE4A00E5A206 /* RouteUITests.swift */; };
+		27CD0B271C28697D00E614DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27CD0B261C28697D00E614DA /* MainViewController.swift */; };
 		F01AF22C7C155C3B2FC70F75 /* Pods_Route.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9833D9B6E532B34263B9872A /* Pods_Route.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		27C74AF81C04FE4A00E5A206 /* RouteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RouteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AFC1C04FE4A00E5A206 /* RouteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouteUITests.swift; sourceTree = "<group>"; };
 		27C74AFE1C04FE4A00E5A206 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27CD0B261C28697D00E614DA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		9833D9B6E532B34263B9872A /* Pods_Route.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Route.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A28B9446C12A405EFCF8C94C /* Pods-Route.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Route.release.xcconfig"; path = "Pods/Target Support Files/Pods-Route/Pods-Route.release.xcconfig"; sourceTree = "<group>"; };
 		C230823E65931EF5B2CCAEF2 /* Pods-Route.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Route.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Route/Pods-Route.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +114,15 @@
 			name = Launch;
 			sourceTree = "<group>";
 		};
+		27A3FE571C274B8E0006E939 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				27C74ADD1C04FE4A00E5A206 /* Main.storyboard */,
+				27CD0B261C28697D00E614DA /* MainViewController.swift */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
 		27C74ACD1C04FE4A00E5A206 = {
 			isa = PBXGroup;
 			children = (
@@ -137,10 +148,10 @@
 		27C74AD81C04FE4A00E5A206 /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				27A3FE571C274B8E0006E939 /* Main */,
 				271388661C1E055B003BE336 /* Launch */,
 				271388631C1DFEF3003BE336 /* Signup */,
 				27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */,
-				27C74ADD1C04FE4A00E5A206 /* Main.storyboard */,
 				27C74AE31C04FE4A00E5A206 /* Assets.xcassets */,
 				27C74AE81C04FE4A00E5A206 /* Info.plist */,
 				27C74AE01C04FE4A00E5A206 /* Route.xcdatamodeld */,
@@ -370,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27CD0B271C28697D00E614DA /* MainViewController.swift in Sources */,
 				27B21C781C1DF7120091505B /* signUp.swift in Sources */,
 				27C74AE21C04FE4A00E5A206 /* Route.xcdatamodeld in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */,
