@@ -15,6 +15,8 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     var applicationKey = "60b73d3d-61e9-4ed8-857a-1addcf1a131a"
     var timer = NSTimer()
     
+    var phoneNumber:String = ""
+    
     @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var validateTextField: UITextField!
     
@@ -42,7 +44,7 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
                 self.spinner.stopAnimating()
                 if (success) {
                     print("Verified")
-                    self.performSegueWithIdentifier("SignUpComplete", sender: nil)
+                    self.performSegueWithIdentifier("ShowCreateUsername", sender: nil)
                 } else {
                     print(error?.description)
                 }
@@ -60,14 +62,11 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if(segue.identifier == "ShowCreateUsername") {
+            let destinationViewController = segue.destinationViewController as! CreateUsernameViewController
+            destinationViewController.phoneNumber = self.phoneNumber
+        }
     }
-    */
 
 }

@@ -8,16 +8,28 @@
 
 import UIKit
 import CoreData
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let myFirebase = Firebase(url:"https://routeapp.firebaseio.com")
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         NSThread.sleepForTimeInterval(1.5)
+        
+        myFirebase.observeAuthEventWithBlock({ authData in
+            if authData != nil {
+                // user authenticated
+                print(authData)
+            } else {
+                // No user is signed in
+                print("will present login view")
+            }
+        })
+        
         return true
     }
 
