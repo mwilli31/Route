@@ -15,22 +15,45 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     let myFirebase = Firebase(url:"https://routeapp.firebaseio.com")
+    
+    let MyKeychainWrapper = KeychainWrapper()
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        NSThread.sleepForTimeInterval(1.5)
         
-        myFirebase.observeAuthEventWithBlock({ authData in
-            if authData != nil {
-                // user authenticated
-                print(authData)
-            } else {
-                // No user is signed in
-                print("will present login view")
-            }
-        })
-        
+        checkLoginCurrentUser()
+
+        NSThread.sleepForTimeInterval(2)
+    
         return true
+    }
+    
+    func checkLoginCurrentUser() {
+        print("checking login...")
+        myFirebase.unauth()
+        
+        //Retrieve the data stored in NSUserDefaults that has info about the current user
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUser") as? NSData {
+            let currentUser = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! CurrentUser
+            
+            //if there is a login key stored in Keychain, then try to log in
+            let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+            if hasLoginKey == true {
+                myFirebase.authUser(currentUser.username + "@route.app", password: MyKeychainWrapper.myObjectForKey("v_Data") as? String) {
+                    error, authData in
+                    if error != nil {
+                        print(error)
+                    } else {
+                        // user is logged in, check authData for data
+                        print(authData.uid)
+                    }
+                }
+            } else {
+                "Will present login view: login key invalid"
+            }
+        } else {
+            print("Will present login view: no current user")
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

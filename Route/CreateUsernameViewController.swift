@@ -14,6 +14,8 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     // Create a reference to a Firebase location
     var myFirebase = Firebase(url:"https://routeapp.firebaseio.com")
     
+    let MyKeychainWrapper = KeychainWrapper()
+    
     var timer = NSTimer()
     
     var phoneNumber: String = ""
@@ -67,21 +69,18 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         let newUser = CurrentUser(username: username, phonenumber: phonenumber, authorizationData: uid)
         
         print(newUser)
+        let pass: String = phonenumber
+        
+        let hasLoginKey = NSUserDefaults.standardUserDefaults().boolForKey("hasLoginKey")
+        if hasLoginKey == false {
+            MyKeychainWrapper.mySetObject(pass, forKey:kSecValueData)
+            MyKeychainWrapper.writeToKeychain()
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: "hasLoginKey")
+            NSUserDefaults.standardUserDefaults().synchronize()
+        }
         
         let data = NSKeyedArchiver.archivedDataWithRootObject(newUser)
-        
         NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")
-        
-        getCurrentUserInfo()
-    }
-    
-    func getCurrentUserInfo() {
-        if let data = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUser") as? NSData {
-            let currentUser = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! CurrentUser
-            print(currentUser.phonenumber)
-            print(currentUser.username)
-            print(currentUser.authorizationData)
-        }
         
     }
     

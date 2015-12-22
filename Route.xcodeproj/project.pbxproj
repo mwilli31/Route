@@ -14,6 +14,8 @@
 		27A69E0E1C1E217E0008B762 /* Launch-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */; };
 		27AC6E5D1C289F5F0096C245 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */; };
 		27AC6E5F1C28DA480096C245 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5E1C28DA480096C245 /* CurrentUser.swift */; };
+		27AC6E631C29D97D0096C245 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E621C29D97D0096C245 /* KeychainWrapper.m */; };
+		27AC9BD81C29EDA40096C245 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC9BD71C29EDA40096C245 /* MainViewController.swift */; };
 		27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */; };
 		27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74ADB1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift */; };
 		27C74ADF1C04FE4A00E5A206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C74ADD1C04FE4A00E5A206 /* Main.storyboard */; };
@@ -49,6 +51,10 @@
 		27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch-667h@2x.png"; path = "Images/Launch-667h@2x.png"; sourceTree = "<group>"; };
 		27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		27AC6E5E1C28DA480096C245 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		27AC6E601C29D97C0096C245 /* Route-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Route-Bridging-Header.h"; sourceTree = "<group>"; };
+		27AC6E611C29D97D0096C245 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		27AC6E621C29D97D0096C245 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
+		27AC9BD71C29EDA40096C245 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		27C42B091C1F66E40088F9A0 /* libPhoneNumber_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber_iOS.framework; path = "Pods/../build/Debug-iphoneos/libPhoneNumber_iOS.framework"; sourceTree = "<group>"; };
 		27C74AD61C04FE4A00E5A206 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,11 +103,14 @@
 		271388631C1DFEF3003BE336 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				27AC6E611C29D97D0096C245 /* KeychainWrapper.h */,
+				27AC6E621C29D97D0096C245 /* KeychainWrapper.m */,
 				271388611C1DFEAB003BE336 /* SignUpStoryboard.storyboard */,
 				27C74ADB1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift */,
 				27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */,
 				2740B1AE1C211124002026D0 /* SignUpCompleteViewController.swift */,
 				27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */,
+				27AC6E601C29D97C0096C245 /* Route-Bridging-Header.h */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -113,6 +122,15 @@
 				27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */,
 			);
 			name = Launch;
+			sourceTree = "<group>";
+		};
+		27AC9BD61C29ED790096C245 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				27C74ADD1C04FE4A00E5A206 /* Main.storyboard */,
+				27AC9BD71C29EDA40096C245 /* MainViewController.swift */,
+			);
+			name = Main;
 			sourceTree = "<group>";
 		};
 		27C74ACD1C04FE4A00E5A206 = {
@@ -140,10 +158,10 @@
 		27C74AD81C04FE4A00E5A206 /* Route */ = {
 			isa = PBXGroup;
 			children = (
+				27AC9BD61C29ED790096C245 /* Main */,
 				271388661C1E055B003BE336 /* Launch */,
 				271388631C1DFEF3003BE336 /* Signup */,
 				27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */,
-				27C74ADD1C04FE4A00E5A206 /* Main.storyboard */,
 				27C74AE31C04FE4A00E5A206 /* Assets.xcassets */,
 				27C74AE81C04FE4A00E5A206 /* Info.plist */,
 				27C74AE01C04FE4A00E5A206 /* Route.xcdatamodeld */,
@@ -253,7 +271,7 @@
 		27C74ACE1C04FE4A00E5A206 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Michael Williams";
 				TargetAttributes = {
@@ -374,10 +392,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				27C74AE21C04FE4A00E5A206 /* Route.xcdatamodeld in Sources */,
+				27AC6E631C29D97D0096C245 /* KeychainWrapper.m in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */,
 				2740B1AF1C211124002026D0 /* SignUpCompleteViewController.swift in Sources */,
 				27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */,
 				27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */,
+				27AC9BD81C29EDA40096C245 /* MainViewController.swift in Sources */,
 				27AC6E5F1C28DA480096C245 /* CurrentUser.swift in Sources */,
 				27AC6E5D1C289F5F0096C245 /* CreateUsernameViewController.swift in Sources */,
 			);
@@ -514,6 +534,7 @@
 			baseConfigurationReference = C230823E65931EF5B2CCAEF2 /* Pods-Route.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -526,6 +547,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mike.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Route/Route-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -535,6 +558,7 @@
 			baseConfigurationReference = A28B9446C12A405EFCF8C94C /* Pods-Route.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -547,6 +571,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mike.Route;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Route/Route-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
