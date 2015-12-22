@@ -82,6 +82,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         if(segue.identifier == "validatePhoneNumber") {
             let enterCodeVC = segue.destinationViewController as! VerifyPhoneNumberViewController
             enterCodeVC.verification = self.verification
+            enterCodeVC.phoneNumber = "+1" + self.phoneNumber.text!
         }
     }
 
