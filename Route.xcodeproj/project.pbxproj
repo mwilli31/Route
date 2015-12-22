@@ -13,7 +13,7 @@
 		27A69E0C1C1E16ED0008B762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */; };
 		27A69E0E1C1E217E0008B762 /* Launch-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */; };
 		27AC6E5D1C289F5F0096C245 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */; };
-		27B21C781C1DF7120091505B /* signUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B21C771C1DF7120091505B /* signUp.swift */; };
+		27AC6E5F1C28DA480096C245 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5E1C28DA480096C245 /* CurrentUser.swift */; };
 		27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */; };
 		27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74ADB1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift */; };
 		27C74ADF1C04FE4A00E5A206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C74ADD1C04FE4A00E5A206 /* Main.storyboard */; };
@@ -48,7 +48,7 @@
 		27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch-667h@2x.png"; path = "Images/Launch-667h@2x.png"; sourceTree = "<group>"; };
 		27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
-		27B21C771C1DF7120091505B /* signUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = signUp.swift; path = API/signUp.swift; sourceTree = "<group>"; };
+		27AC6E5E1C28DA480096C245 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		27C42B091C1F66E40088F9A0 /* libPhoneNumber_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber_iOS.framework; path = "Pods/../build/Debug-iphoneos/libPhoneNumber_iOS.framework"; sourceTree = "<group>"; };
 		27C74AD61C04FE4A00E5A206 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -147,7 +147,7 @@
 				27C74AE31C04FE4A00E5A206 /* Assets.xcassets */,
 				27C74AE81C04FE4A00E5A206 /* Info.plist */,
 				27C74AE01C04FE4A00E5A206 /* Route.xcdatamodeld */,
-				27B21C771C1DF7120091505B /* signUp.swift */,
+				27AC6E5E1C28DA480096C245 /* CurrentUser.swift */,
 			);
 			path = Route;
 			sourceTree = "<group>";
@@ -373,12 +373,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				27B21C781C1DF7120091505B /* signUp.swift in Sources */,
 				27C74AE21C04FE4A00E5A206 /* Route.xcdatamodeld in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */,
 				2740B1AF1C211124002026D0 /* SignUpCompleteViewController.swift in Sources */,
 				27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */,
 				27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */,
+				27AC6E5F1C28DA480096C245 /* CurrentUser.swift in Sources */,
 				27AC6E5D1C289F5F0096C245 /* CreateUsernameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

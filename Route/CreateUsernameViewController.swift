@@ -37,25 +37,51 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func createUser(username_str: String) {
+    func createUser(usernameStr: String) {
         spinner.startAnimating()
         timer.invalidate()
-        print(username_str)
-        print(self.phoneNumber)
+
+        let usernameEmail: String = usernameStr + "@route.app"
         
-        myFirebase.createUser(username_str, password: self.phoneNumber,
-            withValueCompletionBlock: { error, result in
+        myFirebase.createUser(usernameEmail, password: self.phoneNumber,
+            withValueCompletionBlock: { error, authData in
                 
                 self.spinner.stopAnimating()
 
                 if error != nil {
                     print(error)
                 } else {
-                    let uid = result["uid"] as? String
+                    
+                    let uid = authData["uid"] as! String
                     print("Successfully created user account with uid: \(uid)")
+                    
+                    self.storeCurrentUserInfo(uid, phonenumber: self.phoneNumber, username: usernameStr)
+                    
                     self.performSegueWithIdentifier("SuccessView", sender: nil)
                 }
         })
+        
+    }
+    
+    func storeCurrentUserInfo(uid: String, phonenumber: String, username: String) {
+        let newUser = CurrentUser(username: username, phonenumber: phonenumber, authorizationData: uid)
+        
+        print(newUser)
+        
+        let data = NSKeyedArchiver.archivedDataWithRootObject(newUser)
+        
+        NSUserDefaults.standardUserDefaults().setObject(data, forKey: "CurrentUser")
+        
+        getCurrentUserInfo()
+    }
+    
+    func getCurrentUserInfo() {
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUser") as? NSData {
+            let currentUser = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! CurrentUser
+            print(currentUser.phonenumber)
+            print(currentUser.username)
+            print(currentUser.authorizationData)
+        }
         
     }
     
@@ -63,7 +89,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         
         //textField code
         
-        createUser(usernameTextField.text! + "@route.com")
+        createUser(usernameTextField.text!)
         return true
     }
 
