@@ -10,6 +10,7 @@
 		271388621C1DFEAB003BE336 /* SignUpStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 271388611C1DFEAB003BE336 /* SignUpStoryboard.storyboard */; };
 		27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */; };
 		2740B1AF1C211124002026D0 /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740B1AE1C211124002026D0 /* SignUpCompleteViewController.swift */; };
+		277BE93D1C2A5DE900830FF0 /* SetProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277BE93C1C2A5DE900830FF0 /* SetProfilePictureViewController.swift */; };
 		27A69E0C1C1E16ED0008B762 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */; };
 		27A69E0E1C1E217E0008B762 /* Launch-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */; };
 		27AC6E5D1C289F5F0096C245 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */; };
@@ -47,6 +48,7 @@
 		271388611C1DFEAB003BE336 /* SignUpStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = SignUpStoryboard.storyboard; path = ../SignUpStoryboard.storyboard; sourceTree = "<group>"; };
 		27187C011C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		2740B1AE1C211124002026D0 /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpCompleteViewController.swift; sourceTree = "<group>"; };
+		277BE93C1C2A5DE900830FF0 /* SetProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetProfilePictureViewController.swift; sourceTree = "<group>"; };
 		27A69E0B1C1E16ED0008B762 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27A69E0D1C1E217E0008B762 /* Launch-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Launch-667h@2x.png"; path = "Images/Launch-667h@2x.png"; sourceTree = "<group>"; };
 		27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
@@ -111,6 +113,7 @@
 				2740B1AE1C211124002026D0 /* SignUpCompleteViewController.swift */,
 				27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */,
 				27AC6E601C29D97C0096C245 /* Route-Bridging-Header.h */,
+				277BE93C1C2A5DE900830FF0 /* SetProfilePictureViewController.swift */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				27AC6E631C29D97D0096C245 /* KeychainWrapper.m in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */,
 				2740B1AF1C211124002026D0 /* SignUpCompleteViewController.swift in Sources */,
+				277BE93D1C2A5DE900830FF0 /* SetProfilePictureViewController.swift in Sources */,
 				27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */,
 				27187C021C1DDE8400C1D828 /* VerifyPhoneNumberViewController.swift in Sources */,
 				27AC9BD81C29EDA40096C245 /* MainViewController.swift in Sources */,

@@ -59,7 +59,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
                     
                     self.storeCurrentUserInfo(uid, phonenumber: self.phoneNumber, username: usernameStr)
                     
-                    self.performSegueWithIdentifier("SuccessView", sender: nil)
+                    self.performSegueWithIdentifier("SetProfilePictureView", sender: nil)
                 }
         })
         
