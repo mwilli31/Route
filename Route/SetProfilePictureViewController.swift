@@ -19,6 +19,8 @@ class SetProfilePictureViewController: UIViewController, UIImagePickerController
     @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var profilePicImageView: UIImageView!
     @IBOutlet var useCameraRollButton: UIButton!
+    @IBOutlet var changeButton: UIButton!
+    @IBOutlet var looksGoodButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,16 +46,37 @@ class SetProfilePictureViewController: UIViewController, UIImagePickerController
         
     }
     
+    @IBAction func setProfilePhoto(sender: AnyObject) {
+        self.performSegueWithIdentifier("AccessContactsView", sender: sender)
+    }
+    
+    func showDecisionButtons(show: Bool) {
+        if(show == true) {
+            useCameraRollButton.hidden = true
+            useCameraRollButton.enabled = false
+            
+            changeButton.hidden = false
+            changeButton.enabled = true
+            
+            looksGoodButton.hidden = false
+            looksGoodButton.enabled = true
+        }
+    }
+    
     // MARK: - UIImagePickerControllerDelegate Methods
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        profilePicImageView.contentMode = .ScaleAspectFit
         
-        let radius = self.profilePicImageView.frame.size.width / 2;
-        let roundedImage = maskRoundedImage(image, radius: radius)
+        profilePicImageView.contentMode = .ScaleAspectFill
         
-        profilePicImageView.image = roundedImage
+        //let radius: Float = Float(60);
+        //let roundedImage = maskRoundedImage(image, radius: radius)
+        profilePicImageView.layer.cornerRadius = 10;
+        profilePicImageView.clipsToBounds = true
+        profilePicImageView.image = image
         
+        showDecisionButtons(true)
+    
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -61,14 +84,13 @@ class SetProfilePictureViewController: UIViewController, UIImagePickerController
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
-    func maskRoundedImage(image: UIImage, radius: CGFloat) -> UIImage {
+    func maskRoundedImage(image: UIImage, radius: Float) -> UIImage {
         let imageView: UIImageView = UIImageView(image: image)
         var layer: CALayer = CALayer()
         layer = imageView.layer
         
         layer.masksToBounds = true
-        layer.cornerRadius = radius
+        layer.cornerRadius = CGFloat(radius)
         
         UIGraphicsBeginImageContext(imageView.bounds.size)
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
