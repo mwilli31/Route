@@ -86,10 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Route/Firebase.framework"
   install_framework "${PODS_ROOT}/SinchVerification-Swift/swift/SinchVerification.framework"
+  install_framework "Pods-Route/UIAlertControllerExtension.framework"
   install_framework "Pods-Route/libPhoneNumber_iOS.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Route/Firebase.framework"
   install_framework "${PODS_ROOT}/SinchVerification-Swift/swift/SinchVerification.framework"
+  install_framework "Pods-Route/UIAlertControllerExtension.framework"
   install_framework "Pods-Route/libPhoneNumber_iOS.framework"
 fi

@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '16B6BA58D9AD8B4BC146BBD9'
-               BlueprintName = 'libPhoneNumber-iOS'
+               BlueprintIdentifier = '706DC8E6E1C9E82B3C71DE65'
+               BlueprintName = 'UIAlertControllerExtension'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPhoneNumber_iOS.framework'>
+               BuildableName = 'UIAlertControllerExtension.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

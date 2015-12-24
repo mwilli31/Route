@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'FE30474EAEB9730333B85C7F'
+               BlueprintIdentifier = '8270A6010F86C375D2666603'
                BlueprintName = 'Pods-Route'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_Route.framework'>

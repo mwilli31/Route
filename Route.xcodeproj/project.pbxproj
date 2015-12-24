@@ -17,6 +17,7 @@
 		27AC6E5F1C28DA480096C245 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E5E1C28DA480096C245 /* CurrentUser.swift */; };
 		27AC6E631C29D97D0096C245 /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 27AC6E621C29D97D0096C245 /* KeychainWrapper.m */; };
 		27AC9BD81C29EDA40096C245 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27AC9BD71C29EDA40096C245 /* MainViewController.swift */; };
+		27C2E61D1C2B365C00F7FDA6 /* AccessContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C2E61C1C2B365C00F7FDA6 /* AccessContactsViewController.swift */; };
 		27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */; };
 		27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C74ADB1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift */; };
 		27C74ADF1C04FE4A00E5A206 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27C74ADD1C04FE4A00E5A206 /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		27AC6E611C29D97D0096C245 /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
 		27AC6E621C29D97D0096C245 /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		27AC9BD71C29EDA40096C245 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		27C2E61C1C2B365C00F7FDA6 /* AccessContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessContactsViewController.swift; sourceTree = "<group>"; };
 		27C42B091C1F66E40088F9A0 /* libPhoneNumber_iOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libPhoneNumber_iOS.framework; path = "Pods/../build/Debug-iphoneos/libPhoneNumber_iOS.framework"; sourceTree = "<group>"; };
 		27C74AD61C04FE4A00E5A206 /* Route.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Route.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27C74AD91C04FE4A00E5A206 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				27AC6E5C1C289F5F0096C245 /* CreateUsernameViewController.swift */,
 				27AC6E601C29D97C0096C245 /* Route-Bridging-Header.h */,
 				277BE93C1C2A5DE900830FF0 /* SetProfilePictureViewController.swift */,
+				27C2E61C1C2B365C00F7FDA6 /* AccessContactsViewController.swift */,
 			);
 			name = Signup;
 			sourceTree = "<group>";
@@ -397,6 +400,7 @@
 				27C74AE21C04FE4A00E5A206 /* Route.xcdatamodeld in Sources */,
 				27AC6E631C29D97D0096C245 /* KeychainWrapper.m in Sources */,
 				27C74ADC1C04FE4A00E5A206 /* SignupPhoneNumberViewController.swift in Sources */,
+				27C2E61D1C2B365C00F7FDA6 /* AccessContactsViewController.swift in Sources */,
 				2740B1AF1C211124002026D0 /* SignUpCompleteViewController.swift in Sources */,
 				277BE93D1C2A5DE900830FF0 /* SetProfilePictureViewController.swift in Sources */,
 				27C74ADA1C04FE4A00E5A206 /* AppDelegate.swift in Sources */,
