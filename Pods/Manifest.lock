@@ -1,19 +1,19 @@
 PODS:
   - Firebase (2.4.3)
   - libPhoneNumber-iOS (0.8.10)
+  - PermissionScope (1.0.1)
   - SinchVerification-Swift (1.4.1)
-  - UIAlertControllerExtension (1.1)
 
 DEPENDENCIES:
   - Firebase (>= 2.4.3)
   - libPhoneNumber-iOS (~> 0.8)
+  - PermissionScope
   - SinchVerification-Swift
-  - UIAlertControllerExtension (~> 1.0)
 
 SPEC CHECKSUMS:
   Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b
   libPhoneNumber-iOS: 7bfd00f843fdcd82b5182b463e8eb3b27579f41d
+  PermissionScope: 9767066cedefd211d90a8c4f92f6f1a987085ee8
   SinchVerification-Swift: 3cb3878bfdeb2125666ef36dfc692589882aa342
-  UIAlertControllerExtension: d3aaf48590f182096b8bb81997ae54f24ccc07ab
 
 COCOAPODS: 0.39.0

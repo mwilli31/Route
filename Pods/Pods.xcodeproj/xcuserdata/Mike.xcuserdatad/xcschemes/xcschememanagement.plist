@@ -9,12 +9,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Route.xcscheme</key>
+		<key>PermissionScope.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>UIAlertControllerExtension.xcscheme</key>
+		<key>Pods-Route.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -26,6 +26,27 @@
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>230F06C649365BFB9A3B54AAE6CD35CE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4D7EB29BE37F1A91A3A4C63A2FBB147</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C55E46AC6A1E70A6AA25E306AE545375</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>

@@ -8,20 +8,57 @@
 
 import UIKit
 import Contacts
+import UIAlertControllerExtension
+import PermissionScope
 
 class AccessContactsViewController: UIViewController {
     
+    let pscope = PermissionScope()
     var contactStore = CNContactStore()
+    @IBOutlet var useAddressBookButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func useAddressBook(sender: AnyObject) {
+        requestForAccess { (accessGranted) -> Void in
+            if accessGranted {
+                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+                
+                // Get all the containers
+                var allContainers: [CNContainer] = []
+                do {
+                    allContainers = try self.contactStore.containersMatchingPredicate(nil)
+                } catch {
+                    print("Error fetching containers")
+                }
+                
+                var results: [CNContact] = []
+                
+                // Iterate all containers and append their contacts to our results array
+                for container in allContainers {
+                    let fetchPredicate = CNContact.predicateForContactsInContainerWithIdentifier(container.identifier)
+                    
+                    do {
+                        let containerResults = try self.contactStore.unifiedContactsMatchingPredicate(fetchPredicate, keysToFetch: keys)
+                        results.appendContentsOf(containerResults)
+                    } catch {
+                        print("Error fetching results for container")
+                    }
+                }
+                
+                print(results)
+                self.performSegueWithIdentifier("SuccessView", sender: sender)
+                
+            }
+        }
     }
     
     func requestForAccess(completionHandler: (accessGranted: Bool) -> Void) {
@@ -38,31 +75,15 @@ class AccessContactsViewController: UIViewController {
                 }
                 else {
                     if authorizationStatus == CNAuthorizationStatus.Denied {
-                        dispatch_async(dispatch_get_main_queue(), { () -> Void in
-                            let message = "\(accessError!.localizedDescription)\n\nPlease allow the app to access your contacts through the Settings."
-                            self.showMessage(message)
-                        })
+                        print("denied")
                     }
+
                 }
             })
             
         default:
             completionHandler(accessGranted: false)
         }
-    }
-    
-    func showMessage(message: String) {
-        let alertController = UIAlertController(title: "Birthdays", message: message, preferredStyle: UIAlertControllerStyle.Alert)
-        
-        let dismissAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) { (action) -> Void in
-        }
-        
-        alertController.addAction(dismissAction)
-        
-        let pushedViewControllers = (self.rootViewController as! UINavigationController).viewControllers
-        let presentedViewController = pushedViewControllers[pushedViewControllers.count - 1]
-        
-        presentedViewController.presentViewController(alertController, animated: true, completion: nil)
     }
 
     /*

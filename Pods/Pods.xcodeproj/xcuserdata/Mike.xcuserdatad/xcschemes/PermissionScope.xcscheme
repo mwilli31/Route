@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '706DC8E6E1C9E82B3C71DE65'
-               BlueprintName = 'UIAlertControllerExtension'
+               BlueprintIdentifier = 'D3E2968A32254D5CD8D64E9C'
+               BlueprintName = 'PermissionScope'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'UIAlertControllerExtension.framework'>
+               BuildableName = 'PermissionScope.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
