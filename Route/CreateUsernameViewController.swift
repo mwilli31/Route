@@ -57,7 +57,9 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
                     let uid = authData["uid"] as! String
                     print("Successfully created user account with uid: \(uid)")
                     
-                    self.storeCurrentUserInfo(uid, phonenumber: self.phoneNumber, username: usernameStr)
+                    self.storeCurrentUserInfoLocally(uid, phonenumber: self.phoneNumber, username: usernameStr)
+                    
+                    self.storeNewUserInfoToDatabase(uid, phonenumber: self.phoneNumber, username: usernameStr)
                     
                     self.performSegueWithIdentifier("SetProfilePictureView", sender: nil)
                 }
@@ -65,7 +67,48 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    func storeCurrentUserInfo(uid: String, phonenumber: String, username: String) {
+    func storeNewUserInfoToDatabase(uid: String, phonenumber: String, username: String) {
+        let un = "@" + username
+        
+        //For now the newUser will only have the following information saved
+        //We will add more data on as it comes available, like profile photo etc.
+        let newUser = [
+            "phoneNumber": phonenumber,
+            "displayName": un
+        ]
+        
+        // Create a child path with a key set to the uid underneath the "users" node
+        // This creates a URL path like the following:
+        //  - https://<YOUR-FIREBASE-APP>.firebaseio.com/users/<uid>
+        myFirebase.childByAppendingPath("users").childByAppendingPath(uid).setValue(newUser)
+        
+        // Add this new user to the overall list of users
+        // First index by Username in RouteUsersUN
+        let usersUNRef = myFirebase.childByAppendingPath("RouteUsersUN")
+        let userUN = [un: phonenumber]
+        usersUNRef.setValue(userUN, withCompletionBlock: {
+            (error:NSError?, ref:Firebase!) in
+            if (error != nil) {
+                print(error)
+            } else {
+                print("Data saved successfully!")
+            }
+        })
+        
+        // Second index by Phonenumber in RouteUsersPN
+        let usersPNRef = myFirebase.childByAppendingPath("RouteUsersPN")
+        let userPN = [phonenumber: un]
+        usersPNRef.setValue(userPN, withCompletionBlock: {
+            (error:NSError?, ref:Firebase!) in
+            if (error != nil) {
+                print(error)
+            } else {
+                print("Data saved successfully!")
+            }
+        })
+    }
+    
+    func storeCurrentUserInfoLocally(uid: String, phonenumber: String, username: String) {
         let newUser = CurrentUser(username: username, phonenumber: phonenumber, authorizationData: uid)
         
         print(newUser)
