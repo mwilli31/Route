@@ -18,6 +18,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var phoneNumber: UITextField!
     @IBOutlet var spinner: UIActivityIndicatorView!
+    @IBOutlet var countryCodeText: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,7 +83,20 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         if(segue.identifier == "validatePhoneNumber") {
             let enterCodeVC = segue.destinationViewController as! VerifyPhoneNumberViewController
             enterCodeVC.verification = self.verification
-            enterCodeVC.phoneNumber = "+1" + self.phoneNumber.text!
+            
+            //TODO: allow for non-US based phone numbers
+            
+            let phoneUtil = NBPhoneNumberUtil()
+            
+            do {
+                let phoneNumber: NBPhoneNumber = try phoneUtil.parse(self.phoneNumber.text!, defaultRegion: "US")
+                let formattedString: String = try phoneUtil.format(phoneNumber, numberFormat: .E164)
+                enterCodeVC.phoneNumber = formattedString
+            }
+            catch let error as NSError {
+                print(error.localizedDescription)
+            }
+            
         }
     }
 

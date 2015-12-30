@@ -236,6 +236,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="piJ-Ai-ynA"/>
                     <connections>
+                        <outlet property="countryCodeText" destination="nS5-0i-CMG" id="ebG-h3-oM5"/>
                         <outlet property="phoneNumber" destination="FFe-lB-bBF" id="uNX-7N-Ix6"/>
                         <outlet property="spinner" destination="4ZO-pG-xXx" id="1HA-Gd-FfR"/>
                         <segue destination="kTk-zk-Ixi" kind="show" identifier="validatePhoneNumber" id="r35-WU-tlM">
@@ -929,6 +930,20 @@
                                 <exclude reference="I6Y-Ok-H9P"/>
                                 <exclude reference="a4r-tc-LSG"/>
                                 <exclude reference="ekf-4s-4NX"/>
+                                <exclude reference="B5I-pV-bPP"/>
+                                <exclude reference="TQy-ZL-uW8"/>
+                                <exclude reference="jEv-MH-wZr"/>
+                                <exclude reference="EGm-NZ-5EV"/>
+                                <exclude reference="cdP-De-pvc"/>
+                                <exclude reference="egv-bT-77A"/>
+                                <exclude reference="sV9-HE-VBk"/>
+                                <exclude reference="wc2-bN-BnV"/>
+                                <exclude reference="NKS-7P-cUK"/>
+                                <exclude reference="2YY-Ir-PlE"/>
+                                <exclude reference="50g-Zn-KdS"/>
+                                <exclude reference="5FI-e3-UJJ"/>
+                                <exclude reference="j49-Pv-h5D"/>
+                                <exclude reference="rf3-nO-2NK"/>
                                 <exclude reference="0eY-Ov-CHZ"/>
                                 <exclude reference="3jW-7r-hQA"/>
                                 <exclude reference="4kS-9X-kje"/>
@@ -936,24 +951,10 @@
                                 <exclude reference="baX-V2-XgB"/>
                                 <exclude reference="fnX-eg-Fvo"/>
                                 <exclude reference="gzm-fk-SsX"/>
-                                <exclude reference="2YY-Ir-PlE"/>
-                                <exclude reference="50g-Zn-KdS"/>
-                                <exclude reference="5FI-e3-UJJ"/>
-                                <exclude reference="j49-Pv-h5D"/>
-                                <exclude reference="rf3-nO-2NK"/>
-                                <exclude reference="EGm-NZ-5EV"/>
-                                <exclude reference="cdP-De-pvc"/>
-                                <exclude reference="egv-bT-77A"/>
-                                <exclude reference="sV9-HE-VBk"/>
-                                <exclude reference="wc2-bN-BnV"/>
-                                <exclude reference="NKS-7P-cUK"/>
                                 <exclude reference="I0y-gW-Aid"/>
                                 <exclude reference="V6A-tU-7l7"/>
                                 <exclude reference="msE-lH-lus"/>
                                 <exclude reference="yD9-ym-CLh"/>
-                                <exclude reference="B5I-pV-bPP"/>
-                                <exclude reference="TQy-ZL-uW8"/>
-                                <exclude reference="jEv-MH-wZr"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -971,6 +972,20 @@
                                 <include reference="I6Y-Ok-H9P"/>
                                 <include reference="a4r-tc-LSG"/>
                                 <exclude reference="ekf-4s-4NX"/>
+                                <include reference="B5I-pV-bPP"/>
+                                <include reference="TQy-ZL-uW8"/>
+                                <include reference="jEv-MH-wZr"/>
+                                <include reference="EGm-NZ-5EV"/>
+                                <exclude reference="cdP-De-pvc"/>
+                                <exclude reference="egv-bT-77A"/>
+                                <include reference="sV9-HE-VBk"/>
+                                <exclude reference="wc2-bN-BnV"/>
+                                <include reference="NKS-7P-cUK"/>
+                                <include reference="2YY-Ir-PlE"/>
+                                <exclude reference="50g-Zn-KdS"/>
+                                <exclude reference="5FI-e3-UJJ"/>
+                                <exclude reference="j49-Pv-h5D"/>
+                                <include reference="rf3-nO-2NK"/>
                                 <exclude reference="0eY-Ov-CHZ"/>
                                 <exclude reference="3jW-7r-hQA"/>
                                 <exclude reference="4kS-9X-kje"/>
@@ -978,24 +993,10 @@
                                 <exclude reference="baX-V2-XgB"/>
                                 <include reference="fnX-eg-Fvo"/>
                                 <include reference="gzm-fk-SsX"/>
-                                <include reference="2YY-Ir-PlE"/>
-                                <exclude reference="50g-Zn-KdS"/>
-                                <exclude reference="5FI-e3-UJJ"/>
-                                <exclude reference="j49-Pv-h5D"/>
-                                <include reference="rf3-nO-2NK"/>
-                                <include reference="EGm-NZ-5EV"/>
-                                <exclude reference="cdP-De-pvc"/>
-                                <exclude reference="egv-bT-77A"/>
-                                <include reference="sV9-HE-VBk"/>
-                                <exclude reference="wc2-bN-BnV"/>
-                                <include reference="NKS-7P-cUK"/>
                                 <exclude reference="I0y-gW-Aid"/>
                                 <include reference="V6A-tU-7l7"/>
                                 <include reference="msE-lH-lus"/>
                                 <exclude reference="yD9-ym-CLh"/>
-                                <include reference="B5I-pV-bPP"/>
-                                <include reference="TQy-ZL-uW8"/>
-                                <include reference="jEv-MH-wZr"/>
                             </mask>
                         </variation>
                     </view>

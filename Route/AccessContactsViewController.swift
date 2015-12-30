@@ -8,17 +8,17 @@
 
 import UIKit
 import Contacts
-import UIAlertControllerExtension
-import PermissionScope
+import libPhoneNumber_iOS
 
 class AccessContactsViewController: UIViewController {
     
-    let pscope = PermissionScope()
     var contactStore = CNContactStore()
+    
     @IBOutlet var useAddressBookButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
 
@@ -32,15 +32,32 @@ class AccessContactsViewController: UIViewController {
             if accessGranted {
                 let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
                 
+                let request = CNContactFetchRequest(keysToFetch: keys)
+                
+                var results: [CNContact] = []
+                
+                do{
+                    try self.contactStore.enumerateContactsWithFetchRequest(request) {
+                        contact, stop in
+                        print(contact.givenName)
+                        print(contact.familyName)
+                        print(contact.phoneNumbers)
+                        print("")
+                        results.append(contact)
+                    }
+                } catch let err{
+                    print(err)
+                }
+                
+                
                 // Get all the containers
-                var allContainers: [CNContainer] = []
+               /* var allContainers: [CNContainer] = []
                 do {
                     allContainers = try self.contactStore.containersMatchingPredicate(nil)
                 } catch {
                     print("Error fetching containers")
                 }
                 
-                var results: [CNContact] = []
                 
                 // Iterate all containers and append their contacts to our results array
                 for container in allContainers {
@@ -52,9 +69,40 @@ class AccessContactsViewController: UIViewController {
                     } catch {
                         print("Error fetching results for container")
                     }
+                } */
+                
+                /*  Iterate through contacts results array and see if any of the contacts are Route Users:
+                *       T. If users -> do they have Route Networks set up?
+                *           T. If Route Network set up -> Display to user
+                *       F. If NOT users -> is their phone number stored in ~/NonRouteUsers node?
+                            T. If it doesn't exist -> Store in ~/NonRouteUsers
+                */
+                
+                let phoneUtil = NBPhoneNumberUtil()
+
+                for contact in results {
+                    for (index, item) in contact.phoneNumbers.enumerate() {
+                        let pn: CNPhoneNumber = item.value as! CNPhoneNumber
+                        
+                        do {
+                            //format all numbers into the same format for storage (e 164 international format)
+                            let countryCode = pn.valueForKey("countryCode") as! String
+                            let digits = pn.valueForKey("digits") as! String
+                            print(countryCode + "  " + digits)
+                            
+                            let phoneNumber: NBPhoneNumber = try phoneUtil.parse(digits, defaultRegion: countryCode)
+                            let formattedString: String = try phoneUtil.format(phoneNumber, numberFormat: .E164)
+                            
+                            print(formattedString)
+                        }
+                        catch let error as NSError {
+                            print(error.localizedDescription)
+                        }
+                        
+                    }
+                    print("")
                 }
                 
-                print(results)
                 self.performSegueWithIdentifier("SuccessView", sender: sender)
                 
             }
