@@ -9,102 +9,112 @@
 import UIKit
 import Contacts
 import libPhoneNumber_iOS
+import Firebase
 
 class AccessContactsViewController: UIViewController {
     
     var contactStore = CNContactStore()
     
     @IBOutlet var useAddressBookButton: UIButton!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func useAddressBook(sender: AnyObject) {
+        
         requestForAccess { (accessGranted) -> Void in
             if accessGranted {
-                let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
-                
-                let request = CNContactFetchRequest(keysToFetch: keys)
-                
-                var results: [CNContact] = []
-                
-                do{
-                    try self.contactStore.enumerateContactsWithFetchRequest(request) {
-                        contact, stop in
-                        print(contact.givenName)
-                        print(contact.familyName)
-                        print(contact.phoneNumbers)
-                        print("")
-                        results.append(contact)
+                if let data = NSUserDefaults.standardUserDefaults().objectForKey("CurrentUser") as? NSData {
+                    
+                    let currentUser = NSKeyedUnarchiver.unarchiveObjectWithData(data) as! CurrentUser
+                    
+                    let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+                    
+                    let request = CNContactFetchRequest(keysToFetch: keys)
+                    
+                    var results: [CNContact] = []
+                    
+                    do{
+                        try self.contactStore.enumerateContactsWithFetchRequest(request) {
+                            contact, stop in
+                            results.append(contact)
+                        }
+                    } catch let err{
+                        print(err)
                     }
-                } catch let err{
-                    print(err)
-                }
-                
-                
-                // Get all the containers
-               /* var allContainers: [CNContainer] = []
-                do {
+                    
+                    
+                    // Get all the containers
+                    /* var allContainers: [CNContainer] = []
+                    do {
                     allContainers = try self.contactStore.containersMatchingPredicate(nil)
-                } catch {
+                    } catch {
                     print("Error fetching containers")
-                }
-                
-                
-                // Iterate all containers and append their contacts to our results array
-                for container in allContainers {
+                    }
+                    
+                    
+                    // Iterate all containers and append their contacts to our results array
+                    for container in allContainers {
                     let fetchPredicate = CNContact.predicateForContactsInContainerWithIdentifier(container.identifier)
                     
                     do {
-                        let containerResults = try self.contactStore.unifiedContactsMatchingPredicate(fetchPredicate, keysToFetch: keys)
-                        results.appendContentsOf(containerResults)
+                    let containerResults = try self.contactStore.unifiedContactsMatchingPredicate(fetchPredicate, keysToFetch: keys)
+                    results.appendContentsOf(containerResults)
                     } catch {
-                        print("Error fetching results for container")
+                    print("Error fetching results for container")
                     }
-                } */
-                
-                /*  Iterate through contacts results array and see if any of the contacts are Route Users:
-                *       T. If users -> do they have Route Networks set up?
-                *           T. If Route Network set up -> Display to user
-                *       F. If NOT users -> is their phone number stored in ~/NonRouteUsers node?
-                            T. If it doesn't exist -> Store in ~/NonRouteUsers
-                */
-                
-                let phoneUtil = NBPhoneNumberUtil()
-
-                for contact in results {
-                    for (index, item) in contact.phoneNumbers.enumerate() {
-                        let pn: CNPhoneNumber = item.value as! CNPhoneNumber
-                        
-                        do {
-                            //format all numbers into the same format for storage (e 164 international format)
-                            let countryCode = pn.valueForKey("countryCode") as! String
-                            let digits = pn.valueForKey("digits") as! String
-                            print(countryCode + "  " + digits)
+                    } */
+                    
+                    /*  Iterate through contacts results array and see if any of the contacts are Route Users:
+                    *       T. If users -> do they have Route Networks set up?
+                    *           T. If Route Network set up -> Display to user
+                    *       F. If NOT users -> is their phone number stored in ~/NonRouteUsers node?
+                    T. If it doesn't exist -> Store in ~/NonRouteUsers
+                    */
+                    
+                    let phoneUtil = NBPhoneNumberUtil()
+                    
+                    var contactsWithRoute: [String] = []
+                    
+                    for contact in results {
+                        for (index, item) in contact.phoneNumbers.enumerate() {
+                            let pn: CNPhoneNumber = item.value as! CNPhoneNumber
                             
-                            let phoneNumber: NBPhoneNumber = try phoneUtil.parse(digits, defaultRegion: countryCode)
-                            let formattedString: String = try phoneUtil.format(phoneNumber, numberFormat: .E164)
+                            do {
+                                //format all numbers into the same format for storage (e 164 international format)
+                                let countryCode = pn.valueForKey("countryCode") as! String
+                                let digits = pn.valueForKey("digits") as! String
+                                
+                                let phoneNumber: NBPhoneNumber = try phoneUtil.parse(digits, defaultRegion: countryCode)
+                                let formattedNumber: String = try phoneUtil.format(phoneNumber, numberFormat: .E164)
+                                
+                                //let match = 
+                                self.doesPhoneNumberMatchExistingRouteUser(formattedNumber, uid: currentUser.authorizationData)
+                                
+                                //if(match != "") {
+                                //    contactsWithRoute.append(match)
+                                //}
+                            }
+                            catch let error as NSError {
+                                print(error.localizedDescription)
+                            }
                             
-                            print(formattedString)
                         }
-                        catch let error as NSError {
-                            print(error.localizedDescription)
-                        }
-                        
+                        print("")
                     }
-                    print("")
+                    
+                    print(contactsWithRoute)
+                    
+                    self.performSegueWithIdentifier("SuccessView", sender: sender)
+                    
                 }
-                
-                self.performSegueWithIdentifier("SuccessView", sender: sender)
-                
             }
         }
     }
@@ -132,6 +142,46 @@ class AccessContactsViewController: UIViewController {
         default:
             completionHandler(accessGranted: false)
         }
+    }
+    
+    func doesPhoneNumberMatchExistingRouteUser(phonenumber: String, uid: String) {
+        let myFirebase = Firebase(url:"https://routeapp.firebaseio.com")
+        
+        //let semaphore = dispatch_semaphore_create(0) // 1
+        
+        let usersPNRef = myFirebase.childByAppendingPath("RouteUsersPN").childByAppendingPath(phonenumber)
+        
+        usersPNRef.observeSingleEventOfType(.Value, withBlock: { snapshot in
+            if snapshot.value is NSNull {
+                //give a reference to the Route uid of the friend who has the contact (which is the device owner)
+                let nonUsersPNRef = myFirebase.childByAppendingPath("NonRouteUsers").childByAppendingPath(phonenumber).childByAppendingPath(uid)
+                nonUsersPNRef.childByAppendingPath(uid).setValue(true, withCompletionBlock: {
+                    (error:NSError?, ref:Firebase!) in
+                    if (error != nil) {
+                        print(error)
+                        //dispatch_semaphore_signal(semaphore) // 2
+                    } else {
+                        print("Data saved successfully!")
+                        //dispatch_semaphore_signal(semaphore) // 2
+                    }
+                })
+                
+            } else {
+                //We know this Route user exists
+                let match = snapshot.value
+                print(match)
+                //dispatch_semaphore_signal(semaphore) // 2
+            }
+            
+            }, withCancelBlock: { error in
+                print(error.description)
+        })
+        
+        //let timeout = dispatch_time(DISPATCH_TIME_NOW, 10000000000)
+       /* if dispatch_semaphore_wait(semaphore, timeout) != 0 { // 3
+            print("taking too long to retreive...Failing")
+        } */
+        
     }
 
     /*

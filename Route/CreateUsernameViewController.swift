@@ -84,9 +84,9 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         
         // Add this new user to the overall list of users
         // First index by Username in RouteUsersUN
-        let usersUNRef = myFirebase.childByAppendingPath("RouteUsersUN")
-        let userUN = [un: phonenumber]
-        usersUNRef.setValue(userUN, withCompletionBlock: {
+        let usersUNRef = myFirebase.childByAppendingPath("RouteUsersUN").childByAppendingPath(un)
+        let userPN = ["uid": uid, "phonenumber": phonenumber]
+        usersUNRef.setValue(userPN, withCompletionBlock: {
             (error:NSError?, ref:Firebase!) in
             if (error != nil) {
                 print(error)
@@ -96,9 +96,9 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         })
         
         // Second index by Phonenumber in RouteUsersPN
-        let usersPNRef = myFirebase.childByAppendingPath("RouteUsersPN")
-        let userPN = [phonenumber: un]
-        usersPNRef.setValue(userPN, withCompletionBlock: {
+        let usersPNRef = myFirebase.childByAppendingPath("RouteUsersPN").childByAppendingPath(phonenumber)
+        let userUN = ["uid": uid, "username": un]
+        usersPNRef.setValue(userUN, withCompletionBlock: {
             (error:NSError?, ref:Firebase!) in
             if (error != nil) {
                 print(error)
