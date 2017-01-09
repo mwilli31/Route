@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q9I-2A-ONt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Status View Controller-->
+        <scene sceneID="TvH-96-AGb">
+            <objects>
+                <viewController storyboardIdentifier="Status" id="Q9I-2A-ONt" customClass="StatusViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="v5G-DR-Cj4"/>
+                        <viewControllerLayoutGuide type="bottom" id="fAS-5g-XdW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CAN-EY-qCK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-SB-E72">
+                                <rect key="frame" x="107" y="50" width="160" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="ehc-za-cXV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Status"/>
+                                    <segment title="Profile"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </segmentedControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-A2-Jbb">
+                                <rect key="frame" x="147" y="208" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="2jV-Nw-hcx"/>
+                                    <constraint firstAttribute="width" constant="80" id="yGL-Bj-1ci"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
+                                <rect key="frame" x="76" y="440" width="222" height="27"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="200" id="1Ma-Wx-bJz"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="End-dU-rvs"/>
+                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="5d7-SB-E72" secondAttribute="centerX" id="WqM-rR-2Da"/>
+                            <constraint firstItem="fAS-5g-XdW" firstAttribute="top" secondItem="NAF-A2-Jbb" secondAttribute="bottom" constant="379" id="jxO-JI-8qR"/>
+                            <constraint firstItem="5d7-SB-E72" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="mxj-U8-vlo"/>
+                            <constraint firstItem="5d7-SB-E72" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="30" id="s9F-kq-cbW"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="02b-O0-nE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="109.59999999999999" y="148.87556221889056"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="78" height="72"/>
+    </resources>
+</document>

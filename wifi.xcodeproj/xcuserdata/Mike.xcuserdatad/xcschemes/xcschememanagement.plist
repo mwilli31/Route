@@ -4,35 +4,25 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-wifi.xcscheme</key>
+		<key>wifi.xcscheme</key>
 		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-wifiTests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods-wifiUITests.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>0</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>423BBECF37B327DDD002220336FB1055</key>
+		<key>2751D5FD1E21BEEB00C1601F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC7C9E82E64C15AE80A100A5FDFDE332</key>
+		<key>2751D6141E21BEEB00C1601F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D41B56A5D42C18DCD69FC60C4E4C94B2</key>
+		<key>2751D61F1E21BEEB00C1601F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

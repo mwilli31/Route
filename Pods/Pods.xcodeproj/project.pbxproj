@@ -7,464 +7,262 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0074B99E6B2F0835D218AD955A106635 /* NBMetadataCoreTestMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B74D1101AD1D69FB1F4BD29093E0F2A /* NBMetadataCoreTestMapper.m */; };
-		012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D618EA6F7E4F27E5E83BE8F645066DD /* Empty.m */; };
-		07BBBC415E647A76DC5F03C3BF2DFBA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD50A13D7EC735411C373B4688B4B1D /* Foundation.framework */; };
-		09E4735B16E744F8019BFB86F4D9A1FD /* NBNumberFormat.h in Headers */ = {isa = PBXBuildFile; fileRef = 84642081347D4182E6AA4FAF34046A07 /* NBNumberFormat.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13AD63C06AE19353C4F03D6BF6409BCE /* NBPhoneNumberUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F357E7F0AFCD3131713A40A585769FD /* NBPhoneNumberUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14F107B4C35E3BE6C2D79D34B1AD1C60 /* NBMetadataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = B4C48E52E7EA2083E92771BDE5EE1DD1 /* NBMetadataHelper.m */; };
-		191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = FC30A8689A160CAF8D367A55A2642536 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5ECD7714C9D3CC096892AB96DB84A34 /* Security.framework */; };
-		1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B095D12BA69BF258797C70EBCBA5ABA /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 7389ACF65632A08AA418B2B0169A8B82 /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5ADDC78E1B51FA46EC52611E218596A4 /* Firebase-dummy.m */; };
-		239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F2D6F726DE213BBE7D3D6983C845BE5 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		281A0D07F82AEC20506C522BD5F5887E /* NBPhoneNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 78A15BF07F7447AE4757639103996DE4 /* NBPhoneNumber.m */; };
-		2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = E018A4709F4AC2B3CC30F70064C7B051 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35060184C7962B5BED6CFB783480AC48 /* NBPhoneNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = FD660A0207A96C025BEF769933148809 /* NBPhoneNumber.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3C98496676FB5F302DD98D613F9693DD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD50A13D7EC735411C373B4688B4B1D /* Foundation.framework */; };
-		487631B8B5175BF9699BD33B924A6B49 /* NBPhoneNumberUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = A6D79B9082D2C2BE6AF51E528D6FC282 /* NBPhoneNumberUtil.m */; };
-		4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DD50A13D7EC735411C373B4688B4B1D /* Foundation.framework */; };
-		4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 16488BB1FBD762E707884AC572A3DA56 /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E80C96F2DF77DF2A7B62AD19FE23F697 /* Firebase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6122241C6F5D2DACE8041979581B2D30 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE41564494B0B59EBC6CF8DB1344117 /* CoreTelephony.framework */; };
-		6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C45E8031D5AA361AA01B01D4B82EC01 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		69F76B0BE661C8AFB78F16A06216ADC6 /* NBMetadataCoreTestMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = DB6A84C472D7FA9595D3AF6EC2252D11 /* NBMetadataCoreTestMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6EE605F79EB0F2E7B3C715BEC83753E1 /* NBMetadataCoreTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B5873D15B2C46779369F6AE0784AE4C /* NBMetadataCoreTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		70EBF177172FCBD969D51C1217E3E9BA /* NBPhoneMetaData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B45159797E12458677CB4E09CD4A823 /* NBPhoneMetaData.m */; };
-		75AA2EF25DA6FD0C070FAB7E9DF85FEE /* NBMetadataCore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F8570C5B9EC0B9CBB90C0A0734D8D25 /* NBMetadataCore.m */; };
-		7C8F3B23B9E2672B107FCD9630C99898 /* NBPhoneNumberDefines.m in Sources */ = {isa = PBXBuildFile; fileRef = 80863F65D81898E0B25148A9EA579D2A /* NBPhoneNumberDefines.m */; };
-		7D615F3CEB7009789F29EE8136E6D973 /* NBPhoneMetaData.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B7E999A5D2296E49DE98E66EC1E6270 /* NBPhoneMetaData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7DD8A0A4168BCC540B384DB7BAEAE05E /* Pods-Route-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 504BE496024E852EC2FDB38ED94B97B8 /* Pods-Route-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8FE43ADAD04942DED6D44331DC64EDD5 /* libPhoneNumber-iOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DB4B27E02AA84D0976D997BFACED772B /* libPhoneNumber-iOS-dummy.m */; };
-		90B3966B5F1F4F2C6CA9435B48DB743E /* NBMetadataCoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3E5F8475FCD16854B87153D7BD7E68 /* NBMetadataCoreTest.m */; };
-		92D7A763F08D59D342AD9B52093669AE /* NBMetadataCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 06864D22D6DB858A53404E630F2C5B22 /* NBMetadataCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		93988F238498C12C3CD4FC49A7B8C531 /* NBMetadataCoreMapper.h in Headers */ = {isa = PBXBuildFile; fileRef = 52DF7E006E4C9BAF28C227315A9080A6 /* NBMetadataCoreMapper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A1E5DA17847B27AB71701E868DA83F12 /* NBPhoneNumberDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F2A713A5CBCDA2BE80CCCBD2297075A /* NBPhoneNumberDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A2E67A365A254127ADA79EA694B2716F /* NBAsYouTypeFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = C05EE74DA75056BE64128C75A4F01EF0 /* NBAsYouTypeFormatter.m */; };
-		B60DBF9182B7172AF9339C70F2A34D42 /* libPhoneNumber-iOS-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 10914E23AAE79DDAF8AA9FC7D5640C28 /* libPhoneNumber-iOS-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B9010D393B5F965025F027A20DEAB817 /* NBMetadataHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 775BF0B60FF55B0F11F5E7748D203673 /* NBMetadataHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE218BA9834C1028EA4457C85341E456 /* NBPhoneNumberDesc.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B7FC77EDA453BF000235BA1A7D8CA93 /* NBPhoneNumberDesc.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = EE8631146AAF58C78C5B3A4CDD9D8FF5 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C8E1C3D4F72BD3109429368E9053C2C0 /* Pods-Route-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C6D25F3E3CF4A2EFDFA3FEB597A11AD3 /* Pods-Route-dummy.m */; };
-		CD2ADB94ACB7EAC6E677C2EE915F50D0 /* NBNumberFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = CD0C9D4F1E674A8D0B009326BF33CB17 /* NBNumberFormat.m */; };
-		DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = A78EB19983DC19AEB9A76F659D24AC36 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1466398CE612FDE426AE3A9442DBBCBA /* SystemConfiguration.framework */; };
-		E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F32237DD2073F343D051A4B0458CB8BF /* CFNetwork.framework */; };
-		E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = C8DD997871DE79C4EF027212D56DA91E /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = C1A90B318E01A205766640AECEDDD89E /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F0525C9E424B22E59A67A3C8A1EE7CC9 /* NBMetadataCoreMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D60AB7F1B12730EA1393BC86CB86AD9 /* NBMetadataCoreMapper.m */; };
-		F1088AE04C67953D4E31363355F16ACD /* NBAsYouTypeFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA0D6F89D6D0E08539009BB25E38CD7 /* NBAsYouTypeFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCD765EE7B10530A1B55E7FB425B8066 /* NBPhoneNumberDesc.m in Sources */ = {isa = PBXBuildFile; fileRef = 177487597B57EDDCE2BF7C73496DC140 /* NBPhoneNumberDesc.m */; };
+		041DC3C089C6CCD41AB39C078B26CB4A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		0887217B63045A9C2C8FCAF0097E36A0 /* Pods-wifi-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1828270B79F4AF5EF7EBBE09C19E04F1 /* Pods-wifi-dummy.m */; };
+		09BAE61F17B1F1B9F0C499E6F4224815 /* Pods-wifiUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B29D7696624DBECEB91EF32128965F9 /* Pods-wifiUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12D09F0CDF8068D375B2D07FAA30812D /* Pods-wifi-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 18ADA5A489AE68FF550E8149C9265024 /* Pods-wifi-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5D419917448B6AFF0CA919EE72BC71A1 /* Pods-wifiTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5DB12AF32BA67599B1BA2248A947B1C8 /* Pods-wifiTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B487373835CDCE76B7FFFEB89E3DB841 /* Pods-wifiUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 143B93075DE093D5D19C76BE948F170D /* Pods-wifiUITests-dummy.m */; };
+		C0A17DD00F8F5BB1DAC25D755BD8A5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		C70C1A708C1AEEF509706AC096F9E987 /* Pods-wifiTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AA18CB326ECDEAB3284D831D1B088416 /* Pods-wifiTests-dummy.m */; };
+		F4AE9A1BBB3E2C5610B2AAC96AF2E8C8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		74B89FF4A575A1E274EE2A00CAAB9EA4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 230F06C649365BFB9A3B54AAE6CD35CE;
-			remoteInfo = "libPhoneNumber-iOS";
-		};
-		94BD6B1394C074AD82D30EEDF305A518 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7AC9326D819482593FE118E915409D7;
-			remoteInfo = Firebase;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		005C3FB1064549E26607E991613BB4D4 /* Pods-Route.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Route.modulemap"; sourceTree = "<group>"; };
-		01B3BBC01BE2784A7BDAC61D74493AE7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		06864D22D6DB858A53404E630F2C5B22 /* NBMetadataCore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBMetadataCore.h; path = libPhoneNumber/NBMetadataCore.h; sourceTree = "<group>"; };
-		0B45159797E12458677CB4E09CD4A823 /* NBPhoneMetaData.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBPhoneMetaData.m; path = libPhoneNumber/NBPhoneMetaData.m; sourceTree = "<group>"; };
-		0B5873D15B2C46779369F6AE0784AE4C /* NBMetadataCoreTest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBMetadataCoreTest.h; path = libPhoneNumber/NBMetadataCoreTest.h; sourceTree = "<group>"; };
-		0E2C00A68333DDCCF8D3559B508ED115 /* SinchVerification.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SinchVerification.framework; path = swift/SinchVerification.framework; sourceTree = "<group>"; };
-		0F8570C5B9EC0B9CBB90C0A0734D8D25 /* NBMetadataCore.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBMetadataCore.m; path = libPhoneNumber/NBMetadataCore.m; sourceTree = "<group>"; };
-		10914E23AAE79DDAF8AA9FC7D5640C28 /* libPhoneNumber-iOS-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libPhoneNumber-iOS-umbrella.h"; sourceTree = "<group>"; };
-		1466398CE612FDE426AE3A9442DBBCBA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
-		16488BB1FBD762E707884AC572A3DA56 /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
-		177487597B57EDDCE2BF7C73496DC140 /* NBPhoneNumberDesc.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberDesc.m; path = libPhoneNumber/NBPhoneNumberDesc.m; sourceTree = "<group>"; };
-		1D60AB7F1B12730EA1393BC86CB86AD9 /* NBMetadataCoreMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBMetadataCoreMapper.m; path = libPhoneNumber/NBMetadataCoreMapper.m; sourceTree = "<group>"; };
-		2B102D4C6FE8CF162CABB6CCFF216510 /* Pods-Route.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Route.debug.xcconfig"; sourceTree = "<group>"; };
-		2B7FC77EDA453BF000235BA1A7D8CA93 /* NBPhoneNumberDesc.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBPhoneNumberDesc.h; path = libPhoneNumber/NBPhoneNumberDesc.h; sourceTree = "<group>"; };
-		34D673D14AB33DAF931E8605C5255C19 /* Pods-Route-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Route-acknowledgements.plist"; sourceTree = "<group>"; };
-		3B7E999A5D2296E49DE98E66EC1E6270 /* NBPhoneMetaData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBPhoneMetaData.h; path = libPhoneNumber/NBPhoneMetaData.h; sourceTree = "<group>"; };
-		3F2A713A5CBCDA2BE80CCCBD2297075A /* NBPhoneNumberDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBPhoneNumberDefines.h; path = libPhoneNumber/NBPhoneNumberDefines.h; sourceTree = "<group>"; };
-		4179C0D91D03D34639FFB1F858D1FE0A /* libPhoneNumber-iOS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "libPhoneNumber-iOS.xcconfig"; sourceTree = "<group>"; };
-		43A96826473FB8C6689C5DEAB77298C9 /* Pods-Route-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Route-resources.sh"; sourceTree = "<group>"; };
-		504BE496024E852EC2FDB38ED94B97B8 /* Pods-Route-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Route-umbrella.h"; sourceTree = "<group>"; };
-		52DF7E006E4C9BAF28C227315A9080A6 /* NBMetadataCoreMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBMetadataCoreMapper.h; path = libPhoneNumber/NBMetadataCoreMapper.h; sourceTree = "<group>"; };
-		55F26F15F7954CC7A1E48781F4D8FD4D /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
-		5ADDC78E1B51FA46EC52611E218596A4 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
-		5B095D12BA69BF258797C70EBCBA5ABA /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
-		5CE453554DF99693CDD78B866C459D1D /* Firebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Firebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		5FE41564494B0B59EBC6CF8DB1344117 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
-		6D618EA6F7E4F27E5E83BE8F645066DD /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
-		6F357E7F0AFCD3131713A40A585769FD /* NBPhoneNumberUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBPhoneNumberUtil.h; path = libPhoneNumber/NBPhoneNumberUtil.h; sourceTree = "<group>"; };
-		7389ACF65632A08AA418B2B0169A8B82 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
-		775BF0B60FF55B0F11F5E7748D203673 /* NBMetadataHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBMetadataHelper.h; path = libPhoneNumber/NBMetadataHelper.h; sourceTree = "<group>"; };
-		782C1C84859EBE4E89404024EB5ABE3F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78A15BF07F7447AE4757639103996DE4 /* NBPhoneNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumber.m; path = libPhoneNumber/NBPhoneNumber.m; sourceTree = "<group>"; };
-		7C45E8031D5AA361AA01B01D4B82EC01 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
-		80863F65D81898E0B25148A9EA579D2A /* NBPhoneNumberDefines.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberDefines.m; path = libPhoneNumber/NBPhoneNumberDefines.m; sourceTree = "<group>"; };
-		84642081347D4182E6AA4FAF34046A07 /* NBNumberFormat.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBNumberFormat.h; path = libPhoneNumber/NBNumberFormat.h; sourceTree = "<group>"; };
-		8491951DA6469B11B9E9EEEFD07B4068 /* Pods_Route.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Route.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		992E73CC8A1E6A9397CE7733D3C2C6D1 /* libPhoneNumber-iOS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "libPhoneNumber-iOS-prefix.pch"; sourceTree = "<group>"; };
-		997BD3C4D17C5B61DB383D90DCFCBF3D /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
-		9A785CFEDC4A7180D145E9BD5ABA8894 /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
-		9B74D1101AD1D69FB1F4BD29093E0F2A /* NBMetadataCoreTestMapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBMetadataCoreTestMapper.m; path = libPhoneNumber/NBMetadataCoreTestMapper.m; sourceTree = "<group>"; };
-		9DD50A13D7EC735411C373B4688B4B1D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9F2D6F726DE213BBE7D3D6983C845BE5 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
-		A6D79B9082D2C2BE6AF51E528D6FC282 /* NBPhoneNumberUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBPhoneNumberUtil.m; path = libPhoneNumber/NBPhoneNumberUtil.m; sourceTree = "<group>"; };
-		A78EB19983DC19AEB9A76F659D24AC36 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
-		ABCDBC4AC3C1D39DAEA147A01F777E13 /* Pods-Route.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Route.release.xcconfig"; sourceTree = "<group>"; };
-		B4C48E52E7EA2083E92771BDE5EE1DD1 /* NBMetadataHelper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBMetadataHelper.m; path = libPhoneNumber/NBMetadataHelper.m; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB6A1217FE78DE3CA3D492D9567FDBF5 /* Pods-Route-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Route-frameworks.sh"; sourceTree = "<group>"; };
-		BC3E5F8475FCD16854B87153D7BD7E68 /* NBMetadataCoreTest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBMetadataCoreTest.m; path = libPhoneNumber/NBMetadataCoreTest.m; sourceTree = "<group>"; };
-		C05EE74DA75056BE64128C75A4F01EF0 /* NBAsYouTypeFormatter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBAsYouTypeFormatter.m; path = libPhoneNumber/NBAsYouTypeFormatter.m; sourceTree = "<group>"; };
-		C1A90B318E01A205766640AECEDDD89E /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
-		C2453FD25EDC5C3A17C6FA314C966BFA /* Firebase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Firebase.modulemap; sourceTree = "<group>"; };
-		C69FFD2254D81112AB42F35A93A60FC6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C6D25F3E3CF4A2EFDFA3FEB597A11AD3 /* Pods-Route-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Route-dummy.m"; sourceTree = "<group>"; };
-		C8DD997871DE79C4EF027212D56DA91E /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
-		C966C0BD40995C0AA1FDBCCF864C45C3 /* Pods-Route-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Route-acknowledgements.markdown"; sourceTree = "<group>"; };
-		CD0C9D4F1E674A8D0B009326BF33CB17 /* NBNumberFormat.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = NBNumberFormat.m; path = libPhoneNumber/NBNumberFormat.m; sourceTree = "<group>"; };
-		CD70AEAE2829D11FADF1A5EEE48AB1D2 /* libPhoneNumber_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = libPhoneNumber_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CDEFFE8F9186DE18F15139FD861698F4 /* libPhoneNumber-iOS.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "libPhoneNumber-iOS.modulemap"; sourceTree = "<group>"; };
-		CFA0D6F89D6D0E08539009BB25E38CD7 /* NBAsYouTypeFormatter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBAsYouTypeFormatter.h; path = libPhoneNumber/NBAsYouTypeFormatter.h; sourceTree = "<group>"; };
-		DB4B27E02AA84D0976D997BFACED772B /* libPhoneNumber-iOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "libPhoneNumber-iOS-dummy.m"; sourceTree = "<group>"; };
-		DB6A84C472D7FA9595D3AF6EC2252D11 /* NBMetadataCoreTestMapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBMetadataCoreTestMapper.h; path = libPhoneNumber/NBMetadataCoreTestMapper.h; sourceTree = "<group>"; };
-		E018A4709F4AC2B3CC30F70064C7B051 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
-		E80C96F2DF77DF2A7B62AD19FE23F697 /* Firebase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-umbrella.h"; sourceTree = "<group>"; };
-		EE8631146AAF58C78C5B3A4CDD9D8FF5 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
-		F32237DD2073F343D051A4B0458CB8BF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
-		F5ECD7714C9D3CC096892AB96DB84A34 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		FC30A8689A160CAF8D367A55A2642536 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
-		FD660A0207A96C025BEF769933148809 /* NBPhoneNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = NBPhoneNumber.h; path = libPhoneNumber/NBPhoneNumber.h; sourceTree = "<group>"; };
+		143B93075DE093D5D19C76BE948F170D /* Pods-wifiUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-wifiUITests-dummy.m"; sourceTree = "<group>"; };
+		17B56A77191E87AE6FB76DB241E8E1B7 /* Pods-wifiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifiUITests.release.xcconfig"; sourceTree = "<group>"; };
+		1828270B79F4AF5EF7EBBE09C19E04F1 /* Pods-wifi-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-wifi-dummy.m"; sourceTree = "<group>"; };
+		18ADA5A489AE68FF550E8149C9265024 /* Pods-wifi-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-wifi-umbrella.h"; sourceTree = "<group>"; };
+		24111959A5694D1B6A9AB6929D6731F0 /* Pods-wifi.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-wifi.modulemap"; sourceTree = "<group>"; };
+		24D34E0BE8AA6496EB61A77D6B0BE3AF /* Pods-wifiUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-wifiUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		27AD2A7A403E1A7402A4353886B10F0A /* Pods-wifiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifiTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31C448B3D2E0E5E47EB5FB57F4A3B3E8 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
+		3281EB2235076D7CDFCDD2C038E197F6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D8154BC51B4664A7D72F6CF40D0C88 /* Pods-wifiUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifiUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3ADC67FFD6F106B0C7D0CFB98D546D4F /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
+		48C5540F638204A4BB8411699941B6E4 /* Pods-wifiTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-wifiTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		57B78A5EB011DCE9DE5061DED86E8679 /* Pods_wifiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_wifiUITests.framework; path = "Pods-wifiUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB12AF32BA67599B1BA2248A947B1C8 /* Pods-wifiTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-wifiTests-umbrella.h"; sourceTree = "<group>"; };
+		654879FEDFDDA07F299C0164AD856E15 /* Pods-wifiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifiUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		70A23256C1859C8264A274CBD4A5D473 /* Pods-wifiTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-wifiTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		75616B76EF35E2B14949997A663070A0 /* Pods-wifiTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifiTests-resources.sh"; sourceTree = "<group>"; };
+		7BB2A05F5CF643A9D574C1661A9DEA05 /* Pods-wifiTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifiTests-frameworks.sh"; sourceTree = "<group>"; };
+		7D0A5E5F240042D41CE44E982777B794 /* Pods-wifi-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-wifi-acknowledgements.plist"; sourceTree = "<group>"; };
+		8A4CC28997B390B68005443F6BB6BAE7 /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_wifiTests.framework; path = "Pods-wifiTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B29D7696624DBECEB91EF32128965F9 /* Pods-wifiUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-wifiUITests-umbrella.h"; sourceTree = "<group>"; };
+		8DCF838F8977DEFD6C6DB369F91730DD /* Pods-wifiTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-wifiTests.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9EAD2FCD660F0A560B1AB85ED1410018 /* Pods-wifiUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-wifiUITests.modulemap"; sourceTree = "<group>"; };
+		A16FB0AB8A16E17AD5C1DEB50362E6B9 /* Pods-wifi-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-wifi-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A7E8CC198BCD5D76E85A927833B96136 /* Pods-wifi-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifi-frameworks.sh"; sourceTree = "<group>"; };
+		AA18CB326ECDEAB3284D831D1B088416 /* Pods-wifiTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-wifiTests-dummy.m"; sourceTree = "<group>"; };
+		AD8E92BF3EC5D62A5A8C59AF2B7A413E /* Pods-wifiUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-wifiUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		BF613360DA8A6096CF54D6B407FE960C /* Pods_wifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_wifi.framework; path = "Pods-wifi.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFB5061C442A96129FC8F4B45962DCCA /* Pods-wifiUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifiUITests-resources.sh"; sourceTree = "<group>"; };
+		C5DFE9DF9D2B0102934694DC683DD459 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CFAF26B9197DCF5BF223BF8FEA15ED9F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DC916956007441B1EDA97E256957242E /* Pods-wifiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-wifiTests.release.xcconfig"; sourceTree = "<group>"; };
+		FB784754BAD05A8EB07813888BFB0299 /* Pods-wifi-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-wifi-resources.sh"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		45CFFFCB6CF46AB21962249B5B5B4169 /* Frameworks */ = {
+		5E2392CA30A3A2D97E076B2ED6168F3B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C98496676FB5F302DD98D613F9693DD /* Foundation.framework in Frameworks */,
+				C0A17DD00F8F5BB1DAC25D755BD8A5AB /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7E10F383DCD59079712A57B50DCF88E /* Frameworks */ = {
+		8D9DA43C5682EA257689FB9A0CF4FE6E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E3FBB5B462A14E8ACC9B340227DE4BE1 /* CFNetwork.framework in Frameworks */,
-				4B0EFAAA29109D9A705A27EFFA10FAE2 /* Foundation.framework in Frameworks */,
-				1C04A7CD5B70C4561F6D98C882731C65 /* Security.framework in Frameworks */,
-				E1A883FEBDEED9B85D90D6BE2080F218 /* SystemConfiguration.framework in Frameworks */,
+				F4AE9A1BBB3E2C5610B2AAC96AF2E8C8 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E496108BEECA2BCCBC69C6A8CF8E5660 /* Frameworks */ = {
+		F0F7A769144F034F22AA0631AFB68398 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6122241C6F5D2DACE8041979581B2D30 /* CoreTelephony.framework in Frameworks */,
-				07BBBC415E647A76DC5F03C3BF2DFBA7 /* Foundation.framework in Frameworks */,
+				041DC3C089C6CCD41AB39C078B26CB4A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1C6A94E8D72B391F113DE601431134E4 /* Firebase */ = {
+		13C8A130F82C4583CA4C9AA86C45FE26 /* Pods-wifi */ = {
 			isa = PBXGroup;
 			children = (
-				6D618EA6F7E4F27E5E83BE8F645066DD /* Empty.m */,
-				EE8631146AAF58C78C5B3A4CDD9D8FF5 /* FAuthData.h */,
-				7389ACF65632A08AA418B2B0169A8B82 /* FAuthType.h */,
-				C8DD997871DE79C4EF027212D56DA91E /* FConfig.h */,
-				C1A90B318E01A205766640AECEDDD89E /* FDataSnapshot.h */,
-				9F2D6F726DE213BBE7D3D6983C845BE5 /* FEventType.h */,
-				5B095D12BA69BF258797C70EBCBA5ABA /* Firebase.h */,
-				E018A4709F4AC2B3CC30F70064C7B051 /* FirebaseApp.h */,
-				7C45E8031D5AA361AA01B01D4B82EC01 /* FirebaseServerValue.h */,
-				A78EB19983DC19AEB9A76F659D24AC36 /* FMutableData.h */,
-				16488BB1FBD762E707884AC572A3DA56 /* FQuery.h */,
-				FC30A8689A160CAF8D367A55A2642536 /* FTransactionResult.h */,
-				61DB5ADBDC016EA9ABF9646D3C03FFCE /* Frameworks */,
-				A8405BC5BC7021557E460C8BE9F34B03 /* Support Files */,
+				C5DFE9DF9D2B0102934694DC683DD459 /* Info.plist */,
+				24111959A5694D1B6A9AB6929D6731F0 /* Pods-wifi.modulemap */,
+				A16FB0AB8A16E17AD5C1DEB50362E6B9 /* Pods-wifi-acknowledgements.markdown */,
+				7D0A5E5F240042D41CE44E982777B794 /* Pods-wifi-acknowledgements.plist */,
+				1828270B79F4AF5EF7EBBE09C19E04F1 /* Pods-wifi-dummy.m */,
+				A7E8CC198BCD5D76E85A927833B96136 /* Pods-wifi-frameworks.sh */,
+				FB784754BAD05A8EB07813888BFB0299 /* Pods-wifi-resources.sh */,
+				18ADA5A489AE68FF550E8149C9265024 /* Pods-wifi-umbrella.h */,
+				31C448B3D2E0E5E47EB5FB57F4A3B3E8 /* Pods-wifi.debug.xcconfig */,
+				3ADC67FFD6F106B0C7D0CFB98D546D4F /* Pods-wifi.release.xcconfig */,
 			);
-			path = Firebase;
+			name = "Pods-wifi";
+			path = "Target Support Files/Pods-wifi";
 			sourceTree = "<group>";
 		};
-		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+		2FA377D6144360497EBD91BEB07F144B /* Pods-wifiTests */ = {
 			isa = PBXGroup;
 			children = (
-				5531D2FA98E26618A26552D982A129BC /* iOS */,
+				3281EB2235076D7CDFCDD2C038E197F6 /* Info.plist */,
+				8DCF838F8977DEFD6C6DB369F91730DD /* Pods-wifiTests.modulemap */,
+				48C5540F638204A4BB8411699941B6E4 /* Pods-wifiTests-acknowledgements.markdown */,
+				70A23256C1859C8264A274CBD4A5D473 /* Pods-wifiTests-acknowledgements.plist */,
+				AA18CB326ECDEAB3284D831D1B088416 /* Pods-wifiTests-dummy.m */,
+				7BB2A05F5CF643A9D574C1661A9DEA05 /* Pods-wifiTests-frameworks.sh */,
+				75616B76EF35E2B14949997A663070A0 /* Pods-wifiTests-resources.sh */,
+				5DB12AF32BA67599B1BA2248A947B1C8 /* Pods-wifiTests-umbrella.h */,
+				27AD2A7A403E1A7402A4353886B10F0A /* Pods-wifiTests.debug.xcconfig */,
+				DC916956007441B1EDA97E256957242E /* Pods-wifiTests.release.xcconfig */,
 			);
-			name = Frameworks;
+			name = "Pods-wifiTests";
+			path = "Target Support Files/Pods-wifiTests";
 			sourceTree = "<group>";
 		};
-		5531D2FA98E26618A26552D982A129BC /* iOS */ = {
+		7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				F32237DD2073F343D051A4B0458CB8BF /* CFNetwork.framework */,
-				5FE41564494B0B59EBC6CF8DB1344117 /* CoreTelephony.framework */,
-				9DD50A13D7EC735411C373B4688B4B1D /* Foundation.framework */,
-				F5ECD7714C9D3CC096892AB96DB84A34 /* Security.framework */,
-				1466398CE612FDE426AE3A9442DBBCBA /* SystemConfiguration.framework */,
+				CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		61DB5ADBDC016EA9ABF9646D3C03FFCE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				55F26F15F7954CC7A1E48781F4D8FD4D /* libFirebaseStatic.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		663CCCC3E5746193CC63F15B0818C10B /* libPhoneNumber-iOS */ = {
-			isa = PBXGroup;
-			children = (
-				CFA0D6F89D6D0E08539009BB25E38CD7 /* NBAsYouTypeFormatter.h */,
-				C05EE74DA75056BE64128C75A4F01EF0 /* NBAsYouTypeFormatter.m */,
-				06864D22D6DB858A53404E630F2C5B22 /* NBMetadataCore.h */,
-				0F8570C5B9EC0B9CBB90C0A0734D8D25 /* NBMetadataCore.m */,
-				52DF7E006E4C9BAF28C227315A9080A6 /* NBMetadataCoreMapper.h */,
-				1D60AB7F1B12730EA1393BC86CB86AD9 /* NBMetadataCoreMapper.m */,
-				0B5873D15B2C46779369F6AE0784AE4C /* NBMetadataCoreTest.h */,
-				BC3E5F8475FCD16854B87153D7BD7E68 /* NBMetadataCoreTest.m */,
-				DB6A84C472D7FA9595D3AF6EC2252D11 /* NBMetadataCoreTestMapper.h */,
-				9B74D1101AD1D69FB1F4BD29093E0F2A /* NBMetadataCoreTestMapper.m */,
-				775BF0B60FF55B0F11F5E7748D203673 /* NBMetadataHelper.h */,
-				B4C48E52E7EA2083E92771BDE5EE1DD1 /* NBMetadataHelper.m */,
-				84642081347D4182E6AA4FAF34046A07 /* NBNumberFormat.h */,
-				CD0C9D4F1E674A8D0B009326BF33CB17 /* NBNumberFormat.m */,
-				3B7E999A5D2296E49DE98E66EC1E6270 /* NBPhoneMetaData.h */,
-				0B45159797E12458677CB4E09CD4A823 /* NBPhoneMetaData.m */,
-				FD660A0207A96C025BEF769933148809 /* NBPhoneNumber.h */,
-				78A15BF07F7447AE4757639103996DE4 /* NBPhoneNumber.m */,
-				3F2A713A5CBCDA2BE80CCCBD2297075A /* NBPhoneNumberDefines.h */,
-				80863F65D81898E0B25148A9EA579D2A /* NBPhoneNumberDefines.m */,
-				2B7FC77EDA453BF000235BA1A7D8CA93 /* NBPhoneNumberDesc.h */,
-				177487597B57EDDCE2BF7C73496DC140 /* NBPhoneNumberDesc.m */,
-				6F357E7F0AFCD3131713A40A585769FD /* NBPhoneNumberUtil.h */,
-				A6D79B9082D2C2BE6AF51E528D6FC282 /* NBPhoneNumberUtil.m */,
-				9F1869EE371C9D9BE361636F804E751B /* Support Files */,
-			);
-			path = "libPhoneNumber-iOS";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
-				FADB821EE931B8981EDEA83F685FD513 /* Pods */,
-				DEED17417F036E251126C46704E9E948 /* Products */,
-				AF9B51D9CA1F423C715F4CA338C343E1 /* Targets Support Files */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				9F2EC46F9CE688D03F5ECEDCF73BCC01 /* Products */,
+				C996D134DA6B26B572CD720F0048ECF0 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9F1869EE371C9D9BE361636F804E751B /* Support Files */ = {
+		9F2EC46F9CE688D03F5ECEDCF73BCC01 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				01B3BBC01BE2784A7BDAC61D74493AE7 /* Info.plist */,
-				CDEFFE8F9186DE18F15139FD861698F4 /* libPhoneNumber-iOS.modulemap */,
-				4179C0D91D03D34639FFB1F858D1FE0A /* libPhoneNumber-iOS.xcconfig */,
-				DB4B27E02AA84D0976D997BFACED772B /* libPhoneNumber-iOS-dummy.m */,
-				992E73CC8A1E6A9397CE7733D3C2C6D1 /* libPhoneNumber-iOS-prefix.pch */,
-				10914E23AAE79DDAF8AA9FC7D5640C28 /* libPhoneNumber-iOS-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/libPhoneNumber-iOS";
-			sourceTree = "<group>";
-		};
-		A8405BC5BC7021557E460C8BE9F34B03 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C2453FD25EDC5C3A17C6FA314C966BFA /* Firebase.modulemap */,
-				9A785CFEDC4A7180D145E9BD5ABA8894 /* Firebase.xcconfig */,
-				5ADDC78E1B51FA46EC52611E218596A4 /* Firebase-dummy.m */,
-				997BD3C4D17C5B61DB383D90DCFCBF3D /* Firebase-prefix.pch */,
-				E80C96F2DF77DF2A7B62AD19FE23F697 /* Firebase-umbrella.h */,
-				782C1C84859EBE4E89404024EB5ABE3F /* Info.plist */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Firebase";
-			sourceTree = "<group>";
-		};
-		AD10AB99DBB4AB326C543A7CF6B4C17D /* SinchVerification-Swift */ = {
-			isa = PBXGroup;
-			children = (
-				E17A99585B51771F98C405A90ACE4264 /* Frameworks */,
-			);
-			path = "SinchVerification-Swift";
-			sourceTree = "<group>";
-		};
-		AF9B51D9CA1F423C715F4CA338C343E1 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				BD9EF9BE7F852A3D76CED9C21CE17597 /* Pods-Route */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		BD9EF9BE7F852A3D76CED9C21CE17597 /* Pods-Route */ = {
-			isa = PBXGroup;
-			children = (
-				C69FFD2254D81112AB42F35A93A60FC6 /* Info.plist */,
-				005C3FB1064549E26607E991613BB4D4 /* Pods-Route.modulemap */,
-				C966C0BD40995C0AA1FDBCCF864C45C3 /* Pods-Route-acknowledgements.markdown */,
-				34D673D14AB33DAF931E8605C5255C19 /* Pods-Route-acknowledgements.plist */,
-				C6D25F3E3CF4A2EFDFA3FEB597A11AD3 /* Pods-Route-dummy.m */,
-				BB6A1217FE78DE3CA3D492D9567FDBF5 /* Pods-Route-frameworks.sh */,
-				43A96826473FB8C6689C5DEAB77298C9 /* Pods-Route-resources.sh */,
-				504BE496024E852EC2FDB38ED94B97B8 /* Pods-Route-umbrella.h */,
-				2B102D4C6FE8CF162CABB6CCFF216510 /* Pods-Route.debug.xcconfig */,
-				ABCDBC4AC3C1D39DAEA147A01F777E13 /* Pods-Route.release.xcconfig */,
-			);
-			name = "Pods-Route";
-			path = "Target Support Files/Pods-Route";
-			sourceTree = "<group>";
-		};
-		DEED17417F036E251126C46704E9E948 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				5CE453554DF99693CDD78B866C459D1D /* Firebase.framework */,
-				CD70AEAE2829D11FADF1A5EEE48AB1D2 /* libPhoneNumber_iOS.framework */,
-				8491951DA6469B11B9E9EEEFD07B4068 /* Pods_Route.framework */,
+				BF613360DA8A6096CF54D6B407FE960C /* Pods_wifi.framework */,
+				8A4CC28997B390B68005443F6BB6BAE7 /* Pods_wifiTests.framework */,
+				57B78A5EB011DCE9DE5061DED86E8679 /* Pods_wifiUITests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E17A99585B51771F98C405A90ACE4264 /* Frameworks */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0E2C00A68333DDCCF8D3559B508ED115 /* SinchVerification.framework */,
+				7531C8F8DE19F1AA3C8A7AC97A91DC29 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		FADB821EE931B8981EDEA83F685FD513 /* Pods */ = {
+		C996D134DA6B26B572CD720F0048ECF0 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				1C6A94E8D72B391F113DE601431134E4 /* Firebase */,
-				663CCCC3E5746193CC63F15B0818C10B /* libPhoneNumber-iOS */,
-				AD10AB99DBB4AB326C543A7CF6B4C17D /* SinchVerification-Swift */,
+				13C8A130F82C4583CA4C9AA86C45FE26 /* Pods-wifi */,
+				2FA377D6144360497EBD91BEB07F144B /* Pods-wifiTests */,
+				F0425CA6A18E8AADFC7E06B846188F6C /* Pods-wifiUITests */,
 			);
-			name = Pods;
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F0425CA6A18E8AADFC7E06B846188F6C /* Pods-wifiUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CFAF26B9197DCF5BF223BF8FEA15ED9F /* Info.plist */,
+				9EAD2FCD660F0A560B1AB85ED1410018 /* Pods-wifiUITests.modulemap */,
+				24D34E0BE8AA6496EB61A77D6B0BE3AF /* Pods-wifiUITests-acknowledgements.markdown */,
+				AD8E92BF3EC5D62A5A8C59AF2B7A413E /* Pods-wifiUITests-acknowledgements.plist */,
+				143B93075DE093D5D19C76BE948F170D /* Pods-wifiUITests-dummy.m */,
+				38D8154BC51B4664A7D72F6CF40D0C88 /* Pods-wifiUITests-frameworks.sh */,
+				BFB5061C442A96129FC8F4B45962DCCA /* Pods-wifiUITests-resources.sh */,
+				8B29D7696624DBECEB91EF32128965F9 /* Pods-wifiUITests-umbrella.h */,
+				654879FEDFDDA07F299C0164AD856E15 /* Pods-wifiUITests.debug.xcconfig */,
+				17B56A77191E87AE6FB76DB241E8E1B7 /* Pods-wifiUITests.release.xcconfig */,
+			);
+			name = "Pods-wifiUITests";
+			path = "Target Support Files/Pods-wifiUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */ = {
+		8A08443BF50C2FAF30F031AAF33ED709 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C23FCF31260D47CEC1494A292DAA1A1E /* FAuthData.h in Headers */,
-				1D925BB011B04DDED982C7946571A67A /* FAuthType.h in Headers */,
-				E60FA42EEC3ECC48701DB55986D25D69 /* FConfig.h in Headers */,
-				E8B534D15D2B25919ACD898217266891 /* FDataSnapshot.h in Headers */,
-				239B10F388840841389B7F09648735B1 /* FEventType.h in Headers */,
-				60F9139BDD38565B78214C4FC5F5729D /* Firebase-umbrella.h in Headers */,
-				1C3EF85CD30E6FF2E51471BD5B3CEB29 /* Firebase.h in Headers */,
-				2F1496011DBBB75777645194AAAFE92D /* FirebaseApp.h in Headers */,
-				6646DA26298257396C7FFE141BB84CC3 /* FirebaseServerValue.h in Headers */,
-				DB05A9DD8244D10C28B6915C514AE15F /* FMutableData.h in Headers */,
-				4D75CF0089B20355B17A851513C4A002 /* FQuery.h in Headers */,
-				191DE2EB9A35585AE0A88BA9F833A1F4 /* FTransactionResult.h in Headers */,
+				5D419917448B6AFF0CA919EE72BC71A1 /* Pods-wifiTests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		63E5A43B4FA8C7FCCE8C116090060177 /* Headers */ = {
+		A3535A0D0926EC05C871EAEEAF18BCF0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B60DBF9182B7172AF9339C70F2A34D42 /* libPhoneNumber-iOS-umbrella.h in Headers */,
-				F1088AE04C67953D4E31363355F16ACD /* NBAsYouTypeFormatter.h in Headers */,
-				92D7A763F08D59D342AD9B52093669AE /* NBMetadataCore.h in Headers */,
-				93988F238498C12C3CD4FC49A7B8C531 /* NBMetadataCoreMapper.h in Headers */,
-				6EE605F79EB0F2E7B3C715BEC83753E1 /* NBMetadataCoreTest.h in Headers */,
-				69F76B0BE661C8AFB78F16A06216ADC6 /* NBMetadataCoreTestMapper.h in Headers */,
-				B9010D393B5F965025F027A20DEAB817 /* NBMetadataHelper.h in Headers */,
-				09E4735B16E744F8019BFB86F4D9A1FD /* NBNumberFormat.h in Headers */,
-				7D615F3CEB7009789F29EE8136E6D973 /* NBPhoneMetaData.h in Headers */,
-				35060184C7962B5BED6CFB783480AC48 /* NBPhoneNumber.h in Headers */,
-				A1E5DA17847B27AB71701E868DA83F12 /* NBPhoneNumberDefines.h in Headers */,
-				BE218BA9834C1028EA4457C85341E456 /* NBPhoneNumberDesc.h in Headers */,
-				13AD63C06AE19353C4F03D6BF6409BCE /* NBPhoneNumberUtil.h in Headers */,
+				09BAE61F17B1F1B9F0C499E6F4224815 /* Pods-wifiUITests-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6F24D8FB635BAAFDA7326BD087D1A308 /* Headers */ = {
+		B1CB1572894F227E6AE63FB4ED60500A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DD8A0A4168BCC540B384DB7BAEAE05E /* Pods-Route-umbrella.h in Headers */,
+				12D09F0CDF8068D375B2D07FAA30812D /* Pods-wifi-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		230F06C649365BFB9A3B54AAE6CD35CE /* libPhoneNumber-iOS */ = {
+		423BBECF37B327DDD002220336FB1055 /* Pods-wifi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D897D27AC8D3513CC190D3319F419CB6 /* Build configuration list for PBXNativeTarget "libPhoneNumber-iOS" */;
+			buildConfigurationList = 1EDF520918644C8B477ACC0F783BF002 /* Build configuration list for PBXNativeTarget "Pods-wifi" */;
 			buildPhases = (
-				4C1BA7CBA0BCE6024560646D45215884 /* Sources */,
-				E496108BEECA2BCCBC69C6A8CF8E5660 /* Frameworks */,
-				63E5A43B4FA8C7FCCE8C116090060177 /* Headers */,
+				8B569D833DFD93FA6B3395CA87B42554 /* Sources */,
+				8D9DA43C5682EA257689FB9A0CF4FE6E /* Frameworks */,
+				B1CB1572894F227E6AE63FB4ED60500A /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "libPhoneNumber-iOS";
-			productName = "libPhoneNumber-iOS";
-			productReference = CD70AEAE2829D11FADF1A5EEE48AB1D2 /* libPhoneNumber_iOS.framework */;
+			name = "Pods-wifi";
+			productName = "Pods-wifi";
+			productReference = BF613360DA8A6096CF54D6B407FE960C /* Pods_wifi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B7AC9326D819482593FE118E915409D7 /* Firebase */ = {
+		BC7C9E82E64C15AE80A100A5FDFDE332 /* Pods-wifiTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */;
+			buildConfigurationList = 6BDCE2B6F54FF6D34B8816E91745FE10 /* Build configuration list for PBXNativeTarget "Pods-wifiTests" */;
 			buildPhases = (
-				46E052D320E3B778B76D8393E0BAFE0F /* Sources */,
-				A7E10F383DCD59079712A57B50DCF88E /* Frameworks */,
-				2FDCAAB615C287D16BF7F1F2AA978246 /* Headers */,
+				7D16CB887E8E1ECE0E9BE7D2DE9D8D08 /* Sources */,
+				F0F7A769144F034F22AA0631AFB68398 /* Frameworks */,
+				8A08443BF50C2FAF30F031AAF33ED709 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Firebase;
-			productName = Firebase;
-			productReference = 5CE453554DF99693CDD78B866C459D1D /* Firebase.framework */;
+			name = "Pods-wifiTests";
+			productName = "Pods-wifiTests";
+			productReference = 8A4CC28997B390B68005443F6BB6BAE7 /* Pods_wifiTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E876156E353889774C663534F3E747C4 /* Pods-Route */ = {
+		D41B56A5D42C18DCD69FC60C4E4C94B2 /* Pods-wifiUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB121EF328FBFB667C508E917B36B4E2 /* Build configuration list for PBXNativeTarget "Pods-Route" */;
+			buildConfigurationList = EFF16111A2B34117C8133E016744AA7A /* Build configuration list for PBXNativeTarget "Pods-wifiUITests" */;
 			buildPhases = (
-				78A512A6471D9C2F3A366A1E86C2E3DB /* Sources */,
-				45CFFFCB6CF46AB21962249B5B5B4169 /* Frameworks */,
-				6F24D8FB635BAAFDA7326BD087D1A308 /* Headers */,
+				5FB05648B956BD7CC6E4B3F1EE6942D0 /* Sources */,
+				5E2392CA30A3A2D97E076B2ED6168F3B /* Frameworks */,
+				A3535A0D0926EC05C871EAEEAF18BCF0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				C2DE3BC4B2EB415A8B6E08779B37CFB4 /* PBXTargetDependency */,
-				8DAA603B15DC9DA5AC9058294D5DDCFE /* PBXTargetDependency */,
 			);
-			name = "Pods-Route";
-			productName = "Pods-Route";
-			productReference = 8491951DA6469B11B9E9EEEFD07B4068 /* Pods_Route.framework */;
+			name = "Pods-wifiUITests";
+			productName = "Pods-wifiUITests";
+			productReference = 57B78A5EB011DCE9DE5061DED86E8679 /* Pods_wifiUITests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -473,7 +271,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -484,152 +282,72 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = DEED17417F036E251126C46704E9E948 /* Products */;
+			productRefGroup = 9F2EC46F9CE688D03F5ECEDCF73BCC01 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B7AC9326D819482593FE118E915409D7 /* Firebase */,
-				230F06C649365BFB9A3B54AAE6CD35CE /* libPhoneNumber-iOS */,
-				E876156E353889774C663534F3E747C4 /* Pods-Route */,
+				423BBECF37B327DDD002220336FB1055 /* Pods-wifi */,
+				BC7C9E82E64C15AE80A100A5FDFDE332 /* Pods-wifiTests */,
+				D41B56A5D42C18DCD69FC60C4E4C94B2 /* Pods-wifiUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		46E052D320E3B778B76D8393E0BAFE0F /* Sources */ = {
+		5FB05648B956BD7CC6E4B3F1EE6942D0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				012A7E018F3D34F159894EBD7EACACF9 /* Empty.m in Sources */,
-				1D9D7FF5237C8CC91EF58DC45AC274FB /* Firebase-dummy.m in Sources */,
+				B487373835CDCE76B7FFFEB89E3DB841 /* Pods-wifiUITests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4C1BA7CBA0BCE6024560646D45215884 /* Sources */ = {
+		7D16CB887E8E1ECE0E9BE7D2DE9D8D08 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE43ADAD04942DED6D44331DC64EDD5 /* libPhoneNumber-iOS-dummy.m in Sources */,
-				A2E67A365A254127ADA79EA694B2716F /* NBAsYouTypeFormatter.m in Sources */,
-				75AA2EF25DA6FD0C070FAB7E9DF85FEE /* NBMetadataCore.m in Sources */,
-				F0525C9E424B22E59A67A3C8A1EE7CC9 /* NBMetadataCoreMapper.m in Sources */,
-				90B3966B5F1F4F2C6CA9435B48DB743E /* NBMetadataCoreTest.m in Sources */,
-				0074B99E6B2F0835D218AD955A106635 /* NBMetadataCoreTestMapper.m in Sources */,
-				14F107B4C35E3BE6C2D79D34B1AD1C60 /* NBMetadataHelper.m in Sources */,
-				CD2ADB94ACB7EAC6E677C2EE915F50D0 /* NBNumberFormat.m in Sources */,
-				70EBF177172FCBD969D51C1217E3E9BA /* NBPhoneMetaData.m in Sources */,
-				281A0D07F82AEC20506C522BD5F5887E /* NBPhoneNumber.m in Sources */,
-				7C8F3B23B9E2672B107FCD9630C99898 /* NBPhoneNumberDefines.m in Sources */,
-				FCD765EE7B10530A1B55E7FB425B8066 /* NBPhoneNumberDesc.m in Sources */,
-				487631B8B5175BF9699BD33B924A6B49 /* NBPhoneNumberUtil.m in Sources */,
+				C70C1A708C1AEEF509706AC096F9E987 /* Pods-wifiTests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		78A512A6471D9C2F3A366A1E86C2E3DB /* Sources */ = {
+		8B569D833DFD93FA6B3395CA87B42554 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8E1C3D4F72BD3109429368E9053C2C0 /* Pods-Route-dummy.m in Sources */,
+				0887217B63045A9C2C8FCAF0097E36A0 /* Pods-wifi-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		8DAA603B15DC9DA5AC9058294D5DDCFE /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "libPhoneNumber-iOS";
-			target = 230F06C649365BFB9A3B54AAE6CD35CE /* libPhoneNumber-iOS */;
-			targetProxy = 74B89FF4A575A1E274EE2A00CAAB9EA4 /* PBXContainerItemProxy */;
-		};
-		C2DE3BC4B2EB415A8B6E08779B37CFB4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Firebase;
-			target = B7AC9326D819482593FE118E915409D7 /* Firebase */;
-			targetProxy = 94BD6B1394C074AD82D30EEDF305A518 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		36099D3D23BB564DA994D33625C7AE06 /* Release */ = {
+		24951FF739F5D511523681135378CE17 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A785CFEDC4A7180D145E9BD5ABA8894 /* Firebase.xcconfig */;
+			baseConfigurationReference = 654879FEDFDDA07F299C0164AD856E15 /* Pods-wifiUITests.debug.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifiUITests/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Firebase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		3A93BE3B3DEE0B0C9C18077E50F4FBE6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABCDBC4AC3C1D39DAEA147A01F777E13 /* Pods-Route.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Route/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Route/Pods-Route.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Route;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		5293C944D8E83376447E350195067E1A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2B102D4C6FE8CF162CABB6CCFF216510 /* Pods-Route.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-Route/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Route/Pods-Route.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-wifiUITests/Pods-wifiUITests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_Route;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifiUITests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -638,64 +356,11 @@
 			};
 			name = Debug;
 		};
-		74BA65D6D52D58B7FCB71290DB77729D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4179C0D91D03D34639FFB1F858D1FE0A /* libPhoneNumber-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/libPhoneNumber-iOS/libPhoneNumber-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/libPhoneNumber-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/libPhoneNumber-iOS/libPhoneNumber-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = libPhoneNumber_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		7FDFA2D14AF0575E9B310F2D20A35869 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A785CFEDC4A7180D145E9BD5ABA8894 /* Firebase.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Firebase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Firebase/Firebase.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Firebase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+		673254EEAF0B5BF4596080C749645884 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -709,11 +374,229 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9281455D1342DFB5B21A584124801D93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27AD2A7A403E1A7402A4353886B10F0A /* Pods-wifiTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifiTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wifiTests/Pods-wifiTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifiTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CA8CE5BABC3DBD475784D192ED024CF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17B56A77191E87AE6FB76DB241E8E1B7 /* Pods-wifiUITests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifiUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wifiUITests/Pods-wifiUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifiUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D8D9DFBF89D66C4A12F5CF2360D1266C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ADC67FFD6F106B0C7D0CFB98D546D4F /* Pods-wifi.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifi/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wifi/Pods-wifi.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifi;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E1B7995704C48B39109A960C562991F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31C448B3D2E0E5E47EB5FB57F4A3B3E8 /* Pods-wifi.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifi/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wifi/Pods-wifi.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifi;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E272D8678628CA8E3B87F80940CA8B26 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC916956007441B1EDA97E256957242E /* Pods-wifiTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-wifiTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-wifiTests/Pods-wifiTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_wifiTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -724,109 +607,49 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		C241D5E4225DACF93C69BF9F6BD7088D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4179C0D91D03D34639FFB1F858D1FE0A /* libPhoneNumber-iOS.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/libPhoneNumber-iOS/libPhoneNumber-iOS-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/libPhoneNumber-iOS/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/libPhoneNumber-iOS/libPhoneNumber-iOS.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = libPhoneNumber_iOS;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1EDF520918644C8B477ACC0F783BF002 /* Build configuration list for PBXNativeTarget "Pods-wifi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E1B7995704C48B39109A960C562991F5 /* Debug */,
+				D8D9DFBF89D66C4A12F5CF2360D1266C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
-				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+				E4F26E6EB105713A6A7E7E2E283AC2DF /* Debug */,
+				673254EEAF0B5BF4596080C749645884 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49B346C14D532324DCD14D0FA1347BC6 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
+		6BDCE2B6F54FF6D34B8816E91745FE10 /* Build configuration list for PBXNativeTarget "Pods-wifiTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7FDFA2D14AF0575E9B310F2D20A35869 /* Debug */,
-				36099D3D23BB564DA994D33625C7AE06 /* Release */,
+				9281455D1342DFB5B21A584124801D93 /* Debug */,
+				E272D8678628CA8E3B87F80940CA8B26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D897D27AC8D3513CC190D3319F419CB6 /* Build configuration list for PBXNativeTarget "libPhoneNumber-iOS" */ = {
+		EFF16111A2B34117C8133E016744AA7A /* Build configuration list for PBXNativeTarget "Pods-wifiUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				74BA65D6D52D58B7FCB71290DB77729D /* Debug */,
-				C241D5E4225DACF93C69BF9F6BD7088D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EB121EF328FBFB667C508E917B36B4E2 /* Build configuration list for PBXNativeTarget "Pods-Route" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				5293C944D8E83376447E350195067E1A /* Debug */,
-				3A93BE3B3DEE0B0C9C18077E50F4FBE6 /* Release */,
+				24951FF739F5D511523681135378CE17 /* Debug */,
+				CA8CE5BABC3DBD475784D192ED024CF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
