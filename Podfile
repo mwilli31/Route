@@ -6,6 +6,7 @@ target 'wifi' do
   use_frameworks!
 
   # Pods for wifi
+  pod 'PhoneNumberKit'
 
   target 'wifiTests' do
     inherit! :search_paths
