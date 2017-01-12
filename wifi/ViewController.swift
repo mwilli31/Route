@@ -18,7 +18,9 @@ class ViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         print("hello")
-        present( UIStoryboard(name: "Status", bundle: nil).instantiateInitialViewController()!, animated: false, completion: nil)
+        present( UIStoryboard(name: "SignUp", bundle: nil).instantiateInitialViewController()!, animated: false, completion: nil)
+
+        //present( UIStoryboard(name: "Status", bundle: nil).instantiateInitialViewController()!, animated: false, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

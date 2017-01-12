@@ -18,6 +18,8 @@
 		2751D6251E21BEEB00C1601F /* wifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6241E21BEEB00C1601F /* wifiUITests.swift */; };
 		2777A0281E23030700229502 /* Status.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2777A0271E23030700229502 /* Status.storyboard */; };
 		2777A02A1E23081A00229502 /* StatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2777A0291E23081A00229502 /* StatusViewController.swift */; };
+		27D4CF351E271739004FEE83 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27D4CF341E271739004FEE83 /* SignUp.storyboard */; };
+		27D4CF371E271E8E004FEE83 /* SignupPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27D4CF361E271E8E004FEE83 /* SignupPhoneNumberViewController.swift */; };
 		2DDEB825393D6816660FCF2A /* Pods_wifiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */; };
 		2E0FEDF31A7A0403E66B982D /* Pods_wifiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -56,6 +58,8 @@
 		2751D6261E21BEEB00C1601F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2777A0271E23030700229502 /* Status.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Status.storyboard; sourceTree = "<group>"; };
 		2777A0291E23081A00229502 /* StatusViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusViewController.swift; sourceTree = "<group>"; };
+		27D4CF341E271739004FEE83 /* SignUp.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		27D4CF361E271E8E004FEE83 /* SignupPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		53FFCADEAEA05F09C90DF916 /* Pods-wifiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -123,7 +127,8 @@
 				2751D6031E21BEEB00C1601F /* ViewController.swift */,
 				2751D6051E21BEEB00C1601F /* Main.storyboard */,
 				2751D6011E21BEEB00C1601F /* AppDelegate.swift */,
-				2777A0261E23023B00229502 /* Main View */,
+				27D4CF331E271624004FEE83 /* Sign Up  */,
+				2777A0261E23023B00229502 /* Main */,
 				2751D60B1E21BEEB00C1601F /* Assets.xcassets */,
 				2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */,
 				2751D6101E21BEEB00C1601F /* Info.plist */,
@@ -150,13 +155,22 @@
 			path = wifiUITests;
 			sourceTree = "<group>";
 		};
-		2777A0261E23023B00229502 /* Main View */ = {
+		2777A0261E23023B00229502 /* Main */ = {
 			isa = PBXGroup;
 			children = (
 				2777A0271E23030700229502 /* Status.storyboard */,
 				2777A0291E23081A00229502 /* StatusViewController.swift */,
 			);
-			name = "Main View";
+			name = Main;
+			sourceTree = "<group>";
+		};
+		27D4CF331E271624004FEE83 /* Sign Up  */ = {
+			isa = PBXGroup;
+			children = (
+				27D4CF361E271E8E004FEE83 /* SignupPhoneNumberViewController.swift */,
+				27D4CF341E271739004FEE83 /* SignUp.storyboard */,
+			);
+			name = "Sign Up ";
 			sourceTree = "<group>";
 		};
 		73CB3686FBF421D570A76040 /* Pods */ = {
@@ -299,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27D4CF351E271739004FEE83 /* SignUp.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
 				2777A0281E23030700229502 /* Status.storyboard in Resources */,
@@ -467,6 +482,7 @@
 			files = (
 				2777A02A1E23081A00229502 /* StatusViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
+				27D4CF371E271E8E004FEE83 /* SignupPhoneNumberViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */,
 			);

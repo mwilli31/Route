@@ -21,18 +21,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="2y6-yv-cap">
+                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-A3-opr">
                                 <rect key="frame" x="148.5" y="120" width="78" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="78" id="eyf-mp-tVC"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-Se-28q">
+                                <rect key="frame" x="16" y="606" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JDP-A3-opr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3vw-A2-fnA"/>
+                            <constraint firstItem="RW2-Se-28q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7V0-ND-t3o"/>
+                            <constraint firstAttribute="trailing" secondItem="2y6-yv-cap" secondAttribute="trailing" constant="-4" id="8Ad-lA-Jgz"/>
+                            <constraint firstAttribute="bottom" secondItem="RW2-Se-28q" secondAttribute="bottom" constant="40" id="AWl-P2-5eV"/>
+                            <constraint firstItem="2y6-yv-cap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-4" id="PKU-5A-1fQ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDP-A3-opr" secondAttribute="bottom" constant="475" id="ZoK-r0-LJX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2y6-yv-cap" secondAttribute="bottom" id="jPA-0R-vYs"/>
                             <constraint firstItem="JDP-A3-opr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="kvd-9A-lmw"/>
+                            <constraint firstItem="2y6-yv-cap" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l1y-Su-uQq"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -45,10 +60,11 @@
                 <viewControllerPlaceholder storyboardIdentifier="Status" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQc-lW-RTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="630" y="-144"/>
+            <point key="canvasLocation" x="642" y="-48"/>
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage" width="375" height="667"/>
         <image name="logo" width="78" height="72"/>
     </resources>
 </document>

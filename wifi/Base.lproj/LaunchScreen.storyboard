@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,14 +22,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-oT-Zi7">
+                                <rect key="frame" x="-4" y="0.0" width="384" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="z9s-e1-3KW">
-                                <rect key="frame" x="148" y="120" width="78" height="72"/>
+                                <rect key="frame" x="148.5" y="120" width="78" height="72"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright Route 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-hh-ase">
-                                <rect key="frame" x="103" y="606" width="168" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-hh-ase">
+                                <rect key="frame" x="16" y="606" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -36,10 +40,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.058823529411764705" green="0.16862745098039217" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="z9s-e1-3KW" firstAttribute="centerX" secondItem="jvb-hh-ase" secondAttribute="centerX" id="D2d-1u-Vde"/>
+                            <constraint firstItem="dm7-oT-Zi7" firstAttribute="bottom" secondItem="xb3-aO-Qok" secondAttribute="top" id="LfH-MU-6mF"/>
+                            <constraint firstItem="z9s-e1-3KW" firstAttribute="centerX" secondItem="dm7-oT-Zi7" secondAttribute="centerX" id="SL5-ga-2L3"/>
                             <constraint firstItem="jvb-hh-ase" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y5c-hG-I5G"/>
-                            <constraint firstItem="z9s-e1-3KW" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="g1q-wz-foX"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jvb-hh-ase" secondAttribute="bottom" constant="40" id="gJa-Ny-rJa"/>
-                            <constraint firstItem="z9s-e1-3KW" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="uQZ-g0-WGI"/>
+                            <constraint firstItem="z9s-e1-3KW" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="sfE-9P-Te7"/>
+                            <constraint firstItem="dm7-oT-Zi7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="wKq-eG-3Lk"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -49,6 +56,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="backgroundImage" width="375" height="667"/>
         <image name="logo" width="78" height="72"/>
     </resources>
 </document>
