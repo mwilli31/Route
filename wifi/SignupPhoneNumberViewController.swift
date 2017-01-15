@@ -17,6 +17,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var countryCodeText: UILabel!
     
     let phoneNumberKit = PhoneNumberKit()
+    
     var phoneNumberMaxLength = 14;  //set as 14 for default US length, change when other country codes enabled...
 
     
@@ -26,7 +27,6 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         phoneNumber.delegate = self
         phoneNumberKit.countryCode(for: "US")
         self.phoneNumber.becomeFirstResponder()
-
     }
   
 
@@ -35,8 +35,8 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func getVerificationCode(sender: AnyObject) {
-        spinner.startAnimating()
+    func getVerificationCode() {
+        //spinner.startAnimating()
         print("verifying...");
 //        verification =
 //            SMSVerification(applicationKey:applicationKey,
@@ -45,11 +45,13 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            self.phoneNumber.enabled = false
 //            self.spinner.stopAnimating()
 //
-//            if (success){
-//                self.performSegueWithIdentifier("validatePhoneNumber", sender: sender)
-//            } else {
-//                //error
-//            }
+        let success = true;
+            if (success){
+                print("starting segue")
+                self.performSegue(withIdentifier: "validatePhoneNumber", sender: "")
+            } else {
+                //error
+            }
 //        }
         
     }
@@ -59,8 +61,18 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         guard let text = textField.text else { return true }
             
         let newLength = text.utf16.count + string.utf16.count - range.length
-        return newLength <= self.phoneNumberMaxLength // Bool
-    
+        
+        //Check to see if length is less than Max Length
+        //If it exceeds or is equal that Max, then proceed to send verification
+        if newLength == self.phoneNumberMaxLength {
+            getVerificationCode()
+            return true;
+        } else if newLength > self.phoneNumberMaxLength {
+            return false;
+        } else {
+            return true;
+        }
+        
         
         // Allow up to 18 chars
 //        if !(string.characters.count + range.location > 14) {
@@ -87,15 +99,16 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //        return false
     }
     
-   // override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if(segue.identifier == "validatePhoneNumber") {
-//            let enterCodeVC = segue.destinationViewController as! VerifyPhoneNumberViewController
-//            enterCodeVC.verification = self.verification
-//            
-//            //TODO: allow for non-US based phone numbers
-//            
-//            let phoneUtil = NBPhoneNumberUtil()
-//            
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "validatePhoneNumber") {
+            //let enterCodeVC = segue.destinationViewController as! VerifyPhoneNumberViewController
+            //enterCodeVC.verification = self.verification
+            
+            //TODO: allow for non-US based phone numbers
+            
+            //let phoneUtil = NBPhoneNumberUtil()
+            
 //            do {
 //                let phoneNumber: NBPhoneNumber = try phoneUtil.parse(self.phoneNumber.text!, defaultRegion: "US")
 //                let formattedString: String = try phoneUtil.format(phoneNumber, numberFormat: .E164)
@@ -104,9 +117,9 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            catch let error as NSError {
 //                print(error.localizedDescription)
 //            }
-//            
-//        }
-   // }
+            print("moving along...")
+        }
+    }
 
 }
 

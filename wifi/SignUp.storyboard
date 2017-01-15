@@ -252,6 +252,14 @@
             </objects>
             <point key="canvasLocation" x="291" y="381"/>
         </scene>
+        <!--Status-->
+        <scene sceneID="2tw-s7-9HC">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Status" id="g2y-Ir-ROo" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dq6-E0-MRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-424" y="894"/>
+        </scene>
         <!--Verify Phone Number View Controller-->
         <scene sceneID="NXj-Gt-Jty">
             <objects>
@@ -491,6 +499,9 @@
                                         <include reference="7fN-Ve-HlI"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <segue destination="g2y-Ir-ROo" kind="show" id="bx7-hu-lhh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6ho-2D-LHw">
                                 <rect key="frame" x="187.5" y="597" width="191.5" height="70"/>
