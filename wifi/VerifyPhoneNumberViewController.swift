@@ -40,26 +40,18 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         timer.invalidate()
 //        verification.verify(validateTextField.text!,
 //            completion: { (success:Bool, error:NSError?) -> Void in
-//                self.spinner.stopAnimating()
-//                if (success) {
-//                    print("Verified")
-//                    self.performSegueWithIdentifier("ShowCreateUsername", sender: nil)
-//                } else {
-//                    print(error?.description)
-//                }
-//                
+        let success = true
+        self.spinner.stopAnimating()
+                if (success) {
+                    print("Verified")
+                    self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
+                } else {
+                    //print(error?.description)
+                }
+//
 //        });
     }
     
-//    func textField(textField: UITextField, shouldChangeCharactersInRange range:NSRange, replacementString string: String) -> Bool {
-//        
-//        if (string.characters.count + range.location) == 4 {
-//            timer = NSTimer.scheduledTimerWithTimeInterval(0.2, target:self, selector: Selector("verifyPhoneNumber"), userInfo: nil, repeats: false)
-//
-//        }
-//        
-//        return true
-//    }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -67,35 +59,27 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         
         let newLength = text.utf16.count + string.utf16.count - range.length
         
-        //Check to see if length is less than Max Length
-        //If it exceeds or is equal that Max, then proceed to send verification
-        print(newLength)
-        print(string)
-        
+        //Add spacing between pin numbers
         let attributedString = NSMutableAttributedString(string: textField.text!)
-        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(15.0), range: NSRange(location: 0, length: attributedString.length))
+        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(20.0), range: NSRange(location: 0, length: attributedString.length))
         textField.attributedText = attributedString
         
+        //If 4 numbers are input, use it to verify the phone number
         if newLength == 4 {
-            
             timer = Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: #selector(VerifyPhoneNumberViewController.verifyPhoneNumber), userInfo: nil, repeats: false)
-
             return true;
         } else if newLength > 4 {
             return false;
         } else {
-//            if(string != " ") {
-//                textField.text = textField.text! + " "
-//            }
             return true;
         }
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        if(segue.identifier == "ShowCreateUsername") {
-//            let destinationViewController = segue.destinationViewController as! CreateUsernameViewController
-//            destinationViewController.phoneNumber = self.phoneNumber
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "ShowCreateUsername") {
+            //let destinationViewController = segue.destinationViewController as! CreateUsernameViewController
+            //destinationViewController.phoneNumber = self.phoneNumber
+        }
+    }
 
 }

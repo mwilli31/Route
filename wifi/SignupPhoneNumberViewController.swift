@@ -48,7 +48,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         let success = true;
             if (success){
                 print("starting segue")
-                self.performSegue(withIdentifier: "validatePhoneNumber", sender: "")
+                self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
             } else {
                 //error
             }

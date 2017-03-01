@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		02778444E27671C33978E59C /* Pods_wifi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86A827BDE14BF63CB6B780F5 /* Pods_wifi.framework */; };
 		2738C4331E2B4C8000BEEA16 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738C4321E2B4C8000BEEA16 /* VerifyPhoneNumberViewController.swift */; };
+		2738C4351E2BF12200BEEA16 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2738C4341E2BF12200BEEA16 /* CreateUsernameViewController.swift */; };
 		2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6011E21BEEB00C1601F /* AppDelegate.swift */; };
 		2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* ViewController.swift */; };
 		2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D6051E21BEEB00C1601F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		2738C4321E2B4C8000BEEA16 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		2738C4341E2BF12200BEEA16 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		2751D5FE1E21BEEB00C1601F /* wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6011E21BEEB00C1601F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2751D6031E21BEEB00C1601F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 		27D4CF331E271624004FEE83 /* Sign Up  */ = {
 			isa = PBXGroup;
 			children = (
+				2738C4341E2BF12200BEEA16 /* CreateUsernameViewController.swift */,
 				2738C4321E2B4C8000BEEA16 /* VerifyPhoneNumberViewController.swift */,
 				27D4CF361E271E8E004FEE83 /* SignupPhoneNumberViewController.swift */,
 				27D4CF341E271739004FEE83 /* SignUp.storyboard */,
@@ -489,6 +492,7 @@
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */,
 				2738C4331E2B4C8000BEEA16 /* VerifyPhoneNumberViewController.swift in Sources */,
+				2738C4351E2BF12200BEEA16 /* CreateUsernameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

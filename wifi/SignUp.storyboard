@@ -275,7 +275,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Uq5-Fy-T5J">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
-                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="_ _ _ _" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="Sit-y4-d8H">
+                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="__  __  __  __" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="30" translatesAutoresizingMaskIntoConstraints="NO" id="Sit-y4-d8H">
                                 <rect key="frame" x="-4" y="364" width="383" height="90"/>
                                 <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
