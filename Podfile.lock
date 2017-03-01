@@ -1,16 +1,17 @@
 PODS:
-  - Firebase (2.4.3)
-  - libPhoneNumber-iOS (0.8.10)
-  - SinchVerification-Swift (1.4.1)
+  - PhoneNumberKit (1.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 1.1.0)
+    - PhoneNumberKit/UIKit (= 1.1.0)
+  - PhoneNumberKit/PhoneNumberKitCore (1.1.0)
+  - PhoneNumberKit/UIKit (1.1.0):
+    - PhoneNumberKit/PhoneNumberKitCore
 
 DEPENDENCIES:
-  - Firebase (>= 2.4.3)
-  - libPhoneNumber-iOS (~> 0.8)
-  - SinchVerification-Swift
+  - PhoneNumberKit
 
 SPEC CHECKSUMS:
-  Firebase: 48179995b561e2262c5d4060ecdffca45fbbff8b
-  libPhoneNumber-iOS: 7bfd00f843fdcd82b5182b463e8eb3b27579f41d
-  SinchVerification-Swift: 3cb3878bfdeb2125666ef36dfc692589882aa342
+  PhoneNumberKit: 9a59056fcba31af704c97d23de9205c9b3192608
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: f4add5445c2ac8b8470344737924b1314afc0d8d
+
+COCOAPODS: 1.1.1
