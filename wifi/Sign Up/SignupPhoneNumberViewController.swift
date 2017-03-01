@@ -25,7 +25,6 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 //        Do any additional setup after loading the view, typically from a nib.
         phoneNumber.delegate = self
-        phoneNumberKit.countryCode(for: "US")
         self.phoneNumber.becomeFirstResponder()
     }
   
