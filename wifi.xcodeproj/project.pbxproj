@@ -291,7 +291,7 @@
 				TargetAttributes = {
 					2751D5FD1E21BEEB00C1601F = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 878J2FB9S8;
+						DevelopmentTeam = U4HVQW24LD;
 						ProvisioningStyle = Automatic;
 					};
 					2751D6141E21BEEB00C1601F = {
@@ -663,7 +663,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 878J2FB9S8;
+				DEVELOPMENT_TEAM = U4HVQW24LD;
 				INFOPLIST_FILE = wifi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -681,7 +681,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 878J2FB9S8;
+				DEVELOPMENT_TEAM = U4HVQW24LD;
 				INFOPLIST_FILE = wifi/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -31,7 +31,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.usernameTextField.becomeFirstResponder()
+        self.usernameTextField.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -132,6 +132,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         //textField code
         
 //        createUser(usernameTextField.text!)
+        self.performSegue(withIdentifier: "SuccessView", sender: self)
         return true
     }
 
