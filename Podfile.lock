@@ -1,4 +1,10 @@
 PODS:
+  - Auth0 (1.2.0)
+  - Lock (2.0.0):
+    - Auth0 (~> 1.2)
+    - Lock/Classic (= 2.0.0)
+  - Lock/Classic (2.0.0):
+    - Auth0 (~> 1.2)
   - PhoneNumberKit (1.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 1.1.0)
     - PhoneNumberKit/UIKit (= 1.1.0)
@@ -7,11 +13,15 @@ PODS:
     - PhoneNumberKit/PhoneNumberKitCore
 
 DEPENDENCIES:
+  - Auth0 (~> 1.2)
+  - Lock (~> 2.0)
   - PhoneNumberKit
 
 SPEC CHECKSUMS:
+  Auth0: c5719a587c4f5fd78d8c16a26a6f0976f1718add
+  Lock: b98cef67f5e6d1fc5222a59c6d97e9d73a8a9365
   PhoneNumberKit: 9a59056fcba31af704c97d23de9205c9b3192608
 
-PODFILE CHECKSUM: f4add5445c2ac8b8470344737924b1314afc0d8d
+PODFILE CHECKSUM: c05d590b5b954bbc744858237b16aeb1c6871992
 
 COCOAPODS: 1.2.0
