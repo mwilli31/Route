@@ -54,26 +54,28 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            }
 //        }
         
-        var strippedPN = "+1"
-        strippedPN += self.userPhoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+        var phoneNumberAuth0 = "+1"
+        phoneNumberAuth0 += self.userPhoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
 
         
         
         Auth0
             .authentication()
-            .startPasswordless(phoneNumber: strippedPN, connection: "sms")
+            .startPasswordless(phoneNumber: phoneNumberAuth0, connection: "sms")
             .start { result in
                 switch result {
                 case .success:
                     print("OK Sent Credentials")
+                    self.userPhoneNumber = phoneNumberAuth0
+                    DispatchQueue.main.async(execute: {
+                        self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
+                    })
                 case .failure(let error):
                     print(error)
-                    print("Here is the user's stripped Phone Number: ", strippedPN)
+                    print("Here is the user's stripped Phone Number: ", phoneNumberAuth0)
                 }
         }
         
-        
-        self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
 
         
 
@@ -144,6 +146,9 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            catch let error as NSError {
 //                print(error.localizedDescription)
 //            }
+            
+            let destinationViewController = segue.destination as! VerifyPhoneNumberViewController
+            destinationViewController.phoneNumber = self.userPhoneNumber
             print("moving along...")
         }
     }
