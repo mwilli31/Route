@@ -9,5 +9,9 @@ target 'wifi' do
   pod 'PhoneNumberKit'
   pod 'Lock', '~> 2.0'
   pod 'Auth0', '~> 1.2'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'KeychainSwift', '~> 7.0'
   
 end

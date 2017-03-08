@@ -34,9 +34,8 @@ class SignUpCompleteViewController: UIViewController {
 
     @IBAction func getStarted(_ sender: UIButton) {
         
-        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        self.show(vc, sender: self)
+        
+        present( UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!, animated: true, completion: nil)
         
         
     }

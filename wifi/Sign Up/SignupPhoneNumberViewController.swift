@@ -93,7 +93,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         if newLength == self.phoneNumberMaxLength {
             self.userPhoneNumber = text.utf16.description + string.utf16.description
             print(self.userPhoneNumber)
-            
+            self.view.isUserInteractionEnabled = false
             getVerificationCode()
             return true;
         } else if newLength > self.phoneNumberMaxLength {

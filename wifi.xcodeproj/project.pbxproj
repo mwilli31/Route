@@ -27,6 +27,9 @@
 		2751D61A1E21BEEB00C1601F /* wifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6191E21BEEB00C1601F /* wifiTests.swift */; };
 		2751D6251E21BEEB00C1601F /* wifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6241E21BEEB00C1601F /* wifiUITests.swift */; };
 		703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 703C6B0B1E6C99D000C829FB /* Auth0.plist */; };
+		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
+		70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */; };
+		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +77,10 @@
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
-		703C6B0B1E6C99D000C829FB /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		703C6B0B1E6C99D000C829FB /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Auth0.plist; path = wifi/Auth0.plist; sourceTree = "<group>"; };
+		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndKeys.swift; sourceTree = "<group>"; };
+		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
 		86A827BDE14BF63CB6B780F5 /* Pods_wifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -108,6 +114,8 @@
 		2751D5F51E21BEEB00C1601F = {
 			isa = PBXGroup;
 			children = (
+				709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */,
+				703C6B0B1E6C99D000C829FB /* Auth0.plist */,
 				2751D6001E21BEEB00C1601F /* wifi */,
 				2751D6181E21BEEB00C1601F /* wifiTests */,
 				2751D6231E21BEEB00C1601F /* wifiUITests */,
@@ -130,7 +138,6 @@
 		2751D6001E21BEEB00C1601F /* wifi */ = {
 			isa = PBXGroup;
 			children = (
-				703C6B0B1E6C99D000C829FB /* Auth0.plist */,
 				2751D6031E21BEEB00C1601F /* ViewController.swift */,
 				2751D6051E21BEEB00C1601F /* Main.storyboard */,
 				2751D6011E21BEEB00C1601F /* AppDelegate.swift */,
@@ -140,6 +147,7 @@
 				2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */,
 				2751D6101E21BEEB00C1601F /* Info.plist */,
 				2751D6081E21BEEB00C1601F /* wifi.xcdatamodeld */,
+				70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */,
 			);
 			path = wifi;
 			sourceTree = "<group>";
@@ -176,6 +184,7 @@
 			children = (
 				2710E4DD1E66920000F1B40D /* CreateUsernameViewController.swift */,
 				2710E4DE1E66920000F1B40D /* SignUp.storyboard */,
+				70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */,
 				2710E4DF1E66920000F1B40D /* SignupPhoneNumberViewController.swift */,
 				2710E4E01E66920000F1B40D /* VerifyPhoneNumberViewController.swift */,
 				2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */,
@@ -322,6 +331,7 @@
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
 				2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */,
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
+				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +409,8 @@
 				2710E4EC1E66931D00F1B40D /* CurrentUser.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
+				70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */,
+				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,

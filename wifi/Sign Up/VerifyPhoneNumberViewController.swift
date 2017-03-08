@@ -9,6 +9,9 @@
 import UIKit
 import Auth0
 import Lock
+import FirebaseAuth
+import KeychainSwift
+
 
 class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 
@@ -40,20 +43,20 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     func verifyPhoneNumber() {
-//        spinner.startAnimating()
-//        timer.invalidate()
-//        verification.verify(validateTextField.text!,
-//            completion: { (success:Bool, error:NSError?) -> Void in
-//        let success = true
-//        self.spinner.stopAnimating()
-//                if (success) {
-//                    print("Verified")
-//                    self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
-//                } else {
-//                    print(error?.description)
-//                }
-//
-//        });
+        //        spinner.startAnimating()
+        //        timer.invalidate()
+        //        verification.verify(validateTextField.text!,
+        //            completion: { (success:Bool, error:NSError?) -> Void in
+        //        let success = true
+        //        self.spinner.stopAnimating()
+        //                if (success) {
+        //                    print("Verified")
+        //                    self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
+        //                } else {
+        //                    print(error?.description)
+        //                }
+        //
+        //        });
         print("Users PN: ", self.phoneNumber)
         print("Users PIN: ", self.userPin)
         Auth0
@@ -66,10 +69,40 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
             .start { result in
                 switch result {
                 case .success(let credentials):
-                    print("access_token: \(credentials.accessToken)")
-                    DispatchQueue.main.async(execute: {
-                        self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
+                    print("Do something with this jwt id_token: ", credentials.idToken as String!)
+                    
+                    // generating ghetto password. +14087070430 --> 0430+1408707
+                    let index = self.phoneNumber.index(self.phoneNumber.startIndex, offsetBy: 8)
+                    let userPassword = self.phoneNumber.substring(from: index) + self.phoneNumber.substring(to: index)
+                    
+                    // create Firebase user
+                    FIRAuth.auth()?.createUser(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
+                        
+                        if(Error != nil) {
+                            print("Firebase account unsuccessful. ", Error.debugDescription as String!)
+                        }
+                        else {
+                            // save the credentials to keychain
+                            let keychain = KeychainSwift()
+                            keychain.set(userPassword, forKey: Constants.KeychainKeys.routeFirebasePassword)
+                            keychain.set(self.phoneNumber+"@example.com", forKey: Constants.KeychainKeys.routeFirebaseEmail)
+                            
+                            // sign in the user so when app starts again we don't show onboarding
+                            FIRAuth.auth()?.signIn(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
+                                
+                                if(Error != nil) {
+                                    print("Signing the user in after their account creation failed. ", Error.debugDescription as String!)
+                                }
+                                    
+                                else {
+                                    DispatchQueue.main.async(execute: {
+                                        self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
+                                    })
+                                }
+                            })
+                        }
                     })
+                    
                     
                 case .failure(let error):
                     print(error)
@@ -79,7 +112,6 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         
         
     }
-    
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
@@ -111,7 +143,7 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         if newLength == self.pinLength {
             self.userPin = text.utf16.description + string.utf16.description
             print(self.userPin)
-            
+//            self.view.isUserInteractionEnabled = false
             verifyPhoneNumber()
             return true;
         } else if newLength > self.pinLength {

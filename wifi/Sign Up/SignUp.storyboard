@@ -428,7 +428,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qxT-HL-yFQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FOb-on-A8T" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignUp" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FOb-on-A8T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="q0R-Cq-bnP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -443,10 +443,10 @@
             </objects>
             <point key="canvasLocation" x="-1206" y="381"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Login View Controller-->
         <scene sceneID="M9S-EW-ekB">
             <objects>
-                <viewController id="DK5-ZT-pR6" sceneMemberID="viewController">
+                <viewController id="DK5-ZT-pR6" customClass="SignUpLoginViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rUB-KL-l68"/>
                         <viewControllerLayoutGuide type="bottom" id="bjK-Of-dUG"/>
@@ -707,7 +707,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="DK5-ZT-pR6" kind="show" id="Msq-cW-B0T"/>
+                                    <action selector="getStarted:" destination="Q1G-4d-1uh" eventType="touchUpInside" id="ter-bp-YmJ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1050,7 +1050,7 @@
                         <outlet property="spinner" destination="Et8-WZ-oHl" id="kN4-ZJ-C4t"/>
                         <outlet property="usernameTextField" destination="XqE-EY-yUi" id="0ND-St-WXU"/>
                         <segue destination="dlU-rS-Rc4" kind="show" identifier="SetProfilePictureView" id="5CE-Ar-4pJ"/>
-                        <segue destination="Q1G-4d-1uh" kind="show" identifier="" id="h0F-xj-DUF"/>
+                        <segue destination="Q1G-4d-1uh" kind="show" identifier="SuccessView" id="h0F-xj-DUF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3g-Yi-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1662,7 +1662,6 @@
         <image name="success" width="124" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bon-2g-kAY"/>
-        <segue reference="lyi-Ba-B7z"/>
+        <segue reference="h0F-xj-DUF"/>
     </inferredMetricsTieBreakers>
 </document>
