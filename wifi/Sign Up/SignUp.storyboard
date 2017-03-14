@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="291" y="381"/>
         </scene>
-        <!--Status-->
+        <!--PagingMenuViewController-->
         <scene sceneID="2tw-s7-9HC">
             <objects>
-                <viewControllerPlaceholder storyboardName="Status" id="g2y-Ir-ROo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PagingMenuViewController" id="g2y-Ir-ROo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq6-E0-MRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-424" y="894"/>

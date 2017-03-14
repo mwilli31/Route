@@ -13,5 +13,6 @@ target 'wifi' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'KeychainSwift', '~> 7.0'
-  
+  pod "PagingMenuController"
+
 end
