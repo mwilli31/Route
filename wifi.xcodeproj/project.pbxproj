@@ -31,8 +31,14 @@
 		278F4B751E6E3C0400B7F656 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F4B741E6E3C0400B7F656 /* LogIn.storyboard */; };
 		278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F4B771E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift */; };
 		278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */; };
-		2DDEB825393D6816660FCF2A /* Pods_wifiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */; };
-		2E0FEDF31A7A0403E66B982D /* Pods_wifiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */; };
+		279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 279A1F791E77D5A30094A33B /* PagingMenuViewController.storyboard */; };
+		279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */; };
+		279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F811E77DF810094A33B /* ProfileViewController.swift */; };
+		279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F831E77E0550094A33B /* RequestsViewController.swift */; };
+		703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 703C6B0B1E6C99D000C829FB /* Auth0.plist */; };
+		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
+		70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */; };
+		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,14 +89,18 @@
 		278F4B741E6E3C0400B7F656 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LogIn.storyboard; path = LogIn/LogIn.storyboard; sourceTree = "<group>"; };
 		278F4B771E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInPhoneNumberViewController.swift; sourceTree = "<group>"; };
 		278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInUsernameViewController.swift; path = LogIn/LogInUsernameViewController.swift; sourceTree = "<group>"; };
+		279A1F791E77D5A30094A33B /* PagingMenuViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = PagingMenuViewController.storyboard; path = Main/PagingMenuViewController.storyboard; sourceTree = "<group>"; };
+		279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingMenuViewController.swift; path = Main/PagingMenuViewController.swift; sourceTree = "<group>"; };
+		279A1F811E77DF810094A33B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Main/ProfileViewController.swift; sourceTree = "<group>"; };
+		279A1F831E77E0550094A33B /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestsViewController.swift; path = Main/RequestsViewController.swift; sourceTree = "<group>"; };
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
-		53FFCADEAEA05F09C90DF916 /* Pods-wifiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
+		703C6B0B1E6C99D000C829FB /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndKeys.swift; sourceTree = "<group>"; };
+		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
 		86A827BDE14BF63CB6B780F5 /* Pods_wifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AC7A9EEB14A7D5592872D0E9 /* Pods-wifiTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifiTests/Pods-wifiTests.release.xcconfig"; sourceTree = "<group>"; };
-		EA3AEA1D484A67C49107B14C /* Pods-wifiTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifiTests/Pods-wifiTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EF39E6D23E0B947CA08CFB96 /* Pods-wifiUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -107,7 +117,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DDEB825393D6816660FCF2A /* Pods_wifiTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,7 +124,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E0FEDF31A7A0403E66B982D /* Pods_wifiUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,8 @@
 		2751D6001E21BEEB00C1601F /* wifi */ = {
 			isa = PBXGroup;
 			children = (
+				709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */,
+				703C6B0B1E6C99D000C829FB /* Auth0.plist */,
 				278F4B761E6E3C1500B7F656 /* LogIn */,
 				278F4B6F1E67E11300B7F656 /* wifi.entitlements */,
 				2751D6031E21BEEB00C1601F /* ViewController.swift */,
@@ -158,6 +168,7 @@
 				2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */,
 				2751D6101E21BEEB00C1601F /* Info.plist */,
 				2751D6081E21BEEB00C1601F /* wifi.xcdatamodeld */,
+				70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */,
 			);
 			path = wifi;
 			sourceTree = "<group>";
@@ -183,10 +194,14 @@
 		2777A0261E23023B00229502 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */,
+				279A1F791E77D5A30094A33B /* PagingMenuViewController.storyboard */,
 				2710E4D91E66915C00F1B40D /* Status.storyboard */,
 				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
 				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
 				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
+				279A1F811E77DF810094A33B /* ProfileViewController.swift */,
+				279A1F831E77E0550094A33B /* RequestsViewController.swift */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -206,6 +221,7 @@
 			children = (
 				2710E4DD1E66920000F1B40D /* CreateUsernameViewController.swift */,
 				2710E4DE1E66920000F1B40D /* SignUp.storyboard */,
+				70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */,
 				2710E4DF1E66920000F1B40D /* SignupPhoneNumberViewController.swift */,
 				2710E4E01E66920000F1B40D /* VerifyPhoneNumberViewController.swift */,
 				2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */,
@@ -221,10 +237,6 @@
 			children = (
 				6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */,
 				395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */,
-				EA3AEA1D484A67C49107B14C /* Pods-wifiTests.debug.xcconfig */,
-				AC7A9EEB14A7D5592872D0E9 /* Pods-wifiTests.release.xcconfig */,
-				EF39E6D23E0B947CA08CFB96 /* Pods-wifiUITests.debug.xcconfig */,
-				53FFCADEAEA05F09C90DF916 /* Pods-wifiUITests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -266,12 +278,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2751D62C1E21BEEB00C1601F /* Build configuration list for PBXNativeTarget "wifiTests" */;
 			buildPhases = (
-				19DBFC6CF40A680841C7EDEA /* [CP] Check Pods Manifest.lock */,
 				2751D6111E21BEEB00C1601F /* Sources */,
 				2751D6121E21BEEB00C1601F /* Frameworks */,
 				2751D6131E21BEEB00C1601F /* Resources */,
-				73C21BE0041FFDBCF5BBA591 /* [CP] Embed Pods Frameworks */,
-				2A80FA3A92161BB940D5BC2B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -287,12 +296,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2751D62F1E21BEEB00C1601F /* Build configuration list for PBXNativeTarget "wifiUITests" */;
 			buildPhases = (
-				2AA4725744A32E86BBAEB0BB /* [CP] Check Pods Manifest.lock */,
 				2751D61C1E21BEEB00C1601F /* Sources */,
 				2751D61D1E21BEEB00C1601F /* Frameworks */,
 				2751D61E1E21BEEB00C1601F /* Resources */,
-				CE3D03C5F27DE5EB873B3B3F /* [CP] Embed Pods Frameworks */,
-				797BFA2FEC51B681498C13B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -363,12 +369,15 @@
 			files = (
 				278F4B751E6E3C0400B7F656 /* LogIn.storyboard in Resources */,
 				278F4B711E6E2B2E00B7F656 /* Profile.storyboard in Resources */,
+				279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
+				703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */,
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
 				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
 				2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */,
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
+				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,51 +398,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		19DBFC6CF40A680841C7EDEA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2A80FA3A92161BB940D5BC2B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wifiTests/Pods-wifiTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2AA4725744A32E86BBAEB0BB /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 		40BCA6F1986DA65F1FCD46FF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,36 +411,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wifi/Pods-wifi-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73C21BE0041FFDBCF5BBA591 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wifiTests/Pods-wifiTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		797BFA2FEC51B681498C13B7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9D6DDE228BAFA56939F67BBA /* [CP] Copy Pods Resources */ = {
@@ -509,21 +443,6 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		CE3D03C5F27DE5EB873B3B3F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -535,9 +454,14 @@
 				2710E4E81E66920000F1B40D /* AccessContactsViewController.swift in Sources */,
 				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
 				2710E4EC1E66931D00F1B40D /* CurrentUser.swift in Sources */,
+				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
+				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
+				70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */,
+				279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */,
+				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,
@@ -731,7 +655,6 @@
 		};
 		2751D62D1E21BEEB00C1601F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EA3AEA1D484A67C49107B14C /* Pods-wifiTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -746,7 +669,6 @@
 		};
 		2751D62E1E21BEEB00C1601F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC7A9EEB14A7D5592872D0E9 /* Pods-wifiTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -761,7 +683,6 @@
 		};
 		2751D6301E21BEEB00C1601F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF39E6D23E0B947CA08CFB96 /* Pods-wifiUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = wifiUITests/Info.plist;
@@ -775,7 +696,6 @@
 		};
 		2751D6311E21BEEB00C1601F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 53FFCADEAEA05F09C90DF916 /* Pods-wifiUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = wifiUITests/Info.plist;

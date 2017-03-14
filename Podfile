@@ -7,15 +7,12 @@ target 'wifi' do
 
   # Pods for wifi
   pod 'PhoneNumberKit'
-
-  target 'wifiTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'wifiUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  pod 'Lock', '~> 2.0'
+  pod 'Auth0', '~> 1.2'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'Firebase/Database'
+  pod 'KeychainSwift', '~> 7.0'
+  pod "PagingMenuController"
 
 end

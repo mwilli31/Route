@@ -32,4 +32,11 @@ class SignUpCompleteViewController: UIViewController {
     }
     */
 
+    @IBAction func getStarted(_ sender: UIButton) {
+        
+        
+        present( UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()!, animated: true, completion: nil)
+        
+        
+    }
 }

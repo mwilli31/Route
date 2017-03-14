@@ -9,6 +9,9 @@
 import UIKit
 import CoreData
 import NetworkExtension
+import Lock
+import Auth0
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +21,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
+        FIRApp.configure()
         UIApplication.shared.statusBarStyle = .lightContent;
+      
+        
+        // You gotta sign the user out for testing purposes. Make sure you delete from Firebase as well.
+//        try! FIRAuth.auth()?.signOut()
+        
+        // Check if Firebase user is logged in...
+                if (FIRAuth.auth()?.currentUser) == nil {
+                    // segue to main view controller
+                    print("User is not signed in / account does not exist")
+                    let mainStoryboard : UIStoryboard = UIStoryboard(name: "SignUp", bundle: nil)
+                    let initialViewController : UINavigationController = mainStoryboard.instantiateViewController(withIdentifier: "SignUp") as! UINavigationController
+                    self.window = UIWindow(frame: UIScreen.main.bounds)
+                    self.window?.rootViewController = initialViewController
+                    self.window?.makeKeyAndVisible()
+                }
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        return Lock.resumeAuth(url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

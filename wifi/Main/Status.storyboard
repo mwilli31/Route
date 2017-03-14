@@ -13,7 +13,7 @@
         <!--Status View Controller-->
         <scene sceneID="TvH-96-AGb">
             <objects>
-                <viewController storyboardIdentifier="Status" id="Q9I-2A-ONt" customClass="StatusViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StatusViewController" id="Q9I-2A-ONt" customClass="StatusViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v5G-DR-Cj4"/>
                         <viewControllerLayoutGuide type="bottom" id="fAS-5g-XdW"/>
@@ -35,42 +35,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AOs-IS-m5S">
-                                <rect key="frame" x="76" y="28" width="224" height="29"/>
-                                <segments>
-                                    <segment title="Status"/>
-                                    <segment title="Profile"/>
-                                    <segment title="Requests"/>
-                                </segments>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <segue destination="62p-sT-fQW" kind="show" animates="NO" id="uVJ-XJ-XwK"/>
-                                </connections>
-                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="200" id="1Ma-Wx-bJz"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="End-dU-rvs"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="top" secondItem="CAN-EY-qCK" secondAttribute="top" constant="208" id="e1Q-k3-XyV"/>
-                            <constraint firstItem="AOs-IS-m5S" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="8" symbolic="YES" id="ecM-Rj-oym"/>
-                            <constraint firstItem="AOs-IS-m5S" firstAttribute="leading" secondItem="K1z-Fs-eDT" secondAttribute="leading" id="gd9-eJ-q0P"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="K1z-Fs-eDT" secondAttribute="centerX" id="nS8-zi-OYZ"/>
-                            <constraint firstItem="AOs-IS-m5S" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="zbh-td-jPd"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02b-O0-nE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="148.87556221889056"/>
-        </scene>
-        <!--Profile-->
-        <scene sceneID="laN-T5-TbD">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="profile" storyboardName="Profile" id="62p-sT-fQW" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZTK-hd-Um0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="727" y="-70"/>
         </scene>
     </scenes>
     <resources>

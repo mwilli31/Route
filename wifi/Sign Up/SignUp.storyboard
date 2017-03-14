@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FOb-on-A8T">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="FOb-on-A8T">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -103,7 +103,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1 US" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-0i-CMG">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nS5-0i-CMG">
                                 <rect key="frame" x="-4" y="364" width="90" height="90"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="0.68305495689999995" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="291" y="381"/>
         </scene>
-        <!--Status-->
+        <!--PagingMenuViewController-->
         <scene sceneID="2tw-s7-9HC">
             <objects>
-                <viewControllerPlaceholder storyboardName="Status" id="g2y-Ir-ROo" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="PagingMenuViewController" id="g2y-Ir-ROo" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dq6-E0-MRZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-424" y="894"/>
@@ -428,7 +428,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qxT-HL-yFQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FOb-on-A8T" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SignUp" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="FOb-on-A8T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="q0R-Cq-bnP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -443,10 +443,10 @@
             </objects>
             <point key="canvasLocation" x="-1206" y="381"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up Login View Controller-->
         <scene sceneID="M9S-EW-ekB">
             <objects>
-                <viewController id="DK5-ZT-pR6" sceneMemberID="viewController">
+                <viewController id="DK5-ZT-pR6" customClass="SignUpLoginViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rUB-KL-l68"/>
                         <viewControllerLayoutGuide type="bottom" id="bjK-Of-dUG"/>
@@ -681,6 +681,35 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="trN-OU-8O6">
+                                <rect key="frame" x="0.0" y="597" width="375" height="70"/>
+                                <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.8980392157" alpha="0.70220905170000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ZeK-Zo-t7A">
+                                        <variation key="heightClass=regular-widthClass=compact" constant="70"/>
+                                    </constraint>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="70" id="bao-Fp-QQW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ZeK-Zo-t7A"/>
+                                        <exclude reference="bao-Fp-QQW"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ZeK-Zo-t7A"/>
+                                        <exclude reference="bao-Fp-QQW"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="getStarted:" destination="Q1G-4d-1uh" eventType="touchUpInside" id="ter-bp-YmJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -696,18 +725,21 @@
                             <constraint firstItem="Bs5-y6-AWE" firstAttribute="top" secondItem="PZm-YC-FVa" secondAttribute="bottom" constant="31" id="MFf-cb-WAL">
                                 <variation key="heightClass=regular-widthClass=compact" constant="48"/>
                             </constraint>
+                            <constraint firstItem="trN-OU-8O6" firstAttribute="leading" secondItem="uH7-1u-AbD" secondAttribute="leading" id="MhQ-LR-0ng"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="centerY" secondItem="n70-3O-eBs" secondAttribute="centerY" id="MwG-6G-jYS"/>
                             <constraint firstItem="Bs5-y6-AWE" firstAttribute="centerX" secondItem="uH7-1u-AbD" secondAttribute="centerX" id="USS-rc-vma"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="top" secondItem="Uia-mW-Hks" secondAttribute="bottom" constant="52" id="Wuh-05-xZQ">
                                 <variation key="heightClass=regular-widthClass=compact" constant="95"/>
                             </constraint>
                             <constraint firstItem="n70-3O-eBs" firstAttribute="leading" secondItem="uH7-1u-AbD" secondAttribute="leadingMargin" constant="-20" id="c2m-Yt-Ozi"/>
+                            <constraint firstItem="gJT-V0-SQm" firstAttribute="top" secondItem="trN-OU-8O6" secondAttribute="bottom" id="cwg-N8-47d"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n70-3O-eBs" secondAttribute="trailing" constant="-20" id="eTO-VF-Ffb"/>
                             <constraint firstItem="Uia-mW-Hks" firstAttribute="centerX" secondItem="uH7-1u-AbD" secondAttribute="centerX" id="fkp-SO-g5z"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="centerX" secondItem="Uia-mW-Hks" secondAttribute="centerX" id="g5U-tv-xda"/>
                             <constraint firstItem="n70-3O-eBs" firstAttribute="top" secondItem="uH7-1u-AbD" secondAttribute="topMargin" id="ge4-q1-9iG"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="top" secondItem="Uia-mW-Hks" secondAttribute="bottom" constant="70" id="m5N-2q-BRG"/>
                             <constraint firstItem="gJT-V0-SQm" firstAttribute="top" secondItem="n70-3O-eBs" secondAttribute="bottom" id="mxz-wk-skh"/>
+                            <constraint firstAttribute="trailing" secondItem="trN-OU-8O6" secondAttribute="trailing" id="rTn-6A-cL3"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="centerX" secondItem="Bs5-y6-AWE" secondAttribute="centerX" id="vMv-DX-xk7"/>
                             <constraint firstItem="PZm-YC-FVa" firstAttribute="centerX" secondItem="n70-3O-eBs" secondAttribute="centerX" id="yjg-C9-v7D"/>
                         </constraints>
@@ -771,7 +803,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMr-6X-iV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4077" y="381"/>
+            <point key="canvasLocation" x="4076" y="380.95952023988008"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="3wn-7W-u9X">
@@ -807,6 +839,9 @@
                                         <include reference="dRf-Ne-LN7"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="delegate" destination="eau-VM-pAi" id="EHv-j6-vSk"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hh-6q-Res">
                                 <rect key="frame" x="-4" y="364" width="90" height="90"/>
@@ -1015,6 +1050,7 @@
                         <outlet property="spinner" destination="Et8-WZ-oHl" id="kN4-ZJ-C4t"/>
                         <outlet property="usernameTextField" destination="XqE-EY-yUi" id="0ND-St-WXU"/>
                         <segue destination="dlU-rS-Rc4" kind="show" identifier="SetProfilePictureView" id="5CE-Ar-4pJ"/>
+                        <segue destination="Q1G-4d-1uh" kind="show" identifier="SuccessView" id="h0F-xj-DUF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v3g-Yi-ad4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1295,7 +1331,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rdw-XC-AbQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2557.5" y="381"/>
+            <point key="canvasLocation" x="2510" y="-387"/>
         </scene>
         <!--Access Contacts View Controller-->
         <scene sceneID="wPr-dL-614">
@@ -1615,7 +1651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dcK-5l-ndA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3315" y="381"/>
+            <point key="canvasLocation" x="3431" y="-387"/>
         </scene>
     </scenes>
     <resources>
@@ -1625,4 +1661,7 @@
         <image name="profile" width="120" height="120"/>
         <image name="success" width="124" height="124"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="h0F-xj-DUF"/>
+    </inferredMetricsTieBreakers>
 </document>

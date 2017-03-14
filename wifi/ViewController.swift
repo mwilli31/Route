@@ -15,13 +15,6 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        print("hello")
-        present( UIStoryboard(name: "SignUp", bundle: nil).instantiateInitialViewController()!, animated: false, completion: nil)
-
-        //present( UIStoryboard(name: "Status", bundle: nil).instantiateInitialViewController()!, animated: false, completion: nil)
-    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

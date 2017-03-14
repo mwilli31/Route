@@ -7,7 +7,8 @@
 //
 
 import UIKit
-//import Firebase
+import FirebaseAuth
+import FirebaseDatabase
 
 class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     
@@ -31,7 +32,7 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        self.usernameTextField.becomeFirstResponder()
+        self.usernameTextField.becomeFirstResponder()
     }
     
     override func didReceiveMemoryWarning() {
@@ -132,6 +133,13 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         //textField code
         
 //        createUser(usernameTextField.text!)
+        var ref: FIRDatabaseReference!
+        
+        ref = FIRDatabase.database().reference()
+        if (FIRAuth.auth()?.currentUser) != nil {
+            ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["username" : self.usernameTextField.text!])
+        }
+        self.performSegue(withIdentifier: "SuccessView", sender: self)
         return true
     }
 

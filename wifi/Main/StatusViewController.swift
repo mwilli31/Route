@@ -11,6 +11,11 @@ import NetworkExtension
 
 class StatusViewController: UIViewController {
     
+    class func instantiateFromStoryboard() -> StatusViewController {
+        let storyboard = UIStoryboard(name: "Status", bundle: nil)
+        return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! StatusViewController
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

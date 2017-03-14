@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="5t6-dW-xgj">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,28 +9,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Status View-->
+        <scene sceneID="tw2-eT-srf">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JQc-lW-RTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="642" y="107"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="m2a-Ph-dgn">
+            <objects>
+                <viewController storyboardIdentifier="Home" id="5t6-dW-xgj" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="uem-nV-csE"/>
+                        <viewControllerLayoutGuide type="bottom" id="bbj-Kq-NId"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="3Tk-yM-Nop">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="2y6-yv-cap">
-                                <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="QgU-o3-eI6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="JDP-A3-opr">
-                                <rect key="frame" x="148.5" y="120" width="78" height="72"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="78" id="eyf-mp-tVC"/>
-                                </constraints>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NxF-8d-f2H">
+                                <rect key="frame" x="149" y="120" width="78" height="72"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RW2-Se-28q">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mBs-Gh-BIP">
                                 <rect key="frame" x="16" y="606" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,28 +47,20 @@
                         </subviews>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JDP-A3-opr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3vw-A2-fnA"/>
-                            <constraint firstItem="RW2-Se-28q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7V0-ND-t3o"/>
-                            <constraint firstAttribute="trailing" secondItem="2y6-yv-cap" secondAttribute="trailing" constant="-4" id="8Ad-lA-Jgz"/>
-                            <constraint firstAttribute="bottom" secondItem="RW2-Se-28q" secondAttribute="bottom" constant="40" id="AWl-P2-5eV"/>
-                            <constraint firstItem="2y6-yv-cap" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-4" id="PKU-5A-1fQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="JDP-A3-opr" secondAttribute="bottom" constant="475" id="ZoK-r0-LJX"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2y6-yv-cap" secondAttribute="bottom" id="jPA-0R-vYs"/>
-                            <constraint firstItem="JDP-A3-opr" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="100" id="kvd-9A-lmw"/>
-                            <constraint firstItem="2y6-yv-cap" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="l1y-Su-uQq"/>
+                            <constraint firstAttribute="trailing" secondItem="QgU-o3-eI6" secondAttribute="trailing" id="94d-8u-zQU"/>
+                            <constraint firstItem="mBs-Gh-BIP" firstAttribute="centerX" secondItem="3Tk-yM-Nop" secondAttribute="centerX" id="NBk-Dl-JFG"/>
+                            <constraint firstItem="NxF-8d-f2H" firstAttribute="top" secondItem="uem-nV-csE" secondAttribute="bottom" constant="100" id="NHR-0a-yNP"/>
+                            <constraint firstItem="bbj-Kq-NId" firstAttribute="top" secondItem="mBs-Gh-BIP" secondAttribute="bottom" constant="40" id="Sdw-Cy-srD"/>
+                            <constraint firstItem="QgU-o3-eI6" firstAttribute="top" secondItem="3Tk-yM-Nop" secondAttribute="top" id="Xbm-0O-zeA"/>
+                            <constraint firstItem="QgU-o3-eI6" firstAttribute="leading" secondItem="3Tk-yM-Nop" secondAttribute="leading" id="mrO-HQ-Urj"/>
+                            <constraint firstItem="NxF-8d-f2H" firstAttribute="centerX" secondItem="mBs-Gh-BIP" secondAttribute="centerX" id="rZQ-i4-udl"/>
+                            <constraint firstItem="bbj-Kq-NId" firstAttribute="top" secondItem="QgU-o3-eI6" secondAttribute="bottom" id="uyY-XL-cOI"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBP-aC-vw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-        </scene>
-        <!--Status View-->
-        <scene sceneID="tw2-eT-srf">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Status" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="JQc-lW-RTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="642" y="-48"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>

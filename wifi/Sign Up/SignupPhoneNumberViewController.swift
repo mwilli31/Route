@@ -8,7 +8,8 @@
 
 import UIKit
 import PhoneNumberKit
-
+import Lock
+import Auth0
 
 class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
@@ -19,7 +20,7 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     let phoneNumberKit = PhoneNumberKit()
     
     var phoneNumberMaxLength = 14;  //set as 14 for default US length, change when other country codes enabled...
-
+    var userPhoneNumber = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,8 +36,8 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     func getVerificationCode() {
-        //spinner.startAnimating()
-        print("verifying...");
+//        spinner.startAnimating()
+//        print("verifying...");
 //        verification =
 //            SMSVerification(applicationKey:applicationKey,
 //                phoneNumber: phoneNumber.text!)
@@ -44,15 +45,41 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            self.phoneNumber.enabled = false
 //            self.spinner.stopAnimating()
 //
-        let success = true;
-            if (success){
-                print("starting segue")
-                self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
-            } else {
-                //error
-            }
+//        let success = true;
+//            if (success){
+//                print("starting segue")
+//                self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
+//            } else {
+//                //error
+//            }
 //        }
         
+        var phoneNumberAuth0 = "+1"
+        phoneNumberAuth0 += self.userPhoneNumber.components(separatedBy: CharacterSet.decimalDigits.inverted).joined()
+
+        
+        
+        Auth0
+            .authentication()
+            .startPasswordless(phoneNumber: phoneNumberAuth0, connection: "sms")
+            .start { result in
+                switch result {
+                case .success:
+                    print("OK Sent Credentials")
+                    self.userPhoneNumber = phoneNumberAuth0
+                    DispatchQueue.main.async(execute: {
+                        self.performSegue(withIdentifier: "validatePhoneNumber", sender: nil)
+                    })
+                case .failure(let error):
+                    print(error)
+                    print("Here is the user's stripped Phone Number: ", phoneNumberAuth0)
+                }
+        }
+        
+
+        
+
+  
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -64,6 +91,9 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         //Check to see if length is less than Max Length
         //If it exceeds or is equal that Max, then proceed to send verification
         if newLength == self.phoneNumberMaxLength {
+            self.userPhoneNumber = text.utf16.description + string.utf16.description
+            print(self.userPhoneNumber)
+            self.view.isUserInteractionEnabled = false
             getVerificationCode()
             return true;
         } else if newLength > self.phoneNumberMaxLength {
@@ -116,6 +146,9 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //            catch let error as NSError {
 //                print(error.localizedDescription)
 //            }
+            
+            let destinationViewController = segue.destination as! VerifyPhoneNumberViewController
+            destinationViewController.phoneNumber = self.userPhoneNumber
             print("moving along...")
         }
     }
