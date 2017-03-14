@@ -26,6 +26,11 @@
 		2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */; };
 		2751D61A1E21BEEB00C1601F /* wifiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6191E21BEEB00C1601F /* wifiTests.swift */; };
 		2751D6251E21BEEB00C1601F /* wifiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6241E21BEEB00C1601F /* wifiUITests.swift */; };
+		278F4B711E6E2B2E00B7F656 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F4B701E6E2B2E00B7F656 /* Profile.storyboard */; };
+		278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F4B721E6E33C100B7F656 /* Requests.storyboard */; };
+		278F4B751E6E3C0400B7F656 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 278F4B741E6E3C0400B7F656 /* LogIn.storyboard */; };
+		278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F4B771E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift */; };
+		278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */; };
 		2DDEB825393D6816660FCF2A /* Pods_wifiTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */; };
 		2E0FEDF31A7A0403E66B982D /* Pods_wifiUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +77,12 @@
 		2751D6201E21BEEB00C1601F /* wifiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = wifiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6241E21BEEB00C1601F /* wifiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wifiUITests.swift; sourceTree = "<group>"; };
 		2751D6261E21BEEB00C1601F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		278F4B6F1E67E11300B7F656 /* wifi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = wifi.entitlements; sourceTree = "<group>"; };
+		278F4B701E6E2B2E00B7F656 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Profile.storyboard; path = Main/Profile.storyboard; sourceTree = "<group>"; };
+		278F4B721E6E33C100B7F656 /* Requests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Requests.storyboard; path = Main/Requests.storyboard; sourceTree = "<group>"; };
+		278F4B741E6E3C0400B7F656 /* LogIn.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LogIn.storyboard; path = LogIn/LogIn.storyboard; sourceTree = "<group>"; };
+		278F4B771E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LogInUsernameViewController.swift; path = LogIn/LogInUsernameViewController.swift; sourceTree = "<group>"; };
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		53FFCADEAEA05F09C90DF916 /* Pods-wifiUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifiUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifiUITests/Pods-wifiUITests.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -136,6 +147,8 @@
 		2751D6001E21BEEB00C1601F /* wifi */ = {
 			isa = PBXGroup;
 			children = (
+				278F4B761E6E3C1500B7F656 /* LogIn */,
+				278F4B6F1E67E11300B7F656 /* wifi.entitlements */,
 				2751D6031E21BEEB00C1601F /* ViewController.swift */,
 				2751D6051E21BEEB00C1601F /* Main.storyboard */,
 				2751D6011E21BEEB00C1601F /* AppDelegate.swift */,
@@ -172,8 +185,20 @@
 			children = (
 				2710E4D91E66915C00F1B40D /* Status.storyboard */,
 				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
+				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
+				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		278F4B761E6E3C1500B7F656 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				278F4B741E6E3C0400B7F656 /* LogIn.storyboard */,
+				278F4B771E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift */,
+				278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */,
+			);
+			name = LogIn;
 			sourceTree = "<group>";
 		};
 		27D4CF331E271624004FEE83 /* Sign Up  */ = {
@@ -293,6 +318,11 @@
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = 878J2FB9S8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.VPNLite = {
+								enabled = 0;
+							};
+						};
 					};
 					2751D6141E21BEEB00C1601F = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -331,8 +361,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				278F4B751E6E3C0400B7F656 /* LogIn.storyboard in Resources */,
+				278F4B711E6E2B2E00B7F656 /* Profile.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
+				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
 				2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */,
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
@@ -500,8 +533,10 @@
 			files = (
 				2710E4E71E66920000F1B40D /* VerifyPhoneNumberViewController.swift in Sources */,
 				2710E4E81E66920000F1B40D /* AccessContactsViewController.swift in Sources */,
+				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
 				2710E4EC1E66931D00F1B40D /* CurrentUser.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
+				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
@@ -662,6 +697,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wifi/wifi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 878J2FB9S8;
 				INFOPLIST_FILE = wifi/Info.plist;
@@ -680,6 +716,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = wifi/wifi.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 878J2FB9S8;
 				INFOPLIST_FILE = wifi/Info.plist;
