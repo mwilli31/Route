@@ -12,10 +12,10 @@
         <!--Status View-->
         <scene sceneID="tw2-eT-srf">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="Status" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQc-lW-RTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="-48"/>
+            <point key="canvasLocation" x="642" y="107"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="m2a-Ph-dgn">
