@@ -47,7 +47,7 @@ struct MenuItemRequests: MenuItemViewCustomizable {
     }
 }
 
-struct PagingMenuOptions1: PagingMenuControllerCustomizable {
+struct PagingMenuOptions: PagingMenuControllerCustomizable {
     let statusViewController = StatusViewController.instantiateFromStoryboard()
     let profileViewController = ProfileViewController.instantiateFromStoryboard()
     let requestsViewController = RequestsViewController.instantiateFromStoryboard()
@@ -55,9 +55,6 @@ struct PagingMenuOptions1: PagingMenuControllerCustomizable {
     var componentType: ComponentType {
         return .all(menuOptions: MenuOptions(), pagingControllers: [statusViewController, profileViewController, requestsViewController])
     }
-//    var lazyLoadingPage: LazyLoadingPage {
-//        return .three
-//    }
     
     struct MenuOptions: MenuViewCustomizable {
         var displayMode: MenuDisplayMode {
@@ -92,7 +89,7 @@ class PagingMenuViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        options = PagingMenuOptions1()
+        options = PagingMenuOptions()
         
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.setup(options)
