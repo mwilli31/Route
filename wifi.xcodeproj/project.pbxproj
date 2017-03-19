@@ -97,6 +97,7 @@
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
 		703C6B0B1E6C99D000C829FB /* Auth0.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
+		706B15D51E7F43CB000C094E /* route.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.mobileprovision; sourceTree = "<group>"; };
 		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstantsAndKeys.swift; sourceTree = "<group>"; };
 		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
@@ -133,6 +134,7 @@
 		2751D5F51E21BEEB00C1601F = {
 			isa = PBXGroup;
 			children = (
+				706B15D51E7F43CB000C094E /* route.mobileprovision */,
 				2751D6001E21BEEB00C1601F /* wifi */,
 				2751D6181E21BEEB00C1601F /* wifiTests */,
 				2751D6231E21BEEB00C1601F /* wifiUITests */,
@@ -325,6 +327,9 @@
 						DevelopmentTeam = 878J2FB9S8;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.VPNLite = {
 								enabled = 0;
 							};
