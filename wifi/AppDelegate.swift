@@ -9,8 +9,6 @@
 import UIKit
 import CoreData
 import NetworkExtension
-import Lock
-import Auth0
 import Firebase
 
 @UIApplicationMain
@@ -39,10 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     self.window?.makeKeyAndVisible()
                 }
         return true
-    }
-    
-    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
-        return Lock.resumeAuth(url, options: options)
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

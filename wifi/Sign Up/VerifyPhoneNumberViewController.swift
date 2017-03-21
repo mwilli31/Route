@@ -7,10 +7,9 @@
 //
 
 import UIKit
-import Auth0
-import Lock
 import FirebaseAuth
 import KeychainSwift
+import SinchVerification
 
 
 class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
@@ -20,8 +19,10 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
 //    var timer = Timer()
     
     var phoneNumber:String = ""
-    let pinLength = 6
+    let pinLength = 4
     var userPin = ""
+    
+    var verification:Verification!
     
     @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var validateTextField: UITextField!
@@ -43,82 +44,64 @@ class VerifyPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     }
     
     func verifyPhoneNumber() {
-        //        spinner.startAnimating()
-        //        timer.invalidate()
-        //        verification.verify(validateTextField.text!,
-        //            completion: { (success:Bool, error:NSError?) -> Void in
-        //        let success = true
-        //        self.spinner.stopAnimating()
-        //                if (success) {
-        //                    print("Verified")
-        //                    self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
-        //                } else {
-        //                    print(error?.description)
-        //                }
-        //
-        //        });
+
         print("Users PN: ", self.phoneNumber)
         print("Users PIN: ", self.userPin)
-        Auth0
-            .authentication()
-            .login(
-                usernameOrEmail: phoneNumber,
-                password: userPin,
-                connection: "sms"
-            )
-            .start { result in
-                switch result {
-                case .success(let credentials):
-                    print("Do something with this jwt id_token: ", credentials.idToken as String!)
-                    
-                    // generating ghetto password. +14087070430 --> 0430+1408707
-                    let index = self.phoneNumber.index(self.phoneNumber.startIndex, offsetBy: 8)
-                    let userPassword = self.phoneNumber.substring(from: index) + self.phoneNumber.substring(to: index)
-                    
-                    // create Firebase user
-                    FIRAuth.auth()?.createUser(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
-                        
-                        if(Error != nil) {
-                            print("Firebase account unsuccessful. ", Error.debugDescription as String!)
-                        }
-                        else {
-                            // save the credentials to keychain
-                            let keychain = KeychainSwift()
-                            keychain.set(userPassword, forKey: Constants.KeychainKeys.routeFirebasePassword)
-                            keychain.set(self.phoneNumber+"@example.com", forKey: Constants.KeychainKeys.routeFirebaseEmail)
-                            
-                            // sign in the user so when app starts again we don't show onboarding
-                            FIRAuth.auth()?.signIn(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
-                                
-                                if(Error != nil) {
-                                    print("Signing the user in after their account creation failed. ", Error.debugDescription as String!)
-                                }
+        self.verification.verify(self.userPin,
+                            completion: { (success:Bool, error:Error?) -> Void in
+                                if (success) {
+                                    print("Verified phone number")
+                                    self.createFirebaseUser()
                                     
-                                else {
-                                    DispatchQueue.main.async(execute: {
-                                        self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
-                                    })
                                 }
-                            })
-                        }
-                    })
-                    
-                    
-                case .failure(let error):
-                    print(error)
-                    
-                }
-        }
+                                else {
+                                    print("Unable to verify phone number")
+                                }
+        });
+
         
         
+    }
+    
+    func createFirebaseUser() {
+        // generating ghetto password. +14087070430 --> 0430+1408707
+        let index = self.phoneNumber.index(self.phoneNumber.startIndex, offsetBy: 8)
+        let userPassword = self.phoneNumber.substring(from: index) + self.phoneNumber.substring(to: index)
+
+        FIRAuth.auth()?.createUser(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
+            
+            if(Error != nil) {
+                print("Firebase account unsuccessful. ", Error.debugDescription as String!)
+            }
+            else {
+                // save the credentials to keychain
+                let keychain = KeychainSwift()
+                keychain.set(userPassword, forKey: Constants.KeychainKeys.routeFirebasePassword)
+                keychain.set(self.phoneNumber+"@example.com", forKey: Constants.KeychainKeys.routeFirebaseEmail)
+                
+                // sign in the user so when app starts again we don't show onboarding
+                FIRAuth.auth()?.signIn(withEmail: self.phoneNumber+"@example.com", password: userPassword, completion: { (FIRUser, Error) in
+                    
+                    if(Error != nil) {
+                        print("Signing the user in after their account creation failed. ", Error.debugDescription as String!)
+                    }
+                        
+                    else {
+                        DispatchQueue.main.async(execute: {
+                            self.performSegue(withIdentifier: "ShowCreateUsername", sender: nil)
+                        })
+                    }
+                })
+            }
+        })
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
 //        guard let text = textField.text else { return true }
-//        
+//
 //        let newLength = text.utf16.count + string.utf16.count - range.length
-//        
+//
 //        //Add spacing between pin numbers
 //        let attributedString = NSMutableAttributedString(string: textField.text!)
 //        attributedString.addAttribute(NSKernAttributeName, value: CGFloat(20.0), range: NSRange(location: 0, length: attributedString.length))
