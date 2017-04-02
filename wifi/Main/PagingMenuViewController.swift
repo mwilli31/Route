@@ -64,7 +64,7 @@ struct PagingMenuOptions: PagingMenuControllerCustomizable {
             return .underline(height: 5, color: menuUnderlineColor, horizontalPadding: 0, verticalPadding: 0)
         }
         var height: CGFloat {
-            return 60
+            return 40
         }
         var backgroundColor: UIColor {
             return menuBackgroundColor

@@ -35,6 +35,9 @@
 		279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */; };
 		279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F811E77DF810094A33B /* ProfileViewController.swift */; };
 		279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F831E77E0550094A33B /* RequestsViewController.swift */; };
+		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
+		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
+		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
 		703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 703C6B0B1E6C99D000C829FB /* Auth0.plist */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */; };
@@ -93,6 +96,9 @@
 		279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingMenuViewController.swift; path = Main/PagingMenuViewController.swift; sourceTree = "<group>"; };
 		279A1F811E77DF810094A33B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Main/ProfileViewController.swift; sourceTree = "<group>"; };
 		279A1F831E77E0550094A33B /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestsViewController.swift; path = Main/RequestsViewController.swift; sourceTree = "<group>"; };
+		27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTableViewCell.swift; path = Main/NetworkTableViewCell.swift; sourceTree = "<group>"; };
+		27B9A82A1E91ABE00091C152 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Main/Network.swift; sourceTree = "<group>"; };
+		27B9A82C1E91AC520091C152 /* Networks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Networks.plist; path = Main/Networks.plist; sourceTree = "<group>"; };
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -199,9 +205,12 @@
 				2710E4D91E66915C00F1B40D /* Status.storyboard */,
 				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
 				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
+				27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */,
 				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
 				279A1F811E77DF810094A33B /* ProfileViewController.swift */,
 				279A1F831E77E0550094A33B /* RequestsViewController.swift */,
+				27B9A82A1E91ABE00091C152 /* Network.swift */,
+				27B9A82C1E91AC520091C152 /* Networks.plist */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -325,6 +334,9 @@
 						DevelopmentTeam = 878J2FB9S8;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
 							com.apple.VPNLite = {
 								enabled = 0;
 							};
@@ -372,6 +384,7 @@
 				279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
 				703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */,
+				27B9A82D1E91AC520091C152 /* Networks.plist in Resources */,
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
 				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
@@ -459,6 +472,8 @@
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
 				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
+				27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */,
+				27B9A82B1E91ABE00091C152 /* Network.swift in Sources */,
 				70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */,
 				279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */,
 				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
