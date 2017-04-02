@@ -92,15 +92,14 @@ class StatusViewController: UIViewController {
         let queue: DispatchQueue = DispatchQueue(label: "com.route.wifi", attributes: DispatchQueue.Attributes.concurrent)
         
         NEHotspotHelper.register(options: options, queue: queue) { (cmd: NEHotspotHelperCommand) in
-            NSLog("Received command: \(cmd.commandType.rawValue)")
+            print("Received command: \(cmd.commandType.rawValue)")
             
             if cmd.commandType == NEHotspotHelperCommandType.filterScanList {
                 //Get all available hotspots
-                var list: [NEHotspotNetwork] = cmd.networkList!
-                print("here")
+                let list: [NEHotspotNetwork] = cmd.networkList!
                 //Figure out the hotspot you wish to connect to
-//                let desiredNetwork : NEHotspotNetwork? = getBestScanResult(list)
-//                
+                let desiredNetwork : NEHotspotNetwork? = self.getBestScanResult(networkList: list)
+                print(desiredNetwork ?? "nil")
 //                if let network = desiredNetwork {
 //                    network.setPassword("password") //Set the WIFI password
 //                    
@@ -129,6 +128,21 @@ class StatusViewController: UIViewController {
         }
     }
     
+    func getBestScanResult(networkList: [NEHotspotNetwork]) -> NEHotspotNetwork {
+        var bestNetwork : NEHotspotNetwork? = nil
+        
+        //look up in comparison to local network list
+        for network in networkList {
+            print(network.ssid)
+            //compare SSID to list SSID
+            if(network.ssid == "SujusCoffee2") {
+                print("matched")
+                bestNetwork = network
+            }
+        }
+        
+        return bestNetwork!
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
