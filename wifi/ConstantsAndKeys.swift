@@ -19,4 +19,8 @@ struct Constants {
         static let routeFirebasePassword = "routeFirebaseUserPassword"
     }
     
+    struct APIKeys {
+        static let sinchKey = "c966416c-3817-4ba8-b84b-b72ce830c258"
+    }
+    
 }

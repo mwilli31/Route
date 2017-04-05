@@ -1,5 +1,4 @@
 PODS:
-  - Auth0 (1.2.0)
   - Firebase/Auth (3.14.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -44,11 +43,6 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.8)
   - KeychainSwift (7.0.0)
-  - Lock (2.0.0):
-    - Auth0 (~> 1.2)
-    - Lock/Classic (= 2.0.0)
-  - Lock/Classic (2.0.0):
-    - Auth0 (~> 1.2)
   - PagingMenuController (2.2.0)
   - PhoneNumberKit (1.1.0):
     - PhoneNumberKit/PhoneNumberKitCore (= 1.1.0)
@@ -57,20 +51,19 @@ PODS:
   - PhoneNumberKit/UIKit (1.1.0):
     - PhoneNumberKit/PhoneNumberKitCore
   - Protobuf (3.2.0)
+  - SinchVerification-Swift (2.0.3)
 
 DEPENDENCIES:
-  - Auth0 (~> 1.2)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
   - Firebase/Messaging
   - KeychainSwift (~> 7.0)
-  - Lock (~> 2.0)
   - PagingMenuController
   - PhoneNumberKit
+  - SinchVerification-Swift
 
 SPEC CHECKSUMS:
-  Auth0: c5719a587c4f5fd78d8c16a26a6f0976f1718add
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -81,11 +74,11 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 6f8d8b28b7e345549ac471071608170b31cb4977
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
-  Lock: b98cef67f5e6d1fc5222a59c6d97e9d73a8a9365
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   PhoneNumberKit: 9a59056fcba31af704c97d23de9205c9b3192608
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
+  SinchVerification-Swift: 567aaf9cb29c55a115faecb6016fea25a7f37688
 
-PODFILE CHECKSUM: 4b4bfd6209d4b8f3f793603ea62fa6ff97f7dc41
+PODFILE CHECKSUM: bf79c59d2a81bb91b98ab7fbd2ebddfc3f308762
 
 COCOAPODS: 1.2.0

@@ -458,7 +458,7 @@
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="Vrk-zb-cf6">
                                 <rect key="frame" x="-4" y="0.0" width="383" height="667"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fkH-wh-H0P">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="fkH-wh-H0P">
                                 <rect key="frame" x="136" y="120" width="103" height="101"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="103" id="Jbu-3D-lIS"/>
@@ -1656,7 +1656,7 @@
     </scenes>
     <resources>
         <image name="backgroundImage" width="375" height="667"/>
-        <image name="logo" width="78" height="72"/>
+        <image name="logo" width="122" height="122"/>
         <image name="network group" width="177" height="55"/>
         <image name="profile" width="120" height="120"/>
         <image name="success" width="124" height="124"/>
