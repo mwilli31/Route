@@ -152,6 +152,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("APNs token retrieved: \(deviceToken)")
         
+        if let refreshedToken = FIRInstanceID.instanceID().token() {
+            print("InstanceID token: \(refreshedToken)")
+        }
         // With swizzling disabled you must set the APNs token here.
         // FIRInstanceID.instanceID().setAPNSToken(deviceToken, type: FIRInstanceIDAPNSTokenType.sandbox)
     }

@@ -38,7 +38,7 @@
 		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
-		703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 703C6B0B1E6C99D000C829FB /* Auth0.plist */; };
+		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* ConstantsAndKeys.swift */; };
 		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
@@ -383,7 +383,7 @@
 				278F4B711E6E2B2E00B7F656 /* Profile.storyboard in Resources */,
 				279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
-				703C6B0C1E6C99D000C829FB /* Auth0.plist in Resources */,
+				703C6B0C1E6C99D000C829FB /* (null) in Resources */,
 				27B9A82D1E91AC520091C152 /* Networks.plist in Resources */,
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
 				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
