@@ -22,6 +22,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="ys6-NO-Bnt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-A2-Jbb">
                                 <rect key="frame" x="147" y="208" width="80" height="80"/>
                                 <constraints>
@@ -36,11 +39,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="bottomMargin" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="200" id="1Ma-Wx-bJz"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="End-dU-rvs"/>
+                            <constraint firstItem="ys6-NO-Bnt" firstAttribute="bottom" secondItem="fAS-5g-XdW" secondAttribute="top" id="dex-NX-DCr"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="top" secondItem="CAN-EY-qCK" secondAttribute="top" constant="208" id="e1Q-k3-XyV"/>
+                            <constraint firstItem="ys6-NO-Bnt" firstAttribute="centerX" secondItem="NAF-A2-Jbb" secondAttribute="centerX" id="lYr-8F-kC3"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="K1z-Fs-eDT" secondAttribute="centerX" id="nS8-zi-OYZ"/>
                         </constraints>
                     </view>
@@ -51,6 +55,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo" width="78" height="72"/>
+        <image name="blueBackgroundImage" width="375" height="667"/>
+        <image name="logo" width="122" height="122"/>
     </resources>
 </document>

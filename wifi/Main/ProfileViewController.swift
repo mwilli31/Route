@@ -9,7 +9,7 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-    @IBOutlet var networkTableView: UITableView!
+    @IBOutlet weak var networkTableView: UITableView!
     
     var networks: [Network] = []
     
@@ -20,6 +20,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+//        view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
         
         networks = try! Network.loadFromPlist()
         print(networks)
@@ -27,7 +29,7 @@ class ProfileViewController: UIViewController {
         self.networkTableView.dataSource = self
         self.networkTableView.delegate = self
         
-        self.networkTableView.register(UITableViewCell.self, forCellReuseIdentifier: "network")
+        self.networkTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -42,20 +44,25 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         return networks.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Getting the right network
-//        let network = networks[indexPath.row]
+        let network = networks[indexPath.row]
+    
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         // Instantiate a cell
-        let cellIdentifier = "network"
+        let cellIdentifier = "NetworkCell"
         
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: cellIdentifier,
-            for: indexPath) as! NetworkTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! NetworkTableViewCell
         
         // Adding the right informations
-//        cell.textLabel?.text = network.symbol
-//        cell.detailTextLabel?.text = network.name
+        cell.wifiNameLabel.text = network.name
+        cell.activeLabel.text = String(network.usersActive)  + " Active"
+        cell.allowedLabel.text = String(network.usersAllowed) + " Allowed"
         
         // Returning the cell
         return cell

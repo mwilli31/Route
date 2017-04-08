@@ -4,6 +4,16 @@
 <array>
 	<dict>
 		<key>name</key>
+		<string>Test Wifi 2</string>
+		<key>usersAllowed</key>
+		<integer>5</integer>
+		<key>usersActive</key>
+		<integer>1</integer>
+		<key>state</key>
+		<string>Active</string>
+	</dict>
+	<dict>
+		<key>name</key>
 		<string>Test Wifi</string>
 		<key>usersAllowed</key>
 		<integer>13</integer>

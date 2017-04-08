@@ -85,11 +85,13 @@ class StatusViewController: UIViewController {
         
         print("wifi test")
         
-        let options: [String: NSObject] = [kNEHotspotHelperOptionDisplayName : "DropTheMike" as NSObject]
+        let options: [String: NSObject] = [kNEHotspotHelperOptionDisplayName : "Route Network" as NSObject]
         
         //        let concurrentQueue = DispatchQueue(label: "com.route.wifi", attributes: .concurrent)
         
         let queue: DispatchQueue = DispatchQueue(label: "com.route.wifi", attributes: DispatchQueue.Attributes.concurrent)
+        
+        print("queue has begun")
         
         NEHotspotHelper.register(options: options, queue: queue) { (cmd: NEHotspotHelperCommand) in
             print("Received command: \(cmd.commandType.rawValue)")
@@ -99,17 +101,22 @@ class StatusViewController: UIViewController {
                 let list: [NEHotspotNetwork] = cmd.networkList!
                 //Figure out the hotspot you wish to connect to
                 let desiredNetwork : NEHotspotNetwork? = self.getBestScanResult(networkList: list)
-                print(desiredNetwork ?? "nil")
-//                if let network = desiredNetwork {
-//                    network.setPassword("password") //Set the WIFI password
-//                    
-//                    let response = cmd.createResponse(NEHotspotHelperResult.success)
-//                    
-//                    response.setNetworkList([network])
-//                    response.deliver() //Respond back with the filtered list
-//                }
+//                print(desiredNetwork ?? "nil")
+                
+                if let network = desiredNetwork {
+                    print("setting password")
+                    network.setPassword("woopWOOP92") //Set the WIFI password
+                    
+                    let response = cmd.createResponse(NEHotspotHelperResult.success)
+                    
+                    response.setNetworkList([network])
+                    response.deliver() //Respond back with the filtered list
+                }
             } else if cmd.commandType == NEHotspotHelperCommandType.evaluate {
+                print("evaluating...")
+
                 if let network = cmd.network {
+                    print(network)
                     //Set high confidence for the network
                     network.setConfidence(NEHotspotHelperConfidence.high)
                     
@@ -120,6 +127,7 @@ class StatusViewController: UIViewController {
             } else if cmd.commandType == NEHotspotHelperCommandType.authenticate {
                 //Perform custom authentication and respond back with success
                 // if all is OK
+                print("authenticating...")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
                 response.deliver() //Respond back
             }
@@ -133,9 +141,9 @@ class StatusViewController: UIViewController {
         
         //look up in comparison to local network list
         for network in networkList {
-            print(network.ssid)
+            //print(network.ssid)
             //compare SSID to list SSID
-            if(network.ssid == "SujusCoffee2") {
+            if(network.ssid == "DropTheMike-5G") {
                 print("matched")
                 bestNetwork = network
             }

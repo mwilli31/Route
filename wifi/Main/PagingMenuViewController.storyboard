@@ -52,11 +52,24 @@
                     <view key="view" contentMode="scaleToFill" id="XwM-oC-K90">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="BIg-dp-mqp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BIg-dp-mqp" firstAttribute="leading" secondItem="XwM-oC-K90" secondAttribute="leading" id="A8l-XK-91F"/>
+                            <constraint firstItem="BIg-dp-mqp" firstAttribute="top" secondItem="8qh-J3-bOU" secondAttribute="bottom" id="DKu-oZ-H8z"/>
+                            <constraint firstItem="BIg-dp-mqp" firstAttribute="bottom" secondItem="s8f-eB-2x6" secondAttribute="top" id="cnu-OE-7fM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmB-pe-e8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="260"/>
+            <point key="canvasLocation" x="908" y="259.52023988005999"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="blueBackgroundImage" width="375" height="667"/>
+    </resources>
 </document>

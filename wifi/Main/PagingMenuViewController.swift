@@ -93,6 +93,7 @@ class PagingMenuViewController: UIViewController {
         
         let pagingMenuController = self.childViewControllers.first as! PagingMenuController
         pagingMenuController.setup(options)
+        
 //        pagingMenuController.onMove = { state in
 //            switch state {
 //            case let .willMoveController(menuController, previousMenuController):
