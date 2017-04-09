@@ -29,25 +29,25 @@ class AccessContactsViewController: UIViewController {
         
         requestForAccess { (accessGranted) -> Void in
             if accessGranted {
-                if let data = UserDefaults.standard.object(forKey: "CurrentUser") as? NSData {
-                    
-                    let currentUser = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! CurrentUser
-                    
-                    let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
-                    
-                    let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
-                    
-                    var results: [CNContact] = []
-                    
-                    do{
-                        try self.contactStore.enumerateContacts(with: request) {
-                            contact, stop in
-                            results.append(contact)
-                        }
-                    } catch let err{
-                        print(err)
-                    }
-                    
+//                if let data = UserDefaults.standard.object(forKey: "CurrentUser") as? NSData {
+//                    
+//                    //let currentUser = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! CurrentUser
+//                    
+//                    let keys = [CNContactGivenNameKey, CNContactFamilyNameKey, CNContactPhoneNumbersKey]
+//                    
+//                    let request = CNContactFetchRequest(keysToFetch: keys as [CNKeyDescriptor])
+//                    
+//                    var results: [CNContact] = []
+//                    
+//                    do{
+//                        try self.contactStore.enumerateContacts(with: request) {
+//                            contact, stop in
+//                            results.append(contact)
+//                        }
+//                    } catch let err{
+//                        print(err)
+//                    }
+                
                     
                     // Get all the containers
                     /* var allContainers: [CNContainer] = []
@@ -112,7 +112,7 @@ class AccessContactsViewController: UIViewController {
 //                    
 //                    self.performSegueWithIdentifier("SuccessView", sender: sender)
                     
-                }
+//                }
             }
         }
     }

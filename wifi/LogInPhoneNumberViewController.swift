@@ -13,7 +13,6 @@ import PhoneNumberKit
 class LogInPhoneNumberViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var phoneNumber: PhoneNumberTextField!
-    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var countryCodeText: UILabel!
     
     let phoneNumberKit = PhoneNumberKit()

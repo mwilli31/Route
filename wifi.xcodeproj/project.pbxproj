@@ -17,10 +17,12 @@
 		2710E4E81E66920000F1B40D /* AccessContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */; };
 		2710E4E91E66920000F1B40D /* SetProfilePictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710E4E21E66920000F1B40D /* SetProfilePictureViewController.swift */; };
 		2710E4EA1E66920000F1B40D /* SignUpCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710E4E31E66920000F1B40D /* SignUpCompleteViewController.swift */; };
-		2710E4EC1E66931D00F1B40D /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2710E4EB1E66931D00F1B40D /* CurrentUser.swift */; };
+		2712495B1E987AAC008B27BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712495A1E987AAC008B27BB /* UserService.swift */; };
+		2731149A1E998C7C002AE7AD /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114991E998C7C002AE7AD /* FirebaseUserService.swift */; };
+		2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */; };
 		2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6011E21BEEB00C1601F /* AppDelegate.swift */; };
-		2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* ViewController.swift */; };
-		2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D6051E21BEEB00C1601F /* Main.storyboard */; };
+		2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */; };
+		2751D6071E21BEEB00C1601F /* LaunchMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */; };
 		2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6081E21BEEB00C1601F /* wifi.xcdatamodeld */; };
 		2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2751D60B1E21BEEB00C1601F /* Assets.xcassets */; };
 		2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */; };
@@ -71,11 +73,13 @@
 		2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AccessContactsViewController.swift; path = "Sign Up/AccessContactsViewController.swift"; sourceTree = "<group>"; };
 		2710E4E21E66920000F1B40D /* SetProfilePictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetProfilePictureViewController.swift; path = "Sign Up/SetProfilePictureViewController.swift"; sourceTree = "<group>"; };
 		2710E4E31E66920000F1B40D /* SignUpCompleteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignUpCompleteViewController.swift; path = "Sign Up/SignUpCompleteViewController.swift"; sourceTree = "<group>"; };
-		2710E4EB1E66931D00F1B40D /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		2712495A1E987AAC008B27BB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		273114991E998C7C002AE7AD /* FirebaseUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
+		2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWifiService.swift; sourceTree = "<group>"; };
 		2751D5FE1E21BEEB00C1601F /* wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6011E21BEEB00C1601F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2751D6031E21BEEB00C1601F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2751D6061E21BEEB00C1601F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMainViewController.swift; sourceTree = "<group>"; };
+		2751D6061E21BEEB00C1601F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchMain.storyboard; sourceTree = "<group>"; };
 		2751D6091E21BEEB00C1601F /* wifi.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = wifi.xcdatamodel; sourceTree = "<group>"; };
 		2751D60B1E21BEEB00C1601F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2751D60E1E21BEEB00C1601F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -136,6 +140,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2731149D1E99E2EC002AE7AD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2712495A1E987AAC008B27BB /* UserService.swift */,
+				273114991E998C7C002AE7AD /* FirebaseUserService.swift */,
+				2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
 		2751D5F51E21BEEB00C1601F = {
 			isa = PBXGroup;
 			children = (
@@ -165,9 +179,10 @@
 				709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */,
 				278F4B761E6E3C1500B7F656 /* LogIn */,
 				278F4B6F1E67E11300B7F656 /* wifi.entitlements */,
-				2751D6031E21BEEB00C1601F /* ViewController.swift */,
-				2751D6051E21BEEB00C1601F /* Main.storyboard */,
+				2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */,
+				2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */,
 				2751D6011E21BEEB00C1601F /* AppDelegate.swift */,
+				2731149D1E99E2EC002AE7AD /* Services */,
 				27D4CF331E271624004FEE83 /* Sign Up  */,
 				2777A0261E23023B00229502 /* Main */,
 				2751D60B1E21BEEB00C1601F /* Assets.xcassets */,
@@ -236,7 +251,6 @@
 				2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */,
 				2710E4E21E66920000F1B40D /* SetProfilePictureViewController.swift */,
 				2710E4E31E66920000F1B40D /* SignUpCompleteViewController.swift */,
-				2710E4EB1E66931D00F1B40D /* CurrentUser.swift */,
 			);
 			name = "Sign Up ";
 			sourceTree = "<group>";
@@ -388,7 +402,7 @@
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
 				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
-				2751D6071E21BEEB00C1601F /* Main.storyboard in Resources */,
+				2751D6071E21BEEB00C1601F /* LaunchMain.storyboard in Resources */,
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
 				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
 			);
@@ -466,21 +480,23 @@
 				2710E4E71E66920000F1B40D /* VerifyPhoneNumberViewController.swift in Sources */,
 				2710E4E81E66920000F1B40D /* AccessContactsViewController.swift in Sources */,
 				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
-				2710E4EC1E66931D00F1B40D /* CurrentUser.swift in Sources */,
 				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
-				2751D6041E21BEEB00C1601F /* ViewController.swift in Sources */,
+				2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */,
 				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
 				27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */,
 				27B9A82B1E91ABE00091C152 /* Network.swift in Sources */,
+				2712495B1E987AAC008B27BB /* UserService.swift in Sources */,
 				70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */,
 				279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */,
 				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
+				2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,
 				2710E4EA1E66920000F1B40D /* SignUpCompleteViewController.swift in Sources */,
+				2731149A1E998C7C002AE7AD /* FirebaseUserService.swift in Sources */,
 				2710E4E91E66920000F1B40D /* SetProfilePictureViewController.swift in Sources */,
 				2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */,
 			);
@@ -518,12 +534,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2751D6051E21BEEB00C1601F /* Main.storyboard */ = {
+		2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2751D6061E21BEEB00C1601F /* Base */,
 			);
-			name = Main.storyboard;
+			name = LaunchMain.storyboard;
 			sourceTree = "<group>";
 		};
 		2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */ = {

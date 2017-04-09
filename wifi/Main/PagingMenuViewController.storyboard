@@ -12,7 +12,7 @@
         <!--Paging Menu View Controller-->
         <scene sceneID="R6v-o0-VGc">
             <objects>
-                <viewController id="poJ-9M-ZJD" customClass="PagingMenuViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PagingMenuViewController" id="poJ-9M-ZJD" customClass="PagingMenuViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZU-h8-Ycs"/>
                         <viewControllerLayoutGuide type="bottom" id="ckr-QK-BZZ"/>

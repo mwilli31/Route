@@ -707,7 +707,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <action selector="getStarted:" destination="Q1G-4d-1uh" eventType="touchUpInside" id="ter-bp-YmJ"/>
+                                    <segue destination="KNM-kY-5qz" kind="show" id="RuI-n0-5Lk"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -804,6 +804,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMr-6X-iV9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4076" y="380.95952023988008"/>
+        </scene>
+        <!--PagingMenuViewController-->
+        <scene sceneID="FHy-Z9-xXn">
+            <objects>
+                <viewControllerPlaceholder storyboardName="PagingMenuViewController" id="KNM-kY-5qz" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yfF-qm-PNo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4873" y="381"/>
         </scene>
         <!--Create Username View Controller-->
         <scene sceneID="3wn-7W-u9X">

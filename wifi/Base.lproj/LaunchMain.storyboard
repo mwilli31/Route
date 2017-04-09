@@ -9,18 +9,26 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Status View-->
+        <!--Paging Main View Controller-->
         <scene sceneID="tw2-eT-srf">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainView" storyboardName="Status" id="QHQ-dN-qud" userLabel="Status View" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardIdentifier="PagingMainViewControllerStoryboardReference" storyboardName="PagingMenuViewController" id="QHQ-dN-qud" userLabel="Paging Main View Controller" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JQc-lW-RTA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642" y="107"/>
+            <point key="canvasLocation" x="658" y="154"/>
         </scene>
-        <!--View Controller-->
+        <!--SignUp-->
+        <scene sceneID="nGD-ry-MWz">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="SignUpStoryboardReference" storyboardName="SignUp" id="6oV-u4-X9J" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hco-ch-636" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="658" y="420"/>
+        </scene>
+        <!--Launch Main View Controller-->
         <scene sceneID="m2a-Ph-dgn">
             <objects>
-                <viewController storyboardIdentifier="Home" id="5t6-dW-xgj" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="5t6-dW-xgj" customClass="LaunchMainViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uem-nV-csE"/>
                         <viewControllerLayoutGuide type="bottom" id="bbj-Kq-NId"/>
@@ -44,20 +52,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Nq-bF-Je9">
-                                <rect key="frame" x="124" y="268" width="126" height="131"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="131" id="RZI-qM-6l6"/>
-                                    <constraint firstAttribute="width" constant="126" id="rVR-aq-Eas"/>
-                                </constraints>
-                                <state key="normal" title="Send PN">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.058823529409999999" green="0.16862745100000001" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="0Nq-bF-Je9" firstAttribute="centerY" secondItem="3Tk-yM-Nop" secondAttribute="centerY" id="6qu-oi-V0P"/>
                             <constraint firstAttribute="trailing" secondItem="QgU-o3-eI6" secondAttribute="trailing" id="94d-8u-zQU"/>
                             <constraint firstItem="mBs-Gh-BIP" firstAttribute="centerX" secondItem="3Tk-yM-Nop" secondAttribute="centerX" id="NBk-Dl-JFG"/>
                             <constraint firstItem="NxF-8d-f2H" firstAttribute="top" secondItem="uem-nV-csE" secondAttribute="bottom" constant="100" id="NHR-0a-yNP"/>
@@ -66,9 +63,12 @@
                             <constraint firstItem="QgU-o3-eI6" firstAttribute="leading" secondItem="3Tk-yM-Nop" secondAttribute="leading" id="mrO-HQ-Urj"/>
                             <constraint firstItem="NxF-8d-f2H" firstAttribute="centerX" secondItem="mBs-Gh-BIP" secondAttribute="centerX" id="rZQ-i4-udl"/>
                             <constraint firstItem="bbj-Kq-NId" firstAttribute="top" secondItem="QgU-o3-eI6" secondAttribute="bottom" id="uyY-XL-cOI"/>
-                            <constraint firstItem="0Nq-bF-Je9" firstAttribute="centerX" secondItem="3Tk-yM-Nop" secondAttribute="centerX" id="vYg-kx-Hxj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="QHQ-dN-qud" kind="show" identifier="PagingMenuViewControllerSegue" animates="NO" id="cWh-wD-nhQ"/>
+                        <segue destination="6oV-u4-X9J" kind="show" identifier="SignUpViewControllerSegue" animates="NO" id="VLy-bG-tlc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBP-aC-vw6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

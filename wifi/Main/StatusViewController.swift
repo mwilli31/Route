@@ -8,6 +8,7 @@
 
 import UIKit
 import NetworkExtension
+import Firebase
 
 class StatusViewController: UIViewController {
     
@@ -47,54 +48,31 @@ class StatusViewController: UIViewController {
     
     func wifiConnectionTest(){
         
-//        let networkInterfaces = NEHotspotHelper.supportedNetworkInterfaces()
-//        let wifi = NEHotspotNetwork()
-//        
-//        print(wifi)
-//        print(networkInterfaces)
-        
-//        let st = "SSID：\(wifi.ssid)，strength：\(wifi.signalStrength)， 加密：\(wifi.isSecure)， 自动加入：\(wifi.didAutoJoin)\n"
-    
- 
-//        var options = dictionaryWithValues(forKeys: ["kNEHotspotHelperOptionDisplayName"])
-        
-        let serialQueue = DispatchQueue(label: "com.route.wifi")
-        
-//        typealias cmd = (NEHotspotHelperCommand) -> Void
-        
-//        var isAvailable = NEHotspotHelper.register(options: options, queue: serialQueue, handler: cmd) {
-//            var hotspotList = []
-//            
-//            print("inside")
-//        
-//            if let list = cmd.networkList, cmd.commandType == .FilterScanList {
-//                var networks = [NEHotspotNetwork]()
-//                for network in list {
-//                    print(network.ssid)
-//                    if network.SSID.hasPrefix("BTVNET") {
-//                        network.setPassword("12345678")
-//                        network.setConfidence(.High)
-//                        networks.append(network)
-//                    }
-//                }
-//                let response = cmd.createResponse(.Success)
-//                response.setNetworkList(networks)
-//                response.deliver()
-//            }
-//        }
-        
         print("wifi test")
         
         let options: [String: NSObject] = [kNEHotspotHelperOptionDisplayName : "Route Network" as NSObject]
         
-        //        let concurrentQueue = DispatchQueue(label: "com.route.wifi", attributes: .concurrent)
         
         let queue: DispatchQueue = DispatchQueue(label: "com.route.wifi", attributes: DispatchQueue.Attributes.concurrent)
         
         print("queue has begun")
         
+        
+        FIRAnalytics.logEvent(withName: "queue-start", parameters: [
+            "name": "queue-start" as NSObject,
+            "full_text": "started HotspotHelper" as NSObject
+            ])
+        
         NEHotspotHelper.register(options: options, queue: queue) { (cmd: NEHotspotHelperCommand) in
             print("Received command: \(cmd.commandType.rawValue)")
+            
+            let name = "Received Command"
+            let text = "Received command: \(cmd.commandType.rawValue)"
+            
+            FIRAnalytics.logEvent(withName: "NEHotspotHelper", parameters: [
+                "name": name as NSObject,
+                "full_text": text as NSObject
+                ])
             
             if cmd.commandType == NEHotspotHelperCommandType.filterScanList {
                 //Get all available hotspots

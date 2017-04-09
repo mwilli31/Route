@@ -20,7 +20,6 @@ class LogInUsernameViewController: UIViewController, UITextFieldDelegate {
     
     var phoneNumber: String = ""
     
-    @IBOutlet var spinner: UIActivityIndicatorView!
     @IBOutlet var usernameTextField: UITextField!
     
     override func viewDidLoad() {
