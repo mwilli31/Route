@@ -16,6 +16,9 @@ class LaunchMainViewController: UIViewController {
         
         // You gotta sign the user out for testing purposes.
         // UserService.sharedInstance.logoutUser()
+        
+        //Start the HotspotHelperQueue
+        NEHotspotHelperService.sharedInstance.createNEHotspotHelperQueue()
     }
     
     override func viewDidAppear(_ animated: Bool) {

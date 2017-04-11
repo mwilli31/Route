@@ -20,6 +20,8 @@
 		2712495B1E987AAC008B27BB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2712495A1E987AAC008B27BB /* UserService.swift */; };
 		2731149A1E998C7C002AE7AD /* FirebaseUserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114991E998C7C002AE7AD /* FirebaseUserService.swift */; };
 		2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */; };
+		2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */; };
+		273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114A01E9C7FE4002AE7AD /* WifiService.swift */; };
 		2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6011E21BEEB00C1601F /* AppDelegate.swift */; };
 		2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */; };
 		2751D6071E21BEEB00C1601F /* LaunchMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */; };
@@ -76,6 +78,8 @@
 		2712495A1E987AAC008B27BB /* UserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
 		273114991E998C7C002AE7AD /* FirebaseUserService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseUserService.swift; sourceTree = "<group>"; };
 		2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWifiService.swift; sourceTree = "<group>"; };
+		2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NEHotspotHelperService.swift; path = Services/NEHotspotHelperService.swift; sourceTree = "<group>"; };
+		273114A01E9C7FE4002AE7AD /* WifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WifiService.swift; path = Services/WifiService.swift; sourceTree = "<group>"; };
 		2751D5FE1E21BEEB00C1601F /* wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6011E21BEEB00C1601F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMainViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 				2712495A1E987AAC008B27BB /* UserService.swift */,
 				273114991E998C7C002AE7AD /* FirebaseUserService.swift */,
 				2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */,
+				2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */,
+				273114A01E9C7FE4002AE7AD /* WifiService.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -486,9 +492,11 @@
 				2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */,
 				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
 				27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */,
+				2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */,
 				27B9A82B1E91ABE00091C152 /* Network.swift in Sources */,
 				2712495B1E987AAC008B27BB /* UserService.swift in Sources */,
 				70A470D61E6FC2E3008FF97B /* ConstantsAndKeys.swift in Sources */,
+				273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */,
 				279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */,
 				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,

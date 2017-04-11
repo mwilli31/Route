@@ -20,6 +20,10 @@ class UserService {
         return FirebaseUserService.sharedInstance.isThereACurrentFirebaseUser()
     }
     
+    func getCurrentUserUUID () -> String {
+        return FirebaseUserService.sharedInstance.getCurrentUserUUIDFirebase()
+    }
+    
     func loginUserByDeviceUUID () {
 
         if let email = keychain.get("email") {

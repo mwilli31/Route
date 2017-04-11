@@ -14,6 +14,15 @@ class FirebaseUserService {
 
     static let sharedInstance = FirebaseUserService()
     
+    func getCurrentUserUUIDFirebase() -> String {
+        if FIRAuth.auth()?.currentUser == nil{
+            return ""
+        } else {
+            return (FIRAuth.auth()?.currentUser?.uid)!
+        }
+
+    }
+    
     func isThereACurrentFirebaseUser() -> Bool {
         if FIRAuth.auth()?.currentUser == nil{
             return false
