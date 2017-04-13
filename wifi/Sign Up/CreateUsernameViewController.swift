@@ -133,12 +133,14 @@ class CreateUsernameViewController: UIViewController, UITextFieldDelegate {
         //textField code
         
 //        createUser(usernameTextField.text!)
-        var ref: FIRDatabaseReference!
+//        var ref: FIRDatabaseReference!
+//        
+//        ref = FIRDatabase.database().reference()
+//        if (FIRAuth.auth()?.currentUser) != nil {
+//            ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["username" : self.usernameTextField.text!])
+//        }
+        UserService.sharedInstance.setUsername(username: self.usernameTextField.text!)
         
-        ref = FIRDatabase.database().reference()
-        if (FIRAuth.auth()?.currentUser) != nil {
-            ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).setValue(["username" : self.usernameTextField.text!])
-        }
         self.performSegue(withIdentifier: "SuccessView", sender: self)
         return true
     }

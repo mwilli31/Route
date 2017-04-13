@@ -72,4 +72,8 @@ class UserService {
         FirebaseUserService.sharedInstance.registerNewFirebaseUser(email: email, password: password, vc: vc, segueID: segueID)
     }
     
+    func setUsername(username: String) {
+        FirebaseUserService.sharedInstance.setUsername(forUserUUID: self.getCurrentUserUUID(), username: username)
+    }
+    
 }

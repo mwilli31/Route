@@ -14,34 +14,55 @@ class FirebaseWifiService {
     
     static let sharedInstance = FirebaseWifiService()
     
-
     
-    func currentWifiConnectionDetailsPostFirebase(ssid: String, networkUUID: String, timestamp: String) {
+    // TODO: Will make sense to move this code to eventually seperate private functions to handle the posting of data
+    // to multiple indexes in our system (don't worry now, since we are moving away from Firebase eventually)
+    func currentWifiConnectionDetailsPostFirebase(ssid: String, networkUUID: String, timestamp: String, command: String) {
         
-        let wifiConnectionDataForTimestamp: NSDictionary! = [
+        let wifiConnectionDataForTimestamp = [
             "ssid" : ssid,
-            "networkUUID" : networkUUID
+            "networkUUID" : networkUUID,
+            "command" : command
         ]
         
-        let wifiConnectionDataForNetworkUUID: NSDictionary! = [
+        let wifiConnectionDataForNetworkUUID = [
             "ssid" : ssid,
-            "timestamp" : timestamp
+            "timestamp" : timestamp,
+            "command" : command
         ]
         
-        var databaseRef: FIRDatabaseReference!
-        databaseRef = FIRDatabase.database().reference()
+        let wifiConnectionDataForNetworkSSID = [
+            "networkUUID" : networkUUID,
+            "timestamp" : timestamp,
+            "command" : command
+        ]
+        
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         
         //make sure that a user is currently logged in
-        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
-        print("userID:" + userUUID)
         if userUUID != "" {
-            print("users/" + userUUID + "/wifiConnectionHistory/" + timestamp)
-            databaseRef.child("users/" + userUUID + "/wifiConnectionHistory/" + timestamp).setValue(wifiConnectionDataForTimestamp)
-            databaseRef.child("users/" + userUUID + "/wifiConnectionHistory/" + networkUUID).setValue(wifiConnectionDataForNetworkUUID)
-            databaseRef.child("users").child(userUUID).child("wifiConnectionHistory").setValue([timestamp: wifiConnectionDataForTimestamp])
-            databaseRef.child("users").child(userUUID).setValue(["username": "mwilli32"])
-
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID)
+            
+            let baseUserTimestampPath: String = "/connectionHistoryByTimestamp/" + timestamp
+            
+            let baseUserNetworkPath = "/connectionHistoryByNetworkUUID/" + networkUUID
+            let key1 = databaseRef.child(baseUserNetworkPath).childByAutoId().key
+            let userNetworkPath : String = baseUserNetworkPath + "/\(key1)"
+            
+            let baseUserSSIDPath = "/connectionHistoryByNetworkSSID/" + ssid
+            let key2 = databaseRef.child(baseUserSSIDPath).childByAutoId().key
+            let userSSIDPath : String = baseUserSSIDPath + "/\(key2)"
+            
+            let updates = [ baseUserTimestampPath : wifiConnectionDataForTimestamp,
+                            userNetworkPath : wifiConnectionDataForNetworkUUID,
+                            userSSIDPath : wifiConnectionDataForNetworkSSID ]
+            
+            databaseRef.updateChildValues(updates)
+            
         }
     }
     
+    
+
 }

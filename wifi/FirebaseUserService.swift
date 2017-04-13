@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
 import KeychainSwift
 
 class FirebaseUserService {
@@ -105,6 +106,16 @@ class FirebaseUserService {
                 self.signInFirebaseUser(email: email, password: password, vc: vc, segueID: segueID)
             }
         })
+    }
+    
+    func setUsername(forUserUUID: String, username: String) {
+        var ref: FIRDatabaseReference!
+        
+        ref = FIRDatabase.database().reference()
+        print(ref)
+        if (FIRAuth.auth()?.currentUser) != nil {
+            ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["username" : username])
+        }
     }
     
     func signInFirebaseUser(email: String, password: String) {
