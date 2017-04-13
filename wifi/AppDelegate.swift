@@ -47,8 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [END register_for_notifications]
         
         
-        
+        // Firebase Configs
         FIRApp.configure()
+        FIRDatabase.database().persistenceEnabled = true
+
         UIApplication.shared.statusBarStyle = .lightContent;
         
         // [START add_token_refresh_observer]

@@ -15,7 +15,7 @@ class LaunchMainViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         // You gotta sign the user out for testing purposes.
-        // UserService.sharedInstance.logoutUser()
+//         UserService.sharedInstance.logoutUser()
         
         //Start the HotspotHelperQueue
         NEHotspotHelperService.sharedInstance.createNEHotspotHelperQueue()

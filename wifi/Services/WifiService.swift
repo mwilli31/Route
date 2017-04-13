@@ -16,9 +16,9 @@ class WifiService {
                                     Simple Data Collection API's
      ********************************************************************************************/
 
-    func currentWifiConnectionDetailsPost(ssid: String, networkUUID: String, timestamp: String) {
+    func currentWifiConnectionDetailsPost(ssid: String, networkUUID: String, timestamp: String, command: String) {
         print("POSTING")
-        FirebaseWifiService.sharedInstance.currentWifiConnectionDetailsPostFirebase(ssid: ssid, networkUUID: networkUUID, timestamp: timestamp)
+        FirebaseWifiService.sharedInstance.currentWifiConnectionDetailsPostFirebase(ssid: ssid, networkUUID: networkUUID, timestamp: timestamp, command: command)
     }
     
     

@@ -57,12 +57,12 @@ class NEHotspotHelperService {
                 // if all is OK
                 print("authenticating...")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
-                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: "1234", timestamp: epoch)
+                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
                 response.deliver() //Respond back
             } else if cmd.commandType == NEHotspotHelperCommandType.maintain {
                 print("maintaining")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
-                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: "1234", timestamp: epoch)
+                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "maintain")
                 response.deliver()
             }
             
