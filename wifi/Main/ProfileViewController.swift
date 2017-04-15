@@ -21,20 +21,16 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        view.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        
         networks = try! Network.loadFromPlist()
         print(networks)
 
         self.networkTableView.dataSource = self
         self.networkTableView.delegate = self
-        
         self.networkTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }
@@ -45,7 +41,8 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        // the cell height in storyboard is (this_value - 20). This is what creates the cell spacing
+        return 140
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

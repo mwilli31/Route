@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q9I-2A-ONt">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Q9I-2A-ONt">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -22,30 +23,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="ys6-NO-Bnt">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-A2-Jbb">
-                                <rect key="frame" x="147" y="208" width="80" height="80"/>
+                                <rect key="frame" x="137" y="117" width="100" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="5Ws-UX-xFb"/>
-                                    <constraint firstAttribute="height" constant="80" id="Qre-o9-Y9s"/>
+                                    <constraint firstAttribute="height" constant="100" id="Sh4-m5-pdL"/>
+                                    <constraint firstAttribute="width" constant="100" id="dyj-21-UG8"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
-                                <rect key="frame" x="76" y="440" width="222" height="27"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
+                                <rect key="frame" x="16" y="268.5" width="343" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="200" id="1Ma-Wx-bJz"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="End-dU-rvs"/>
-                            <constraint firstItem="ys6-NO-Bnt" firstAttribute="bottom" secondItem="fAS-5g-XdW" secondAttribute="top" id="dex-NX-DCr"/>
-                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="top" secondItem="CAN-EY-qCK" secondAttribute="top" constant="208" id="e1Q-k3-XyV"/>
-                            <constraint firstItem="ys6-NO-Bnt" firstAttribute="centerX" secondItem="NAF-A2-Jbb" secondAttribute="centerX" id="lYr-8F-kC3"/>
-                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="K1z-Fs-eDT" secondAttribute="centerX" id="nS8-zi-OYZ"/>
+                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerY" secondItem="CAN-EY-qCK" secondAttribute="centerY" multiplier="0.5" id="CfB-vA-bJK"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="NAF-A2-Jbb" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="Dfo-EH-N6a"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="Xe6-1o-qcF"/>
+                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="icS-oD-yU5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="K1z-Fs-eDT" secondAttribute="trailing" id="tib-jf-J34"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -55,7 +53,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="blueBackgroundImage" width="375" height="667"/>
         <image name="logo" width="122" height="122"/>
     </resources>
 </document>
