@@ -9,6 +9,7 @@
 import UIKit
 
 class StatusViewController: UIViewController {
+    @IBOutlet var wifiSettingsButton: UIButton!
     
     class func instantiateFromStoryboard() -> StatusViewController {
         let storyboard = UIStoryboard(name: "Status", bundle: nil)
@@ -18,6 +19,21 @@ class StatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+
+    }
+    
+    @IBAction func openWifiSettingsPage(_ sender: Any) {
+        print("opening wifi page")
+                
+        guard let settingsUrl = URL(string:"App-Prefs:root=WIFI") else {
+            return
+        }
+        
+        if UIApplication.shared.canOpenURL(settingsUrl) {
+            UIApplication.shared.open(settingsUrl, completionHandler: { (success) in
+                print("Settings opened: \(success)") // Prints true
+            })
+        }
 
     }
     
