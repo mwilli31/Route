@@ -10,6 +10,7 @@ import UIKit
 
 class StatusViewController: UIViewController {
     @IBOutlet var wifiSettingsButton: UIButton!
+    @IBOutlet var statusLabel: UILabel!
     
     class func instantiateFromStoryboard() -> StatusViewController {
         let storyboard = UIStoryboard(name: "Status", bundle: nil)

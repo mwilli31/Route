@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="poJ-9M-ZJD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="poJ-9M-ZJD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +28,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="ta5-a5-SIb" firstAttribute="top" secondItem="VZU-h8-Ycs" secondAttribute="bottom" id="EBI-hk-lDs"/>
                             <constraint firstItem="ta5-a5-SIb" firstAttribute="bottom" secondItem="ckr-QK-BZZ" secondAttribute="top" id="GC4-bo-1yS"/>
@@ -52,16 +52,6 @@
                     <view key="view" contentMode="scaleToFill" id="XwM-oC-K90">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blueBackgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="BIg-dp-mqp">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
-                            </imageView>
-                        </subviews>
-                        <constraints>
-                            <constraint firstItem="BIg-dp-mqp" firstAttribute="leading" secondItem="XwM-oC-K90" secondAttribute="leading" id="A8l-XK-91F"/>
-                            <constraint firstItem="BIg-dp-mqp" firstAttribute="top" secondItem="8qh-J3-bOU" secondAttribute="bottom" id="DKu-oZ-H8z"/>
-                            <constraint firstItem="BIg-dp-mqp" firstAttribute="bottom" secondItem="s8f-eB-2x6" secondAttribute="top" id="cnu-OE-7fM"/>
-                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RmB-pe-e8p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -69,7 +59,4 @@
             <point key="canvasLocation" x="908" y="259.52023988005999"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="blueBackgroundImage" width="375" height="667"/>
-    </resources>
 </document>

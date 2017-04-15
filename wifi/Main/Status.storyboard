@@ -31,21 +31,42 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
-                                <rect key="frame" x="16" y="268.5" width="343" height="21.5"/>
+                                <rect key="frame" x="16" y="269" width="343" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-jg-d23">
+                                <rect key="frame" x="37" y="333" width="300" height="60"/>
+                                <color key="backgroundColor" red="0.43921568630000002" green="0.62745098040000002" blue="0.8862745098" alpha="0.74644396550000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="YIw-xu-8nW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Open Wifi Settings">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="openWifiSettingsPage:" destination="Q9I-2A-ONt" eventType="touchUpInside" id="iAP-Jq-p47"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="rKZ-jg-d23" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" constant="21" id="CRQ-Ph-yJQ"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerY" secondItem="CAN-EY-qCK" secondAttribute="centerY" multiplier="0.5" id="CfB-vA-bJK"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="NAF-A2-Jbb" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="Dfo-EH-N6a"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="Xe6-1o-qcF"/>
+                            <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="42" id="cEC-K0-d4n"/>
                             <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="icS-oD-yU5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="K1z-Fs-eDT" secondAttribute="trailing" id="tib-jf-J34"/>
+                            <constraint firstItem="rKZ-jg-d23" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="u7q-LN-kfY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="statusLabel" destination="K1z-Fs-eDT" id="MnY-V6-wBI"/>
+                        <outlet property="wifiSettingsButton" destination="rKZ-jg-d23" id="IVi-4w-SLC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02b-O0-nE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

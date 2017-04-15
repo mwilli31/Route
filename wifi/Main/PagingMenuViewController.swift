@@ -7,16 +7,30 @@
 //
 
 import UIKit
-import Foundation
 import PagingMenuController
 
-let menuBackgroundColor : UIColor! = .white
-let menuUnderlineColor : UIColor! = .cyan
+
+
+extension UIColor {
+    convenience init(red: Int, green: Int, blue: Int) {
+        assert(red >= 0 && red <= 255, "Invalid red component")
+        assert(green >= 0 && green <= 255, "Invalid green component")
+        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+    }
+}
+
+let menuBackgroundColor : UIColor! = UIColor.init(red: 27, green: 51, blue: 77)
+let menuUnderlineColor : UIColor! = .white
 
 struct MenuItemStatus: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
         let title = MenuItemText(text: "Status")
         return .text(title: title)
+    }
+    
+    var backgroundColor: UIColor {
+        return menuBackgroundColor
     }
 
     var selectedBackgroundColor: UIColor {
@@ -31,6 +45,10 @@ struct MenuItemProfile: MenuItemViewCustomizable {
         return .text(title: title)
     }
     
+    var backgroundColor: UIColor {
+        return menuBackgroundColor
+    }
+    
     var selectedBackgroundColor: UIColor {
         return menuBackgroundColor
     }
@@ -40,6 +58,10 @@ struct MenuItemRequests: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
         let title = MenuItemText(text: "Requests")
         return .text(title: title)
+    }
+    
+    var backgroundColor: UIColor {
+        return menuBackgroundColor
     }
     
     var selectedBackgroundColor: UIColor {
@@ -61,13 +83,16 @@ struct PagingMenuOptions: PagingMenuControllerCustomizable {
             return .infinite(widthMode: .fixed(width: 85), scrollingMode: .scrollEnabled)
         }
         var focusMode: MenuFocusMode {
-            return .underline(height: 5, color: menuUnderlineColor, horizontalPadding: 0, verticalPadding: 0)
+            return .underline(height: 3, color: menuUnderlineColor, horizontalPadding: 0, verticalPadding: 0)
         }
         var height: CGFloat {
             return 40
         }
+        var selectedBackgroundColor: UIColor {
+            return UIColor.init(red: 27, green: 51, blue: 77)
+        }
         var backgroundColor: UIColor {
-            return menuBackgroundColor
+            return UIColor.init(red: 27, green: 51, blue: 77)
         }
         var animationDuration: TimeInterval {
             return 0.2

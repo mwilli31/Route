@@ -69,6 +69,7 @@ class NEHotspotHelperService {
         }
     }
     
+
     private func getBestScanResult(networkList: [NEHotspotNetwork]) -> NEHotspotNetwork {
         var bestNetwork : NEHotspotNetwork? = nil
         
