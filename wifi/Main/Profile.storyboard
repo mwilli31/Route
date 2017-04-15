@@ -104,6 +104,7 @@
                                             <outlet property="activeLabel" destination="MkA-zV-h2n" id="7Yx-oF-V6O"/>
                                             <outlet property="allowedLabel" destination="rmq-by-84p" id="hSC-1x-yv9"/>
                                             <outlet property="wifiNameLabel" destination="uSs-0e-kCO" id="pXE-0B-4lP"/>
+                                            <segue destination="MNM-2E-Tv9" kind="show" id="FUN-oi-B36"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -146,6 +147,7 @@
         <!--Navigation Controller-->
         <scene sceneID="EPq-VW-JEu">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Trh-Va-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="75v-eA-BDj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cja-WL-ruw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -159,7 +161,6 @@
                         <segue destination="wja-l8-rTJ" kind="relationship" relationship="rootViewController" id="h8w-a7-F7G"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Trh-Va-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1030" y="125"/>
         </scene>
@@ -174,7 +175,17 @@
                     <view key="view" contentMode="scaleToFill" id="cbq-MG-fWj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Eq-oH-GaX">
+                                <rect key="frame" x="172" y="318" width="30" height="30"/>
+                                <state key="normal" title="exit"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Eq-oH-GaX" firstAttribute="centerX" secondItem="cbq-MG-fWj" secondAttribute="centerX" id="pVW-Ig-Tcp"/>
+                            <constraint firstItem="2Eq-oH-GaX" firstAttribute="centerY" secondItem="cbq-MG-fWj" secondAttribute="centerY" id="z1m-II-D6v"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wgx-Sb-2b6">
                         <barButtonItem key="backBarButtonItem" title="Back" id="yjM-3U-Alq">
