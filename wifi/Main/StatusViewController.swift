@@ -12,6 +12,9 @@ class StatusViewController: UIViewController {
     @IBOutlet var wifiSettingsButton: UIButton!
     @IBOutlet var statusLabel: UILabel!
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+    
     class func instantiateFromStoryboard() -> StatusViewController {
         let storyboard = UIStoryboard(name: "Status", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! StatusViewController
@@ -20,7 +23,22 @@ class StatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
+        
+        self.wifiSettingsButton.isHidden=true
+        self.activityIndicator.startAnimating()
+        self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: 2)
+        
 
+    }
+    
+    func stopActivityIndicator() {
+        self.activityIndicator.stopAnimating()
+        self.activityIndicator.hidesWhenStopped=true
+        self.wifiSettingsButton.isHidden=false
+        
     }
     
     @IBAction func openWifiSettingsPage(_ sender: Any) {
@@ -38,9 +56,20 @@ class StatusViewController: UIViewController {
 
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func catchConnectionStateNotification(notification:Notification) -> Void {
+        print("Catch notification")
+        
+        guard let userInfo = notification.userInfo,
+            let connectionState = userInfo[Constants.NotificationKeys.connectionStateNotificationKey] as? String else {
+                print("No userInfo found in notification")
+                return
+        }
+        
+        //update label
+        DispatchQueue.main.async(execute: {
+            self.statusLabel.text = connectionState
+        })
+        
+
     }
-    
 }

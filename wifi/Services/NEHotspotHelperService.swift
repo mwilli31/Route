@@ -12,6 +12,8 @@ import NetworkExtension
 class NEHotspotHelperService {
     
     static let sharedInstance = NEHotspotHelperService()
+    let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+    let nc = NotificationCenter.default
     
     func createNEHotspotHelperQueue () {
         
@@ -39,9 +41,13 @@ class NEHotspotHelperService {
                     
                     response.setNetworkList([network])
                     response.deliver() //Respond back with the filtered list
+                    
+                    // notify view controllers
+                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.discoverMessage)
+                    
                 }
             } else if cmd.commandType == NEHotspotHelperCommandType.evaluate {
-                print("evaluating...")
+                print("evaluating/authenticating...")
                 
                 if let network = cmd.network {
                     print(network)
@@ -51,14 +57,22 @@ class NEHotspotHelperService {
                     let response = cmd.createResponse(NEHotspotHelperResult.success)
                     response.setNetwork(network)
                     response.deliver() //Respond back
+                    
+                    // notify view controllers
+                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.authenticateMessage)
                 }
             } else if cmd.commandType == NEHotspotHelperCommandType.authenticate {
                 //Perform custom authentication and respond back with success
                 // if all is OK
-                print("authenticating...")
+                print("connected...")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
                 WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
                 response.deliver() //Respond back
+                
+                // notify view controllers
+                let connectedMessage = "Connected to " + cmd.network!.ssid
+                self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
+                
             } else if cmd.commandType == NEHotspotHelperCommandType.maintain {
                 print("maintaining")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
@@ -83,6 +97,13 @@ class NEHotspotHelperService {
         }
         
         return bestNetwork!
+    }
+    
+    private func postNetworkConnectionStateNotification(connectionState: String) {
+        self.nc.post(name:self.connectionStateNotification,
+                     object: nil,
+                     userInfo:[Constants.NotificationKeys.connectionStateNotificationKey:connectionState])
+        
     }
  
 }

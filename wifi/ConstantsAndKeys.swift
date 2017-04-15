@@ -9,6 +9,14 @@
 struct Constants {
     
     struct NotificationKeys {
+        static let connectionStateNotification = "ConnectionStateNotification"
+        static let connectionStateNotificationKey = "connectionState"
+    }
+    
+    struct ConnectionStateMessages {
+        static let discoverMessage = "Discovering Routes"
+        static let authenticateMessage = "Authenticating Route"
+        static let connectedMessage = "Connected"
     }
     
     struct Segues {
@@ -22,5 +30,6 @@ struct Constants {
     struct APIKeys {
         static let sinchKey = "c966416c-3817-4ba8-b84b-b72ce830c258"
     }
+    
     
 }

@@ -24,7 +24,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="198" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PXD-V0-Uqn">
-                                <rect key="frame" x="16" y="174.5" width="343" height="484.5"/>
+                                <rect key="frame" x="16" y="213" width="343" height="446"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="NetworkCell" rowHeight="198" id="zq0-Zx-SRs" customClass="NetworkTableViewCell" customModule="wifi" customModuleProvider="target">
@@ -110,14 +110,14 @@
                                 </prototypes>
                             </tableView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="nrZ-T4-KTK">
-                                <rect key="frame" x="147" y="28" width="80" height="80"/>
+                                <rect key="frame" x="147" y="60" width="80" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="4nq-zn-tad"/>
                                     <constraint firstAttribute="height" constant="80" id="ROC-Wg-s23"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" translatesAutoresizingMaskIntoConstraints="NO" id="mW6-VH-UfV">
-                                <rect key="frame" x="124" y="137.5" width="127.5" height="29"/>
+                                <rect key="frame" x="124" y="176" width="127.5" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -125,9 +125,9 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="nrZ-T4-KTK" firstAttribute="top" secondItem="bV7-GC-7y4" secondAttribute="bottom" constant="40" id="ByE-ka-I0v"/>
                             <constraint firstItem="PXD-V0-Uqn" firstAttribute="leading" secondItem="XKA-ie-GZN" secondAttribute="leadingMargin" id="HYH-IX-Qdo"/>
                             <constraint firstItem="PXD-V0-Uqn" firstAttribute="top" secondItem="mW6-VH-UfV" secondAttribute="bottom" constant="8" symbolic="YES" id="Ijr-YP-YjV"/>
-                            <constraint firstItem="nrZ-T4-KTK" firstAttribute="top" secondItem="bV7-GC-7y4" secondAttribute="bottom" constant="8" symbolic="YES" id="MLJ-eg-9Gq"/>
                             <constraint firstItem="mW6-VH-UfV" firstAttribute="centerX" secondItem="nrZ-T4-KTK" secondAttribute="centerX" id="Pro-lZ-GGj"/>
                             <constraint firstItem="GYB-p7-n6H" firstAttribute="top" secondItem="PXD-V0-Uqn" secondAttribute="bottom" constant="8" symbolic="YES" id="V00-Fr-GEa"/>
                             <constraint firstItem="nrZ-T4-KTK" firstAttribute="centerX" secondItem="XKA-ie-GZN" secondAttribute="centerX" id="WyU-li-s02"/>
@@ -147,7 +147,6 @@
         <!--Navigation Controller-->
         <scene sceneID="EPq-VW-JEu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Trh-Va-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController navigationBarHidden="YES" id="75v-eA-BDj" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cja-WL-ruw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -161,6 +160,7 @@
                         <segue destination="wja-l8-rTJ" kind="relationship" relationship="rootViewController" id="h8w-a7-F7G"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Trh-Va-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1030" y="125"/>
         </scene>
