@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="60" id="bHf-ye-uK7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Open Wifi Settings">
+                                <state key="normal" title="Open Wifi Settings To Connect">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>

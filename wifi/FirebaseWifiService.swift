@@ -17,7 +17,7 @@ class FirebaseWifiService {
     
     // TODO: Will make sense to move this code to eventually seperate private functions to handle the posting of data
     // to multiple indexes in our system (don't worry now, since we are moving away from Firebase eventually)
-    func currentWifiConnectionDetailsPostFirebase(ssid: String, networkUUID: String, timestamp: String, command: String) {
+    func postCurrentWifiConnectionDetails(ssid: String, networkUUID: String, timestamp: String, command: String) {
         
         let wifiConnectionDataForTimestamp = [
             "ssid" : ssid,

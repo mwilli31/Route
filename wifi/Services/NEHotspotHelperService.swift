@@ -43,7 +43,7 @@ class NEHotspotHelperService {
                     response.deliver() //Respond back with the filtered list
                     
                     // notify view controllers
-                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.discoverMessage)
+//                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.discoverMessage)
                     
                 }
             } else if cmd.commandType == NEHotspotHelperCommandType.evaluate {
@@ -66,7 +66,7 @@ class NEHotspotHelperService {
                 // if all is OK
                 print("connected...")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
-                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
+                WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
                 response.deliver() //Respond back
                 
                 // notify view controllers
@@ -76,7 +76,9 @@ class NEHotspotHelperService {
             } else if cmd.commandType == NEHotspotHelperCommandType.maintain {
                 print("maintaining")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
-                WifiService.sharedInstance.currentWifiConnectionDetailsPost(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "maintain")
+                let connectedMessage = "Connected to " + cmd.network!.ssid
+                self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
+                WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "maintain")
                 response.deliver()
             }
             

@@ -13,8 +13,13 @@ struct Constants {
         static let connectionStateNotificationKey = "connectionState"
     }
     
+    struct TimersAndDelays {
+        static let discoveringRoutesTimer : Double! = 3.0
+    }
+    
     struct ConnectionStateMessages {
         static let discoverMessage = "Discovering Routes"
+        static let foundRoutesMessage = "Discovered nearby routes"
         static let authenticateMessage = "Authenticating Route"
         static let connectedMessage = "Connected"
     }
