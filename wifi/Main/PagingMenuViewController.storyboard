@@ -28,7 +28,7 @@
                                 </connections>
                             </containerView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.13671702146530151" green="0.26347565650939941" blue="0.37515449523925781" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="ta5-a5-SIb" firstAttribute="top" secondItem="VZU-h8-Ycs" secondAttribute="bottom" id="EBI-hk-lDs"/>
                             <constraint firstItem="ta5-a5-SIb" firstAttribute="bottom" secondItem="ckr-QK-BZZ" secondAttribute="top" id="GC4-bo-1yS"/>

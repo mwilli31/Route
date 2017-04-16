@@ -20,12 +20,14 @@ extension UIColor {
     }
 }
 
-let menuBackgroundColor : UIColor! = UIColor.init(red: 27, green: 51, blue: 77)
-let menuUnderlineColor : UIColor! = .white
+private let menuBackgroundColor : UIColor! = UIColor.init(red: 27, green: 51, blue: 77, alpha: 1)
+private let menuUnderlineColor : UIColor! = .white
+
+private let menuFontSize : CGFloat = 18.0
 
 struct MenuItemStatus: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Status")
+        let title = MenuItemText(text: "Status", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
@@ -41,7 +43,7 @@ struct MenuItemStatus: MenuItemViewCustomizable {
 
 struct MenuItemProfile: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Profile")
+        let title = MenuItemText(text: "Profile", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
@@ -56,7 +58,7 @@ struct MenuItemProfile: MenuItemViewCustomizable {
 
 struct MenuItemRequests: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Requests")
+        let title = MenuItemText(text: "Requests", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
@@ -89,10 +91,10 @@ struct PagingMenuOptions: PagingMenuControllerCustomizable {
             return 40
         }
         var selectedBackgroundColor: UIColor {
-            return UIColor.init(red: 27, green: 51, blue: 77)
+            return UIColor.init(red: 35, green: 67, blue: 96)
         }
         var backgroundColor: UIColor {
-            return UIColor.init(red: 27, green: 51, blue: 77)
+            return UIColor.init(red: 35, green: 67, blue: 96)
         }
         var animationDuration: TimeInterval {
             return 0.2
