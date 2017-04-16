@@ -15,8 +15,6 @@ class StatusViewController: UIViewController {
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
     
-    private var currentState : String = Constants.ConnectionStateMessages.discoverMessage
-    
     class func instantiateFromStoryboard() -> StatusViewController {
         let storyboard = UIStoryboard(name: "Status", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! StatusViewController
@@ -29,17 +27,28 @@ class StatusViewController: UIViewController {
         let nc = NotificationCenter.default
         nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
         
-        self.wifiSettingsButton.isHidden=true
+        let epoch = String(Int(Date().timeIntervalSince1970.rounded()))
         
-        //only start indicator if trying to discover routes
-        if self.currentState == Constants.ConnectionStateMessages.discoverMessage {
+        let currentState = UserDefaultsHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
+        
+        self.wifiSettingsButton.isHidden=true
+        self.activityIndicator.hidesWhenStopped=true
+        if currentState != nil {
+            //update label
+            DispatchQueue.main.async(execute: {
+                self.statusLabel.text = "Connected to " + (currentState?["ssid"])!
+
+            })
+        } else {
+            //only start indicator if trying to discover routes
             self.activityIndicator.startAnimating()
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         }
+
+
     }
     
     func stopActivityIndicator() {
-        self.activityIndicator.hidesWhenStopped=true
         self.activityIndicator.stopAnimating()
         self.wifiSettingsButton.isHidden=false
         
@@ -62,8 +71,6 @@ class StatusViewController: UIViewController {
             })
         }
 
-        self.wifiSettingsButton.isHidden=true
-
     }
     
     func catchConnectionStateNotification(notification:Notification) -> Void {
@@ -75,8 +82,9 @@ class StatusViewController: UIViewController {
                 return
         }
         
-        //
-        self.currentState = connectionState
+        if(connectionState != Constants.ConnectionStateMessages.discoverMessage  || connectionState != Constants.ConnectionStateMessages.foundRoutesMessage) {
+            self.wifiSettingsButton.isHidden=true
+        }
         
         //update label
         DispatchQueue.main.async(execute: {

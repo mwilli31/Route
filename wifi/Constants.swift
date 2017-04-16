@@ -19,7 +19,7 @@ struct Constants {
     
     struct ConnectionStateMessages {
         static let discoverMessage = "Discovering Routes"
-        static let foundRoutesMessage = "Discovered nearby routes"
+        static let foundRoutesMessage = "Discovered nearby Routes"
         static let authenticateMessage = "Authenticating Route"
         static let connectedMessage = "Connected"
     }

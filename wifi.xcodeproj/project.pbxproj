@@ -39,6 +39,7 @@
 		279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */; };
 		279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F811E77DF810094A33B /* ProfileViewController.swift */; };
 		279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F831E77E0550094A33B /* RequestsViewController.swift */; };
+		27B2C5FB1EA341D200693EA7 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C5FA1EA341D200693EA7 /* UserDefaultsHelper.swift */; };
 		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
@@ -104,6 +105,7 @@
 		279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PagingMenuViewController.swift; path = Main/PagingMenuViewController.swift; sourceTree = "<group>"; };
 		279A1F811E77DF810094A33B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Main/ProfileViewController.swift; sourceTree = "<group>"; };
 		279A1F831E77E0550094A33B /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestsViewController.swift; path = Main/RequestsViewController.swift; sourceTree = "<group>"; };
+		27B2C5FA1EA341D200693EA7 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
 		27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTableViewCell.swift; path = Main/NetworkTableViewCell.swift; sourceTree = "<group>"; };
 		27B9A82A1E91ABE00091C152 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Main/Network.swift; sourceTree = "<group>"; };
 		27B9A82C1E91AC520091C152 /* Networks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Networks.plist; path = Main/Networks.plist; sourceTree = "<group>"; };
@@ -152,6 +154,7 @@
 				2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */,
 				2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */,
 				273114A01E9C7FE4002AE7AD /* WifiService.swift */,
+				27B2C5FA1EA341D200693EA7 /* UserDefaultsHelper.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
 				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
+				27B2C5FB1EA341D200693EA7 /* UserDefaultsHelper.swift in Sources */,
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */,
 				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
