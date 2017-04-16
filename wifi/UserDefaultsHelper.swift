@@ -92,7 +92,10 @@ class UserDefaultsHelper {
         //verify connected to wifi
         if currentReachabilityStatus == .reachableViaWiFi && lastSavedState != nil {
             //check to see if timestamp is within 300 seconds
-            let diff : Int! = Int(timestamp)! - Int(lastSavedState!["timestamp"]!)!
+            let newTimestamp : Int = Int(timestamp)!
+            let oldTimestamp : Int = Int(lastSavedState!["timestamp"]!)!
+            
+            let diff = newTimestamp - oldTimestamp
             if diff <= 300 {
                 return lastSavedState
             }

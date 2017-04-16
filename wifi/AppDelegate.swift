@@ -160,6 +160,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillEnterForeground(_ application: UIApplication) {
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
+        
+        print("entering foreground")
+        
+        let epoch = String(Int(Date().timeIntervalSince1970.rounded()))
+        let currentState = UserDefaultsHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
+        
+        let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+        let nc = NotificationCenter.default
+        
+        //currentState == nil means that while the app was in the background, the status of the wifi connection changed...thus notify the UI
+        if currentState == nil {
+            nc.post(name:connectionStateNotification,
+                         object: nil,
+                         userInfo:[Constants.NotificationKeys.connectionStateNotificationKey:Constants.ConnectionStateMessages.discoverMessage])
+        }
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {

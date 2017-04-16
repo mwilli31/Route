@@ -27,6 +27,12 @@ class StatusViewController: UIViewController {
         let nc = NotificationCenter.default
         nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        print("status view is appearing")
+        
         let epoch = String(Int(Date().timeIntervalSince1970.rounded()))
         
         let currentState = UserDefaultsHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
@@ -37,15 +43,13 @@ class StatusViewController: UIViewController {
             //update label
             DispatchQueue.main.async(execute: {
                 self.statusLabel.text = "Connected to " + (currentState?["ssid"])!
-
+                
             })
         } else {
             //only start indicator if trying to discover routes
             self.activityIndicator.startAnimating()
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         }
-
-
     }
     
     func stopActivityIndicator() {
@@ -82,8 +86,16 @@ class StatusViewController: UIViewController {
                 return
         }
         
-        if(connectionState != Constants.ConnectionStateMessages.discoverMessage  || connectionState != Constants.ConnectionStateMessages.foundRoutesMessage) {
+        if(connectionState == Constants.ConnectionStateMessages.discoverMessage)   {
             self.wifiSettingsButton.isHidden=true
+            self.activityIndicator.hidesWhenStopped=true
+            self.activityIndicator.startAnimating()
+            self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
+        } else if connectionState == Constants.ConnectionStateMessages.foundRoutesMessage {
+            self.wifiSettingsButton.isHidden=false
+        } else {
+            self.wifiSettingsButton.isHidden=true
+
         }
         
         //update label
