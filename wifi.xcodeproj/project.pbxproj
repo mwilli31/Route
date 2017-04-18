@@ -224,15 +224,14 @@
 		2777A0261E23023B00229502 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				70D5B2D51EA5AE150089BD7A /* Requests */,
 				279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */,
 				279A1F791E77D5A30094A33B /* PagingMenuViewController.storyboard */,
 				2710E4D91E66915C00F1B40D /* Status.storyboard */,
 				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
 				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
 				27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */,
-				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
 				279A1F811E77DF810094A33B /* ProfileViewController.swift */,
-				279A1F831E77E0550094A33B /* RequestsViewController.swift */,
 				27B9A82A1E91ABE00091C152 /* Network.swift */,
 				27B9A82C1E91AC520091C152 /* Networks.plist */,
 			);
@@ -262,6 +261,15 @@
 				2710E4E31E66920000F1B40D /* SignUpCompleteViewController.swift */,
 			);
 			name = "Sign Up ";
+			sourceTree = "<group>";
+		};
+		70D5B2D51EA5AE150089BD7A /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				279A1F831E77E0550094A33B /* RequestsViewController.swift */,
+				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
+			);
+			name = Requests;
 			sourceTree = "<group>";
 		};
 		73CB3686FBF421D570A76040 /* Pods */ = {
