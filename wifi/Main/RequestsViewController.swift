@@ -14,10 +14,30 @@ class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
     
+    @IBOutlet weak var timedAccessButton: UIButton!
+    @IBOutlet weak var denyButton: UIButton!
+    @IBOutlet weak var approveButton: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+        
+//        self.denyButton.addTarget(self, action: #selector(AllowedUsers.denyAccessRequest(user:), for: .touchUpInside)
+        
+        
+//        addTarget(self, action: #selector(ClassName.FunctionName.buttonTapped), for: .touchUpInside)
+        
+//     @objc    http://stackoverflow.com/questions/28894765/ios-swift-button-action-in-table-view-cell
+        
+    }
 }
 
 class RequestsViewController: UIViewController {
     @IBOutlet weak var requestsTableView: UITableView!
+    
+    var users = AllowedUsers()
+    
+    let sectionHeaders = ["Access Requests", "Allowed Users"]
     
     class func instantiateFromStoryboard() -> RequestsViewController {
         let storyboard = UIStoryboard(name: "Requests", bundle: nil)
@@ -40,40 +60,38 @@ class RequestsViewController: UIViewController {
 
 extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        switch section {
+        case 0:
+            return users.pendingAccessRequestUsersArray().count
+        default:
+            return users.currentlyAllowedUsersArray().count
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
     
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 2
-//    }
-    
-    // Swipe to show options not working because of PagingMenuViewController?
-    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let button1 = UITableViewRowAction.init(style: .default, title: "Action 1") { (action, IndexPath) in
-            print("HELLO")
-        }
-        let button2 = UITableViewRowAction.init(style: .default, title: "Action 2") { (action, IndexPath) in
-            print("BYE")
-        }
-        
-        return [button1, button2]
-
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return self.sectionHeaders.count
     }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sectionHeaders[section]
+    }
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+        let cell = tableView.dequeueReusableCell(withIdentifier: "request") as! RequestTableViewCell
         
-        // Instantiate a cell
-        let cellIdentifier = "request"
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! RequestTableViewCell
+        switch indexPath.section {
+        case 0:
+            cell.username.text = self.users.pendingAccessRequestUsersArray()[indexPath.row]
+        default:
+            cell.username.text = self.users.currentlyAllowedUsersArray()[indexPath.row]
+        }
         
-        // Adding the right information
-        cell.username.text = "Sajay"
-
-        // Returning the cell
         return cell
     }
 }

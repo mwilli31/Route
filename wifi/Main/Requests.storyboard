@@ -75,6 +75,10 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
+                                            <outlet property="approveButton" destination="mQN-JI-gMs" id="yPP-RU-OaF"/>
+                                            <outlet property="denyButton" destination="7at-mV-Mdg" id="e4D-ab-9nY"/>
+                                            <outlet property="timedAccessButton" destination="Ak9-MT-OrC" id="j5I-3P-ldR"/>
+                                            <outlet property="userPicture" destination="r5V-Bl-t2m" id="sia-gK-1aW"/>
                                             <outlet property="username" destination="50G-pn-Gaq" id="fRe-Z8-mhQ"/>
                                         </connections>
                                     </tableViewCell>
