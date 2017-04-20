@@ -23,21 +23,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="NAF-A2-Jbb">
-                                <rect key="frame" x="137" y="117" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="5Ho-vi-gXK"/>
-                                    <constraint firstAttribute="width" constant="100" id="hh5-yR-S8M"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
-                                <rect key="frame" x="16" y="268.5" width="343" height="22"/>
+                                <rect key="frame" x="16" y="269" width="343" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-jg-d23">
-                                <rect key="frame" x="37" y="356.5" width="300" height="60"/>
+                                <rect key="frame" x="37" y="357" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.43921568630000002" green="0.62745098040000002" blue="0.8862745098" alpha="0.74644396550000003" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bHf-ye-uK7"/>
@@ -51,7 +44,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-39-cSX">
-                                <rect key="frame" x="157.5" y="356.5" width="60" height="60"/>
+                                <rect key="frame" x="158" y="357" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2xz-2u-9C6"/>
                                     <constraint firstAttribute="height" constant="60" id="x5p-Gp-vxf"/>
@@ -60,15 +53,13 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="0qg-bt-Z97"/>
-                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="8Sp-ff-AL5"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="4yc-KH-RVZ"/>
+                            <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="top" id="AYA-4C-l6z"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="width" secondItem="CAN-EY-qCK" secondAttribute="width" multiplier="0.8" id="Gkz-Al-e5u"/>
+                            <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="66" id="MbC-zL-ZfI"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="OIp-jK-k7r"/>
-                            <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="RHq-0J-N6C"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="SRE-DJ-0ga"/>
-                            <constraint firstItem="NAF-A2-Jbb" firstAttribute="centerY" secondItem="CAN-EY-qCK" secondAttribute="centerY" multiplier="0.5" id="Thq-Oe-RsX"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="NAF-A2-Jbb" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="h8D-7k-kqf"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="trailing" secondItem="CAN-EY-qCK" secondAttribute="trailingMargin" id="k5U-ZL-wvl"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="249" id="ecH-ga-kXP"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="fmB-sf-OCJ"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="zwF-sf-585"/>
                         </constraints>
                     </view>
@@ -83,7 +74,4 @@
             <point key="canvasLocation" x="109.59999999999999" y="148.87556221889056"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="logo" width="122" height="122"/>
-    </resources>
 </document>

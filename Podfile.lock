@@ -44,6 +44,7 @@ PODS:
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
   - KeychainSwift (7.0.0)
+  - lottie-ios (1.5.1)
   - PagingMenuController (2.2.0)
   - PhoneNumberKit (1.2.3):
     - PhoneNumberKit/PhoneNumberKitCore (= 1.2.3)
@@ -60,6 +61,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - KeychainSwift (~> 7.0)
+  - lottie-ios
   - PagingMenuController
   - PhoneNumberKit
   - SinchVerification-Swift
@@ -75,11 +77,12 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   KeychainSwift: b6947435dd78cc442c64a84ae648dd0e871cf448
+  lottie-ios: f680a7c4cb7a567ecf258fde0f967913aff111b8
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   PhoneNumberKit: 1e5cca669113fc361a8c82ec1ee559c62b8cd0f7
   Protobuf: 2ccbaf193f6c65adc67745453ca0c13234c32796
   SinchVerification-Swift: 567aaf9cb29c55a115faecb6016fea25a7f37688
 
-PODFILE CHECKSUM: bf79c59d2a81bb91b98ab7fbd2ebddfc3f308762
+PODFILE CHECKSUM: a4defb841c35c4c85b13490e1c3b6efc01588e2f
 
 COCOAPODS: 1.2.0

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class StatusViewController: UIViewController {
     @IBOutlet var wifiSettingsButton: UIButton!
@@ -14,7 +15,8 @@ class StatusViewController: UIViewController {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
-    
+    let animationView = LOTAnimationView(name: "RouteLogoBlueBlinking")
+
     class func instantiateFromStoryboard() -> StatusViewController {
         let storyboard = UIStoryboard(name: "Status", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! StatusViewController
@@ -26,6 +28,11 @@ class StatusViewController: UIViewController {
         
         let nc = NotificationCenter.default
         nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
+        
+        self.animationView?.frame = CGRect(x: self.view.bounds.width/2 - 70, y: 80, width: 140, height: 140)
+        self.animationView?.contentMode = .scaleAspectFill
+        self.animationView?.loopAnimation = true
+        self.view.addSubview(animationView!)
         
     }
     
@@ -48,12 +55,16 @@ class StatusViewController: UIViewController {
         } else {
             //only start indicator if trying to discover routes
             self.activityIndicator.startAnimating()
+            
+            self.animationView?.play()
+            
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         }
     }
     
     func stopActivityIndicator() {
         self.activityIndicator.stopAnimating()
+        self.animationView?.pause()
         self.wifiSettingsButton.isHidden=false
         
         //update label
@@ -90,6 +101,7 @@ class StatusViewController: UIViewController {
             self.wifiSettingsButton.isHidden=true
             self.activityIndicator.hidesWhenStopped=true
             self.activityIndicator.startAnimating()
+            self.animationView?.play()
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         } else if connectionState == Constants.ConnectionStateMessages.foundRoutesMessage {
             self.wifiSettingsButton.isHidden=false

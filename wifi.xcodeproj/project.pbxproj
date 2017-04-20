@@ -22,6 +22,7 @@
 		2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */; };
 		2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */; };
 		273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114A01E9C7FE4002AE7AD /* WifiService.swift */; };
+		2748EB0A1EA7017800C6271A /* RouteLogoBlueBlinking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2748EB091EA7017800C6271A /* RouteLogoBlueBlinking.json */; };
 		2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6011E21BEEB00C1601F /* AppDelegate.swift */; };
 		2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */; };
 		2751D6071E21BEEB00C1601F /* LaunchMain.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */; };
@@ -40,6 +41,7 @@
 		279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F811E77DF810094A33B /* ProfileViewController.swift */; };
 		279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 279A1F831E77E0550094A33B /* RequestsViewController.swift */; };
 		27B2C5FB1EA341D200693EA7 /* UserDefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B2C5FA1EA341D200693EA7 /* UserDefaultsHelper.swift */; };
+		27B2C6001EA4734300693EA7 /* LoadingRouteLogo.json in Resources */ = {isa = PBXBuildFile; fileRef = 27B2C5FF1EA4734300693EA7 /* LoadingRouteLogo.json */; };
 		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
@@ -82,6 +84,7 @@
 		2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWifiService.swift; sourceTree = "<group>"; };
 		2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NEHotspotHelperService.swift; path = Services/NEHotspotHelperService.swift; sourceTree = "<group>"; };
 		273114A01E9C7FE4002AE7AD /* WifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WifiService.swift; path = Services/WifiService.swift; sourceTree = "<group>"; };
+		2748EB091EA7017800C6271A /* RouteLogoBlueBlinking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RouteLogoBlueBlinking.json; path = Animations/RouteLogoBlueBlinking.json; sourceTree = "<group>"; };
 		2751D5FE1E21BEEB00C1601F /* wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6011E21BEEB00C1601F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchMainViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +110,7 @@
 		279A1F811E77DF810094A33B /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileViewController.swift; path = Main/ProfileViewController.swift; sourceTree = "<group>"; };
 		279A1F831E77E0550094A33B /* RequestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RequestsViewController.swift; path = Main/RequestsViewController.swift; sourceTree = "<group>"; };
 		27B2C5FA1EA341D200693EA7 /* UserDefaultsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsHelper.swift; sourceTree = "<group>"; };
+		27B2C5FF1EA4734300693EA7 /* LoadingRouteLogo.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = LoadingRouteLogo.json; path = Animations/LoadingRouteLogo.json; sourceTree = "<group>"; };
 		27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTableViewCell.swift; path = Main/NetworkTableViewCell.swift; sourceTree = "<group>"; };
 		27B9A82A1E91ABE00091C152 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Main/Network.swift; sourceTree = "<group>"; };
 		27B9A82C1E91AC520091C152 /* Networks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Networks.plist; path = Main/Networks.plist; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 		2751D6001E21BEEB00C1601F /* wifi */ = {
 			isa = PBXGroup;
 			children = (
+				27B2C5FE1EA465C900693EA7 /* Animation */,
 				709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */,
 				278F4B761E6E3C1500B7F656 /* LogIn */,
 				278F4B6F1E67E11300B7F656 /* wifi.entitlements */,
@@ -248,6 +253,15 @@
 				278F4B791E6E3F3500B7F656 /* LogInUsernameViewController.swift */,
 			);
 			name = LogIn;
+			sourceTree = "<group>";
+		};
+		27B2C5FE1EA465C900693EA7 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				2748EB091EA7017800C6271A /* RouteLogoBlueBlinking.json */,
+				27B2C5FF1EA4734300693EA7 /* LoadingRouteLogo.json */,
+			);
+			name = Animation;
 			sourceTree = "<group>";
 		};
 		27D4CF331E271624004FEE83 /* Sign Up  */ = {
@@ -423,7 +437,9 @@
 				278F4B731E6E33C100B7F656 /* Requests.storyboard in Resources */,
 				2751D60C1E21BEEB00C1601F /* Assets.xcassets in Resources */,
 				2751D6071E21BEEB00C1601F /* LaunchMain.storyboard in Resources */,
+				27B2C6001EA4734300693EA7 /* LoadingRouteLogo.json in Resources */,
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
+				2748EB0A1EA7017800C6271A /* RouteLogoBlueBlinking.json in Resources */,
 				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
