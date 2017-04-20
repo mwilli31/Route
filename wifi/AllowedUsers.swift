@@ -10,11 +10,12 @@ import Foundation
 
 class AllowedUsers {
     
+    static let sharedInstance = AllowedUsers()
     var pendingAccessRequestUsers : [String:String]
     var currentlyAllowedUsers : [String:String]
     
-    init() {
-
+    
+    private init() {
         pendingAccessRequestUsers = [String:String]()
         
         pendingAccessRequestUsers["@gfrasca"] = "pending"
@@ -30,15 +31,17 @@ class AllowedUsers {
     }
     
     func denyAccessRequest(user : String) {
-        
-        self.pendingAccessRequestUsers.removeValue(forKey: user)
-    
+        AllowedUsers.sharedInstance.pendingAccessRequestUsers.removeValue(forKey: user)
+    }
+
+    func revokeAccessRights(user : String) {
+        AllowedUsers.sharedInstance.currentlyAllowedUsers.removeValue(forKey: user)
     }
     
     func approveAccessRequest(user : String) {
         
-        self.pendingAccessRequestUsers.removeValue(forKey: user)
-        self.currentlyAllowedUsers[user] = "allowed"
+        AllowedUsers.sharedInstance.pendingAccessRequestUsers.removeValue(forKey: user)
+        AllowedUsers.sharedInstance.currentlyAllowedUsers[user] = "allowed"
         
     }
     

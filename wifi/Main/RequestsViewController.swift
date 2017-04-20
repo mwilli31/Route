@@ -8,34 +8,15 @@
 
 import UIKit
 
-
-
 class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var userPicture: UIImageView!
-    
-    @IBOutlet weak var timedAccessButton: UIButton!
-    @IBOutlet weak var denyButton: UIButton!
-    @IBOutlet weak var approveButton: UIButton!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        
-//        self.denyButton.addTarget(self, action: #selector(AllowedUsers.denyAccessRequest(user:), for: .touchUpInside)
-        
-        
-//        addTarget(self, action: #selector(ClassName.FunctionName.buttonTapped), for: .touchUpInside)
-        
-//     @objc    http://stackoverflow.com/questions/28894765/ios-swift-button-action-in-table-view-cell
-        
-    }
 }
 
 class RequestsViewController: UIViewController {
     @IBOutlet weak var requestsTableView: UITableView!
     
-    var users = AllowedUsers()
+    var users = AllowedUsers.sharedInstance
     
     let sectionHeaders = ["Access Requests", "Allowed Users"]
     
@@ -56,6 +37,37 @@ class RequestsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func denyButtonAction(_ sender: UIButton) {
+        let usernameLabel = resolveUsernameLabelFromCell(sender: sender)
+        
+        switch usernameLabel.tag {
+        case 0:
+            users.denyAccessRequest(user: usernameLabel.text!)
+            self.requestsTableView.reloadData()
+        case 1:
+            users.revokeAccessRights(user: usernameLabel.text!)
+            self.requestsTableView.reloadData()
+        default: break
+        }
+    }
+    
+    @IBAction func approveButtonAction(_ sender: UIButton) {
+        users.approveAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
+        self.requestsTableView.reloadData()
+    }
+    
+    @IBAction func timedAccessAction(_ sender: UIButton) {
+        print("Oh implement me baby")
+    }
+    
+    func resolveUsernameLabelFromCell(sender: UIButton) -> UILabel {
+        var ancestor = sender.superview
+        while ancestor != nil && !(ancestor! is RequestTableViewCell) {
+            ancestor = ancestor?.superview
+        }
+        let cell = ancestor as! RequestTableViewCell
+        return cell.username
+    }
 }
 
 extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
@@ -88,10 +100,13 @@ extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
         switch indexPath.section {
         case 0:
             cell.username.text = self.users.pendingAccessRequestUsersArray()[indexPath.row]
+            cell.username.tag = indexPath.section
         default:
             cell.username.text = self.users.currentlyAllowedUsersArray()[indexPath.row]
+            cell.username.tag = indexPath.section
         }
         
         return cell
     }
+
 }
