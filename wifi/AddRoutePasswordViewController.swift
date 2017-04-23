@@ -22,6 +22,7 @@ class AddRoutePasswordViewController : UIViewController {
     @IBAction func ExplainPassword(_ sender: UIButton) {
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
+        self.passwordTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
 }

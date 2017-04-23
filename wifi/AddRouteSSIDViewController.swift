@@ -24,6 +24,7 @@ class AddRouteSSIDViewController: UIViewController {
         self.performSegue(withIdentifier: "EnterPasswordSegue", sender: self)
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
+        self.SSIDTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
 }

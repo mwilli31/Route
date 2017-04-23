@@ -22,6 +22,7 @@ class AddRouteNameViewController: UIViewController {
                 self.performSegue(withIdentifier: "ConfirmLocationSegue", sender: self)
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
+        self.routeNameTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
     }
 }

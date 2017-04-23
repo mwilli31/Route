@@ -62,7 +62,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // [END add_token_refresh_observer]
         
         
-        // View Changes
+        // UI Changes
         navigationBarAppearance()
         
         return true
@@ -238,7 +238,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    // MARK: - UINavigationBar Appearance Override
+    // MARK: - UI Changes
     
     func navigationBarAppearance () {
         UINavigationBar.appearance().barTintColor = UIColor(red:0.24, green:0.29, blue:0.51, alpha:1.00)
