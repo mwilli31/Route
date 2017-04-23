@@ -47,7 +47,6 @@ class SignUpPhoneNumberViewController: UIViewController, UITextFieldDelegate {
         self.verification = SMSVerification(Constants.APIKeys.sinchKey, phoneNumber: text)
         self.verification.initiate { (result: InitiationResult, error: Error?) -> Void in
             // handle outcome
-            print("YO MADE IT ")
             self.performSegue(withIdentifier: "validatePhoneNumber", sender: self);
         }
         let code = ""

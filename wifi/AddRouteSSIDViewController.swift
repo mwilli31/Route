@@ -9,6 +9,7 @@
 import UIKit
 
 class AddRouteSSIDViewController: UIViewController {
+    
     @IBOutlet weak var SSIDTextField: UITextField!
     
     override func viewWillAppear(_ animated: Bool) {
@@ -18,11 +19,11 @@ class AddRouteSSIDViewController: UIViewController {
     
     @IBAction func ExplainSSID(_ sender: UIButton) {
     }
+    
     @IBAction func SSIDTextFieldPrimaryActionTriggered(_ sender: Any) {
-        
-        print("DONE")
         self.performSegue(withIdentifier: "EnterPasswordSegue", sender: self)
     }
+    
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
         self.SSIDTextField.resignFirstResponder()
         self.dismiss(animated: true, completion: nil)
