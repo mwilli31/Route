@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="75v-eA-BDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="wja-l8-rTJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -129,11 +129,11 @@
                                     <constraint firstAttribute="height" constant="60" id="rHr-nl-YCt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Add Personal Route">
+                                <state key="normal" title="Add Home Route">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xpA-Vq-eJw" kind="show" id="DAC-c9-meH"/>
+                                    <segue destination="Mmq-QX-quW" kind="show" id="DAC-c9-meH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="124.58770614692655"/>
         </scene>
-        <!--View Controller-->
+        <!--Add RouteSSID View Controller-->
         <scene sceneID="4a2-br-ZDJ">
             <objects>
-                <viewController id="xpA-Vq-eJw" sceneMemberID="viewController">
+                <viewController id="xpA-Vq-eJw" customClass="AddRouteSSIDViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ohY-gh-a07"/>
                         <viewControllerLayoutGuide type="bottom" id="crb-ah-na3"/>
@@ -174,13 +174,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your SSID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="M4C-jB-ACT">
-                                <rect key="frame" x="111" y="80" width="153.5" height="26.5"/>
+                                <rect key="frame" x="111" y="124" width="153.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="SSID" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="QxA-h0-5Wd">
-                                <rect key="frame" x="37.5" y="180" width="300" height="60"/>
+                                <rect key="frame" x="37.5" y="233" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="JXE-We-dqv"/>
@@ -188,13 +188,19 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="SSIDTextFieldPrimaryActionTriggered:" destination="xpA-Vq-eJw" eventType="primaryActionTriggered" id="iad-XD-CNd"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQO-KA-aPk">
-                                <rect key="frame" x="144" y="114.5" width="87" height="29"/>
+                                <rect key="frame" x="144" y="158.5" width="87" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="What is This?">
                                     <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ExplainSSID:" destination="xpA-Vq-eJw" eventType="touchUpInside" id="qhA-dj-GzG"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -208,30 +214,26 @@
                             <constraint firstItem="QxA-h0-5Wd" firstAttribute="width" secondItem="HPR-ci-sWP" secondAttribute="width" multiplier="0.8" id="t6W-H6-CVt"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="5p9-06-BTZ">
+                        <barButtonItem key="rightBarButtonItem" title="Quit" id="q9V-Lm-Cek">
+                            <connections>
+                                <action selector="dismissView:" destination="xpA-Vq-eJw" id="GH1-yf-DuJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
+                            <color key="value" red="0.25005361437797546" green="0.30566063523292542" blue="0.58369332551956177" alpha="1" colorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <outlet property="SSIDTextField" destination="QxA-h0-5Wd" id="Qk0-sx-S9d"/>
+                        <segue destination="439-2Z-xZd" kind="show" identifier="EnterPasswordSegue" id="bxY-Hh-cTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lST-iQ-6rg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-202" y="851"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="EPq-VW-JEu">
-            <objects>
-                <navigationController navigationBarHidden="YES" id="75v-eA-BDj" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="cja-WL-ruw">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="GMz-yH-P4l">
-                        <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="wja-l8-rTJ" kind="relationship" relationship="rootViewController" id="h8w-a7-F7G"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Trh-Va-TZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1030" y="125"/>
+            <point key="canvasLocation" x="736.79999999999995" y="850.52473763118451"/>
         </scene>
         <!--Personal Network Details-->
         <scene sceneID="9Kg-hn-elr">
@@ -267,10 +269,10 @@
             </objects>
             <point key="canvasLocation" x="486" y="125"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Route Password View Controller-->
         <scene sceneID="oX3-Dj-Ufo">
             <objects>
-                <viewController id="439-2Z-xZd" sceneMemberID="viewController">
+                <viewController id="439-2Z-xZd" customClass="AddRoutePasswordViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2OI-2q-CBD"/>
                         <viewControllerLayoutGuide type="bottom" id="XCI-Ij-CuL"/>
@@ -280,13 +282,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Your Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="CaC-2G-EOG">
-                                <rect key="frame" x="87" y="80" width="201" height="27"/>
+                                <rect key="frame" x="87" y="124" width="201" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Network Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="2Ta-Ls-ISD">
-                                <rect key="frame" x="37.5" y="180" width="300" height="60"/>
+                                <rect key="frame" x="37.5" y="233" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="otg-ia-WYz"/>
@@ -294,16 +296,19 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureTextEntry" value="YES"/>
-                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="passwordTextFieldPrimaryActionTriggered:" destination="439-2Z-xZd" eventType="primaryActionTriggered" id="xM7-Cg-TfF"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cab-vh-vd0">
-                                <rect key="frame" x="144" y="114.5" width="87" height="29"/>
+                                <rect key="frame" x="144" y="158.5" width="87" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="What is This?">
                                     <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="ExplainPassword:" destination="439-2Z-xZd" eventType="touchUpInside" id="dzT-Ax-KVc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -317,10 +322,21 @@
                             <constraint firstItem="cab-vh-vd0" firstAttribute="top" secondItem="CaC-2G-EOG" secondAttribute="bottom" constant="8" symbolic="YES" id="x40-It-OXu"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="9dB-H3-FJa">
+                        <barButtonItem key="rightBarButtonItem" title="Quit" id="F0i-8N-Dr0">
+                            <connections>
+                                <action selector="dismissView:" destination="439-2Z-xZd" id="Ni7-My-Eyg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="passwordTextField" destination="2Ta-Ls-ISD" id="rMS-jt-8ua"/>
+                        <segue destination="c87-oC-sFy" kind="show" identifier="AddRouteNameSegue" id="je3-I3-DJf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vcs-bB-EAJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486" y="851"/>
+            <point key="canvasLocation" x="1424.8" y="850.52473763118451"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="VK1-Mr-S1p">
@@ -375,12 +391,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9CK-2z-XQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1185" y="851"/>
+            <point key="canvasLocation" x="-202" y="1594"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Route Name View Controller-->
         <scene sceneID="HVH-gO-xfm">
             <objects>
-                <viewController id="c87-oC-sFy" sceneMemberID="viewController">
+                <viewController id="c87-oC-sFy" customClass="AddRouteNameViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dCl-iE-iA5"/>
                         <viewControllerLayoutGuide type="bottom" id="nfL-33-wZD"/>
@@ -390,13 +406,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Your Route" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="69W-On-sgM">
-                                <rect key="frame" x="102" y="80" width="171" height="27"/>
+                                <rect key="frame" x="102" y="124" width="171" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Custom Route Name" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="yOD-w4-AKE">
-                                <rect key="frame" x="37.5" y="180" width="300" height="60"/>
+                                <rect key="frame" x="37.5" y="233" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="irA-tc-g0t"/>
@@ -404,50 +420,52 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="routeNameTextFieldPrimaryActionTriggered:" destination="c87-oC-sFy" eventType="primaryActionTriggered" id="VJ7-XZ-1HO"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wWL-lV-gUm">
-                                <rect key="frame" x="144" y="114.5" width="87" height="29"/>
+                                <rect key="frame" x="144" y="158.5" width="87" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="What is This?">
                                     <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odr-0M-h4s">
-                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
-                                <color key="backgroundColor" red="0.60784313729999995" green="0.73333333329999995" blue="0.8980392157" alpha="0.70220905170000003" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="ILy-cV-NsJ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="Pfz-jM-AmI"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <state key="normal" title="Use Default Name">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
+                                <connections>
+                                    <action selector="ExplainRouteName:" destination="c87-oC-sFy" eventType="touchUpInside" id="mDf-hI-FCo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="top" secondItem="wWL-lV-gUm" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="BOg-bw-FFP"/>
                             <constraint firstItem="69W-On-sgM" firstAttribute="centerX" secondItem="rcD-SP-3wG" secondAttribute="centerX" id="EQp-EE-XtG"/>
-                            <constraint firstAttribute="trailing" secondItem="odr-0M-h4s" secondAttribute="trailing" id="KVK-i3-mBr"/>
                             <constraint firstItem="69W-On-sgM" firstAttribute="top" secondItem="dCl-iE-iA5" secondAttribute="bottom" constant="60" id="MzF-ez-Vs4"/>
                             <constraint firstItem="wWL-lV-gUm" firstAttribute="centerX" secondItem="69W-On-sgM" secondAttribute="centerX" id="cbw-Gh-33i"/>
-                            <constraint firstItem="nfL-33-wZD" firstAttribute="top" secondItem="odr-0M-h4s" secondAttribute="bottom" id="ke9-Pe-iDy"/>
                             <constraint firstItem="wWL-lV-gUm" firstAttribute="top" secondItem="69W-On-sgM" secondAttribute="bottom" constant="8" symbolic="YES" id="lFG-n0-N5a"/>
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="width" secondItem="rcD-SP-3wG" secondAttribute="width" multiplier="0.8" id="mBt-cm-NAk"/>
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="centerX" secondItem="69W-On-sgM" secondAttribute="centerX" id="vVX-ng-nIt"/>
-                            <constraint firstItem="odr-0M-h4s" firstAttribute="leading" secondItem="rcD-SP-3wG" secondAttribute="leading" id="yUg-E7-VgX"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="wYp-sT-77L">
+                        <barButtonItem key="rightBarButtonItem" title="Quit" id="lYc-KK-t98">
+                            <connections>
+                                <action selector="dismissView:" destination="c87-oC-sFy" id="fwh-im-GjK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="routeNameTextField" destination="yOD-w4-AKE" id="Lea-Y6-Dav"/>
+                        <segue destination="A9M-Q3-4rk" kind="show" identifier="ConfirmLocationSegue" id="xHr-wj-zJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="di3-QC-clT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1844" y="851"/>
+            <point key="canvasLocation" x="2096.8000000000002" y="850.52473763118451"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Route Location View Controller-->
         <scene sceneID="S1S-kZ-fyO">
             <objects>
-                <viewController id="A9M-Q3-4rk" sceneMemberID="viewController">
+                <viewController id="A9M-Q3-4rk" customClass="AddRouteLocationViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="EbC-0B-abk"/>
                         <viewControllerLayoutGuide type="bottom" id="2IO-xl-FVX"/>
@@ -457,7 +475,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-I2-BUK">
-                                <rect key="frame" x="103" y="80" width="169" height="27"/>
+                                <rect key="frame" x="103" y="124" width="169" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -481,7 +499,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vkF-fF-wIU">
-                                <rect key="frame" x="169" y="115" width="36" height="29"/>
+                                <rect key="frame" x="169" y="159" width="36" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Why?">
                                     <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -494,6 +512,9 @@
                                     <constraint firstAttribute="height" constant="50" id="e0h-V7-LB5"/>
                                 </constraints>
                                 <state key="normal" image="deny"/>
+                                <connections>
+                                    <action selector="invalidLocation:" destination="A9M-Q3-4rk" eventType="touchUpInside" id="NXi-Wd-E7p"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-Zr-lxn">
                                 <rect key="frame" x="200" y="305" width="50" height="50"/>
@@ -502,6 +523,9 @@
                                     <constraint firstAttribute="height" constant="50" id="wwx-14-Ggs"/>
                                 </constraints>
                                 <state key="normal" image="allow"/>
+                                <connections>
+                                    <action selector="confirmLocation:" destination="A9M-Q3-4rk" eventType="touchUpInside" id="137-Qn-fj6"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -522,10 +546,35 @@
                             <constraint firstItem="kgC-Zr-lxn" firstAttribute="top" secondItem="Jsi-6b-f8k" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="qQt-TG-pNe"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="n4I-zl-G7c">
+                        <barButtonItem key="rightBarButtonItem" title="Quit" id="0qV-Jq-Ltv">
+                            <connections>
+                                <action selector="dismissView:" destination="A9M-Q3-4rk" id="MCq-Lo-VBj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M92-JG-Lm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2506" y="851"/>
+            <point key="canvasLocation" x="2776.8000000000002" y="850.52473763118451"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RsJ-aO-LT4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Mmq-QX-quW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHb-ta-qC4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="xpA-Vq-eJw" kind="relationship" relationship="rootViewController" id="SMa-1X-mpi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhC-MK-WOJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-202.40000000000001" y="850.52473763118451"/>
         </scene>
     </scenes>
     <resources>
