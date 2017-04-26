@@ -53,6 +53,11 @@
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* Constants.swift */; };
 		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
+		70C615251EAC419C00814AF5 /* AddRouteSSIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C615241EAC419C00814AF5 /* AddRouteSSIDViewController.swift */; };
+		70C615281EAC440B00814AF5 /* AddRoutePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */; };
+		70C6152A1EAC443500814AF5 /* AddRouteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C615291EAC443500814AF5 /* AddRouteLocationViewController.swift */; };
+		70C6152C1EAC461600814AF5 /* AddRouteNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */; };
+		70C6152E1EB043FB00814AF5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6152D1EB043FB00814AF5 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -128,6 +133,11 @@
 		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70A470D51E6FC2E3008FF97B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
+		70C615241EAC419C00814AF5 /* AddRouteSSIDViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteSSIDViewController.swift; sourceTree = "<group>"; };
+		70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoutePasswordViewController.swift; sourceTree = "<group>"; };
+		70C615291EAC443500814AF5 /* AddRouteLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteLocationViewController.swift; sourceTree = "<group>"; };
+		70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteNameViewController.swift; sourceTree = "<group>"; };
+		70C6152D1EB043FB00814AF5 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		86A827BDE14BF63CB6B780F5 /* Pods_wifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -248,16 +258,11 @@
 		2777A0261E23023B00229502 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				708DA0101EA9B6A5004E3E31 /* Profile */,
 				70D5B2D51EA5AE150089BD7A /* Requests */,
+				708DA0111EA9B73A004E3E31 /* Status */,
 				279A1F7F1E77D9580094A33B /* PagingMenuViewController.swift */,
 				279A1F791E77D5A30094A33B /* PagingMenuViewController.storyboard */,
-				2710E4D91E66915C00F1B40D /* Status.storyboard */,
-				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
-				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
-				27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */,
-				279A1F811E77DF810094A33B /* ProfileViewController.swift */,
-				27B9A82A1E91ABE00091C152 /* Network.swift */,
-				27B9A82C1E91AC520091C152 /* Networks.plist */,
 			);
 			name = Main;
 			sourceTree = "<group>";
@@ -284,16 +289,50 @@
 		27D4CF331E271624004FEE83 /* Sign Up  */ = {
 			isa = PBXGroup;
 			children = (
-				2710E4DD1E66920000F1B40D /* CreateUsernameViewController.swift */,
-				2710E4DE1E66920000F1B40D /* SignUp.storyboard */,
+				2710E4E21E66920000F1B40D /* SetProfilePictureViewController.swift */,
 				70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */,
+				2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */,
+				2710E4DE1E66920000F1B40D /* SignUp.storyboard */,
 				2710E4DF1E66920000F1B40D /* SignupPhoneNumberViewController.swift */,
 				2710E4E01E66920000F1B40D /* VerifyPhoneNumberViewController.swift */,
-				2710E4E11E66920000F1B40D /* AccessContactsViewController.swift */,
-				2710E4E21E66920000F1B40D /* SetProfilePictureViewController.swift */,
+				2710E4DD1E66920000F1B40D /* CreateUsernameViewController.swift */,
 				2710E4E31E66920000F1B40D /* SignUpCompleteViewController.swift */,
 			);
 			name = "Sign Up ";
+			sourceTree = "<group>";
+		};
+		708DA0101EA9B6A5004E3E31 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				70C615261EAC41A300814AF5 /* Add Route */,
+				27B9A82A1E91ABE00091C152 /* Network.swift */,
+				27B9A82C1E91AC520091C152 /* Networks.plist */,
+				278F4B701E6E2B2E00B7F656 /* Profile.storyboard */,
+				27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */,
+				279A1F811E77DF810094A33B /* ProfileViewController.swift */,
+			);
+			name = Profile;
+			sourceTree = "<group>";
+		};
+		708DA0111EA9B73A004E3E31 /* Status */ = {
+			isa = PBXGroup;
+			children = (
+				2710E4D91E66915C00F1B40D /* Status.storyboard */,
+				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
+			);
+			name = Status;
+			sourceTree = "<group>";
+		};
+		70C615261EAC41A300814AF5 /* Add Route */ = {
+			isa = PBXGroup;
+			children = (
+				70C6152D1EB043FB00814AF5 /* Route.swift */,
+				70C615241EAC419C00814AF5 /* AddRouteSSIDViewController.swift */,
+				70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */,
+				70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */,
+				70C615291EAC443500814AF5 /* AddRouteLocationViewController.swift */,
+			);
+			name = "Add Route";
 			sourceTree = "<group>";
 		};
 		70D5B2D51EA5AE150089BD7A /* Requests */ = {
@@ -535,11 +574,14 @@
 				2710E4E81E66920000F1B40D /* AccessContactsViewController.swift in Sources */,
 				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
 				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
+				70C6152C1EAC461600814AF5 /* AddRouteNameViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
+				70C6152E1EB043FB00814AF5 /* Route.swift in Sources */,
 				27B2C5FB1EA341D200693EA7 /* UserDefaultsHelper.swift in Sources */,
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */,
 				279A1F821E77DF810094A33B /* ProfileViewController.swift in Sources */,
+				70C615281EAC440B00814AF5 /* AddRoutePasswordViewController.swift in Sources */,
 				27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */,
 				2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */,
 				705CE6601EA7106F007D1461 /* AllowedUsers.swift in Sources */,
@@ -548,6 +590,7 @@
 				2712495B1E987AAC008B27BB /* UserService.swift in Sources */,
 				70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */,
 				273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */,
+				70C6152A1EAC443500814AF5 /* AddRouteLocationViewController.swift in Sources */,
 				279A1F801E77D9580094A33B /* PagingMenuViewController.swift in Sources */,
 				70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */,
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
@@ -556,6 +599,7 @@
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,
 				2745D1311EAF01D000A10C9F /* AddNetworkViewController.swift in Sources */,
 				2710E4EA1E66920000F1B40D /* SignUpCompleteViewController.swift in Sources */,
+				70C615251EAC419C00814AF5 /* AddRouteSSIDViewController.swift in Sources */,
 				2731149A1E998C7C002AE7AD /* FirebaseUserService.swift in Sources */,
 				2710E4E91E66920000F1B40D /* SetProfilePictureViewController.swift in Sources */,
 				2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */,

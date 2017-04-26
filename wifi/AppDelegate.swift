@@ -61,6 +61,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                                                object: nil)
         // [END add_token_refresh_observer]
         
+        
+        // UI Changes
+        navigationBarAppearance()
+        
         return true
     }
     
@@ -233,6 +237,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
             }
         }
+    }
+    
+    // MARK: - UI Changes
+    
+    func navigationBarAppearance () {
+        UINavigationBar.appearance().barTintColor = UIColor(red:0.24, green:0.29, blue:0.51, alpha:1.00)
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
     }
 }
 
