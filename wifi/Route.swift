@@ -25,6 +25,7 @@ class Route {
         credentials["ssid"] = ""
         credentials["password"] = ""
         credentials["name"] = ""
+        credentials["address"] = "none"
     }
     
     func setSSID(ssid: String) {
@@ -49,5 +50,13 @@ class Route {
     
     func getName() -> String {
         return Route.sharedInstance.credentials["name"]!
+    }
+    
+    func setAddress(address: String) {
+        Route.sharedInstance.credentials["address"] = address
+    }
+    
+    func getAddress() -> String {
+        return Route.sharedInstance.credentials["address"]!
     }
 }

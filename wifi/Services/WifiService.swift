@@ -21,8 +21,8 @@ class WifiService {
     
     // MARK: Simple Data Posting API's
     
-    func postUserAddedRoute (ssid: String, password: String, name: String) {
-        FirebaseWifiService.sharedInstance.postUserAddedRoute(ssid: ssid, password: password, name: name)
+    func postUserAddedRoute (ssid: String, password: String, name: String, address: String) {
+        FirebaseWifiService.sharedInstance.postUserAddedRoute(ssid: ssid, password: password, name: name, address: address)
     }
     
     // MARK: Available Networks API's

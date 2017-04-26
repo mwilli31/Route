@@ -41,7 +41,8 @@ class AddRouteLocationViewController: UIViewController, CLLocationManagerDelegat
         let routeSSID = Route.sharedInstance.getSSID()
         let routePassword = Route.sharedInstance.getPassword()
         let routeName = Route.sharedInstance.getName()
-        WifiService.sharedInstance.postUserAddedRoute(ssid: routeSSID, password: routePassword, name: routeName)
+        let routeAddress = Route.sharedInstance.getAddress()
+        WifiService.sharedInstance.postUserAddedRoute(ssid: routeSSID, password: routePassword, name: routeName, address: routeAddress)
     }
     
     func getLocation() {
@@ -57,19 +58,26 @@ class AddRouteLocationViewController: UIViewController, CLLocationManagerDelegat
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
             if error != nil {
                 print ("Error in finding location while location services were enabled.")
+                Route.sharedInstance.setAddress(address: "none")
             } else {
                 if let place = placemark?[0] {
                     if place.subThoroughfare != nil {
-                        self.streetLabel.text = place.subThoroughfare! + " " + place.thoroughfare!
-                        self.cityStateLabel.text = place.locality! + ", " + place.administrativeArea!
+                        let streetAddress = place.subThoroughfare! + " " + place.thoroughfare!
+                        let cityState = place.locality! + ", " + place.administrativeArea!
+                        
+                        Route.sharedInstance.setAddress(address: streetAddress + " " + cityState)
+                        
+                        self.streetLabel.text = streetAddress
+                        self.cityStateLabel.text = cityState
                     }
                 }
             }
-            self.locationManager.stopUpdatingLocation()
         }
+        locationManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        Route.sharedInstance.setAddress(address: "none")
         beforeAddressLabel.text = "Unable to find location. \n Press any button to continue."
     }
 }

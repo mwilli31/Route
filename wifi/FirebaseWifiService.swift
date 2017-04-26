@@ -63,7 +63,7 @@ class FirebaseWifiService {
         }
     }
     
-    func postUserAddedRoute (ssid: String, password: String, name: String) {
+    func postUserAddedRoute (ssid: String, password: String, name: String, address: String) {
         let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         if userUUID != "" {
             print(userUUID)
@@ -77,7 +77,8 @@ class FirebaseWifiService {
             let addedRoute = [
                 "ssid" : ssid,
                 "password" : password,
-                "name" : name
+                "name" : name,
+                "address" : address
             ]
             
             let update = [userRoutePath : addedRoute]
