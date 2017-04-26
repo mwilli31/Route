@@ -7,17 +7,69 @@
 //
 
 import UIKit
+import CoreLocation
 
-class AddRouteLocationViewController: UIViewController {
+class AddRouteLocationViewController: UIViewController, CLLocationManagerDelegate {
+    
+    @IBOutlet weak var beforeAddressLabel: UILabel!
+    @IBOutlet weak var streetLabel: UILabel!
+    @IBOutlet weak var cityStateLabel: UILabel!
+    
+    let locationManager = CLLocationManager()
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getLocation()
+    }
+    
+    
     @IBAction func invalidLocation(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
 
     }
     @IBAction func confirmLocation(_ sender: UIButton) {
+        addRoute()
         self.dismiss(animated: true, completion: nil)
 
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func addRoute() {
+        let routeSSID = Route.sharedInstance.getSSID()
+        let routePassword = Route.sharedInstance.getPassword()
+        let routeName = Route.sharedInstance.getName()
+        WifiService.sharedInstance.postUserAddedRoute(ssid: routeSSID, password: routePassword, name: routeName)
+    }
+    
+    func getLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations[0]
+
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in
+            if error != nil {
+                print ("Error in finding location while location services were enabled.")
+            } else {
+                if let place = placemark?[0] {
+                    if place.subThoroughfare != nil {
+                        self.streetLabel.text = place.subThoroughfare! + " " + place.thoroughfare!
+                        self.cityStateLabel.text = place.locality! + ", " + place.administrativeArea!
+                    }
+                }
+            }
+            self.locationManager.stopUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        beforeAddressLabel.text = "Unable to find location. \n Press any button to continue."
     }
 }

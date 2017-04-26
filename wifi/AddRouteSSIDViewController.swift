@@ -21,6 +21,7 @@ class AddRouteSSIDViewController: UIViewController {
     }
     
     @IBAction func SSIDTextFieldPrimaryActionTriggered(_ sender: Any) {
+        Route.sharedInstance.setSSID(ssid: SSIDTextField.text!)
         self.performSegue(withIdentifier: "EnterPasswordSegue", sender: self)
     }
     

@@ -12,18 +12,20 @@ class WifiService {
     
     static let sharedInstance = WifiService()
     
-    /*******************************************************************************************
-                                    Simple Data Collection API's
-     ********************************************************************************************/
+    // MARK: Simple Data Collection API's
 
     func postCurrentWifiConnectionDetails(ssid: String, networkUUID: String, timestamp: String, command: String) {
         print("POSTING")
         FirebaseWifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: ssid, networkUUID: networkUUID, timestamp: timestamp, command: command)
     }
     
-    /*******************************************************************************************
-     Available Networks API's
-     ********************************************************************************************/
+    // MARK: Simple Data Posting API's
+    
+    func postUserAddedRoute (ssid: String, password: String, name: String) {
+        FirebaseWifiService.sharedInstance.postUserAddedRoute(ssid: ssid, password: password, name: name)
+    }
+    
+    // MARK: Available Networks API's
     
     func getMatchingNetworks(forNetworkList: Array<Any>) -> Array<Dictionary<String, Any>> {
         

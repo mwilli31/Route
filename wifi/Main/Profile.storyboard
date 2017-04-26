@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="124.58770614692655"/>
         </scene>
-        <!--Add Home Route-->
+        <!--Route SSID-->
         <scene sceneID="4a2-br-ZDJ">
             <objects>
                 <viewController id="xpA-Vq-eJw" customClass="AddRouteSSIDViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                             <constraint firstItem="QxA-h0-5Wd" firstAttribute="width" secondItem="HPR-ci-sWP" secondAttribute="width" multiplier="0.8" id="t6W-H6-CVt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Home Route" id="5p9-06-BTZ">
+                    <navigationItem key="navigationItem" title="Route SSID" id="5p9-06-BTZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="DOz-mJ-84m"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="q9V-Lm-Cek">
                             <connections>
@@ -222,11 +222,6 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="color" keyPath="barTintColor">
-                            <color key="value" red="0.25005361437797546" green="0.30566063523292542" blue="0.58369332551956177" alpha="1" colorSpace="calibratedRGB"/>
-                        </userDefinedRuntimeAttribute>
-                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="SSIDTextField" destination="QxA-h0-5Wd" id="Qk0-sx-S9d"/>
                         <segue destination="439-2Z-xZd" kind="show" identifier="EnterPasswordSegue" id="bxY-Hh-cTu"/>
@@ -270,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="486" y="125"/>
         </scene>
-        <!--Add Home Route-->
+        <!--Route Password-->
         <scene sceneID="oX3-Dj-Ufo">
             <objects>
                 <viewController id="439-2Z-xZd" customClass="AddRoutePasswordViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -323,7 +318,7 @@
                             <constraint firstItem="cab-vh-vd0" firstAttribute="top" secondItem="CaC-2G-EOG" secondAttribute="bottom" constant="8" symbolic="YES" id="x40-It-OXu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Home Route" id="9dB-H3-FJa">
+                    <navigationItem key="navigationItem" title="Route Password" id="9dB-H3-FJa">
                         <barButtonItem key="backBarButtonItem" title=" " id="SpA-Ga-4Mk"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="F0i-8N-Dr0">
                             <connections>
@@ -395,7 +390,7 @@
             </objects>
             <point key="canvasLocation" x="-202" y="1594"/>
         </scene>
-        <!--Add Home Route-->
+        <!--Route Name-->
         <scene sceneID="HVH-gO-xfm">
             <objects>
                 <viewController id="c87-oC-sFy" customClass="AddRouteNameViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -448,7 +443,7 @@
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="centerX" secondItem="69W-On-sgM" secondAttribute="centerX" id="vVX-ng-nIt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Home Route" id="wYp-sT-77L">
+                    <navigationItem key="navigationItem" title="Route Name" id="wYp-sT-77L">
                         <barButtonItem key="backBarButtonItem" title=" " id="tqG-Cp-1Su"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="lYc-KK-t98">
                             <connections>
@@ -465,7 +460,7 @@
             </objects>
             <point key="canvasLocation" x="2096.8000000000002" y="850.52473763118451"/>
         </scene>
-        <!--Add Home Route-->
+        <!--Route Location-->
         <scene sceneID="S1S-kZ-fyO">
             <objects>
                 <viewController id="A9M-Q3-4rk" customClass="AddRouteLocationViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -483,20 +478,20 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this Route located at" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="JIX-5P-FV8">
-                                <rect key="frame" x="95.5" y="189.5" width="184.5" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is this Route located near" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="JIX-5P-FV8">
+                                <rect key="frame" x="85.5" y="189.5" width="205" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 Gibbs Street" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="2fp-Am-6H5">
-                                <rect key="frame" x="124" y="219" width="127" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="2fp-Am-6H5">
+                                <rect key="frame" x="187.5" y="219" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brookline, MA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jsi-6b-f8k">
-                                <rect key="frame" x="131.5" y="248.5" width="112" height="21.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Jsi-6b-f8k">
+                                <rect key="frame" x="187.5" y="227" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -509,7 +504,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mUc-AP-YIK">
-                                <rect key="frame" x="125" y="305" width="50" height="50"/>
+                                <rect key="frame" x="125" y="258" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="7cT-ig-Cwu"/>
                                     <constraint firstAttribute="height" constant="50" id="e0h-V7-LB5"/>
@@ -520,7 +515,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgC-Zr-lxn">
-                                <rect key="frame" x="200" y="305" width="50" height="50"/>
+                                <rect key="frame" x="200" y="258" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="g8z-od-OGt"/>
                                     <constraint firstAttribute="height" constant="50" id="wwx-14-Ggs"/>
@@ -549,7 +544,7 @@
                             <constraint firstItem="kgC-Zr-lxn" firstAttribute="top" secondItem="Jsi-6b-f8k" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="qQt-TG-pNe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Add Home Route" id="n4I-zl-G7c">
+                    <navigationItem key="navigationItem" title="Route Location" id="n4I-zl-G7c">
                         <barButtonItem key="backBarButtonItem" title=" " id="XDn-jl-Php"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="0qV-Jq-Ltv">
                             <connections>
@@ -557,6 +552,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="beforeAddressLabel" destination="JIX-5P-FV8" id="nd8-wQ-MUe"/>
+                        <outlet property="cityStateLabel" destination="Jsi-6b-f8k" id="0e6-BO-HyK"/>
+                        <outlet property="streetLabel" destination="2fp-Am-6H5" id="ZVV-6Y-DAf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M92-JG-Lm4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

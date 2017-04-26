@@ -54,6 +54,7 @@
 		70C615281EAC440B00814AF5 /* AddRoutePasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */; };
 		70C6152A1EAC443500814AF5 /* AddRouteLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C615291EAC443500814AF5 /* AddRouteLocationViewController.swift */; };
 		70C6152C1EAC461600814AF5 /* AddRouteNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */; };
+		70C6152E1EB043FB00814AF5 /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C6152D1EB043FB00814AF5 /* Route.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -130,6 +131,7 @@
 		70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRoutePasswordViewController.swift; sourceTree = "<group>"; };
 		70C615291EAC443500814AF5 /* AddRouteLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteLocationViewController.swift; sourceTree = "<group>"; };
 		70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddRouteNameViewController.swift; sourceTree = "<group>"; };
+		70C6152D1EB043FB00814AF5 /* Route.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		86A827BDE14BF63CB6B780F5 /* Pods_wifi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8AA20B3CC6110340A51FCAB /* Pods_wifiUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -307,6 +309,7 @@
 		70C615261EAC41A300814AF5 /* Add Route */ = {
 			isa = PBXGroup;
 			children = (
+				70C6152D1EB043FB00814AF5 /* Route.swift */,
 				70C615241EAC419C00814AF5 /* AddRouteSSIDViewController.swift */,
 				70C615271EAC440B00814AF5 /* AddRoutePasswordViewController.swift */,
 				70C6152B1EAC461600814AF5 /* AddRouteNameViewController.swift */,
@@ -555,6 +558,7 @@
 				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
 				70C6152C1EAC461600814AF5 /* AddRouteNameViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
+				70C6152E1EB043FB00814AF5 /* Route.swift in Sources */,
 				27B2C5FB1EA341D200693EA7 /* UserDefaultsHelper.swift in Sources */,
 				278F4B7A1E6E3F3500B7F656 /* LogInUsernameViewController.swift in Sources */,
 				2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */,

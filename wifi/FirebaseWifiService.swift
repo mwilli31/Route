@@ -63,6 +63,28 @@ class FirebaseWifiService {
         }
     }
     
+    func postUserAddedRoute (ssid: String, password: String, name: String) {
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
+        if userUUID != "" {
+            print(userUUID)
+            print("POSTING")
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID)
+            let baseUserRoutePath: String = "/addedRoutes/"
+            let key = databaseRef.child(baseUserRoutePath).childByAutoId().key
+            let userRoutePath : String = baseUserRoutePath + "/\(key)"
+            
+            let addedRoute = [
+                "ssid" : ssid,
+                "password" : password,
+                "name" : name
+            ]
+            
+            let update = [userRoutePath : addedRoute]
+            databaseRef.updateChildValues(update)
+        }
+    }
+    
     
 
 }

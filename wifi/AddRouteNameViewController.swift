@@ -19,7 +19,8 @@ class AddRouteNameViewController: UIViewController {
     @IBAction func ExplainRouteName(_ sender: UIButton) {
     }
     @IBAction func routeNameTextFieldPrimaryActionTriggered(_ sender: Any) {
-                self.performSegue(withIdentifier: "ConfirmLocationSegue", sender: self)
+        Route.sharedInstance.setName(name: routeNameTextField.text!)
+        self.performSegue(withIdentifier: "ConfirmLocationSegue", sender: self)
     }
     @IBAction func dismissView(_ sender: UIBarButtonItem) {
         self.routeNameTextField.resignFirstResponder()

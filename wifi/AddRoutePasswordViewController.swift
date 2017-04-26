@@ -17,7 +17,8 @@ class AddRoutePasswordViewController : UIViewController {
     }
     
     @IBAction func passwordTextFieldPrimaryActionTriggered(_ sender: Any) {
-                self.performSegue(withIdentifier: "AddRouteNameSegue", sender: self)
+        Route.sharedInstance.setPassword(password: passwordTextField.text!)
+        self.performSegue(withIdentifier: "AddRouteNameSegue", sender: self)
     }
     @IBAction func ExplainPassword(_ sender: UIButton) {
     }
