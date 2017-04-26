@@ -76,4 +76,7 @@ class UserService {
         FirebaseUserService.sharedInstance.setUsername(forUserUUID: self.getCurrentUserUUID(), username: username)
     }
     
+    func setPushNotificationToken() {
+        FirebaseUserService.sharedInstance.setFCMToken()
+    }
 }

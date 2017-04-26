@@ -50,6 +50,14 @@
                                     <constraint firstAttribute="height" constant="60" id="x5p-Gp-vxf"/>
                                 </constraints>
                             </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3u-j4-1RD">
+                                <rect key="frame" x="152" y="577" width="70" height="70"/>
+                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="10" maxY="5"/>
+                                <state key="normal" backgroundImage="add"/>
+                                <connections>
+                                    <segue destination="3gG-se-Q5b" kind="show" id="xMv-QF-cq7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -58,8 +66,10 @@
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="width" secondItem="CAN-EY-qCK" secondAttribute="width" multiplier="0.8" id="Gkz-Al-e5u"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="66" id="MbC-zL-ZfI"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="OIp-jK-k7r"/>
+                            <constraint firstItem="M3u-j4-1RD" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="ZRV-9C-Bzg"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="249" id="ecH-ga-kXP"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="fmB-sf-OCJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="M3u-j4-1RD" secondAttribute="bottom" constant="20" id="x5b-ra-OvV"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="zwF-sf-585"/>
                         </constraints>
                     </view>
@@ -73,5 +83,16 @@
             </objects>
             <point key="canvasLocation" x="109.59999999999999" y="148.87556221889056"/>
         </scene>
+        <!--AddNetwork-->
+        <scene sceneID="8ZN-Xs-won">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddNetwork" id="3gG-se-Q5b" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRB-RM-Zu7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="110" y="539"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="add" width="70" height="70"/>
+    </resources>
 </document>

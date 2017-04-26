@@ -122,6 +122,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if error != nil {
                 print("Unable to connect with FCM. \(error!)")
             } else {
+                UserService.sharedInstance.setPushNotificationToken()
                 print("Connected to FCM.")
             }
         }

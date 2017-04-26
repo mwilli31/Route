@@ -7,8 +7,7 @@
 //
 
 import Foundation
-import FirebaseAuth
-import FirebaseDatabase
+import Firebase
 import KeychainSwift
 
 class FirebaseUserService {
@@ -112,10 +111,21 @@ class FirebaseUserService {
         var ref: FIRDatabaseReference!
         
         ref = FIRDatabase.database().reference()
-        print(ref)
         if (FIRAuth.auth()?.currentUser) != nil {
             ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["username" : username])
         }
+    }
+    
+    func setFCMToken(){
+        let token = FIRInstanceID.instanceID().token()!
+     
+        var ref: FIRDatabaseReference!
+        
+        ref = FIRDatabase.database().reference()
+        if (FIRAuth.auth()?.currentUser) != nil {
+            ref.child("users").child((FIRAuth.auth()?.currentUser?.uid)!).updateChildValues(["fcmToken" : token])
+        }
+        
     }
     
     func signInFirebaseUser(email: String, password: String) {
