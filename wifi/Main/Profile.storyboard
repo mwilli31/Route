@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="124.58770614692655"/>
         </scene>
-        <!--Route SSID-->
+        <!--Add RouteSSID View Controller-->
         <scene sceneID="4a2-br-ZDJ">
             <objects>
                 <viewController id="xpA-Vq-eJw" customClass="AddRouteSSIDViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                             <constraint firstItem="QxA-h0-5Wd" firstAttribute="width" secondItem="HPR-ci-sWP" secondAttribute="width" multiplier="0.8" id="t6W-H6-CVt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route SSID" id="5p9-06-BTZ">
+                    <navigationItem key="navigationItem" id="5p9-06-BTZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="DOz-mJ-84m"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="q9V-Lm-Cek">
                             <connections>
@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="486" y="125"/>
         </scene>
-        <!--Route Password-->
+        <!--Add Route Password View Controller-->
         <scene sceneID="oX3-Dj-Ufo">
             <objects>
                 <viewController id="439-2Z-xZd" customClass="AddRoutePasswordViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -318,7 +318,7 @@
                             <constraint firstItem="cab-vh-vd0" firstAttribute="top" secondItem="CaC-2G-EOG" secondAttribute="bottom" constant="8" symbolic="YES" id="x40-It-OXu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Password" id="9dB-H3-FJa">
+                    <navigationItem key="navigationItem" id="9dB-H3-FJa">
                         <barButtonItem key="backBarButtonItem" title=" " id="SpA-Ga-4Mk"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="F0i-8N-Dr0">
                             <connections>
@@ -335,7 +335,7 @@
             </objects>
             <point key="canvasLocation" x="1424.8" y="850.52473763118451"/>
         </scene>
-        <!--Route Name-->
+        <!--Add Route Name View Controller-->
         <scene sceneID="HVH-gO-xfm">
             <objects>
                 <viewController id="c87-oC-sFy" customClass="AddRouteNameViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -388,7 +388,7 @@
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="centerX" secondItem="69W-On-sgM" secondAttribute="centerX" id="vVX-ng-nIt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Name" id="wYp-sT-77L">
+                    <navigationItem key="navigationItem" id="wYp-sT-77L">
                         <barButtonItem key="backBarButtonItem" title=" " id="tqG-Cp-1Su"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="lYc-KK-t98">
                             <connections>
@@ -405,7 +405,7 @@
             </objects>
             <point key="canvasLocation" x="2096.8000000000002" y="850.52473763118451"/>
         </scene>
-        <!--Route Location-->
+        <!--Add Route Location View Controller-->
         <scene sceneID="S1S-kZ-fyO">
             <objects>
                 <viewController id="A9M-Q3-4rk" customClass="AddRouteLocationViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -489,7 +489,7 @@
                             <constraint firstItem="kgC-Zr-lxn" firstAttribute="top" secondItem="Jsi-6b-f8k" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="qQt-TG-pNe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Location" id="n4I-zl-G7c">
+                    <navigationItem key="navigationItem" id="n4I-zl-G7c">
                         <barButtonItem key="backBarButtonItem" title=" " id="XDn-jl-Php"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="0qV-Jq-Ltv">
                             <connections>
