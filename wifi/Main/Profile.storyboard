@@ -335,61 +335,6 @@
             </objects>
             <point key="canvasLocation" x="1424.8" y="850.52473763118451"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VK1-Mr-S1p">
-            <objects>
-                <viewController id="GRv-Fl-595" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A3T-AZ-UXO"/>
-                        <viewControllerLayoutGuide type="bottom" id="cs8-Uj-xwQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wsk-lb-0Ak">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Your Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-tL-87I">
-                                <rect key="frame" x="74" y="80" width="228" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Network Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="UeY-eh-Li1">
-                                <rect key="frame" x="37.5" y="180" width="300" height="60"/>
-                                <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7X7-L2-h2v"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureTextEntry" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-cx-ioS">
-                                <rect key="frame" x="144" y="114.5" width="87" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="What is This?">
-                                    <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Oab-tL-87I" firstAttribute="top" secondItem="A3T-AZ-UXO" secondAttribute="bottom" constant="60" id="1KD-IK-rhn"/>
-                            <constraint firstItem="f1d-cx-ioS" firstAttribute="top" secondItem="Oab-tL-87I" secondAttribute="bottom" constant="8" symbolic="YES" id="2MK-25-bRD"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="width" secondItem="wsk-lb-0Ak" secondAttribute="width" multiplier="0.8" id="Cmk-nl-Zjp"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="centerX" secondItem="Oab-tL-87I" secondAttribute="centerX" id="NW2-lY-o7H"/>
-                            <constraint firstItem="f1d-cx-ioS" firstAttribute="centerX" secondItem="Oab-tL-87I" secondAttribute="centerX" id="OIA-Cs-1Mb"/>
-                            <constraint firstItem="Oab-tL-87I" firstAttribute="centerX" secondItem="wsk-lb-0Ak" secondAttribute="centerX" id="k3E-tr-dk3"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="top" secondItem="f1d-cx-ioS" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="u8r-hm-xAK"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9CK-2z-XQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-202" y="1594"/>
-        </scene>
         <!--Route Name-->
         <scene sceneID="HVH-gO-xfm">
             <objects>

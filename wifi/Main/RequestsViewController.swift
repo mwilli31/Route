@@ -15,7 +15,7 @@ class RequestTableViewCell: UITableViewCell {
 class RequestsViewController: UIViewController {
     @IBOutlet weak var requestsTableView: UITableView!
     
-    var users = AllowedUsers.sharedInstance
+    var users = RouteAC.sharedInstance
     
     class func instantiateFromStoryboard() -> RequestsViewController {
         let storyboard = UIStoryboard(name: "Requests", bundle: nil)
@@ -49,7 +49,7 @@ class RequestsViewController: UIViewController {
 
 extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.pendingAccessRequestUsers.count
+        return users.accessRequests.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

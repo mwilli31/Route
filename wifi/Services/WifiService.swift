@@ -46,4 +46,8 @@ class WifiService {
     func updateNetworkListCache(forNetworkList: Array<Any>) {
         
     }
+    
+    func getNetworkAccessRequests() {
+        FirebaseWifiService.sharedInstance.getNetworkAccessRequests()
+    }
 }

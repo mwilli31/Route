@@ -264,6 +264,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         
         // Print full message.
         print(userInfo)
+        if(userInfo["type"] as! String! == "Request") {
+            // TODO: Notify Requests VC to update 
+        }
         
         // Change this to your preferred presentation option
         completionHandler([])

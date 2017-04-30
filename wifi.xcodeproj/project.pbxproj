@@ -49,7 +49,7 @@
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
 		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
-		705CE6601EA7106F007D1461 /* AllowedUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* AllowedUsers.swift */; };
+		705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* RouteAC.swift */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* Constants.swift */; };
 		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
@@ -128,8 +128,8 @@
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
-		705CE65F1EA7106F007D1461 /* AllowedUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AllowedUsers.swift; sourceTree = "<group>"; };
-		706B15D51E7F43CB000C094E /* route.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.mobileprovision; sourceTree = "<group>"; };
+		703D97D61EB51AF900000643 /* route.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.mobileprovision; sourceTree = "<group>"; };
+		705CE65F1EA7106F007D1461 /* RouteAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAC.swift; sourceTree = "<group>"; };
 		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70A470D51E6FC2E3008FF97B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
@@ -194,7 +194,7 @@
 		2751D5F51E21BEEB00C1601F = {
 			isa = PBXGroup;
 			children = (
-				706B15D51E7F43CB000C094E /* route.mobileprovision */,
+				703D97D61EB51AF900000643 /* route.mobileprovision */,
 				2751D6001E21BEEB00C1601F /* wifi */,
 				2751D6181E21BEEB00C1601F /* wifiTests */,
 				2751D6231E21BEEB00C1601F /* wifiUITests */,
@@ -339,7 +339,7 @@
 			isa = PBXGroup;
 			children = (
 				279A1F831E77E0550094A33B /* RequestsViewController.swift */,
-				705CE65F1EA7106F007D1461 /* AllowedUsers.swift */,
+				705CE65F1EA7106F007D1461 /* RouteAC.swift */,
 				278F4B721E6E33C100B7F656 /* Requests.storyboard */,
 			);
 			name = Requests;
@@ -584,7 +584,7 @@
 				70C615281EAC440B00814AF5 /* AddRoutePasswordViewController.swift in Sources */,
 				27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */,
 				2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */,
-				705CE6601EA7106F007D1461 /* AllowedUsers.swift in Sources */,
+				705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */,
 				279E8B571EADC7AD009A4C90 /* Requests.swift in Sources */,
 				27B9A82B1E91ABE00091C152 /* Network.swift in Sources */,
 				2712495B1E987AAC008B27BB /* UserService.swift in Sources */,
