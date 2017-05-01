@@ -75,7 +75,7 @@ class ConnectionStateHelper {
         UserDefaults.standard.synchronize()
     }
     
-    func save(state: Constants.ConnectionState) {
+    func save(state: String) {
         UserDefaults.standard.set(state, forKey: "lastState")
     }
     
@@ -123,50 +123,50 @@ class ConnectionStateHelper {
     
     func updateCurrentState() {
         let lastConnectedNetwork : Dictionary? = getLastConnectedNetwork() as Dictionary?
-        var dict : Dictionary<String, Any> = [:]
 
         print(currentReachabilityStatus) //true connected
         
         //verify connected to wifi
         if currentReachabilityStatus == .reachableViaWiFi && lastConnectedNetwork != nil {
-            //check to see if timestamp is within 300 seconds
-            let newTimestamp : Int = Int(Date().timeIntervalSince1970.rounded())
-            let oldTimestamp : Int = Int(lastConnectedNetwork!["timestamp"]!)!
-            
-            guard lastConnectedNetwork!["ssid"] != nil else {
-                publishConnectionState(forState: Constants.ConnectionState.Connected, withMessage: Constants.ConnectionStateMessages.connectedMessage, ssid: nil)
-                return
+            if lastConnectedNetwork!["ssid"] != nil {
+                //check to see if timestamp is within 300 seconds
+                let newTimestamp : Int = Int(Date().timeIntervalSince1970.rounded())
+                let oldTimestamp : Int = Int(lastConnectedNetwork!["timestamp"]!)!
+                let diff = newTimestamp - oldTimestamp
+                if diff <= 300 {
+                    let msg : String = Constants.ConnectionStateMessages.connectedMessage + " To " + lastConnectedNetwork!["ssid"]!
+                    publishConnectionState(forState: Constants.ConnectionState.ConnectedToSSID, withMessage:msg)
+                } else {
+                    publishConnectionState(forState: Constants.ConnectionState.Connected, withMessage: Constants.ConnectionStateMessages.connectedMessage)
+                }
+            } else {
+                publishConnectionState(forState: Constants.ConnectionState.Connected, withMessage: Constants.ConnectionStateMessages.connectedMessage)
             }
             
-            let diff = newTimestamp - oldTimestamp
-            if diff <= 300 {
-                publishConnectionState(forState: Constants.ConnectionState.ConnectedToSSID, withMessage: Constants.ConnectionStateMessages.connectedMessage, ssid: lastConnectedNetwork!["ssid"]!)
-            }
         } else if currentReachabilityStatus == .reachableViaWiFi  {
             //connected to wifi, but unsure the network
-            publishConnectionState(forState: Constants.ConnectionState.Connected, withMessage: Constants.ConnectionStateMessages.connectedMessage, ssid: nil)
+            publishConnectionState(forState: Constants.ConnectionState.Connected, withMessage: Constants.ConnectionStateMessages.connectedMessage)
         } else if currentReachabilityStatus == .reachableViaWWAN {
             //on cellular, thus let's look for available networks
-            publishConnectionState(forState: Constants.ConnectionState.Discovering, withMessage: Constants.ConnectionStateMessages.discoverMessage, ssid: nil)
+            publishConnectionState(forState: Constants.ConnectionState.Discovering, withMessage: Constants.ConnectionStateMessages.discoverMessage)
         } else if currentReachabilityStatus == .notReachable {
             // not reachable, so either wifi is turned off or you are in a location without cellular service
-            publishConnectionState(forState: Constants.ConnectionState.NeedSettings, withMessage: Constants.ConnectionStateMessages.needSettingsNoServiceMessage, ssid: nil)
+            publishConnectionState(forState: Constants.ConnectionState.NeedSettings, withMessage: Constants.ConnectionStateMessages.needSettingsNoServiceMessage)
         } else {
             //really unsure
-            dict["state"] = Constants.ConnectionState.NeedSettings
+            publishConnectionState(forState: Constants.ConnectionState.NeedSettings, withMessage: Constants.ConnectionStateMessages.needSettingsNoServiceMessage)
         }
         
     }
     
-    private func publishConnectionState(forState: Constants.ConnectionState, withMessage: String, ssid: String?) {
-        var message : String = withMessage
-        if(forState == Constants.ConnectionState.ConnectedToSSID) {
-            message = message + " " + ssid!
-        }
+    private func publishConnectionState(forState: Constants.ConnectionState, withMessage: String) {
         
         self.nc.post(name:connectionStateNotification,
                      object: nil,
-                     userInfo:[Constants.NotificationKeys.connectionStateNotificationKey:message])
+                     userInfo:[
+                        Constants.NotificationKeys.connectionStateNotificationKey:forState,
+                        Constants.NotificationKeys.connectionStateMessageNotificationKey:withMessage
+            ])
     }
     
     
