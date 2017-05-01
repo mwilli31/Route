@@ -3,7 +3,7 @@
 //  wifi
 //
 //  Created by Sajay Shah on 3/7/17.
-//  Copyright © 2017 Route. All rights reserved.
+//  Copyright © 2017 Spot. All rights reserved.
 //
 
 struct Constants {
@@ -14,14 +14,20 @@ struct Constants {
     }
     
     struct TimersAndDelays {
-        static let discoveringRoutesTimer : Double! = 3.0
+        static let discoveringSpotsTimer : Double! = 3.0
     }
     
     struct ConnectionStateMessages {
-        static let discoverMessage = "Discovering Routes"
-        static let foundRoutesMessage = "Discovered nearby Routes"
-        static let authenticateMessage = "Authenticating Route"
-        static let connectedMessage = "Connected"
+        static let needSettingsNoServiceMessage : String = "No service, open up settings to identify a Spot"
+        static let discoverMessage : String = "Discovering Spots"
+        static let foundSpotsMessage : String = "Discovered nearby Spots"
+        static let noSpotsNearby : String = "Discovered nearby Spots"
+        static let authenticateMessage : String = "Authenticating Spot"
+        static let connectedMessage : String = "Connected"
+    }
+    
+    enum ConnectionState: String {
+        case NeedSettings, Discovering, NoSpotsNearby, Discovered, Authenticating, Connected, ConnectedToSSID
     }
     
     struct Segues {

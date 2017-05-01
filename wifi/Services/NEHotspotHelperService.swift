@@ -70,7 +70,8 @@ class NEHotspotHelperService {
                 // notify view controllers
                 let connectedMessage = "Connected to " + cmd.network!.ssid
                 self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
-                UserDefaultsHelper.sharedInstance.save(state: "connected", ssid: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                ConnectionStateHelper.sharedInstance.saveConnectedNetwork(withSSID: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                ConnectionStateHelper.sharedInstance.save(state: Constants.ConnectionState.ConnectedToSSID)
                 WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
                 
                 response.deliver() //Respond back
@@ -80,7 +81,8 @@ class NEHotspotHelperService {
                 let connectedMessage = "Connected to " + cmd.network!.ssid
                 self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
                 WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "maintain")
-                UserDefaultsHelper.sharedInstance.save(state: "connected", ssid: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                ConnectionStateHelper.sharedInstance.save(state: Constants.ConnectionState.ConnectedToSSID)
+                ConnectionStateHelper.sharedInstance.saveConnectedNetwork(withSSID: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
                 response.deliver()
             }
             

@@ -42,14 +42,14 @@ class StatusViewController: UIViewController {
         
         let epoch = String(Int(Date().timeIntervalSince1970.rounded()))
         
-        let currentState = UserDefaultsHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
+        let currentState = ConnectionStateHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
         
         self.wifiSettingsButton.isHidden=true
         self.activityIndicator.hidesWhenStopped=true
-        if currentState != nil {
+        if currentState?["state"] as! Constants.ConnectionState == Constants.ConnectionState.ConnectedToSSID {
             //update label
             DispatchQueue.main.async(execute: {
-                self.statusLabel.text = "Connected to " + (currentState?["ssid"])!
+                self.statusLabel.text = "Connected to " + (currentState?["ssid"] as! String)
                 
             })
         } else {
