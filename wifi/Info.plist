@@ -34,10 +34,11 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Hey! I want to know where you're @!</string>
+	<string>Hey! I want to know where you&apos;re @!</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>network-authentication</string>
+		<string>remote-notification</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

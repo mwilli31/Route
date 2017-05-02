@@ -86,7 +86,7 @@ class FirebaseWifiService {
         }
     }
     
-    func getNetworkAccessRequests()  {
+    func getNetworkAccessRequests(completion:@escaping (_ result: NSDictionary) -> Void)  {
         let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         if userUUID != "" {
             print("GET: Network Access Requests")
@@ -94,10 +94,8 @@ class FirebaseWifiService {
             databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID)
             let requestsRef = databaseRef.child("requests")
             requestsRef.observeSingleEvent(of: .value, with: { (snapshot) in
-                let requests = (snapshot.value) as? NSDictionary
-                RouteAC.sharedInstance.updateAccessRequests(updatedRequests: requests!)
-            }, withCancel: { (Error) in
-                print(Error.localizedDescription)
+                let requests = (snapshot.value) as? NSDictionary ?? [:]
+                completion(requests)
             })
         }
     }

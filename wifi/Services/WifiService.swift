@@ -47,7 +47,9 @@ class WifiService {
         
     }
     
-    func getNetworkAccessRequests() {
-        FirebaseWifiService.sharedInstance.getNetworkAccessRequests()
+    func getNetworkAccessRequests(completion:@escaping (_ result: NSDictionary) -> Void)  {
+        FirebaseWifiService.sharedInstance.getNetworkAccessRequests { (result) in
+            completion(result)
+        }
     }
 }

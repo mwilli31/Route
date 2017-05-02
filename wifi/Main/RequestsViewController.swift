@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class RequestTableViewCell: UITableViewCell {
     @IBOutlet weak var username: UILabel!
@@ -17,6 +18,8 @@ class RequestsViewController: UIViewController {
     
     var users = RouteAC.sharedInstance
     
+    let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+    
     class func instantiateFromStoryboard() -> RequestsViewController {
         let storyboard = UIStoryboard(name: "Requests", bundle: nil)
         return storyboard.instantiateViewController(withIdentifier: String(describing: self)) as! RequestsViewController
@@ -25,6 +28,9 @@ class RequestsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.requestsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
     }
     
     @IBAction func denyButtonAction(_ sender: UIButton) {
@@ -45,11 +51,25 @@ class RequestsViewController: UIViewController {
         let cell = ancestor as! RequestTableViewCell
         return cell.username
     }
+    
+    func catchConnectionStateNotification(notification:Notification) -> Void {
+        print("Catch notification in req vc")
+        guard let userInfo = notification.userInfo,
+            let connectionState = userInfo["update"] as? Bool
+            else {
+                print("Fuck sajayn No userInfo found in notification")
+                return
+        }
+        if connectionState {
+            self.requestsTableView.reloadData()
+        }
+    }
 }
 
 extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.accessRequests.count
+        print(users.accessRequestsByUserID.count)
+        return users.accessRequestsByUserID.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
