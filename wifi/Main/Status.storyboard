@@ -31,13 +31,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-jg-d23">
                                 <rect key="frame" x="37" y="357" width="300" height="60"/>
-                                <color key="backgroundColor" red="0.43921568630000002" green="0.62745098040000002" blue="0.8862745098" alpha="0.74644396550000003" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99287563562393188" green="0.99362605810165405" blue="0.9929918646812439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bHf-ye-uK7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Open Wifi Settings To Connect">
-                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" red="0.21780791878700256" green="0.66114187240600586" blue="0.99662142992019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="openWifiSettingsPage:" destination="Q9I-2A-ONt" eventType="touchUpInside" id="iAP-Jq-p47"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.21780791878700256" green="0.66114187240600586" blue="0.99662142992019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="4yc-KH-RVZ"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="top" id="AYA-4C-l6z"/>

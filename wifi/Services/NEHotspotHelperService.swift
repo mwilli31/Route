@@ -42,8 +42,7 @@ class NEHotspotHelperService {
                     response.setNetworkList([network])
                     response.deliver() //Respond back with the filtered list
                     
-                    // notify view controllers
-//                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.discoverMessage)
+                    self.postNetworkConnectionStateNotification(state: Constants.ConnectionState.Discovered ,connectionStateMessage: Constants.ConnectionStateMessages.foundRoutesMessage)
                     
                 }
             } else if cmd.commandType == NEHotspotHelperCommandType.evaluate {
@@ -59,7 +58,7 @@ class NEHotspotHelperService {
                     response.deliver() //Respond back
                     
                     // notify view controllers
-                    self.postNetworkConnectionStateNotification(connectionState: Constants.ConnectionStateMessages.authenticateMessage)
+                    self.postNetworkConnectionStateNotification(state: Constants.ConnectionState.Authenticating ,connectionStateMessage: Constants.ConnectionStateMessages.authenticateMessage)
                 }
             } else if cmd.commandType == NEHotspotHelperCommandType.authenticate {
                 //Perform custom authentication and respond back with success
@@ -69,8 +68,9 @@ class NEHotspotHelperService {
                 
                 // notify view controllers
                 let connectedMessage = "Connected to " + cmd.network!.ssid
-                self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
-                UserDefaultsHelper.sharedInstance.save(state: "connected", ssid: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                self.postNetworkConnectionStateNotification(state: Constants.ConnectionState.ConnectedToSSID, connectionStateMessage: connectedMessage + " To" + (cmd.network?.ssid)!)
+                ConnectionStateHelper.sharedInstance.saveConnectedNetwork(withSSID: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                ConnectionStateHelper.sharedInstance.save(state: Constants.ConnectionState.ConnectedToSSID.rawValue)
                 WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "authenticate")
                 
                 response.deliver() //Respond back
@@ -78,9 +78,10 @@ class NEHotspotHelperService {
                 print("maintaining")
                 let response = cmd.createResponse(NEHotspotHelperResult.success)
                 let connectedMessage = "Connected to " + cmd.network!.ssid
-                self.postNetworkConnectionStateNotification(connectionState: connectedMessage)
+                self.postNetworkConnectionStateNotification(state: Constants.ConnectionState.ConnectedToSSID, connectionStateMessage: connectedMessage + " To " + (cmd.network?.ssid)!)
                 WifiService.sharedInstance.postCurrentWifiConnectionDetails(ssid: (cmd.network?.ssid)!, networkUUID: (cmd.network?.bssid)!, timestamp: epoch, command: "maintain")
-                UserDefaultsHelper.sharedInstance.save(state: "connected", ssid: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
+                ConnectionStateHelper.sharedInstance.save(state: Constants.ConnectionState.ConnectedToSSID.rawValue)
+                ConnectionStateHelper.sharedInstance.saveConnectedNetwork(withSSID: cmd.network!.ssid, networkUUID: cmd.network!.bssid, timestamp: epoch)
                 response.deliver()
             }
             
@@ -103,10 +104,13 @@ class NEHotspotHelperService {
         return bestNetwork!
     }
     
-    private func postNetworkConnectionStateNotification(connectionState: String) {
+    private func postNetworkConnectionStateNotification(state: Constants.ConnectionState, connectionStateMessage: String) {
         self.nc.post(name:self.connectionStateNotification,
                      object: nil,
-                     userInfo:[Constants.NotificationKeys.connectionStateNotificationKey:connectionState])
+                     userInfo:[
+                        Constants.NotificationKeys.connectionStateNotificationKey:state,
+                        Constants.NotificationKeys.connectionStateMessageNotificationKey:connectionStateMessage
+            ])
         
     }
  

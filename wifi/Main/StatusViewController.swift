@@ -33,33 +33,9 @@ class StatusViewController: UIViewController {
         self.animationView?.contentMode = .scaleAspectFill
         self.animationView?.loopAnimation = true
         self.view.addSubview(animationView!)
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        
-        print("status view is appearing")
-        
-        let epoch = String(Int(Date().timeIntervalSince1970.rounded()))
-        
-        let currentState = UserDefaultsHelper.sharedInstance.getEstimatedCurrentState(timestamp: epoch)
-        
-        self.wifiSettingsButton.isHidden=true
         self.activityIndicator.hidesWhenStopped=true
-        if currentState != nil {
-            //update label
-            DispatchQueue.main.async(execute: {
-                self.statusLabel.text = "Connected to " + (currentState?["ssid"])!
-                
-            })
-        } else {
-            //only start indicator if trying to discover routes
-            self.activityIndicator.startAnimating()
-            
-            self.animationView?.play()
-            
-            self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
-        }
+
+        ConnectionStateHelper.sharedInstance.updateCurrentState()
     }
     
     func stopActivityIndicator() {
@@ -85,34 +61,35 @@ class StatusViewController: UIViewController {
                 print("Settings opened: \(success)") // Prints true
             })
         }
-
+        
     }
     
     func catchConnectionStateNotification(notification:Notification) -> Void {
         print("Catch notification")
         
         guard let userInfo = notification.userInfo,
-            let connectionState = userInfo[Constants.NotificationKeys.connectionStateNotificationKey] as? String else {
+            let connectionState = userInfo[Constants.NotificationKeys.connectionStateNotificationKey] as? Constants.ConnectionState,
+            let connectionStateMessage = userInfo[Constants.NotificationKeys.connectionStateMessageNotificationKey] as? String else {
                 print("No userInfo found in notification")
                 return
         }
         
-        if(connectionState == Constants.ConnectionStateMessages.discoverMessage)   {
+        
+        if(connectionState == Constants.ConnectionState.Discovering)   {
             self.wifiSettingsButton.isHidden=true
             self.activityIndicator.hidesWhenStopped=true
             self.activityIndicator.startAnimating()
             self.animationView?.play()
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
-        } else if connectionState == Constants.ConnectionStateMessages.foundRoutesMessage {
+        } else if connectionState == Constants.ConnectionState.Discovered {
             self.wifiSettingsButton.isHidden=false
         } else {
             self.wifiSettingsButton.isHidden=true
-
         }
         
         //update label
         DispatchQueue.main.async(execute: {
-            self.statusLabel.text = connectionState
+            self.statusLabel.text = connectionStateMessage
         })
         
 

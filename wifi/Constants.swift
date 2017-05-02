@@ -11,6 +11,8 @@ struct Constants {
     struct NotificationKeys {
         static let connectionStateNotification = "ConnectionStateNotification"
         static let connectionStateNotificationKey = "connectionState"
+        static let connectionStateMessageNotificationKey = "connectionStateMessage"
+
     }
     
     struct TimersAndDelays {
@@ -18,10 +20,16 @@ struct Constants {
     }
     
     struct ConnectionStateMessages {
-        static let discoverMessage = "Discovering Routes"
-        static let foundRoutesMessage = "Discovered nearby Routes"
-        static let authenticateMessage = "Authenticating Route"
-        static let connectedMessage = "Connected"
+        static let needSettingsNoServiceMessage : String = "No service, open up settings to identify a Spot"
+        static let discoverMessage : String = "Discovering Spots"
+        static let foundRoutesMessage : String = "Discovered nearby Spots"
+        static let noRoutesNearby : String = "Discovered nearby Spots"
+        static let authenticateMessage : String = "Authenticating Spot"
+        static let connectedMessage : String = "Connected"
+    }
+    
+    enum ConnectionState: String {
+        case NeedSettings, Discovering, NoRoutesNearby, Discovered, Authenticating, Connected, ConnectedToSSID
     }
     
     struct Segues {

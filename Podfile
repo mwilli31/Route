@@ -12,6 +12,7 @@ target 'wifi' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Crash'
   pod 'KeychainSwift', '~> 7.0'
   pod 'PagingMenuController'
   pod 'lottie-ios'

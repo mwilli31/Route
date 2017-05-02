@@ -20,7 +20,7 @@ extension UIColor {
     }
 }
 
-private let menuBackgroundColor : UIColor! = UIColor.init(red: 27, green: 51, blue: 77, alpha: 1)
+private let menuBackgroundColor : UIColor! = UIColor(red:0.24, green:0.65, blue:0.99, alpha:1.0)
 private let menuUnderlineColor : UIColor! = .white
 
 private let menuFontSize : CGFloat = 18.0
@@ -91,10 +91,10 @@ struct PagingMenuOptions: PagingMenuControllerCustomizable {
             return 40
         }
         var selectedBackgroundColor: UIColor {
-            return UIColor.init(red: 35, green: 67, blue: 96)
+            return menuBackgroundColor
         }
         var backgroundColor: UIColor {
-            return UIColor.init(red: 35, green: 67, blue: 96)
+            return menuBackgroundColor
         }
         var animationDuration: TimeInterval {
             return 0.2
