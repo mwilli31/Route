@@ -99,4 +99,17 @@ class FirebaseWifiService {
             })
         }
     }
+    
+    func postNetworkAccessRequests(fromUserUUID: String, timestamp: String, networkUUID: String)  {
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
+        if userUUID != "" {
+            print("Posting incoming access request")
+            let updates = [
+                networkUUID : timestamp
+            ]
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID + "/requests/" + fromUserUUID)
+            databaseRef.updateChildValues(updates)
+        }
+    }
 }

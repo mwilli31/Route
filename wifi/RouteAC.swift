@@ -11,61 +11,48 @@ import Foundation
 class RouteAC {
     
     static let sharedInstance = RouteAC()
-    var accessRequestsByAutoID : [String : [String:String]]
-    var accessRequestsByUserID : [String:String]
+    var accessRequests : [String : AnyObject]
     
-    let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+    let routeACListNotification = Notification.Name(rawValue:Constants.NotificationKeys.routeACListNotification)
     let nc = NotificationCenter.default
     
     private init() {
         // TODO: Retrieve from Firebase
-        accessRequestsByAutoID = [String : [String:String]]()
-        accessRequestsByUserID = [String:String]()
+        accessRequests = [String : AnyObject]()
         WifiService.sharedInstance.getNetworkAccessRequests { (result) in
             // Deep copy needed?
-            self.accessRequestsByAutoID = result as! [String : [String:String]]
-            self.parseAccessRequestsByAutoID()
+            self.accessRequests = (result as? [String : AnyObject])!
+            print(self.accessRequests)
+            self.postRouteACListNotification()
         }
     }
     
-    func parseAccessRequestsByAutoID() {
-        let temp = RouteAC.sharedInstance.accessRequestsByAutoID.values
-        
-        for item in temp {
-            RouteAC.sharedInstance.accessRequestsByUserID[item["from"]!] = "dat boi"
-        }
-        // Done parsing notify Requests VC
-        postNetworkConnectionStateNotification()
-    }
-    
-    func addAccessRequest(user: String) {
-        RouteAC.sharedInstance.accessRequestsByUserID[user] = "someRoute"
+    func addAccessRequest(fromUserUUID: String, value: NSDictionary) {
+        RouteAC.sharedInstance.accessRequests[fromUserUUID] = value
+        print(RouteAC.sharedInstance.accessRequests)
+        postRouteACListNotification()
     }
     
     func getAccessRequestFrom(user: String) -> String {
-        return RouteAC.sharedInstance.accessRequestsByUserID[user]!
+        return user
     }
 
     func denyAccessRequest(user : String) {
-        RouteAC.sharedInstance.accessRequestsByUserID.removeValue(forKey: user)
     }
 
     func approveAccessRequest(user : String) {
-        RouteAC.sharedInstance.accessRequestsByUserID.removeValue(forKey: user)
         // TODO: Firebase activity
     }
     
     func pendingAccessRequestUsersArray() -> Array<String> {
-        return Array(RouteAC.sharedInstance.accessRequestsByUserID.keys)
+        return Array(RouteAC.sharedInstance.accessRequests.keys)
     }
     
-    private func postNetworkConnectionStateNotification() {
-        print("sending local noti")
-        self.nc.post(name:self.connectionStateNotification,
+    private func postRouteACListNotification() {
+        print("Notifying Requests View Controller that Route AC List has been updated.")
+        self.nc.post(name:self.routeACListNotification,
                      object: nil,
-                     userInfo:[
-                        "update":true
-            ])
-        
+                     userInfo:nil
+        )
     }
 }

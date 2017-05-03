@@ -52,4 +52,12 @@ class WifiService {
             completion(result)
         }
     }
+    
+    func postNetworkAccessRequests(fromUserUUID: String, timestamp: String, networkUUID: String) {
+        FirebaseWifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+        let userData: [String:String] = [
+            networkUUID: timestamp
+        ]
+        RouteAC.sharedInstance.addAccessRequest(fromUserUUID: fromUserUUID, value: userData as NSDictionary)
+    }
 }

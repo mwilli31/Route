@@ -49,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Firebase Configs
         FIRApp.configure()
-//        FIRDatabase.database().persistenceEnabled = true
+        FIRDatabase.database().persistenceEnabled = true
 
         UIApplication.shared.statusBarStyle = .lightContent;
         
@@ -90,8 +90,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: - Handle Push Notifications Here
         if let messageID = userInfo[gcmMessageIDKey] {
             print("HANDLE PUSH HERE ALWAYS Message ID: \(messageID)")
-            if let requesterUUID = userInfo["requesterUUID"] {
-                // TODO: Post to Firebase Notifications Ref
+            if (userInfo["type"] != nil) {
+                switch userInfo["type"] as! String {
+                case "Request" :
+                    // TODO: Post to Firebase Notifications Ref, ensure data exists.
+                    let fromUserUUID = userInfo["userUUID"] as! String
+                    let networkUUID = userInfo["networkUUID"] as! String
+                    let timestamp = userInfo["timestamp"] as! String
+                    WifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+                    
+                default: break
+                }
+                
             }
         }
         
