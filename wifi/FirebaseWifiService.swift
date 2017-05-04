@@ -89,7 +89,7 @@ class FirebaseWifiService {
     func getNetworkAccessRequests(completion:@escaping (_ result: NSDictionary) -> Void)  {
         let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         if userUUID != "" {
-            print("GET: Network Access Requests")
+            print("GET: Current network access requests")
             var databaseRef: FIRDatabaseReference!
             databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID)
             let requestsRef = databaseRef.child("requests")
@@ -103,7 +103,7 @@ class FirebaseWifiService {
     func postNetworkAccessRequests(fromUserUUID: String, timestamp: String, networkUUID: String)  {
         let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         if userUUID != "" {
-            print("Posting incoming access request")
+            print("POST: Incoming network access request")
             let updates = [
                 networkUUID : timestamp
             ]

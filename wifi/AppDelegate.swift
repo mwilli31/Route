@@ -93,12 +93,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if (userInfo["type"] != nil) {
                 switch userInfo["type"] as! String {
                 case "Request" :
-                    // TODO: Post to Firebase Notifications Ref, ensure data exists.
                     let fromUserUUID = userInfo["userUUID"] as! String
                     let networkUUID = userInfo["networkUUID"] as! String
                     let timestamp = userInfo["timestamp"] as! String
-                    WifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
-                    
+                    DispatchQueue.global(qos: .background).async {
+                        print("This is run on the background queue")
+                        WifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+                    }
                 default: break
                 }
                 
