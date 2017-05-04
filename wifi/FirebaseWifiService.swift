@@ -14,6 +14,71 @@ class FirebaseWifiService {
     
     static let sharedInstance = FirebaseWifiService()
     
+    // getPublicWifiNetworks
+    func observeAllPublicWifiNetworks() {
+        var databaseRef: FIRDatabaseReference!
+        databaseRef = FIRDatabase.database().reference().child("/sharedPublicNetworks")
+        let refHandle = databaseRef.observe(FIRDataEventType.value, with: { (snapshot) in
+            let dict = snapshot.value as? [String : AnyObject] ?? [:]
+            print(dict)
+        })
+    }
+    
+    // getPrivateWifiNetworks
+    func observeAllAccessiblePrivateWifiNetworks() {
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
+
+        //make sure that a user is currently logged in
+        if userUUID != "" {
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID + "/accessiblePrivateSpots")
+            
+            let refHandle = databaseRef.observe(FIRDataEventType.value, with: { (snapshot) in
+                let spots = snapshot.value as? [String : AnyObject] ?? [:]
+                
+                //save to local list
+                self.saveAccessibleSpots(spots: spots)
+            })
+            
+            saveObserverHandles(handle: refHandle)
+            
+        }
+
+    }
+    
+    private func saveObserverHandles(handle: UInt) {
+        var arr = getObserverHandles()
+        if (arr == nil) {
+            arr = [UInt]()
+        }
+        arr!.append(handle)
+        UserDefaults.standard.set(arr, forKey: "databaseObserverHandles")
+        UserDefaults.standard.synchronize()
+    }
+    
+    func getObserverHandles() -> [UInt]? {
+        return UserDefaults.standard.object(forKey: "databaseObserverHandles") as? [UInt]
+    }
+    
+    private func saveAccessibleSpots(spots: Dictionary<String, Any>) {
+        UserDefaults.standard.set(spots, forKey: "accessibleSpots")
+        UserDefaults.standard.synchronize()
+    }
+    
+    func createWifiNetworkForTest() {
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
+        let netData = [
+            "ssid" : "DropTheMike",
+            "password" : "woopW00P",
+            "ownerID" : userUUID
+        ]
+        //make sure that a user is currently logged in
+        if userUUID != "" {
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID + "/accessiblePrivateSpots")
+            databaseRef.child(userUUID + "_" + "DropTheMike").setValue(netData)
+        }
+    }
     
     // TODO: Will make sense to move this code to eventually seperate private functions to handle the posting of data
     // to multiple indexes in our system (don't worry now, since we are moving away from Firebase eventually)

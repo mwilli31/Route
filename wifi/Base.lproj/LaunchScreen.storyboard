@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,30 +21,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFill" image="backgroundImage" translatesAutoresizingMaskIntoConstraints="NO" id="dm7-oT-Zi7">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="z9s-e1-3KW">
-                                <rect key="frame" x="148.5" y="120" width="78" height="72"/>
+                                <rect key="frame" x="132" y="120" width="111" height="154"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
                                 </accessibility>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-hh-ase">
-                                <rect key="frame" x="16" y="606" width="343" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 Route. All Rights Reserved" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvb-hh-ase">
+                                <rect key="frame" x="17" y="606" width="341" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" red="0.2178079188" green="0.6611418724" blue="0.99662142990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.058823529411764705" green="0.16862745098039217" blue="0.29411764705882354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99287563560000003" green="0.99362605810000004" blue="0.9929918647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="dm7-oT-Zi7" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="79T-il-8Gp"/>
-                            <constraint firstItem="dm7-oT-Zi7" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="8Ge-Gj-ZUw"/>
                             <constraint firstItem="z9s-e1-3KW" firstAttribute="centerX" secondItem="jvb-hh-ase" secondAttribute="centerX" id="D2d-1u-Vde"/>
-                            <constraint firstAttribute="trailing" secondItem="dm7-oT-Zi7" secondAttribute="trailing" id="Wwr-2S-Yez"/>
                             <constraint firstItem="jvb-hh-ase" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Y5c-hG-I5G"/>
-                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="dm7-oT-Zi7" secondAttribute="bottom" id="b49-aE-KRS"/>
                             <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="jvb-hh-ase" secondAttribute="bottom" constant="40" id="gJa-Ny-rJa"/>
                             <constraint firstItem="z9s-e1-3KW" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="100" id="sfE-9P-Te7"/>
                         </constraints>
@@ -56,7 +49,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="backgroundImage" width="375" height="667"/>
-        <image name="logo" width="78" height="72"/>
+        <image name="logo" width="111" height="154"/>
     </resources>
 </document>

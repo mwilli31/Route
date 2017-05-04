@@ -36,6 +36,10 @@ class StatusViewController: UIViewController {
         self.activityIndicator.hidesWhenStopped=true
 
         ConnectionStateHelper.sharedInstance.updateCurrentState()
+        
+        WifiService.sharedInstance.observeAllPublicWifiNetworks()
+        WifiService.sharedInstance.observeAllAccessiblePrivateWifiNetworks()
+        
     }
     
     func stopActivityIndicator() {

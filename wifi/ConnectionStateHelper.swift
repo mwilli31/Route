@@ -77,6 +77,7 @@ class ConnectionStateHelper {
     
     func save(state: String) {
         UserDefaults.standard.set(state, forKey: "lastState")
+        UserDefaults.standard.synchronize()
     }
     
     func getLastSavedState() -> Constants.ConnectionState {

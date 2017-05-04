@@ -17,7 +17,7 @@ class AddNetworkViewController: UIViewController {
     }
 
     @IBAction func sendMessageTest(_ sender: Any) {
-        Requests.sharedInstance.askForAccess(toNetworkUUID: "ShahFamily", ownerUUID: "xWaB0iboEaNz5RNrDoc5hxb6gbo1")
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
     }
     
     @IBAction func dismiss(_ sender: UIButton) {

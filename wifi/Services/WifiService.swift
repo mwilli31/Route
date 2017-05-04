@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import NetworkExtension
+
 
 class WifiService {
     
@@ -27,21 +29,41 @@ class WifiService {
     
     // MARK: Available Networks API's
     
-    func getMatchingNetworks(forNetworkList: Array<Any>) -> Array<Dictionary<String, Any>> {
-        
-        var matchedNetworks : Array<Dictionary<String, Any>> = []
-        
-        let matchedNetwork : Dictionary! = [
-            "ssid": "Hi",
-            "password": "hi",
-            "networkUUID": "hi"
-        ]
-        
-        matchedNetworks.append(matchedNetwork)
-        
-        return matchedNetworks
-        
+    func observeAllPublicWifiNetworks() {
+        FirebaseWifiService.sharedInstance.observeAllPublicWifiNetworks()
     }
+    
+    func observeAllAccessiblePrivateWifiNetworks() {
+        FirebaseWifiService.sharedInstance.observeAllAccessiblePrivateWifiNetworks()
+    }
+    
+    func getAccessibleSpots() -> Dictionary<String, Any>? {
+        return UserDefaults.standard.dictionary(forKey: "accessibleSpots")
+    }
+    
+//    func getMatchingNetworks(forNetworkList: [NEHotspotNetwork]) -> [Dictionary<String, Any>] {
+//        //get spots
+//        let spots: Dictionary? = getAccessibleSpots()
+//        var matchedNetworks : [NEHotspotNetwork?] = []
+//        
+//        //match against network list
+//        if(spots != nil) {
+//            for net in forNetworkList {
+//                print(net.ssid)
+//                print(spots?[net.ssid] ?? "no matching spot")
+//                if(spots![net.ssid] != nil) {
+//                    let networkDict = [
+//                        "NEHotspotNetwork": net,
+//                        "password": spots![net.ssid]
+//                    ]
+//                    matchedNetworks.append(net)
+//                }
+//            }
+//        }
+//        print("matched")
+//        print(matchedNetworks)
+//        return matchedNetworks
+//    }
     
     func updateNetworkListCache(forNetworkList: Array<Any>) {
         

@@ -24,6 +24,7 @@
 		273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114A01E9C7FE4002AE7AD /* WifiService.swift */; };
 		2745D12F1EAF011600A10C9F /* AddNetwork.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2745D12E1EAF011600A10C9F /* AddNetwork.storyboard */; };
 		2745D1311EAF01D000A10C9F /* AddNetworkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2745D1301EAF01D000A10C9F /* AddNetworkViewController.swift */; };
+		2747142F1EBAE3840001C0F6 /* Introduction.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2747142E1EBAE3840001C0F6 /* Introduction.storyboard */; };
 		2748EB0A1EA7017800C6271A /* RouteLogoBlueBlinking.json in Resources */ = {isa = PBXBuildFile; fileRef = 2748EB091EA7017800C6271A /* RouteLogoBlueBlinking.json */; };
 		2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6011E21BEEB00C1601F /* AppDelegate.swift */; };
 		2751D6041E21BEEB00C1601F /* LaunchMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */; };
@@ -48,7 +49,7 @@
 		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
-		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
+		703C6B0C1E6C99D000C829FB /* BuildFile in Resources */ = {isa = PBXBuildFile; };
 		705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* RouteAC.swift */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* Constants.swift */; };
@@ -94,6 +95,7 @@
 		273114A01E9C7FE4002AE7AD /* WifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WifiService.swift; path = Services/WifiService.swift; sourceTree = "<group>"; };
 		2745D12E1EAF011600A10C9F /* AddNetwork.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddNetwork.storyboard; path = "Add Network/AddNetwork.storyboard"; sourceTree = "<group>"; };
 		2745D1301EAF01D000A10C9F /* AddNetworkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddNetworkViewController.swift; path = "Add Network/AddNetworkViewController.swift"; sourceTree = "<group>"; };
+		2747142E1EBAE3840001C0F6 /* Introduction.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Introduction.storyboard; path = Introduction/Introduction.storyboard; sourceTree = "<group>"; };
 		2748EB091EA7017800C6271A /* RouteLogoBlueBlinking.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = RouteLogoBlueBlinking.json; path = Animations/RouteLogoBlueBlinking.json; sourceTree = "<group>"; };
 		2751D5FE1E21BEEB00C1601F /* wifi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = wifi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2751D6011E21BEEB00C1601F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -191,6 +193,14 @@
 			name = "Add Network";
 			sourceTree = "<group>";
 		};
+		274714301EBAE38C0001C0F6 /* Introduction */ = {
+			isa = PBXGroup;
+			children = (
+				2747142E1EBAE3840001C0F6 /* Introduction.storyboard */,
+			);
+			name = Introduction;
+			sourceTree = "<group>";
+		};
 		2751D5F51E21BEEB00C1601F = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +231,7 @@
 				2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */,
 				2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */,
 				2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */,
+				274714301EBAE38C0001C0F6 /* Introduction */,
 				27B2C5FE1EA465C900693EA7 /* Animation */,
 				2731149D1E99E2EC002AE7AD /* Services */,
 				278F4B761E6E3C1500B7F656 /* LogIn */,
@@ -483,11 +494,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2747142F1EBAE3840001C0F6 /* Introduction.storyboard in Resources */,
 				278F4B751E6E3C0400B7F656 /* LogIn.storyboard in Resources */,
 				278F4B711E6E2B2E00B7F656 /* Profile.storyboard in Resources */,
 				279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
-				703C6B0C1E6C99D000C829FB /* (null) in Resources */,
+				703C6B0C1E6C99D000C829FB /* BuildFile in Resources */,
 				27B9A82D1E91AC520091C152 /* Networks.plist in Resources */,
 				2745D12F1EAF011600A10C9F /* AddNetwork.storyboard in Resources */,
 				2710E4DB1E66915C00F1B40D /* Status.storyboard in Resources */,
@@ -560,7 +572,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
