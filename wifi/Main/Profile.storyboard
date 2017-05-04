@@ -161,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-202.40000000000001" y="124.58770614692655"/>
         </scene>
-        <!--Route SSID-->
+        <!--Add RouteSSID View Controller-->
         <scene sceneID="4a2-br-ZDJ">
             <objects>
                 <viewController id="xpA-Vq-eJw" customClass="AddRouteSSIDViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -214,7 +214,7 @@
                             <constraint firstItem="QxA-h0-5Wd" firstAttribute="width" secondItem="HPR-ci-sWP" secondAttribute="width" multiplier="0.8" id="t6W-H6-CVt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route SSID" id="5p9-06-BTZ">
+                    <navigationItem key="navigationItem" id="5p9-06-BTZ">
                         <barButtonItem key="backBarButtonItem" title=" " id="DOz-mJ-84m"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="q9V-Lm-Cek">
                             <connections>
@@ -265,7 +265,7 @@
             </objects>
             <point key="canvasLocation" x="486" y="125"/>
         </scene>
-        <!--Route Password-->
+        <!--Add Route Password View Controller-->
         <scene sceneID="oX3-Dj-Ufo">
             <objects>
                 <viewController id="439-2Z-xZd" customClass="AddRoutePasswordViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -318,7 +318,7 @@
                             <constraint firstItem="cab-vh-vd0" firstAttribute="top" secondItem="CaC-2G-EOG" secondAttribute="bottom" constant="8" symbolic="YES" id="x40-It-OXu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Password" id="9dB-H3-FJa">
+                    <navigationItem key="navigationItem" id="9dB-H3-FJa">
                         <barButtonItem key="backBarButtonItem" title=" " id="SpA-Ga-4Mk"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="F0i-8N-Dr0">
                             <connections>
@@ -335,62 +335,7 @@
             </objects>
             <point key="canvasLocation" x="1424.8" y="850.52473763118451"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="VK1-Mr-S1p">
-            <objects>
-                <viewController id="GRv-Fl-595" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="A3T-AZ-UXO"/>
-                        <viewControllerLayoutGuide type="bottom" id="cs8-Uj-xwQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="wsk-lb-0Ak">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm Your Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="Oab-tL-87I">
-                                <rect key="frame" x="74" y="80" width="228" height="27"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Network Password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="22" translatesAutoresizingMaskIntoConstraints="NO" id="UeY-eh-Li1">
-                                <rect key="frame" x="37.5" y="180" width="300" height="60"/>
-                                <color key="backgroundColor" red="0.42248722150000001" green="0.61544865709999996" blue="0.90544164780000003" alpha="0.59164870690000004" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="7X7-L2-h2v"/>
-                                </constraints>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" spellCheckingType="no" returnKeyType="continue" enablesReturnKeyAutomatically="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureTextEntry" value="YES"/>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1d-cx-ioS">
-                                <rect key="frame" x="144" y="114.5" width="87" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="What is This?">
-                                    <color key="titleColor" red="0.35686274509999999" green="0.6588235294" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.20000000000000001" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="Oab-tL-87I" firstAttribute="top" secondItem="A3T-AZ-UXO" secondAttribute="bottom" constant="60" id="1KD-IK-rhn"/>
-                            <constraint firstItem="f1d-cx-ioS" firstAttribute="top" secondItem="Oab-tL-87I" secondAttribute="bottom" constant="8" symbolic="YES" id="2MK-25-bRD"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="width" secondItem="wsk-lb-0Ak" secondAttribute="width" multiplier="0.8" id="Cmk-nl-Zjp"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="centerX" secondItem="Oab-tL-87I" secondAttribute="centerX" id="NW2-lY-o7H"/>
-                            <constraint firstItem="f1d-cx-ioS" firstAttribute="centerX" secondItem="Oab-tL-87I" secondAttribute="centerX" id="OIA-Cs-1Mb"/>
-                            <constraint firstItem="Oab-tL-87I" firstAttribute="centerX" secondItem="wsk-lb-0Ak" secondAttribute="centerX" id="k3E-tr-dk3"/>
-                            <constraint firstItem="UeY-eh-Li1" firstAttribute="top" secondItem="f1d-cx-ioS" secondAttribute="bottom" multiplier="1.2" constant="8" symbolic="YES" id="u8r-hm-xAK"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9CK-2z-XQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-202" y="1594"/>
-        </scene>
-        <!--Route Name-->
+        <!--Add Route Name View Controller-->
         <scene sceneID="HVH-gO-xfm">
             <objects>
                 <viewController id="c87-oC-sFy" customClass="AddRouteNameViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -443,7 +388,7 @@
                             <constraint firstItem="yOD-w4-AKE" firstAttribute="centerX" secondItem="69W-On-sgM" secondAttribute="centerX" id="vVX-ng-nIt"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Name" id="wYp-sT-77L">
+                    <navigationItem key="navigationItem" id="wYp-sT-77L">
                         <barButtonItem key="backBarButtonItem" title=" " id="tqG-Cp-1Su"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="lYc-KK-t98">
                             <connections>
@@ -460,7 +405,7 @@
             </objects>
             <point key="canvasLocation" x="2096.8000000000002" y="850.52473763118451"/>
         </scene>
-        <!--Route Location-->
+        <!--Add Route Location View Controller-->
         <scene sceneID="S1S-kZ-fyO">
             <objects>
                 <viewController id="A9M-Q3-4rk" customClass="AddRouteLocationViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
@@ -544,7 +489,7 @@
                             <constraint firstItem="kgC-Zr-lxn" firstAttribute="top" secondItem="Jsi-6b-f8k" secondAttribute="bottom" multiplier="1.1" constant="8" symbolic="YES" id="qQt-TG-pNe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Route Location" id="n4I-zl-G7c">
+                    <navigationItem key="navigationItem" id="n4I-zl-G7c">
                         <barButtonItem key="backBarButtonItem" title=" " id="XDn-jl-Php"/>
                         <barButtonItem key="rightBarButtonItem" title="Quit" id="0qV-Jq-Ltv">
                             <connections>

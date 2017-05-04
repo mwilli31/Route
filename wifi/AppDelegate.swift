@@ -71,7 +71,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         // If you are receiving a notification message while your app is in the background,
         // this callback will not be fired till the user taps on the notification launching the application.
-        // TODO: Handle data of notification
         
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
@@ -81,7 +80,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Print full message.
         print(userInfo)
     }
-    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // If you are receiving a notification message while your app is in the background,
@@ -89,8 +87,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // TODO: Handle data of notification
         
         // Print message ID.
+        // TODO: - Handle Push Notifications Here
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("HANDLE PUSH HERE ALWAYS Message ID: \(messageID)")
+            if (userInfo["type"] != nil) {
+                switch userInfo["type"] as! String {
+                case "Request" :
+                    let fromUserUUID = userInfo["userUUID"] as! String
+                    let networkUUID = userInfo["networkUUID"] as! String
+                    let timestamp = userInfo["timestamp"] as! String
+                    DispatchQueue.global(qos: .background).async {
+                        print("This is run on the background queue")
+                        WifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+                    }
+                default: break
+                }
+                
+            }
         }
         
         // Print full message.
@@ -244,11 +257,15 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         let userInfo = notification.request.content.userInfo
         // Print message ID.
         if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
+            print("This gets called when user taps notification banner or app is in foreground \(messageID)")
         }
         
         // Print full message.
         print(userInfo)
+        if(userInfo["type"] as! String! == "Request") {
+            // TODO: Notify Requests VC to update 
+            // Persist to local cache
+        }
         
         // Change this to your preferred presentation option
         completionHandler([])

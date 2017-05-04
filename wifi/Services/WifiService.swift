@@ -46,4 +46,18 @@ class WifiService {
     func updateNetworkListCache(forNetworkList: Array<Any>) {
         
     }
+    
+    func getNetworkAccessRequests(completion:@escaping (_ result: NSDictionary) -> Void)  {
+        FirebaseWifiService.sharedInstance.getNetworkAccessRequests { (result) in
+            completion(result)
+        }
+    }
+    
+    func postNetworkAccessRequests(fromUserUUID: String, timestamp: String, networkUUID: String) {
+        FirebaseWifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+        let userData: [String:String] = [
+            networkUUID: timestamp
+        ]
+        RouteAC.sharedInstance.addAccessRequest(fromUserUUID: fromUserUUID, value: userData as NSDictionary)
+    }
 }

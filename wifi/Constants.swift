@@ -12,6 +12,10 @@ struct Constants {
         static let connectionStateNotification = "ConnectionStateNotification"
         static let connectionStateNotificationKey = "connectionState"
         static let connectionStateMessageNotificationKey = "connectionStateMessage"
+        
+        static let routeACListNotification = "RouteACListNotification"
+//        static let connectionStateNotificationKey = "connectionState"
+//        static let connectionStateMessageNotificationKey = "connectionStateMessage"
 
     }
     
