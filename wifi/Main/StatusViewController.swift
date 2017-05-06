@@ -25,14 +25,11 @@ class StatusViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.initColors()
         
         let nc = NotificationCenter.default
         nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
         
-        self.animationView?.frame = CGRect(x: self.view.bounds.width/2 - 70, y: 80, width: 140, height: 140)
-        self.animationView?.contentMode = .scaleAspectFill
-        self.animationView?.loopAnimation = true
-        self.view.addSubview(animationView!)
         self.activityIndicator.hidesWhenStopped=true
 
         ConnectionStateHelper.sharedInstance.updateCurrentState()
@@ -42,9 +39,23 @@ class StatusViewController: UIViewController {
         
     }
     
+    private func initAnimationView() {
+        self.animationView?.frame = CGRect(x: self.view.bounds.width/2 - 70, y: 80, width: 140, height: 140)
+        self.animationView?.contentMode = .scaleAspectFill
+        self.animationView?.loopAnimation = true
+        self.view.addSubview(animationView!)
+    }
+    
+    private func initColors() {
+        self.view.backgroundColor = Constants.Color.background
+        self.statusLabel.textColor = Constants.Color.mainText
+        self.wifiSettingsButton.backgroundColor = Constants.Color.button
+        self.wifiSettingsButton.setTitleColor(Constants.Color.buttonText, for: UIControlState.normal)
+    }
+    
     func stopActivityIndicator() {
         self.activityIndicator.stopAnimating()
-        self.animationView?.pause()
+//        self.animationView?.pause()
         self.wifiSettingsButton.isHidden=false
         
         //update label
@@ -83,7 +94,7 @@ class StatusViewController: UIViewController {
             self.wifiSettingsButton.isHidden=true
             self.activityIndicator.hidesWhenStopped=true
             self.activityIndicator.startAnimating()
-            self.animationView?.play()
+//            self.animationView?.play()
             self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         } else if connectionState == Constants.ConnectionState.Discovered {
             self.wifiSettingsButton.isHidden=false

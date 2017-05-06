@@ -11,63 +11,63 @@ import PagingMenuController
 
 
 
-extension UIColor {
-    convenience init(red: Int, green: Int, blue: Int) {
-        assert(red >= 0 && red <= 255, "Invalid red component")
-        assert(green >= 0 && green <= 255, "Invalid green component")
-        assert(blue >= 0 && blue <= 255, "Invalid blue component")
-        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
-    }
-}
+//extension UIColor {
+//    convenience init(red: Int, green: Int, blue: Int) {
+//        assert(red >= 0 && red <= 255, "Invalid red component")
+//        assert(green >= 0 && green <= 255, "Invalid green component")
+//        assert(blue >= 0 && blue <= 255, "Invalid blue component")
+//        self.init(red: CGFloat(red) / 255.0, green: CGFloat(green) / 255.0, blue: CGFloat(blue) / 255.0, alpha: 1.0)
+//    }
+//}
 
-private let menuBackgroundColor : UIColor! = UIColor(red:0.24, green:0.65, blue:0.99, alpha:1.0)
-private let menuUnderlineColor : UIColor! = .white
+//private let menuBackgroundColor : UIColor! = UIColor(red:0.24, green:0.65, blue:0.99, alpha:1.0)
+//private let menuUnderlineColor : UIColor! = .white
 
 private let menuFontSize : CGFloat = 18.0
 
 struct MenuItemStatus: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Status", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
+        let title = MenuItemText(text: "Status", color: Constants.Color.headerText, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
     var backgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
 
     var selectedBackgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
 
 }
 
 struct MenuItemProfile: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Profile", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
+        let title = MenuItemText(text: "Profile", color: Constants.Color.headerText, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
     var backgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
     
     var selectedBackgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
 }
 
 struct MenuItemRequests: MenuItemViewCustomizable {
     var displayMode: MenuItemDisplayMode {
-        let title = MenuItemText(text: "Requests", color: .white, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
+        let title = MenuItemText(text: "Requests", color: Constants.Color.headerText, selectedColor: .white, font: UIFont.systemFont(ofSize: menuFontSize), selectedFont: UIFont.systemFont(ofSize: menuFontSize))
         return .text(title: title)
     }
     
     var backgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
     
     var selectedBackgroundColor: UIColor {
-        return menuBackgroundColor
+        return Constants.Color.headerBackground
     }
 }
 
@@ -85,16 +85,16 @@ struct PagingMenuOptions: PagingMenuControllerCustomizable {
             return .infinite(widthMode: .fixed(width: 85), scrollingMode: .scrollEnabled)
         }
         var focusMode: MenuFocusMode {
-            return .underline(height: 3, color: menuUnderlineColor, horizontalPadding: 0, verticalPadding: 0)
+            return .underline(height: 3, color: Constants.Color.headerIndicator, horizontalPadding: 0, verticalPadding: 0)
         }
         var height: CGFloat {
             return 40
         }
         var selectedBackgroundColor: UIColor {
-            return menuBackgroundColor
+            return Constants.Color.headerBackground
         }
         var backgroundColor: UIColor {
-            return menuBackgroundColor
+            return Constants.Color.headerBackground
         }
         var animationDuration: TimeInterval {
             return 0.2
@@ -115,6 +115,7 @@ class PagingMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        self.initColors()
         
         options = PagingMenuOptions()
         
@@ -137,6 +138,10 @@ class PagingMenuViewController: UIViewController {
 //                print("Scroll end")
 //            }
 //        }
+    }
+    
+    private func initColors() {
+        self.view.backgroundColor = Constants.Color.headerBackground
     }
 }
 

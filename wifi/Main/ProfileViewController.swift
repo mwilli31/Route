@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileViewController: UIViewController {
     @IBOutlet weak var networkTableView: UITableView!
+    @IBOutlet var usernameLabel: UILabel!
+    @IBOutlet var addSpotButton: UIButton!
     
     var networks: [Network] = []
     
@@ -24,9 +26,18 @@ class ProfileViewController: UIViewController {
         networks = try! Network.loadFromPlist()
         print(networks)
 
+        self.initColors()
+        
         self.networkTableView.dataSource = self
         self.networkTableView.delegate = self
         self.networkTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+    }
+    
+    private func initColors() {
+        self.view.backgroundColor = Constants.Color.background
+        self.usernameLabel.textColor = Constants.Color.mainText
+        self.addSpotButton.backgroundColor = Constants.Color.button
+        self.addSpotButton.setTitleColor(Constants.Color.buttonText, for: UIControlState.normal)
     }
     
     override func didReceiveMemoryWarning() {
@@ -60,6 +71,11 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         cell.wifiNameLabel.text = network.name
         cell.activeLabel.text = String(network.usersActive)  + " Active"
         cell.allowedLabel.text = String(network.usersAllowed) + " Allowed"
+        
+        cell.wifiNameLabel.textColor = Constants.Color.white
+        cell.activeLabel.textColor = Constants.Color.white
+        cell.allowedLabel.textColor = Constants.Color.white
+        cell.backgroundView?.backgroundColor = Constants.Color.blueGrayDark
         
         // Returning the cell
         return cell

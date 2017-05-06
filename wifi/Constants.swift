@@ -6,6 +6,8 @@
 //  Copyright © 2017 Route. All rights reserved.
 //
 
+import UIKit
+
 struct Constants {
     
     struct NotificationKeys {
@@ -36,6 +38,22 @@ struct Constants {
         case NeedSettings, Discovering, NoRoutesNearby, Discovered, Authenticating, Connected, ConnectedToSSID
     }
     
+    struct Color {
+        static let blueGrayDark = UIColor(r: 47, g: 69, b: 92)
+        static let blueMediumMetallic = UIColor(r: 1, g: 159, b: 196)
+        static let blueLight = UIColor(r: 30, g: 207, b: 248)
+        static let white = UIColor.white
+        
+        static let button = Color.blueGrayDark
+        static let buttonText = Color.white
+        static let background = Color.white
+        static let mainText = Color.blueGrayDark
+        static let headerBackground = Color.blueMediumMetallic
+        static let headerText = Color.white
+        static let headerIndicator = Color.blueLight
+
+    }
+    
     struct Segues {
     }
     
@@ -48,5 +66,13 @@ struct Constants {
         static let sinchKey = "c966416c-3817-4ba8-b84b-b72ce830c258"
     }
     
-    
+}
+
+extension UIColor {
+    convenience init(r: Int, g: Int, b: Int) {
+        let cR : CGFloat = pow(pow((CGFloat(r)/255.0),2.2), 0.4545)
+        let cG : CGFloat = pow(pow((CGFloat(g)/255.0),2.2), 0.4545)
+        let cB : CGFloat = pow(pow((CGFloat(b)/255.0),2.2), 0.4545)
+        self.init(red: CGFloat(cR), green: CGFloat(cG), blue: CGFloat(cB), alpha: 1.0)
+    }
 }

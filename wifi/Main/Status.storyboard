@@ -58,17 +58,26 @@
                                     <segue destination="3gG-se-Q5b" kind="show" id="xMv-QF-cq7"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bho-bU-FwD">
+                                <rect key="frame" x="157" y="131" width="60" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9L4-B1-Qor"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.21780791878700256" green="0.66114187240600586" blue="0.99662142992019653" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.18221443891525269" green="0.2726438045501709" blue="0.36247467994689941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="bho-bU-FwD" firstAttribute="centerX" secondItem="K1z-Fs-eDT" secondAttribute="centerX" id="361-rr-8E3"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="4yc-KH-RVZ"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="top" id="AYA-4C-l6z"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="width" secondItem="CAN-EY-qCK" secondAttribute="width" multiplier="0.8" id="Gkz-Al-e5u"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="66" id="MbC-zL-ZfI"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="OIp-jK-k7r"/>
+                            <constraint firstItem="bho-bU-FwD" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="111" id="RP2-jS-Xv4"/>
                             <constraint firstItem="M3u-j4-1RD" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="ZRV-9C-Bzg"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="249" id="ecH-ga-kXP"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="fmB-sf-OCJ"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="bho-bU-FwD" secondAttribute="bottom" constant="53" id="lvB-Yl-6zL"/>
                             <constraint firstAttribute="bottomMargin" secondItem="M3u-j4-1RD" secondAttribute="bottom" constant="20" id="x5b-ra-OvV"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="zwF-sf-585"/>
                         </constraints>
@@ -94,5 +103,6 @@
     </scenes>
     <resources>
         <image name="add" width="70" height="70"/>
+        <image name="logo" width="117" height="157"/>
     </resources>
 </document>

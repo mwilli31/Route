@@ -34,7 +34,7 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Hey! I want to know where you&apos;re @!</string>
+	<string>Hey! I want to know where you're @!</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>network-authentication</string>
