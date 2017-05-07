@@ -16,5 +16,6 @@ target 'wifi' do
   pod 'KeychainSwift', '~> 7.0'
   pod 'PagingMenuController'
   pod 'lottie-ios'
+  pod "CascadingTableDelegate", "~> 2.0"
 
 end

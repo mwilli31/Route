@@ -1,4 +1,5 @@
 PODS:
+  - CascadingTableDelegate (2.0.4)
   - Firebase/Auth (3.17.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
@@ -65,6 +66,7 @@ PODS:
   - SinchVerification-Swift (2.0.3)
 
 DEPENDENCIES:
+  - CascadingTableDelegate (~> 2.0)
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Crash
@@ -77,6 +79,7 @@ DEPENDENCIES:
   - SinchVerification-Swift
 
 SPEC CHECKSUMS:
+  CascadingTableDelegate: ed32acc7647018e7bbf33a71c1f1c170c751699f
   Firebase: 4b66b5b59c43edac745b87f0c87e42cdd0279c13
   FirebaseAnalytics: e5fe8486efc01bec33f6bf82e2fa9fce4b124052
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
@@ -94,6 +97,6 @@ SPEC CHECKSUMS:
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
   SinchVerification-Swift: 567aaf9cb29c55a115faecb6016fea25a7f37688
 
-PODFILE CHECKSUM: 25b66859924d5953ccd9159ad93ad30f70e2b5f9
+PODFILE CHECKSUM: 8f4f7f41024b1364fcd8ea2e9f8327169a26511d
 
 COCOAPODS: 1.2.1
