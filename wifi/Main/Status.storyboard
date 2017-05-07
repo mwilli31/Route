@@ -51,6 +51,19 @@
                                 </constraints>
                                 <color key="color" red="0.1822144389" green="0.27264380459999998" blue="0.36247467989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bho-bU-FwD">
+                                <rect key="frame" x="158" y="39" width="60" height="85"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9L4-B1-Qor"/>
+                                </constraints>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-yu-f2T">
+                                <rect key="frame" x="31" y="275" width="313" height="249"/>
+                            </mapView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="Gut-1b-3L6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.1822144389" green="0.27264380459999998" blue="0.36247467989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3u-j4-1RD">
                                 <rect key="frame" x="267" y="577" width="70" height="70"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="10" maxY="5"/>
@@ -62,20 +75,13 @@
                                     <segue destination="3gG-se-Q5b" kind="show" id="xMv-QF-cq7"/>
                                 </connections>
                             </button>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bho-bU-FwD">
-                                <rect key="frame" x="158" y="39" width="60" height="85"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="9L4-B1-Qor"/>
-                                </constraints>
-                            </imageView>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-yu-f2T">
-                                <rect key="frame" x="31" y="275" width="313" height="249"/>
-                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.18221443891525269" green="0.2726438045501709" blue="0.36247467994689941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bho-bU-FwD" firstAttribute="centerX" secondItem="K1z-Fs-eDT" secondAttribute="centerX" id="361-rr-8E3"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="4yc-KH-RVZ"/>
+                            <constraint firstItem="fAS-5g-XdW" firstAttribute="top" secondItem="Gut-1b-3L6" secondAttribute="bottom" id="5Zu-i9-4ke"/>
+                            <constraint firstItem="Gut-1b-3L6" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="9sj-eR-8tR"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="top" id="AYA-4C-l6z"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="width" secondItem="CAN-EY-qCK" secondAttribute="width" multiplier="0.8" id="Gkz-Al-e5u"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="19" id="MbC-zL-ZfI"/>
@@ -83,10 +89,13 @@
                             <constraint firstItem="M3u-j4-1RD" firstAttribute="trailing" secondItem="rKZ-jg-d23" secondAttribute="trailing" id="Ofl-Mk-qvS"/>
                             <constraint firstItem="bho-bU-FwD" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="19" id="RP2-jS-Xv4"/>
                             <constraint firstItem="kfC-yu-f2T" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="bottom" constant="34" id="T13-e8-hVv"/>
+                            <constraint firstAttribute="trailing" secondItem="Gut-1b-3L6" secondAttribute="trailing" id="VZQ-4V-oYm"/>
+                            <constraint firstItem="Gut-1b-3L6" firstAttribute="top" secondItem="CAN-EY-qCK" secondAttribute="top" id="aGQ-6z-aOE"/>
                             <constraint firstItem="kfC-yu-f2T" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="cYH-KJ-c2j"/>
                             <constraint firstItem="M3u-j4-1RD" firstAttribute="top" secondItem="kfC-yu-f2T" secondAttribute="bottom" constant="53" id="dcv-mD-zEe"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="120" id="ecH-ga-kXP"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="fmB-sf-OCJ"/>
+                            <constraint firstItem="Gut-1b-3L6" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leading" id="gb6-gA-dCX"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="bho-bU-FwD" secondAttribute="bottom" constant="16" id="lvB-Yl-6zL"/>
                             <constraint firstAttribute="bottom" secondItem="M3u-j4-1RD" secondAttribute="bottom" constant="20" symbolic="YES" id="sTx-VG-OMi"/>
                             <constraint firstItem="kfC-yu-f2T" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" constant="15" id="zco-YY-Pyf"/>
@@ -97,12 +106,13 @@
                         <outlet property="activityIndicator" destination="o7R-39-cSX" id="rzR-YP-kzc"/>
                         <outlet property="mapView" destination="kfC-yu-f2T" id="wtZ-D7-Syv"/>
                         <outlet property="statusLabel" destination="K1z-Fs-eDT" id="MnY-V6-wBI"/>
+                        <outlet property="tableView" destination="Gut-1b-3L6" id="VLX-HJ-BDG"/>
                         <outlet property="wifiSettingsButton" destination="rKZ-jg-d23" id="IVi-4w-SLC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="02b-O0-nE9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="109.59999999999999" y="148.87556221889056"/>
+            <point key="canvasLocation" x="-215.19999999999999" y="63.418290854572717"/>
         </scene>
         <!--AddNetwork-->
         <scene sceneID="8ZN-Xs-won">
