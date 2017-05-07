@@ -72,10 +72,10 @@ extension ProfileViewController: UITableViewDataSource, UITableViewDelegate {
         cell.activeLabel.text = String(network.usersActive)  + " Active"
         cell.allowedLabel.text = String(network.usersAllowed) + " Allowed"
         
-        cell.wifiNameLabel.textColor = Constants.Color.white
-        cell.activeLabel.textColor = Constants.Color.white
-        cell.allowedLabel.textColor = Constants.Color.white
-        cell.backgroundView?.backgroundColor = Constants.Color.blueGrayDark
+        cell.wifiNameLabel.textColor = Constants.Color.mainCardText
+        cell.activeLabel.textColor = Constants.Color.mainCardText
+        cell.allowedLabel.textColor = Constants.Color.mainCardText
+        cell.backgroundView?.backgroundColor = Constants.Color.mainCardBackground //this doesn't work..
         
         // Returning the cell
         return cell

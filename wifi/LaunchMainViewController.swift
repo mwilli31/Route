@@ -16,6 +16,7 @@ class LaunchMainViewController: UIViewController {
         
         // You gotta sign the user out for testing purposes.
 //         UserService.sharedInstance.logoutUser()
+        self.initColors()
         
         //Start the HotspotHelperQueue
         NEHotspotHelperService.sharedInstance.createNEHotspotHelperQueue()
@@ -35,6 +36,11 @@ class LaunchMainViewController: UIViewController {
             self.performSegue(withIdentifier: "PagingMenuViewControllerSegue", sender: nil)
         }
     }
+    
+    private func initColors() {
+        self.view.backgroundColor = Constants.Color.white
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

@@ -13,6 +13,7 @@ import NetworkExtension
 class WifiService {
     
     static let sharedInstance = WifiService()
+
     
     // MARK: Simple Data Collection API's
 
@@ -49,6 +50,7 @@ class WifiService {
 //        //match against network list
 //        if(spots != nil) {
 //            for net in forNetworkList {
+//                let netUUID = net.ssid + "_" + LocationManager.sharedInstance.
 //                print(net.ssid)
 //                print(spots?[net.ssid] ?? "no matching spot")
 //                if(spots![net.ssid] != nil) {

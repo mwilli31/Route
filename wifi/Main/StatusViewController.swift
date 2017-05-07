@@ -8,13 +8,18 @@
 
 import UIKit
 import Lottie
+import MapKit
 
 class StatusViewController: UIViewController {
     @IBOutlet var wifiSettingsButton: UIButton!
     @IBOutlet var statusLabel: UILabel!
+    @IBOutlet var mapView: MKMapView!
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     let connectionStateNotification = Notification.Name(rawValue:Constants.NotificationKeys.connectionStateNotification)
+    let locationNotification = Notification.Name(rawValue:Constants.NotificationKeys.locationNotification)
+    let nc = NotificationCenter.default
+    
     let animationView = LOTAnimationView(name: "RouteLogoBlueBlinking")
 
     class func instantiateFromStoryboard() -> StatusViewController {
@@ -27,8 +32,8 @@ class StatusViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.initColors()
         
-        let nc = NotificationCenter.default
         nc.addObserver(forName:connectionStateNotification, object:nil, queue:nil, using:catchConnectionStateNotification)
+        nc.addObserver(forName:locationNotification, object:nil, queue:nil, using:catchLocationNotification)
         
         self.activityIndicator.hidesWhenStopped=true
 
@@ -94,8 +99,8 @@ class StatusViewController: UIViewController {
             self.wifiSettingsButton.isHidden=true
             self.activityIndicator.hidesWhenStopped=true
             self.activityIndicator.startAnimating()
-//            self.animationView?.play()
-            self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
+            LocationManager.sharedInstance.startGettingLocation()
+//            self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         } else if connectionState == Constants.ConnectionState.Discovered {
             self.wifiSettingsButton.isHidden=false
         } else {
@@ -107,6 +112,32 @@ class StatusViewController: UIViewController {
             self.statusLabel.text = connectionStateMessage
         })
         
-
+    }
+    
+    func catchLocationNotification(notification:Notification) -> Void {
+        print("Catch notification")
+        
+        guard let userInfo = notification.userInfo,
+            let location = userInfo[Constants.NotificationKeys.locationNotificationKey] as? CLLocation,
+            let postalCode = userInfo[Constants.NotificationKeys.locationPostalCodeNotificationKey] as? String else {
+                print("No userInfo found in notification")
+                return
+        }
+        print(postalCode)
+        
+        self.centerMapOnLocation(location: location)
+        self.stopActivityIndicator()
+        
+    }
+    
+    let regionRadius: CLLocationDistance = 300
+    func centerMapOnLocation(location: CLLocation) {
+        let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+                                                                  regionRadius, regionRadius)
+        mapView.setRegion(coordinateRegion, animated: true)
+        
+//        let userLocationAnnotation = MKPointAnnotation()
+//        userLocationAnnotation.coordinate = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+//        mapView.addAnnotation(userLocationAnnotation)
     }
 }

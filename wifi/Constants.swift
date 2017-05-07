@@ -15,6 +15,10 @@ struct Constants {
         static let connectionStateNotificationKey = "connectionState"
         static let connectionStateMessageNotificationKey = "connectionStateMessage"
         
+        static let locationNotification = "ConnectionStateNotification"
+        static let locationNotificationKey = "location"
+        static let locationPostalCodeNotificationKey = "postalCode"
+        
         static let routeACListNotification = "RouteACListNotification"
 //        static let connectionStateNotificationKey = "connectionState"
 //        static let connectionStateMessageNotificationKey = "connectionStateMessage"
@@ -42,15 +46,21 @@ struct Constants {
         static let blueGrayDark = UIColor(r: 47, g: 69, b: 92)
         static let blueMediumMetallic = UIColor(r: 1, g: 159, b: 196)
         static let blueLight = UIColor(r: 30, g: 207, b: 248)
+        static let offWhite = UIColor(r: 238, g: 242, b: 245)
         static let white = UIColor.white
         
         static let button = Color.blueGrayDark
         static let buttonText = Color.white
-        static let background = Color.white
+        static let background = Color.offWhite
         static let mainText = Color.blueGrayDark
         static let headerBackground = Color.blueMediumMetallic
         static let headerText = Color.white
         static let headerIndicator = Color.blueLight
+        
+        //cards colors
+        //main card type
+        static let mainCardBackground = Color.white
+        static let mainCardText = Color.blueGrayDark
 
     }
     

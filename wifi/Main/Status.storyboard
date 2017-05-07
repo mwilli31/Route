@@ -24,13 +24,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Searching for Routes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K1z-Fs-eDT">
-                                <rect key="frame" x="16" y="269" width="343" height="22"/>
+                                <rect key="frame" x="16" y="140" width="343" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rKZ-jg-d23">
-                                <rect key="frame" x="37" y="357" width="300" height="60"/>
+                                <rect key="frame" x="37" y="181" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.99287563562393188" green="0.99362605810165405" blue="0.9929918646812439" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="bHf-ye-uK7"/>
@@ -44,26 +44,33 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="o7R-39-cSX">
-                                <rect key="frame" x="158" y="357" width="60" height="60"/>
+                                <rect key="frame" x="158" y="181" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="2xz-2u-9C6"/>
                                     <constraint firstAttribute="height" constant="60" id="x5p-Gp-vxf"/>
                                 </constraints>
+                                <color key="color" red="0.1822144389" green="0.27264380459999998" blue="0.36247467989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3u-j4-1RD">
-                                <rect key="frame" x="152" y="577" width="70" height="70"/>
+                                <rect key="frame" x="267" y="577" width="70" height="70"/>
                                 <inset key="imageEdgeInsets" minX="5" minY="5" maxX="10" maxY="5"/>
-                                <state key="normal" backgroundImage="add"/>
+                                <size key="titleShadowOffset" width="-2" height="-2"/>
+                                <state key="normal" backgroundImage="add">
+                                    <color key="titleShadowColor" red="0.1822144389" green="0.27264380459999998" blue="0.36247467989999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="3gG-se-Q5b" kind="show" id="xMv-QF-cq7"/>
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="bho-bU-FwD">
-                                <rect key="frame" x="157" y="131" width="60" height="85"/>
+                                <rect key="frame" x="158" y="39" width="60" height="85"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="9L4-B1-Qor"/>
                                 </constraints>
                             </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" scrollEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfC-yu-f2T">
+                                <rect key="frame" x="31" y="275" width="313" height="249"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" red="0.18221443891525269" green="0.2726438045501709" blue="0.36247467994689941" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -71,19 +78,24 @@
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="centerX" secondItem="rKZ-jg-d23" secondAttribute="centerX" id="4yc-KH-RVZ"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="top" id="AYA-4C-l6z"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="width" secondItem="CAN-EY-qCK" secondAttribute="width" multiplier="0.8" id="Gkz-Al-e5u"/>
-                            <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="66" id="MbC-zL-ZfI"/>
+                            <constraint firstItem="o7R-39-cSX" firstAttribute="top" secondItem="K1z-Fs-eDT" secondAttribute="bottom" constant="19" id="MbC-zL-ZfI"/>
                             <constraint firstItem="rKZ-jg-d23" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="OIp-jK-k7r"/>
-                            <constraint firstItem="bho-bU-FwD" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="111" id="RP2-jS-Xv4"/>
-                            <constraint firstItem="M3u-j4-1RD" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="ZRV-9C-Bzg"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="249" id="ecH-ga-kXP"/>
+                            <constraint firstItem="M3u-j4-1RD" firstAttribute="trailing" secondItem="rKZ-jg-d23" secondAttribute="trailing" id="Ofl-Mk-qvS"/>
+                            <constraint firstItem="bho-bU-FwD" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="19" id="RP2-jS-Xv4"/>
+                            <constraint firstItem="kfC-yu-f2T" firstAttribute="top" secondItem="o7R-39-cSX" secondAttribute="bottom" constant="34" id="T13-e8-hVv"/>
+                            <constraint firstItem="kfC-yu-f2T" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="cYH-KJ-c2j"/>
+                            <constraint firstItem="M3u-j4-1RD" firstAttribute="top" secondItem="kfC-yu-f2T" secondAttribute="bottom" constant="53" id="dcv-mD-zEe"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="v5G-DR-Cj4" secondAttribute="bottom" constant="120" id="ecH-ga-kXP"/>
                             <constraint firstItem="K1z-Fs-eDT" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" id="fmB-sf-OCJ"/>
-                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="bho-bU-FwD" secondAttribute="bottom" constant="53" id="lvB-Yl-6zL"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="M3u-j4-1RD" secondAttribute="bottom" constant="20" id="x5b-ra-OvV"/>
+                            <constraint firstItem="K1z-Fs-eDT" firstAttribute="top" secondItem="bho-bU-FwD" secondAttribute="bottom" constant="16" id="lvB-Yl-6zL"/>
+                            <constraint firstAttribute="bottom" secondItem="M3u-j4-1RD" secondAttribute="bottom" constant="20" symbolic="YES" id="sTx-VG-OMi"/>
+                            <constraint firstItem="kfC-yu-f2T" firstAttribute="leading" secondItem="CAN-EY-qCK" secondAttribute="leadingMargin" constant="15" id="zco-YY-Pyf"/>
                             <constraint firstItem="o7R-39-cSX" firstAttribute="centerX" secondItem="CAN-EY-qCK" secondAttribute="centerX" id="zwF-sf-585"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="o7R-39-cSX" id="rzR-YP-kzc"/>
+                        <outlet property="mapView" destination="kfC-yu-f2T" id="wtZ-D7-Syv"/>
                         <outlet property="statusLabel" destination="K1z-Fs-eDT" id="MnY-V6-wBI"/>
                         <outlet property="wifiSettingsButton" destination="rKZ-jg-d23" id="IVi-4w-SLC"/>
                     </connections>

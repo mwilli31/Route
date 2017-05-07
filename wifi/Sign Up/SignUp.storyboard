@@ -31,15 +31,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Join Route!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7k-Ai-4e1">
-                                <rect key="frame" x="107" y="80" width="162.5" height="26.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let's Join Spot!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F7k-Ai-4e1">
+                                <rect key="frame" x="112" y="80" width="151" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2uy-ok-jF0">
-                                <rect key="frame" x="37" y="135" width="300" height="67"/>
-                                <string key="text">By signing up, you agree to our Route Terms and that you have read our Privacy Policy. You may receive SMS Notifications from Route only to verify your phone number.</string>
+                                <rect key="frame" x="37.5" y="136.5" width="300" height="67"/>
+                                <string key="text">By signing up, you agree to Spots Terms and that you have read our Privacy Policy. You may receive SMS Notifications from Spots only to verify your phone number.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.99287563560000003" green="0.99362605810000004" blue="0.9929918647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iju-kq-zi8">
-                                <rect key="frame" x="38" y="231" width="300" height="60"/>
+                                <rect key="frame" x="37" y="232.5" width="300" height="60"/>
                                 <color key="backgroundColor" red="0.99287563560000003" green="0.99362605810000004" blue="0.9929918647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Z6u-2K-ZZr"/>
@@ -388,6 +388,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="w35-AJ-8vp"/>
+        <segue reference="AkN-cq-x8G"/>
     </inferredMetricsTieBreakers>
 </document>
