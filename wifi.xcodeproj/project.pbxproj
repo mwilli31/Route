@@ -393,18 +393,12 @@
 		2751D6001E21BEEB00C1601F /* wifi */ = {
 			isa = PBXGroup;
 			children = (
-				2740EB2D1EBEC81000B11609 /* Extensions */,
-				2740EB331EBEC81000B11609 /* Protocols */,
-				2740EB371EBEC81000B11609 /* RowTableDelegates */,
-				2740EB3A1EBEC81000B11609 /* SectionTableDelegates */,
-				2740EB451EBEC81000B11609 /* ViewModels */,
-				2740EB471EBEC81000B11609 /* Views */,
-				2740EB101EBEC7F400B11609 /* TableViewCells */,
 				2751D6011E21BEEB00C1601F /* AppDelegate.swift */,
 				2751D60D1E21BEEB00C1601F /* LaunchScreen.storyboard */,
 				2751D6031E21BEEB00C1601F /* LaunchMainViewController.swift */,
 				2751D6051E21BEEB00C1601F /* LaunchMain.storyboard */,
 				70A470D51E6FC2E3008FF97B /* Constants.swift */,
+				2740EB2D1EBEC81000B11609 /* Extensions */,
 				274714301EBAE38C0001C0F6 /* Introduction */,
 				27B2C5FE1EA465C900693EA7 /* Animation */,
 				2731149D1E99E2EC002AE7AD /* Services */,
@@ -501,6 +495,12 @@
 		708DA0111EA9B73A004E3E31 /* Status */ = {
 			isa = PBXGroup;
 			children = (
+				2740EB331EBEC81000B11609 /* Protocols */,
+				2740EB371EBEC81000B11609 /* RowTableDelegates */,
+				2740EB3A1EBEC81000B11609 /* SectionTableDelegates */,
+				2740EB451EBEC81000B11609 /* ViewModels */,
+				2740EB471EBEC81000B11609 /* Views */,
+				2740EB101EBEC7F400B11609 /* TableViewCells */,
 				2710E4D91E66915C00F1B40D /* Status.storyboard */,
 				2710E4DA1E66915C00F1B40D /* StatusViewController.swift */,
 			);
