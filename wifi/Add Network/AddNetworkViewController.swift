@@ -25,6 +25,7 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         searchController.dimsBackgroundDuringPresentation = false
         resultsTableview.tableHeaderView = searchController.searchBar
     }
+
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -50,15 +51,15 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func updateSearchResults(for searchController: UISearchController) {
-//        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-//            filteredContacts = unfilteredContacts.filter { team in
-//                return team.lowercased().contains(searchText.lowercased())
-//            }
-//            
-//        } else {
-//            filteredContacts = unfilteredContacts
-//        }
-//        resultsTableview.reloadData()
+        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+            filteredContacts = unfilteredContacts.filter { Contact in
+                return Contact.wifiName.lowercased().contains(searchText.lowercased())
+            }
+            
+        } else {
+            filteredContacts = unfilteredContacts
+        }
+        resultsTableview.reloadData()
     }
     
     @IBAction func sendMessageTest(_ sender: Any) {
