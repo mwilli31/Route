@@ -11,16 +11,15 @@ import UIKit
 class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
     
     @IBOutlet weak var resultsTableview: UITableView!
-    let unfilteredNFLTeams = ["Bengals", "Ravens", "Browns", "Steelers", "Bears", "Lions", "Packers", "Vikings",
-                              "Texans", "Colts", "Jaguars", "Titans", "Falcons", "Panthers", "Saints", "Buccaneers",
-                              "Bills", "Dolphins", "Patriots", "Jets", "Cowboys", "Giants", "Eagles", "Redskins",
-                              "Broncos", "Chiefs", "Raiders", "Chargers", "Cardinals", "Rams", "49ers", "Seahawks"].sorted()
-    var filteredNFLTeams: [String]?
+    var unfilteredContacts = [Contact]()
+    var filteredContacts: [Contact]?
     let searchController = UISearchController(searchResultsController: nil)
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        filteredNFLTeams = unfilteredNFLTeams
+        
+        unfilteredContacts = try! Contact.loadFromPlist()
+        filteredContacts = unfilteredContacts
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
@@ -31,18 +30,19 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let nflTeams = filteredNFLTeams else {
+        guard let contacts = filteredContacts else {
             return 0
         }
-        return nflTeams.count
+        return contacts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
         
-        if let nflTeams = filteredNFLTeams {
-            let team = nflTeams[indexPath.row]
-            cell.textLabel!.text = team
+        if let contacts = filteredContacts {
+            let contact = contacts[indexPath.row]
+            let wifiName = contact.wifiName
+            cell.textLabel!.text = wifiName
         }
         
         return cell
@@ -50,15 +50,15 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     
     
     func updateSearchResults(for searchController: UISearchController) {
-        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
-            filteredNFLTeams = unfilteredNFLTeams.filter { team in
-                return team.lowercased().contains(searchText.lowercased())
-            }
-            
-        } else {
-            filteredNFLTeams = unfilteredNFLTeams
-        }
-        resultsTableview.reloadData()
+//        if let searchText = searchController.searchBar.text, !searchText.isEmpty {
+//            filteredContacts = unfilteredContacts.filter { team in
+//                return team.lowercased().contains(searchText.lowercased())
+//            }
+//            
+//        } else {
+//            filteredContacts = unfilteredContacts
+//        }
+//        resultsTableview.reloadData()
     }
     
     @IBAction func sendMessageTest(_ sender: Any) {
@@ -69,4 +69,47 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         self.dismiss(animated: true, completion: nil)
     }
     
+}
+
+extension Contact {
+    enum ErrorType: Error {
+        case noPlistFile
+        case cannotReadFile
+    }
+    
+    /// Load all the Networks from the plist file
+    static func loadFromPlist() throws -> [Contact] {
+        // First we need to find the plist
+        guard let file = Bundle.main.path(forResource: "Contacts", ofType: "plist") else {
+            throw ErrorType.noPlistFile
+        }
+        
+        // Then we read it as an array of dict
+        guard let array = NSArray(contentsOfFile: file) as? [[String: AnyObject]] else {
+            throw ErrorType.cannotReadFile
+        }
+        
+        // Initialize the array
+        var contacts: [Contact] = []
+        
+        // For each dictionary
+        for dict in array {
+            // We implement the Contact
+            let contact = Contact.from(dict: dict)
+            // And add it to the array
+            contacts.append(contact)
+        }
+        
+        // Return all Networks
+        return contacts
+    }
+    
+    /// Create an network corresponding to the given dict
+    static func from(dict: [String: AnyObject]) -> Contact {
+        let wifiName = dict["name"] as! String
+        let ownerName = dict["owner"] as! String
+        let ownerUUID = dict["ownerUUID"] as! String
+        
+        return Contact(wifiName: wifiName, ownerName: ownerName, ownerUUID: ownerUUID)
+    }
 }
