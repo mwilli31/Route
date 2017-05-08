@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12118"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SectionFooterView" customModule="wifi" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PEN-QM-kgq">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="20"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ly5-rR-CIx">
+                            <rect key="frame" x="10" y="0.0" width="355" height="10"/>
+                            <color key="backgroundColor" red="0.18554249410000001" green="0.95259636640000001" blue="0.76717829699999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="10" id="hMF-sv-Rnu"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="ly5-rR-CIx" secondAttribute="trailing" constant="10" id="3lS-zl-1sQ"/>
+                        <constraint firstItem="ly5-rR-CIx" firstAttribute="leading" secondItem="PEN-QM-kgq" secondAttribute="leading" constant="10" id="6tV-xj-6mw"/>
+                        <constraint firstItem="ly5-rR-CIx" firstAttribute="top" secondItem="PEN-QM-kgq" secondAttribute="top" id="ilG-SB-Dq4"/>
+                        <constraint firstAttribute="height" constant="20" id="ngO-vS-CiM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.93158215284347534" green="0.9493369460105896" blue="0.9624449610710144" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="PEN-QM-kgq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="CX9-0n-pPi"/>
+                <constraint firstAttribute="trailing" secondItem="PEN-QM-kgq" secondAttribute="trailing" id="PMo-Ol-B6h"/>
+                <constraint firstItem="PEN-QM-kgq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="iUZ-81-qNJ"/>
+            </constraints>
+            <connections>
+                <outlet property="innerView" destination="ly5-rR-CIx" id="9eA-2b-Upd"/>
+                <outlet property="outerView" destination="PEN-QM-kgq" id="bFN-ts-YpK"/>
+            </connections>
+            <point key="canvasLocation" x="33.5" y="48.5"/>
+        </view>
+    </objects>
+</document>

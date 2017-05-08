@@ -15,8 +15,9 @@ class DestinationInfoMapSectionDelegate: CascadingBareTableDelegate {
 	
 	fileprivate var viewModel: DestinationInfoSectionViewModel?
 	
-	fileprivate var headerView = SectionHeaderView.view(headerText: "INFORMATION")
-	
+	fileprivate var headerView = SectionHeaderView.view(headerText: "Nearby Spots", cardColor: Constants.Color.mapCardBackground)
+    fileprivate var footerView = SectionFooterView.view(cardColor: Constants.Color.mapCardBackground)
+    
 	convenience init(viewModel: DestinationInfoSectionViewModel? = nil) {
 		self.init(index: 0, childDelegates: [])
 		
@@ -65,7 +66,11 @@ extension DestinationInfoMapSectionDelegate {
 	func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
 		return headerView
 	}
-	
+
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return footerView
+    }
+    
 	func tableView(_ tableView: UITableView, heightForRowAtIndexPath indexPath: IndexPath) -> CGFloat {
 		
 		return DestinationMapCell.preferredHeight()
@@ -77,7 +82,7 @@ extension DestinationInfoMapSectionDelegate {
 	}
 	
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-		return CGFloat(1.1)
+		return SectionFooterView.preferredHeight()
 	}
 	
 	func tableView(_ tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {

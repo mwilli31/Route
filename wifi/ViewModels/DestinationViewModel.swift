@@ -22,7 +22,10 @@ class DestinationViewModel {
 	// MARK: - Private properties
 	
 	fileprivate var _topPhoto: UIImage?
-	fileprivate var _description: String?
+    fileprivate var _iconImage: UIImage?
+    fileprivate var _topPhotoQuote: String?
+
+    fileprivate var _description: String?
 	fileprivate var _destinationName: String?
 	fileprivate var _locationName: String?
 	
@@ -60,8 +63,17 @@ class DestinationViewModel {
 	// MARK: - Private methods
 	
 	fileprivate func updateHeaderSectionProperties() {
-		_topPhoto = UIImage(named: "vacation-place")
-		
+		_topPhoto = UIImage(named: "ProfileBackground")
+        _iconImage = UIImage(named: "logo")
+        
+        let array = ["Home is where WiFi connects automatically",
+                     "...\'Be Strong!\'...I whispered to my WiFi signal",
+                     "WiFi went down for 5 minutes, so I had to talk to my family. They seem nice...",
+                     "True friendship is when you walk into their house and your phone connects to their WiFi automatically",
+                     "It's all good until you find out your WiFi is down"]
+        let randomIndex = Int(arc4random_uniform(UInt32(array.count)))
+        _topPhotoQuote = array[randomIndex]
+        
 		_destinationName = "Under The Stars"
 		_locationName = "Hyrum State Park, Utah"
 		
@@ -113,7 +125,15 @@ extension DestinationViewModel: DestinationHeaderSectionViewModel {
 	var topPhoto: UIImage? {
 		return _topPhoto
 	}
-	
+
+    var iconImage: UIImage? {
+        return _iconImage
+    }
+    
+    var topPhotoQuote: String? {
+        return _topPhotoQuote
+    }
+    
 	var description: String? {
 		return _description
 	}

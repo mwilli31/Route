@@ -17,5 +17,6 @@ target 'wifi' do
   pod 'PagingMenuController'
   pod 'lottie-ios'
   pod "CascadingTableDelegate", "~> 2.0"
+  pod 'PureLayout'
 
 end

@@ -63,6 +63,7 @@ PODS:
   - PhoneNumberKit/UIKit (1.2.3):
     - PhoneNumberKit/PhoneNumberKitCore
   - Protobuf (3.3.0)
+  - PureLayout (3.0.2)
   - SinchVerification-Swift (2.0.3)
 
 DEPENDENCIES:
@@ -76,6 +77,7 @@ DEPENDENCIES:
   - lottie-ios
   - PagingMenuController
   - PhoneNumberKit
+  - PureLayout
   - SinchVerification-Swift
 
 SPEC CHECKSUMS:
@@ -95,8 +97,9 @@ SPEC CHECKSUMS:
   PagingMenuController: 6176618987bb170096664f2da097313e45ed9c31
   PhoneNumberKit: 1e5cca669113fc361a8c82ec1ee559c62b8cd0f7
   Protobuf: d582fecf68201eac3d79ed61369ef45734394b9c
+  PureLayout: 4d550abe49a94f24c2808b9b95db9131685fe4cd
   SinchVerification-Swift: 567aaf9cb29c55a115faecb6016fea25a7f37688
 
-PODFILE CHECKSUM: 8f4f7f41024b1364fcd8ea2e9f8327169a26511d
+PODFILE CHECKSUM: 48b1fd4143b94dd024077fed4e9f2ec00926e599
 
 COCOAPODS: 1.2.1

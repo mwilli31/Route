@@ -14,7 +14,7 @@ class DestinationHeaderSectionDelegate: NSObject {
 	enum Row: Int {
 		case topPhoto = 0, name, description
 		
-		static let allValues: [Row] = [ .topPhoto, .name, .description ]
+		static let allValues: [Row] = [ .topPhoto]
 		
 		var cellIdentifier: String {
 			switch self {
@@ -133,7 +133,7 @@ extension DestinationHeaderSectionDelegate: UITableViewDelegate {
 		}
 		
 		if let cell = cell as? DestinationTopPhotoCell , row == .topPhoto {
-			cell.configure(image: viewModel?.topPhoto)
+            cell.configure(image: viewModel?.topPhoto, quote: viewModel?.topPhotoQuote)
 		}
 		
 		if let cell = cell as? DestinationNameCell , row == .name {

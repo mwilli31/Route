@@ -86,6 +86,8 @@
 		27B9A8291E882F340091C152 /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */; };
 		27B9A82B1E91ABE00091C152 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27B9A82A1E91ABE00091C152 /* Network.swift */; };
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
+		27DFEE5A1EBFF848002B213B /* SectionFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DFEE581EBFF848002B213B /* SectionFooterView.swift */; };
+		27DFEE5B1EBFF848002B213B /* SectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DFEE591EBFF848002B213B /* SectionFooterView.xib */; };
 		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* RouteAC.swift */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
@@ -201,6 +203,8 @@
 		27B9A8281E882F340091C152 /* NetworkTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NetworkTableViewCell.swift; path = Main/NetworkTableViewCell.swift; sourceTree = "<group>"; };
 		27B9A82A1E91ABE00091C152 /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Main/Network.swift; sourceTree = "<group>"; };
 		27B9A82C1E91AC520091C152 /* Networks.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Networks.plist; path = Main/Networks.plist; sourceTree = "<group>"; };
+		27DFEE581EBFF848002B213B /* SectionFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionFooterView.swift; sourceTree = "<group>"; };
+		27DFEE591EBFF848002B213B /* SectionFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SectionFooterView.xib; sourceTree = "<group>"; };
 		395BC8A7FF4BA5149051EB26 /* Pods-wifi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.release.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.release.xcconfig"; sourceTree = "<group>"; };
 		61B5F95D135837E35602E7AF /* Pods_wifiTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_wifiTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
@@ -340,6 +344,8 @@
 				2740EB4B1EBEC81000B11609 /* ReviewSectionFooterView.xib */,
 				2740EB4C1EBEC81000B11609 /* SectionHeaderView.swift */,
 				2740EB4D1EBEC81000B11609 /* SectionHeaderView.xib */,
+				27DFEE581EBFF848002B213B /* SectionFooterView.swift */,
+				27DFEE591EBFF848002B213B /* SectionFooterView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -668,6 +674,7 @@
 				279A1F7C1E77D5A30094A33B /* PagingMenuViewController.storyboard in Resources */,
 				2751D60F1E21BEEB00C1601F /* LaunchScreen.storyboard in Resources */,
 				703C6B0C1E6C99D000C829FB /* (null) in Resources */,
+				27DFEE5B1EBFF848002B213B /* SectionFooterView.xib in Resources */,
 				2740EB2C1EBEC7F400B11609 /* DestinationTopPhotoCell.xib in Resources */,
 				27B9A82D1E91AC520091C152 /* Networks.plist in Resources */,
 				2740EB281EBEC7F400B11609 /* DestinationReviewRatingCell.xib in Resources */,
@@ -817,6 +824,7 @@
 				2751D6021E21BEEB00C1601F /* AppDelegate.swift in Sources */,
 				2740EB521EBEC81000B11609 /* UIView+RoundedCorner.swift in Sources */,
 				2740EB531EBEC81000B11609 /* DestinationHeaderSectionViewModel.swift in Sources */,
+				27DFEE5A1EBFF848002B213B /* SectionFooterView.swift in Sources */,
 				2740EB5A1EBEC81000B11609 /* DestinationInfoMapSectionDelegate.swift in Sources */,
 				2740EB541EBEC81000B11609 /* DestinationInfoSectionViewModel.swift in Sources */,
 			);

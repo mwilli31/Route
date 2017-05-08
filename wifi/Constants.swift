@@ -46,6 +46,7 @@ struct Constants {
         static let blueGrayDark = UIColor(r: 47, g: 69, b: 92)
         static let blueMediumMetallic = UIColor(r: 1, g: 159, b: 196)
         static let blueLight = UIColor(r: 30, g: 207, b: 248)
+        static let tealGreen = UIColor(r: 52, g: 245, b: 198)
         static let offWhite = UIColor(r: 238, g: 242, b: 245)
         static let white = UIColor.white
         
@@ -61,6 +62,16 @@ struct Constants {
         //main card type
         static let mainCardBackground = Color.white
         static let mainCardText = Color.blueGrayDark
+        
+        //map card type
+        static let mapCardBackground = Color.tealGreen
+        static let mapCardText = Color.blueGrayDark
+
+    }
+    
+    struct CardView {
+        static let cornerRadius = CGFloat(10.0)
+        static let mapZoom = 300.0
 
     }
     

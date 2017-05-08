@@ -1,5 +1,5 @@
 //
-//  SectionHeaderView.swift
+//  SectionFooterView.swift
 //  CascadingTableDelegate
 //
 //  Created by Ricardo Pramana Suranta on 10/31/16.
@@ -8,9 +8,10 @@
 
 import UIKit
 
-class SectionHeaderView: UIView {
+class SectionFooterView: UIView {
 
-	@IBOutlet fileprivate weak var headerLabel: UILabel!
+    @IBOutlet fileprivate weak var innerView: UIView!
+    @IBOutlet fileprivate weak var outerView: UIView!
 	
 	/**
 	Preferred height for displaying this class' instance.
@@ -18,32 +19,34 @@ class SectionHeaderView: UIView {
 	- returns: `CGFloat` value.
 	*/
 	static func preferredHeight() -> CGFloat {
-		return CGFloat(41)
+		return CGFloat(20.0)
 	}
 	
-	static func view(headerText: String) -> SectionHeaderView {
+    static func view(cardColor: UIColor) -> SectionFooterView {
 		
 		let mainBundle = Bundle.main
-		let nibs = mainBundle.loadNibNamed("SectionHeaderView", owner: nil, options: nil)
+		let nibs = mainBundle.loadNibNamed("SectionFooterView", owner: nil, options: nil)
 		
-		if let headerView = nibs?.first as? SectionHeaderView {
-			
-			headerView.configure(headerText: headerText)
-			return headerView
+		if let footerView = nibs?.first as? SectionFooterView {
+            footerView.backgroundColor = Constants.Color.background
+            footerView.outerView.backgroundColor = Constants.Color.background
+            return initInnerView(footerView: footerView, backgroundColor: cardColor)
 		}
 		
-		let headerView = SectionHeaderView()
-		headerView.configure(headerText: headerText)
-		
-		return headerView
-	}			
+		let footerView = SectionFooterView()
+		return footerView
+	}
+    
+    static func initInnerView(footerView: SectionFooterView, backgroundColor: UIColor) -> SectionFooterView {
+        footerView.innerView.backgroundColor = backgroundColor
+        footerView.innerView.round(corners: [UIRectCorner.bottomLeft, UIRectCorner.bottomRight], radius: Constants.CardView.cornerRadius)
+//        footerView.innerView.layer.cornerRadius = Constants.CardView.cornerRadius
+//        footerView.innerView.clipsToBounds = true
+        return footerView
+    }
 	
 	override func awakeFromNib() {
 		super.awakeFromNib()
-		headerLabel?.text = nil
 	}
 	
-	func configure(headerText: String) {
-		headerLabel?.text = headerText
-	}
 }

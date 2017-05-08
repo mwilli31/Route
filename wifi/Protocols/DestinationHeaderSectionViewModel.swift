@@ -17,6 +17,10 @@ protocol DestinationHeaderSectionViewModelObserver: class {
 protocol DestinationHeaderSectionViewModel: class {
 	
 	var topPhoto: UIImage? { get }
+    
+    var iconImage: UIImage? { get }
+    
+    var topPhotoQuote: String? { get }
 	
 	var destinationName: String? { get }
 	var locationName: String? { get }

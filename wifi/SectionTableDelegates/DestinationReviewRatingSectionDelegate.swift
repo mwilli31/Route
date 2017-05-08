@@ -37,7 +37,7 @@ class DestinationReviewRatingSectionDelegate: NSObject {
 		self.index = index
 		self.childDelegates = childDelegates
 		
-		headerview = SectionHeaderView.view(headerText: "REVIEW")
+		headerview = SectionHeaderView.view(headerText: "REVIEW", cardColor: Constants.Color.mapCardBackground)
 		footerView = EmptyContentView.view()
 	}
 	

@@ -15,8 +15,9 @@ class EmptyContentView: UIView {
 		
 		let mainBundle = Bundle.main
 		let nibs = mainBundle.loadNibNamed("EmptyContentView", owner: nil, options: nil)
-		
-		return nibs!.first as? EmptyContentView ?? EmptyContentView()
-	}
-	
+        
+        return nibs!.first as? EmptyContentView ?? EmptyContentView()
+    }
+    
+    
 }

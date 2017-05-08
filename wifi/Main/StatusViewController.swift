@@ -60,6 +60,7 @@ class StatusViewController: UIViewController {
 //        configureNavBarStyle()
         
         createRootDelegate()
+        
     }
     
     private func initAnimationView() {
@@ -118,7 +119,6 @@ class StatusViewController: UIViewController {
             self.activityIndicator.hidesWhenStopped=true
             self.activityIndicator.startAnimating()
             LocationManager.sharedInstance.startGettingLocation()
-//            self.perform(#selector(self.stopActivityIndicator), with: nil, afterDelay: TimeInterval(Constants.TimersAndDelays.discoveringRoutesTimer))
         } else if connectionState == Constants.ConnectionState.Discovered {
             self.wifiSettingsButton.isHidden=false
         } else {
@@ -171,6 +171,8 @@ class StatusViewController: UIViewController {
         refreshControl.addTarget(self, action: #selector(StatusViewController.refreshData), for: .valueChanged)
         
         tableView.addSubview(refreshControl)
+        
+        refreshData()
     }
     
     fileprivate func configureNavBarStyle() {

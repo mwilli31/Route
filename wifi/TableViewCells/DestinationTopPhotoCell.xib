@@ -6,32 +6,53 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DestinationTopPhotoCell" rowHeight="357" id="KGk-i7-Jjw" customClass="DestinationTopPhotoCell" customModule="CascadingTableDelegate_Example" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DestinationTopPhotoCell" rowHeight="357" id="KGk-i7-Jjw" customClass="DestinationTopPhotoCell" customModule="wifi" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="357"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="356.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bdE-Z5-gxG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="356"/>
                         <color key="backgroundColor" red="0.24313725531101227" green="0.29019609093666077" blue="0.34509804844856262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to your quote of the day" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="591-s0-Wcn">
+                        <rect key="frame" x="18" y="200" width="285" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.99287563560000003" green="0.99362605810000004" blue="0.9929918647" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-PL-fHj">
+                        <rect key="frame" x="130" y="108" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="31F-st-Uc6"/>
+                            <constraint firstAttribute="width" constant="60" id="O8w-jX-2zV"/>
+                        </constraints>
+                    </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="591-s0-Wcn" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="30" id="7JC-mv-ngp"/>
+                    <constraint firstItem="rxe-PL-fHj" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="Fbe-Nx-bak"/>
                     <constraint firstItem="bdE-Z5-gxG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HpB-CP-CFF"/>
                     <constraint firstAttribute="trailing" secondItem="bdE-Z5-gxG" secondAttribute="trailing" id="RwN-g8-oBC"/>
+                    <constraint firstItem="591-s0-Wcn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Tls-Ez-RbL"/>
                     <constraint firstAttribute="bottom" secondItem="bdE-Z5-gxG" secondAttribute="bottom" id="ca0-wJ-4Cd"/>
+                    <constraint firstItem="rxe-PL-fHj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-40" id="d9p-gW-d0M"/>
                     <constraint firstAttribute="leading" secondItem="bdE-Z5-gxG" secondAttribute="leading" id="djK-21-xgU"/>
+                    <constraint firstItem="591-s0-Wcn" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="kGe-rm-g9W"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="logoImageView" destination="rxe-PL-fHj" id="ImF-IE-Igj"/>
                 <outlet property="photoImageView" destination="bdE-Z5-gxG" id="R4l-mL-0Fl"/>
+                <outlet property="quoteLabel" destination="591-s0-Wcn" id="N3g-g8-t2y"/>
             </connections>
             <point key="canvasLocation" x="426" y="485.5"/>
         </tableViewCell>

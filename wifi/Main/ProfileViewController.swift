@@ -12,6 +12,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var networkTableView: UITableView!
     @IBOutlet var usernameLabel: UILabel!
     @IBOutlet var addSpotButton: UIButton!
+    @IBOutlet weak var headerImageView: UIImageView!
     
     var networks: [Network] = []
     
@@ -38,6 +39,12 @@ class ProfileViewController: UIViewController {
         self.usernameLabel.textColor = Constants.Color.mainText
         self.addSpotButton.backgroundColor = Constants.Color.button
         self.addSpotButton.setTitleColor(Constants.Color.buttonText, for: UIControlState.normal)
+        
+        let visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.light))
+        
+        visualEffectView.frame = self.headerImageView.bounds
+        visualEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.headerImageView.addSubview(visualEffectView)
     }
     
     override func didReceiveMemoryWarning() {
