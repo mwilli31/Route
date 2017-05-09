@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating {
+class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchResultsUpdating, UISearchBarDelegate {
     
     @IBOutlet weak var resultsTableview: UITableView!
     var unfilteredContacts = [Contact]()
@@ -20,11 +20,17 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         
         unfilteredContacts = try! Contact.loadFromPlist()
         filteredContacts = unfilteredContacts
+        
+        searchController.searchBar.showsCancelButton = true
+        searchController.searchBar.delegate = self
         searchController.searchResultsUpdater = self
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.dimsBackgroundDuringPresentation = false
-        resultsTableview.tableHeaderView = searchController.searchBar
+        searchController.searchBar.barTintColor = Constants.Color.headerBackground
+        
+        self.navigationItem.titleView = searchController.searchBar
     }
+    
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -62,12 +68,12 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         resultsTableview.reloadData()
     }
     
-    @IBAction func sendMessageTest(_ sender: Any) {
-        Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        self.dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func dismiss(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+    @IBAction func sendMessageTest(_ sender: Any) {
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
     }
     
 }
