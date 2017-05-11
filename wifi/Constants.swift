@@ -62,6 +62,10 @@ struct Constants {
         //main card type
         static let mainCardBackground = Color.white
         static let mainCardText = Color.blueGrayDark
+
+        //status discovering card type
+        static let connectionStateCardBackground = Color.blueLight
+        static let connectionStateCardText = Color.blueGrayDark
         
         //map card type
         static let mapCardBackground = Color.tealGreen

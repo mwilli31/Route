@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Rebellious Amish Family</string>
+		<key>owner</key>
+		<string>Otis McSmith</string>
+		<key>ownerUUID</key>
+		<string>d0jTtvQEFhR535LffGbO9ybgsQk2
+ </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Shah Family</string>
+		<key>owner</key>
+		<string>Sajay Shah</string>
+		<key>ownerUUID</key>
+		<string>xWaB0iboEaNz5RNrDoc5hxb6gbo1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>DropTheMike-5G</string>
+		<key>owner</key>
+		<string>Michael Williams</string>
+		<key>ownerUUID</key>
+		<string>SI6NhWoMI9fHcGNGtXUMujaPuK23</string>
+	</dict>
+</array>
+</plist>

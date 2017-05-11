@@ -105,7 +105,7 @@ extension DestinationHeaderSectionDelegate: UITableViewDelegate {
 
 	
 	func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-		return CGFloat(1.1)
+		return CGFloat(0.1)
 	}
 	
 	func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {

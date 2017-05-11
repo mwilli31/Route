@@ -22,6 +22,9 @@
 		2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */; };
 		2731149F1E9C74DF002AE7AD /* NEHotspotHelperService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */; };
 		273114A11E9C7FE4002AE7AD /* WifiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273114A01E9C7FE4002AE7AD /* WifiService.swift */; };
+		273459A91EC4310B0080077E /* DestinationConnectionStateSectionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273459A81EC4310B0080077E /* DestinationConnectionStateSectionDelegate.swift */; };
+		273459AC1EC4311B0080077E /* ConnectionStateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273459AA1EC4311B0080077E /* ConnectionStateCell.swift */; };
+		273459AD1EC4311B0080077E /* ConnectionStateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 273459AB1EC4311B0080077E /* ConnectionStateCell.xib */; };
 		2740EB0F1EBE359E00B11609 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740EB0E1EBE359E00B11609 /* LocationManager.swift */; };
 		2740EB1F1EBEC7F400B11609 /* DestinationDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2740EB111EBEC7F400B11609 /* DestinationDescriptionCell.swift */; };
 		2740EB201EBEC7F400B11609 /* DestinationDescriptionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2740EB121EBEC7F400B11609 /* DestinationDescriptionCell.xib */; };
@@ -90,6 +93,8 @@
 		27DFEE5B1EBFF848002B213B /* SectionFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 27DFEE591EBFF848002B213B /* SectionFooterView.xib */; };
 		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* RouteAC.swift */; };
+		707F93A41EBFFCFD001B2A21 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 707F93A31EBFFCFD001B2A21 /* Contacts.plist */; };
+		707F93A61EC000AE001B2A21 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F93A51EC000AE001B2A21 /* Contact.swift */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* Constants.swift */; };
 		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
@@ -132,6 +137,9 @@
 		2731149B1E99E263002AE7AD /* FirebaseWifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseWifiService.swift; sourceTree = "<group>"; };
 		2731149E1E9C74DF002AE7AD /* NEHotspotHelperService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NEHotspotHelperService.swift; path = Services/NEHotspotHelperService.swift; sourceTree = "<group>"; };
 		273114A01E9C7FE4002AE7AD /* WifiService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WifiService.swift; path = Services/WifiService.swift; sourceTree = "<group>"; };
+		273459A81EC4310B0080077E /* DestinationConnectionStateSectionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationConnectionStateSectionDelegate.swift; sourceTree = "<group>"; };
+		273459AA1EC4311B0080077E /* ConnectionStateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionStateCell.swift; sourceTree = "<group>"; };
+		273459AB1EC4311B0080077E /* ConnectionStateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ConnectionStateCell.xib; sourceTree = "<group>"; };
 		2740EB0E1EBE359E00B11609 /* LocationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationManager.swift; path = Services/LocationManager.swift; sourceTree = "<group>"; };
 		2740EB111EBEC7F400B11609 /* DestinationDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationDescriptionCell.swift; sourceTree = "<group>"; };
 		2740EB121EBEC7F400B11609 /* DestinationDescriptionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DestinationDescriptionCell.xib; sourceTree = "<group>"; };
@@ -210,6 +218,8 @@
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
 		703D97D61EB51AF900000643 /* route.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.mobileprovision; sourceTree = "<group>"; };
 		705CE65F1EA7106F007D1461 /* RouteAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAC.swift; sourceTree = "<group>"; };
+		707F93A31EBFFCFD001B2A21 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = "Add Network/Contacts.plist"; sourceTree = "<group>"; };
+		707F93A51EC000AE001B2A21 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70A470D51E6FC2E3008FF97B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
@@ -266,6 +276,8 @@
 		2740EB101EBEC7F400B11609 /* TableViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				273459AA1EC4311B0080077E /* ConnectionStateCell.swift */,
+				273459AB1EC4311B0080077E /* ConnectionStateCell.xib */,
 				2740EB111EBEC7F400B11609 /* DestinationDescriptionCell.swift */,
 				2740EB121EBEC7F400B11609 /* DestinationDescriptionCell.xib */,
 				2740EB131EBEC7F400B11609 /* DestinationInfoCell.swift */,
@@ -318,6 +330,7 @@
 		2740EB3A1EBEC81000B11609 /* SectionTableDelegates */ = {
 			isa = PBXGroup;
 			children = (
+				273459A81EC4310B0080077E /* DestinationConnectionStateSectionDelegate.swift */,
 				2740EB3B1EBEC81000B11609 /* DestinationHeaderSectionDelegate.swift */,
 				2740EB3C1EBEC81000B11609 /* DestinationInfoListSectionDelegate.swift */,
 				2740EB3D1EBEC81000B11609 /* DestinationInfoMapSectionDelegate.swift */,
@@ -354,6 +367,8 @@
 			isa = PBXGroup;
 			children = (
 				2745D12E1EAF011600A10C9F /* AddNetwork.storyboard */,
+				707F93A31EBFFCFD001B2A21 /* Contacts.plist */,
+				707F93A51EC000AE001B2A21 /* Contact.swift */,
 				2745D1301EAF01D000A10C9F /* AddNetworkViewController.swift */,
 			);
 			name = "Add Network";
@@ -693,7 +708,9 @@
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
 				2748EB0A1EA7017800C6271A /* RouteLogoBlueBlinking.json in Resources */,
 				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
+				273459AD1EC4311B0080077E /* ConnectionStateCell.xib in Resources */,
 				2740EB671EBEC81000B11609 /* SectionHeaderView.xib in Resources */,
+				707F93A41EBFFCFD001B2A21 /* Contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -771,6 +788,7 @@
 				2740EB621EBEC81000B11609 /* EmptyContentView.swift in Sources */,
 				278F4B781E6E3ECC00B7F656 /* LogInPhoneNumberViewController.swift in Sources */,
 				279A1F841E77E0550094A33B /* RequestsViewController.swift in Sources */,
+				273459AC1EC4311B0080077E /* ConnectionStateCell.swift in Sources */,
 				70C6152C1EAC461600814AF5 /* AddRouteNameViewController.swift in Sources */,
 				2710E4DC1E66915C00F1B40D /* StatusViewController.swift in Sources */,
 				70C6152E1EB043FB00814AF5 /* Route.swift in Sources */,
@@ -809,11 +827,13 @@
 				2740EB571EBEC81000B11609 /* DestinationReviewUserRowDelegate.swift in Sources */,
 				2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
+				707F93A61EC000AE001B2A21 /* Contact.swift in Sources */,
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,
 				2740EB5C1EBEC81000B11609 /* DestinationReviewUserSectionDelegate.swift in Sources */,
 				2745D1311EAF01D000A10C9F /* AddNetworkViewController.swift in Sources */,
 				2710E4EA1E66920000F1B40D /* SignUpCompleteViewController.swift in Sources */,
 				70C615251EAC419C00814AF5 /* AddRouteSSIDViewController.swift in Sources */,
+				273459A91EC4310B0080077E /* DestinationConnectionStateSectionDelegate.swift in Sources */,
 				2740EB231EBEC7F400B11609 /* DestinationMapCell.swift in Sources */,
 				2740EB4F1EBEC81000B11609 /* UIColor+CSTAdditions.swift in Sources */,
 				2740EB2B1EBEC7F400B11609 /* DestinationTopPhotoCell.swift in Sources */,
