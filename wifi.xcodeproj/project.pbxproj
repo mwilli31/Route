@@ -52,6 +52,8 @@
 		27B9A82D1E91AC520091C152 /* Networks.plist in Resources */ = {isa = PBXBuildFile; fileRef = 27B9A82C1E91AC520091C152 /* Networks.plist */; };
 		703C6B0C1E6C99D000C829FB /* (null) in Resources */ = {isa = PBXBuildFile; };
 		705CE6601EA7106F007D1461 /* RouteAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705CE65F1EA7106F007D1461 /* RouteAC.swift */; };
+		707F93A41EBFFCFD001B2A21 /* Contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 707F93A31EBFFCFD001B2A21 /* Contacts.plist */; };
+		707F93A61EC000AE001B2A21 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707F93A51EC000AE001B2A21 /* Contact.swift */; };
 		709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */; };
 		70A470D61E6FC2E3008FF97B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D51E6FC2E3008FF97B /* Constants.swift */; };
 		70A470D81E6FD401008FF97B /* SignUpLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */; };
@@ -134,6 +136,8 @@
 		6D302D942481B69C0BA49031 /* Pods-wifi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-wifi.debug.xcconfig"; path = "Pods/Target Support Files/Pods-wifi/Pods-wifi.debug.xcconfig"; sourceTree = "<group>"; };
 		703D97D61EB51AF900000643 /* route.mobileprovision */ = {isa = PBXFileReference; lastKnownFileType = file; path = route.mobileprovision; sourceTree = "<group>"; };
 		705CE65F1EA7106F007D1461 /* RouteAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouteAC.swift; sourceTree = "<group>"; };
+		707F93A31EBFFCFD001B2A21 /* Contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Contacts.plist; path = "Add Network/Contacts.plist"; sourceTree = "<group>"; };
+		707F93A51EC000AE001B2A21 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		709710BB1E6CF6D7007DA7CA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		70A470D51E6FC2E3008FF97B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		70A470D71E6FD401008FF97B /* SignUpLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpLoginViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				2745D12E1EAF011600A10C9F /* AddNetwork.storyboard */,
+				707F93A31EBFFCFD001B2A21 /* Contacts.plist */,
+				707F93A51EC000AE001B2A21 /* Contact.swift */,
 				2745D1301EAF01D000A10C9F /* AddNetworkViewController.swift */,
 			);
 			name = "Add Network";
@@ -513,6 +519,7 @@
 				2710E4E51E66920000F1B40D /* SignUp.storyboard in Resources */,
 				2748EB0A1EA7017800C6271A /* RouteLogoBlueBlinking.json in Resources */,
 				709710BC1E6CF6D7007DA7CA /* GoogleService-Info.plist in Resources */,
+				707F93A41EBFFCFD001B2A21 /* Contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,7 +582,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -612,6 +619,7 @@
 				2751D60A1E21BEEB00C1601F /* wifi.xcdatamodeld in Sources */,
 				2731149C1E99E263002AE7AD /* FirebaseWifiService.swift in Sources */,
 				2710E4E41E66920000F1B40D /* CreateUsernameViewController.swift in Sources */,
+				707F93A61EC000AE001B2A21 /* Contact.swift in Sources */,
 				2710E4E61E66920000F1B40D /* SignupPhoneNumberViewController.swift in Sources */,
 				2745D1311EAF01D000A10C9F /* AddNetworkViewController.swift in Sources */,
 				2710E4EA1E66920000F1B40D /* SignUpCompleteViewController.swift in Sources */,
