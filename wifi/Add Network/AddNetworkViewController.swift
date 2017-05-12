@@ -55,6 +55,10 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "ShahFamily", ownerUUID: "xWaB0iboEaNz5RNrDoc5hxb6gbo1")
+    }
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
@@ -74,6 +78,10 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     
     @IBAction func sendMessageTest(_ sender: Any) {
         Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
+    }
+    
+    deinit {
+        self.searchController.view.removeFromSuperview()
     }
     
 }

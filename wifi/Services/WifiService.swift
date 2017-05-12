@@ -77,11 +77,23 @@ class WifiService {
         }
     }
     
-    func postNetworkAccessRequests(fromUserUUID: String, timestamp: String, networkUUID: String) {
-        FirebaseWifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+    func postNetworkAccessRequest(fromRequesterUUID: String, timestamp: String, networkUUID: String, requesterName: String, requesterPhoneNumber: String) {
+        FirebaseWifiService.sharedInstance.postNetworkAccessRequest(
+            fromRequesterUUID: fromRequesterUUID,
+            timestamp: timestamp,
+            networkUUID: networkUUID,
+            requesterName: requesterName,
+            requesterPhoneNumber: requesterPhoneNumber
+        )
+        
+        
         let userData: [String:String] = [
             networkUUID: timestamp
         ]
-        RouteAC.sharedInstance.addAccessRequest(fromUserUUID: fromUserUUID, value: userData as NSDictionary)
+        RouteAC.sharedInstance.addAccessRequest(fromRequesterUUID: fromRequesterUUID, value: userData as NSDictionary)
+    }
+    
+    func purgeUserDataInclusive(fromRef: String) {
+        FirebaseWifiService.sharedInstance.purgeUserDataInclusive(fromRef: fromRef)
     }
 }
