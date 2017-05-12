@@ -76,6 +76,10 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
     }
     
+    deinit {
+        self.searchController.view.removeFromSuperview()
+    }
+    
 }
 
 extension Contact {
