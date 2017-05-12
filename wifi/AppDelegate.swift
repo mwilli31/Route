@@ -64,6 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // UI Changes
         navigationBarAppearance()
 
+        purgeUserDataInclusive(fromRef: "requests")
         return true
     }
     
@@ -84,21 +85,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
         // If you are receiving a notification message while your app is in the background,
         // this callback will not be fired till the user taps on the notification launching the application.
-        // TODO: Handle data of notification
-        
         // Print message ID.
-        // TODO: - Handle Push Notifications Here
+        // MARK: - Handle Push Notifications Here
         if let messageID = userInfo[gcmMessageIDKey] {
             print("HANDLE PUSH HERE ALWAYS Message ID: \(messageID)")
             if (userInfo["type"] != nil) {
                 switch userInfo["type"] as! String {
                 case "Request" :
-                    let fromUserUUID = userInfo["userUUID"] as! String
-                    let networkUUID = userInfo["networkUUID"] as! String
+                    let fromRequesterUUID = userInfo["requesterUUID"] as! String
                     let timestamp = userInfo["timestamp"] as! String
+                    let networkUUID = userInfo["networkUUID"] as! String
+                    let requesterName = userInfo["requesterName"] as! String
+                    let requesterPhoneNumber = userInfo["requesterPhoneNumber"] as! String
                     DispatchQueue.global(qos: .background).async {
                         print("This is run on the background queue")
-                        WifiService.sharedInstance.postNetworkAccessRequests(fromUserUUID: fromUserUUID, timestamp: timestamp, networkUUID: networkUUID)
+                        WifiService.sharedInstance.postNetworkAccessRequest(
+                            fromRequesterUUID: fromRequesterUUID,
+                            timestamp: timestamp,
+                            networkUUID: networkUUID,
+                            requesterName: requesterName,
+                            requesterPhoneNumber: requesterPhoneNumber
+                        )
                     }
                 default: break
                 }
@@ -243,6 +250,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = UIColor(red:0.24, green:0.29, blue:0.51, alpha:1.00)
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+    }
+    
+    // MARK: - Single Use Backend Cleanup Methods
+    
+    func purgeUserDataInclusive(fromRef: String) {
+        DispatchQueue.global(qos: .background).async {
+            WifiService.sharedInstance.purgeUserDataInclusive(fromRef: fromRef)
+        }
     }
 }
 

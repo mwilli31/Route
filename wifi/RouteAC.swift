@@ -27,8 +27,8 @@ class RouteAC {
         }
     }
     
-    func addAccessRequest(fromUserUUID: String, value: NSDictionary) {
-        RouteAC.sharedInstance.accessRequests[fromUserUUID] = value
+    func addAccessRequest(fromRequesterUUID: String, value: NSDictionary) {
+        RouteAC.sharedInstance.accessRequests[fromRequesterUUID] = value
         print(RouteAC.sharedInstance.accessRequests)
         postRouteACListNotification()
     }

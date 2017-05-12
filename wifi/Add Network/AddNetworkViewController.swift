@@ -55,6 +55,10 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "ShahFamily", ownerUUID: "xWaB0iboEaNz5RNrDoc5hxb6gbo1")
+    }
+    
     
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
