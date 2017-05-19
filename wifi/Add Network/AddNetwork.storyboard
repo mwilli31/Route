@@ -12,7 +12,6 @@
         <!--Add Network View Controller-->
         <scene sceneID="yDN-WX-Q1h">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="pmF-DP-AZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="BqZ-3m-ovw" customClass="AddNetworkViewController" customModule="wifi" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xbF-Fu-g1h"/>
@@ -54,6 +53,7 @@
                         <outlet property="resultsTableview" destination="ZZK-qA-Zmo" id="GYc-qT-VRh"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pmF-DP-AZo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="916" y="127.28635682158921"/>
         </scene>

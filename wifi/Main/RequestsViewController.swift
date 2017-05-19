@@ -34,13 +34,15 @@ class RequestsViewController: UIViewController {
     }
     
     @IBAction func denyButtonAction(_ sender: UIButton) {
-        users.denyAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
-        self.requestsTableView.reloadData()
+        print("Deny request")
+//        users.denyAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
+//        self.requestsTableView.reloadData()
     }
     
     @IBAction func approveButtonAction(_ sender: UIButton) {
-        users.approveAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
-        self.requestsTableView.reloadData()
+        print("approve request")
+//        users.approveAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
+//        self.requestsTableView.reloadData()
     }
     
     func resolveUsernameLabelFromCell(sender: UIButton) -> UILabel {
@@ -53,7 +55,7 @@ class RequestsViewController: UIViewController {
     }
     
     func catchRouteACListNotification(notification:Notification) -> Void {
-        print("Recieved notification that Route AC List has been updated.")
+        print("Received notification that Route AC List has been updated.")
         self.requestsTableView.reloadData()
     }
 }
@@ -64,7 +66,7 @@ extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return 120
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

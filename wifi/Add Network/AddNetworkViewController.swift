@@ -56,7 +56,7 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Requests.sharedInstance.askForAccess(toNetworkUUID: "ShahFamily", ownerUUID: "xWaB0iboEaNz5RNrDoc5hxb6gbo1")
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "ShahFamily2", ownerUUID: UserService.sharedInstance.getCurrentUserUUID())
     }
     
     
@@ -77,7 +77,7 @@ class AddNetworkViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func sendMessageTest(_ sender: Any) {
-        Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: "SI6NhWoMI9fHcGNGtXUMujaPuK23")
+        Requests.sharedInstance.askForAccess(toNetworkUUID: "DropTheMike", ownerUUID: UserService.sharedInstance.getCurrentUserUUID())
     }
     
     deinit {

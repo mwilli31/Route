@@ -64,7 +64,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // UI Changes
         navigationBarAppearance()
 
-        purgeUserDataInclusive(fromRef: "requests")
+//        purgeUserDataInclusive(fromRef: "requests")
         return true
     }
     
@@ -94,18 +94,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 case "Request" :
                     let fromRequesterUUID = userInfo["requesterUUID"] as! String
                     let timestamp = userInfo["timestamp"] as! String
-                    let networkUUID = userInfo["networkUUID"] as! String
+                    let forNetworkSSID = userInfo["networkUUID"] as! String
                     let requesterName = userInfo["requesterName"] as! String
                     let requesterPhoneNumber = userInfo["requesterPhoneNumber"] as! String
                     DispatchQueue.global(qos: .background).async {
                         print("This is run on the background queue")
-                        WifiService.sharedInstance.postNetworkAccessRequest(
-                            fromRequesterUUID: fromRequesterUUID,
-                            timestamp: timestamp,
-                            networkUUID: networkUUID,
-                            requesterName: requesterName,
-                            requesterPhoneNumber: requesterPhoneNumber
-                        )
+                        WifiService.sharedInstance.postNetworkAccessRequest(fromRequesterUUID: fromRequesterUUID,
+                                                                                    forNetworkSSID: forNetworkSSID,
+                                                                                    timestamp: timestamp,
+                                                                                    requesterName: requesterName,
+                                                                                    requesterPhoneNumber: requesterPhoneNumber)
                     }
                 default: break
                 }
@@ -276,11 +274,9 @@ extension AppDelegate : UNUserNotificationCenterDelegate {
         }
         
         // Print full message.
-        print(userInfo)
-        if(userInfo["type"] as! String! == "Request") {
-            // TODO: Notify Requests VC to update 
-            // Persist to local cache
-        }
+//        print(userInfo)
+//        if(userInfo["type"] as! String! == "Request") {
+//        }
         
         // Change this to your preferred presentation option
         completionHandler([])
