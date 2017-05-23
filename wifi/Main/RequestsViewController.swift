@@ -87,8 +87,8 @@ extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "request") as! RequestTableViewCell
-        let userUUID = self.userRequestsKeys[indexPath.row]
-        let userRequest = self.userRequests.accessRequests[userUUID]
+        let fromRequesterUUID = self.userRequestsKeys[indexPath.row]
+        let userRequest = self.userRequests.accessRequests[fromRequesterUUID]
         cell.username.text = userRequest?.requesterInfo["name"]
         
         cell.allowAccessClosure = {
@@ -96,7 +96,7 @@ extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         cell.declineAccessClosure = {
-            print("decline")
+            RouteAC.sharedInstance.declineAccessRequest(fromRequesterUUID: fromRequesterUUID)
         }
         
         return cell

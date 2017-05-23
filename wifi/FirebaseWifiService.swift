@@ -180,6 +180,18 @@ class FirebaseWifiService {
         }
     }
     
+    func declineAccessRequest(fromRequesterUUID: String) {
+        //TODO: Assumes one network access request per UUID
+        let userUUID = UserService.sharedInstance.getCurrentUserUUID()
+        if userUUID != "" {
+            print("Declining Network Request")
+            var databaseRef: FIRDatabaseReference!
+            databaseRef = FIRDatabase.database().reference().child("/users/" + userUUID + "/requests/" + fromRequesterUUID)
+            databaseRef.setValue(nil)
+        }
+
+    }
+    
     func purgeUserDataInclusive(fromRef: String) {
         let userUUID = UserService.sharedInstance.getCurrentUserUUID()
         if userUUID != "" {

@@ -32,14 +32,17 @@ class RouteAC {
         Request.upsertAccessRequest(fromRequesterUUID: fromRequesterUUID,
                                     forNetworkSSID: forNetworkSSID,
                                     timestamp: timestamp,
-                                    requesterName: requesterPhoneNumber,
+                                    requesterName: requesterName,
                                     requesterPhoneNumber: requesterPhoneNumber)
         
         print(RouteAC.sharedInstance.accessRequests)
         postRouteACListNotification()
     }
 
-    func denyAccessRequest(user : String) {
+    func declineAccessRequest(fromRequesterUUID : String) {
+        RouteAC.sharedInstance.accessRequests.removeValue(forKey: fromRequesterUUID)
+        WifiService.sharedInstance.declineAccessRequest(fromRequesterUUID: fromRequesterUUID)
+        postRouteACListNotification()
     }
 
     func approveAccessRequest(user : String) {
@@ -83,11 +86,13 @@ extension Request {
             else {
                 RouteAC.sharedInstance.accessRequests[fromRequesterUUID] = Request(fromRequesterUUID: fromRequesterUUID,
                                                                                    networks: [forNetworkSSID: timestamp],
-                                                                                   requesterInfo: [requesterName: requesterPhoneNumber])
+                                                                                   requesterInfo: ["name": requesterName,
+                                                                                                   "phoneNumber": requesterPhoneNumber])
                 return
         }
 
         RouteAC.sharedInstance.accessRequests[fromRequesterUUID]?.networks[forNetworkSSID] = timestamp
-        RouteAC.sharedInstance.accessRequests[fromRequesterUUID]?.requesterInfo[requesterName] = requesterPhoneNumber
+        RouteAC.sharedInstance.accessRequests[fromRequesterUUID]?.requesterInfo["name"] = requesterName
+        RouteAC.sharedInstance.accessRequests[fromRequesterUUID]?.requesterInfo["phoneNumber"] = requesterPhoneNumber
     }
 }

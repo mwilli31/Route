@@ -92,6 +92,10 @@ class WifiService {
         
     }
     
+    func declineAccessRequest(fromRequesterUUID: String) {
+        FirebaseWifiService.sharedInstance.declineAccessRequest(fromRequesterUUID: fromRequesterUUID)
+    }
+    
     func purgeUserDataInclusive(fromRef: String) {
         FirebaseWifiService.sharedInstance.purgeUserDataInclusive(fromRef: fromRef)
     }
