@@ -10,13 +10,34 @@ import UIKit
 import Foundation
 
 class RequestTableViewCell: UITableViewCell {
+    
+    var allowAccessClosure : (() -> Void)? = nil
+    
+    var declineAccessClosure : (() -> Void)? = nil
+    
     @IBOutlet weak var username: UILabel!
+    
+    @IBAction func allowAccess(_ sender: UIButton) {
+        if let allowAccess = self.allowAccessClosure {
+            allowAccess()
+        }
+    }
+    
+    @IBAction func declineAccess(_ sender: UIButton) {
+        if let declineAccess = self.declineAccessClosure {
+            declineAccess()
+        }
+    }
 }
 
 class RequestsViewController: UIViewController {
     @IBOutlet weak var requestsTableView: UITableView!
     
-    var users = RouteAC.sharedInstance
+    @IBAction func allowAccess(_ sender: UIButton) {
+        
+    }
+    var userRequests = RouteAC.sharedInstance
+    var userRequestsKeys = [String]()
     
     let routeACListNotification = Notification.Name(rawValue:Constants.NotificationKeys.routeACListNotification)
     
@@ -27,42 +48,37 @@ class RequestsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        userRequestsKeys = userRequests.pendingAccessRequestUsersArray()
         self.requestsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         
         let nc = NotificationCenter.default
         nc.addObserver(forName:routeACListNotification, object:nil, queue:nil, using:catchRouteACListNotification)
+        
+
     }
     
     @IBAction func denyButtonAction(_ sender: UIButton) {
         print("Deny request")
-//        users.denyAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
 //        self.requestsTableView.reloadData()
     }
     
     @IBAction func approveButtonAction(_ sender: UIButton) {
-        print("approve request")
-//        users.approveAccessRequest(user: resolveUsernameLabelFromCell(sender: sender).text!)
+//        print("approve request")
 //        self.requestsTableView.reloadData()
-    }
-    
-    func resolveUsernameLabelFromCell(sender: UIButton) -> UILabel {
-        var ancestor = sender.superview
-        while ancestor != nil && !(ancestor! is RequestTableViewCell) {
-            ancestor = ancestor?.superview
-        }
-        let cell = ancestor as! RequestTableViewCell
-        return cell.username
     }
     
     func catchRouteACListNotification(notification:Notification) -> Void {
         print("Received notification that Route AC List has been updated.")
+        userRequestsKeys = userRequests.pendingAccessRequestUsersArray()
         self.requestsTableView.reloadData()
     }
 }
 
 extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.accessRequests.count
+        return userRequestsKeys.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -71,8 +87,23 @@ extension RequestsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "request") as! RequestTableViewCell
-        cell.username.text = self.users.pendingAccessRequestUsersArray()[indexPath.row]
+        let userUUID = self.userRequestsKeys[indexPath.row]
+        let userRequest = self.userRequests.accessRequests[userUUID]
+        cell.username.text = userRequest?.requesterInfo["name"]
+        
+        cell.allowAccessClosure = {
+            print("approve")
+        }
+        
+        cell.declineAccessClosure = {
+            print("decline")
+        }
+        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(userRequestsKeys[indexPath.row])
     }
 
 }

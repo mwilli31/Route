@@ -38,10 +38,6 @@ class RouteAC {
         print(RouteAC.sharedInstance.accessRequests)
         postRouteACListNotification()
     }
-    
-    func getAccessRequestFrom(user: String) -> String {
-        return user
-    }
 
     func denyAccessRequest(user : String) {
     }
