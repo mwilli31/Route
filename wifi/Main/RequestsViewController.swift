@@ -72,7 +72,11 @@ class RequestsViewController: UIViewController {
     func catchRouteACListNotification(notification:Notification) -> Void {
         print("Received notification that Route AC List has been updated.")
         userRequestsKeys = userRequests.pendingAccessRequestUsersArray()
-        self.requestsTableView.reloadData()
+        
+        DispatchQueue.main.async(execute: {
+            self.requestsTableView.reloadData()    
+        })
+        
     }
 }
 
